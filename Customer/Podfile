@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'Customer' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Customer
+
+  pod 'IQKeyboardManagerSwift', :git => 'https://github.com/FarhanAnsari92/IQKeyboardManager.git'
+  pod "ZSWTappableLabel", "~> 3.3"
+
+end

@@ -1,0 +1,28 @@
+PODS:
+  - IQKeyboardManagerSwift (6.1.1)
+  - ZSWTappableLabel (3.3.2)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift (from `https://github.com/FarhanAnsari92/IQKeyboardManager.git`)
+  - ZSWTappableLabel (~> 3.3)
+
+SPEC REPOS:
+  trunk:
+    - ZSWTappableLabel
+
+EXTERNAL SOURCES:
+  IQKeyboardManagerSwift:
+    :git: https://github.com/FarhanAnsari92/IQKeyboardManager.git
+
+CHECKOUT OPTIONS:
+  IQKeyboardManagerSwift:
+    :commit: 89cb74ffaa9a419ebc74d8a3eb8574feb050a989
+    :git: https://github.com/FarhanAnsari92/IQKeyboardManager.git
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  ZSWTappableLabel: 92f11d677bb395a8294df48482316c4981783ca0
+
+PODFILE CHECKSUM: 037f5bc8535dbb97843c959593b7e7d4dc565c97
+
+COCOAPODS: 1.10.1
