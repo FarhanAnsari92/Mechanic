@@ -9,7 +9,7 @@ import UIKit
 
 class RegistrationViewController: BaseViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: BaseScrollView!
     
     @IBOutlet weak var btnSubmit: UIButton! {
         didSet {
@@ -60,4 +60,15 @@ class RegistrationViewController: BaseViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+class BaseScrollView: UIScrollView {
+
+    override func touchesShouldCancel(in view: UIView) -> Bool {
+        if view.isKind(of: UIButton.self) {
+          return true
+        }
+
+        return super.touchesShouldCancel(in: view)
+    }
 }

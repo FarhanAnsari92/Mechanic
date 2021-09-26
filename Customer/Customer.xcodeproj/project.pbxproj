@@ -41,6 +41,10 @@
 		280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577C526FE97CB0035BC2B /* BaseNavigationController.swift */; };
 		280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577C826FF38C60035BC2B /* VerifyNumberViewController.swift */; };
 		280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577CB26FF3C070035BC2B /* OTPTextField.swift */; };
+		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
+		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
+		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
+		28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */; };
 		5953FB0EB47E9C42D53DD4BD /* Pods_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +85,10 @@
 		280577C526FE97CB0035BC2B /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		280577C826FF38C60035BC2B /* VerifyNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNumberViewController.swift; sourceTree = "<group>"; };
 		280577CB26FF3C070035BC2B /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
+		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		5EE034CF885286C63D4DB69E /* Pods-Customer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.release.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.release.xcconfig"; sourceTree = "<group>"; };
 		93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Customer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8486B28AB1E1F1158B3B864 /* Pods-Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.debug.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 				280575CA26FBA1620035BC2B /* Info.plist */,
 				280575DC26FBA5160035BC2B /* Controllers */,
 				280575D826FBA4B30035BC2B /* Storyboards */,
+				28A88FA626FFC18100003EB7 /* TableView Cells */,
 				280575D326FBA2F10035BC2B /* Utilities */,
 				280576EB26FCFA830035BC2B /* Resources */,
 			);
@@ -149,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				280575D926FBA4F70035BC2B /* Authentication.storyboard */,
+				28A88F9E26FFBEB500003EB7 /* Order.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				280575DD26FBA52D0035BC2B /* Authentication */,
+				28A88FA126FFBEFB00003EB7 /* Order */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +223,23 @@
 				2805770826FD05590035BC2B /* Poppins-LightItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		28A88FA126FFBEFB00003EB7 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		28A88FA626FFC18100003EB7 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */,
+				28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */,
+			);
+			path = "TableView Cells";
 			sourceTree = "<group>";
 		};
 		8E6727337FAB7580F4D09840 /* Pods */ = {
@@ -293,6 +321,7 @@
 				2805770C26FD05590035BC2B /* Poppins-LightItalic.ttf in Resources */,
 				2805770B26FD05590035BC2B /* Poppins-ExtraLightItalic.ttf in Resources */,
 				280575DA26FBA4F70035BC2B /* Authentication.storyboard in Resources */,
+				28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */,
 				2805770A26FD05590035BC2B /* Poppins-Light.ttf in Resources */,
 				280576FB26FCFAC10035BC2B /* Poppins-SemiBoldItalic.otf in Resources */,
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
@@ -308,6 +337,7 @@
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
 				280576FC26FCFAC10035BC2B /* Poppins-BlackItalic.otf in Resources */,
+				28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,9 +395,11 @@
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
 				280575EF26FBA9F30035BC2B /* NibLoadable.swift in Sources */,
 				280577C326FE8A400035BC2B /* RegistrationViewController.swift in Sources */,
+				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
+				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,

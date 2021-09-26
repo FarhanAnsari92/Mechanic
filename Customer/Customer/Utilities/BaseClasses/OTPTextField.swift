@@ -21,7 +21,10 @@ class OTPTextField: UITextField {
     
     func commonInit() {
         layer.cornerRadius = 10
+//        layer.borderWidth = 0.2
+        backgroundColor = UIColor.white
         dropShadow()
+//        font = UIFont.Poppins(UIFont.FontType.semiBold, size: 29)
         textAlignment = .center
     }
 }

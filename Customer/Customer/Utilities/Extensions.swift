@@ -111,8 +111,8 @@ extension UIView {
     
     func dropShadow(scale: Bool = true) {
         layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.2
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOpacity = 0.5
         layer.shadowOffset = .zero
         layer.shadowRadius = 4
         layer.shouldRasterize = true
@@ -182,5 +182,13 @@ extension UIViewController: Backable, StoryboardIdentifiable {
     @objc func backButtonHandler() {
         self.navigationController?.popViewController(animated:true)
     }
+    
+}
+
+extension UITableViewCell: NibLoadable {
+    
+}
+
+extension UICollectionViewCell: NibLoadable {
     
 }
