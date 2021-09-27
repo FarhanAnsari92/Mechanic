@@ -20,7 +20,7 @@ class VerifyNumberViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Register"
-        self.setupBackButton()
+        self.setupBackButton(color: .black)
         self.setupRegisterNowLabel()
     }
     
@@ -59,9 +59,14 @@ class VerifyNumberViewController: BaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .order)
-        let vc = sb.instantiateViewController(withIdentifier: OrderHistoryViewController.storyboardIdentifier)
-        self.navigationController?.pushViewController(vc, animated: true)
+        let sb = UIStoryboard(storyboard: .home)
+        let vc = sb.instantiateInitialViewController()
+//        let vc = sb.instantiateViewController(withIdentifier: HomeViewController.storyboardIdentifier)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let appdelegate = Helper.appDelegate
+        appdelegate.window?.rootViewController = vc
+        
     }
 
 }

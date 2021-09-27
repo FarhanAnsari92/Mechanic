@@ -100,10 +100,6 @@ extension UIStoryboard {
     }
 }
 
-protocol Backable {
-    func setupBackButton()
-}
-
 extension UIView {
     func roundView() {
         self.layer.cornerRadius = self.frame.height / 2
@@ -170,12 +166,16 @@ extension UIView {
     
 }
 
+protocol Backable {
+    func setupBackButton(color: UIColor)
+}
+
 extension UIViewController: Backable, StoryboardIdentifiable {
     
-    func setupBackButton() {
+    func setupBackButton(color: UIColor) {
         navigationItem.hidesBackButton = true
         let backBtn = UIBarButtonItem(image: UIImage(named: "ic_back"), style: .plain, target: self, action: #selector(self.backButtonHandler))
-        backBtn.tintColor = .black
+        backBtn.tintColor = color
         navigationItem.leftBarButtonItem = backBtn
     }
     
@@ -183,6 +183,19 @@ extension UIViewController: Backable, StoryboardIdentifiable {
         self.navigationController?.popViewController(animated:true)
     }
     
+}
+
+extension UIViewController: UINavigationControllerDelegate {
+    
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        switch (navigationController, viewController) {
+        case (_, is HomeViewController):             
+            navigationController.setNavigationBarHidden(true, animated: true)
+        default:
+            navigationController.setNavigationBarHidden(false, animated: true)
+        }
+
+    }
 }
 
 extension UITableViewCell: NibLoadable {

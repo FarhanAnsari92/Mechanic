@@ -1,13 +1,13 @@
 //
-//  BaseNavigationController.swift
+//  HomeBaseNavigationController.swift
 //  Customer
 //
-//  Created by BYKEA - Hadi Ali on 25/09/2021.
+//  Created by BYKEA - Hadi Ali on 27/09/2021.
 //
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+class HomeBaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
        super.viewDidLoad()
@@ -18,8 +18,9 @@ class BaseNavigationController: UINavigationController {
         let font = UIFont.Poppins(.regular, size: 20)
         self.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: font,
-            NSAttributedString.Key.foregroundColor: UIColor.black
+            NSAttributedString.Key.foregroundColor: UIColor.white
         ]
     }
+
 
 }

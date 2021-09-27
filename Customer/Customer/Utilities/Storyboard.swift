@@ -10,7 +10,7 @@ import UIKit
 enum Storyboard: String {
     case authentication = "Authentication"
     case order = "Order"
-//    case home = "Home"
+    case home = "Home"
 //    case tabBar = "TabBar"
 //    case laundryService = "LaundryService"
 //    case address = "Address"

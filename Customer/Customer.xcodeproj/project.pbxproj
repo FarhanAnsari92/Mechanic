@@ -45,6 +45,11 @@
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
 		28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */; };
+		28A88FB52700EC8B00003EB7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88FB42700EC8B00003EB7 /* Home.storyboard */; };
+		28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FB82700F24400003EB7 /* HomeViewController.swift */; };
+		28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */; };
+		28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC52700FA4A00003EB7 /* Helper.swift */; };
+		28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */; };
 		5953FB0EB47E9C42D53DD4BD /* Pods_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +94,11 @@
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		28A88FB42700EC8B00003EB7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		28A88FB82700F24400003EB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseViewController.swift; sourceTree = "<group>"; };
+		28A88FC52700FA4A00003EB7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseNavigationController.swift; sourceTree = "<group>"; };
 		5EE034CF885286C63D4DB69E /* Pods-Customer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.release.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.release.xcconfig"; sourceTree = "<group>"; };
 		93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Customer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8486B28AB1E1F1158B3B864 /* Pods-Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.debug.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 				280575E826FBA8F70035BC2B /* StoryboardIdentifiable.swift */,
 				280575EB26FBA9C00035BC2B /* NibDesignable.swift */,
 				280575EE26FBA9F30035BC2B /* NibLoadable.swift */,
+				28A88FC52700FA4A00003EB7 /* Helper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 			children = (
 				280575D926FBA4F70035BC2B /* Authentication.storyboard */,
 				28A88F9E26FFBEB500003EB7 /* Order.storyboard */,
+				28A88FB42700EC8B00003EB7 /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -167,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				280575DD26FBA52D0035BC2B /* Authentication */,
+				28A88FB72700F21B00003EB7 /* Home */,
 				28A88FA126FFBEFB00003EB7 /* Order */,
 			);
 			path = Controllers;
@@ -186,11 +199,13 @@
 		280575F426FBAF000035BC2B /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				280575F526FBAF1C0035BC2B /* BaseViewController.swift */,
 				280577B426FE70530035BC2B /* InteractiveLinkLabel.swift */,
 				280577BE26FE84760035BC2B /* AuthTextField.swift */,
-				280577C526FE97CB0035BC2B /* BaseNavigationController.swift */,
 				280577CB26FF3C070035BC2B /* OTPTextField.swift */,
+				280577C526FE97CB0035BC2B /* BaseNavigationController.swift */,
+				280575F526FBAF1C0035BC2B /* BaseViewController.swift */,
+				28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */,
+				28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -240,6 +255,14 @@
 				28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */,
 			);
 			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		28A88FB72700F21B00003EB7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				28A88FB82700F24400003EB7 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8E6727337FAB7580F4D09840 /* Pods */ = {
@@ -318,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A88FB52700EC8B00003EB7 /* Home.storyboard in Resources */,
 				2805770C26FD05590035BC2B /* Poppins-LightItalic.ttf in Resources */,
 				2805770B26FD05590035BC2B /* Poppins-ExtraLightItalic.ttf in Resources */,
 				280575DA26FBA4F70035BC2B /* Authentication.storyboard in Resources */,
@@ -392,18 +416,22 @@
 			files = (
 				280575E926FBA8F70035BC2B /* StoryboardIdentifiable.swift in Sources */,
 				280575E326FBA8610035BC2B /* Extensions.swift in Sources */,
+				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
 				280575EF26FBA9F30035BC2B /* NibLoadable.swift in Sources */,
 				280577C326FE8A400035BC2B /* RegistrationViewController.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
+				28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */,
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,
+				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
+				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,

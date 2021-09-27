@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderHistoryViewController: UIViewController {
+class OrderHistoryViewController: HomeBaseViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -20,6 +20,7 @@ class OrderHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Order History"
+        self.setupBackButton(color: .white)
     }
 
 }
