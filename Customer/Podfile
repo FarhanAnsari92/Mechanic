@@ -9,5 +9,26 @@ target 'Customer' do
 
   pod 'IQKeyboardManagerSwift', :git => 'https://github.com/FarhanAnsari92/IQKeyboardManager.git'
   pod "ZSWTappableLabel", "~> 3.3"
+  
+  # https://github.com/jonkykong/SideMenu
+  pod 'SideMenu', '~> 6.0'
+  
+  # https://github.com/Alamofire/Alamofire
+  pod 'Alamofire', '~> 4.8.2'
+
+  # https://github.com/SwiftyJSON/Alamofire-SwiftyJSON
+  pod 'Alamofire-SwiftyJSON'
+
+  # https://github.com/Hearst-DD/ObjectMapper
+  pod 'ObjectMapper', '~> 3.4'
+  
+  # https://github.com/ninjaprox/NVActivityIndicatorView
+  pod 'NVActivityIndicatorView'
+
+  # https://github.com/jdg/MBProgressHUD
+  pod 'MBProgressHUD', '~> 1.1.0'
+
+  # https://github.com/SDWebImage/SDWebImage
+  pod 'SDWebImage', '~> 5.8.3'
 
 end
