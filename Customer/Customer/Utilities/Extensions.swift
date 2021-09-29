@@ -58,6 +58,8 @@ extension UIFont {
         case thin = "-Thin"
         case thinItalic = "-ThinItalic"
         
+        case medium = "-Medium"
+        
         case bold = "-Bold"
         case boldItalic = "-BoldItalic"
         case semiBold = "-SemiBold"
@@ -189,8 +191,8 @@ extension UIViewController: UINavigationControllerDelegate {
     
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         switch (navigationController, viewController) {
-        case (_, is HomeViewController):             
-            navigationController.setNavigationBarHidden(true, animated: true)
+//        case (_, is HomeViewController):             
+//            navigationController.setNavigationBarHidden(true, animated: true)
         default:
             navigationController.setNavigationBarHidden(false, animated: true)
         }

@@ -20,7 +20,6 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var btnLoginWithGoogle: UIButton! {
         didSet {
             btnLoginWithGoogle.layer.cornerRadius = 10
-            btnLoginWithGoogle.backgroundColor = .lightGray
         }
     }
     

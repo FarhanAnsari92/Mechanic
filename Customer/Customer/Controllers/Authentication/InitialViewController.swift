@@ -32,7 +32,7 @@ class InitialViewController: BaseViewController {
         
         let skipButton = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(self.skipButtonHandler))
         
-        let font = UIFont.Poppins(UIFont.FontType.semiBold, size: 14.0)
+        let font = UIFont.Poppins(.semiBold, size: 14.0)
         skipButton.setTitleTextAttributes([NSAttributedString.Key.font: font], for: UIControl.State.normal)
         
         skipButton.tintColor = UIColor.Theme.green

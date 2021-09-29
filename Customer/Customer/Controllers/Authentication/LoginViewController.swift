@@ -21,7 +21,6 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var btnLoginWithGoogle: UIButton! {
         didSet {
             btnLoginWithGoogle.layer.cornerRadius = 10
-            btnLoginWithGoogle.backgroundColor = .lightGray
         }
     }
     @IBOutlet weak var lblRegisterNow: InteractiveLinkLabel!

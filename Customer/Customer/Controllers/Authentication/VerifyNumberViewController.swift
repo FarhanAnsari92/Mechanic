@@ -61,11 +61,16 @@ class VerifyNumberViewController: BaseViewController {
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .home)
         let vc = sb.instantiateInitialViewController()
-//        let vc = sb.instantiateViewController(withIdentifier: HomeViewController.storyboardIdentifier)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        guard let window = Helper.appDelegate.window else { return }
         
-        let appdelegate = Helper.appDelegate
-        appdelegate.window?.rootViewController = vc
+        window.makeKeyAndVisible()
+            UIView.transition(with: window,
+                              duration: 0.3,
+                              options: .transitionCrossDissolve,
+                              animations: nil,
+                              completion: nil)
+        
+        window.rootViewController = vc
         
     }
 

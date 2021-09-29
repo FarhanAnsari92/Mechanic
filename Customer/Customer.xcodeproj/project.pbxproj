@@ -50,6 +50,9 @@
 		28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */; };
 		28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC52700FA4A00003EB7 /* Helper.swift */; };
 		28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */; };
+		28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */; };
+		28CCA64927039D7000DB1421 /* LeftMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */; };
+		28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */; };
 		5953FB0EB47E9C42D53DD4BD /* Pods_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +102,10 @@
 		28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseViewController.swift; sourceTree = "<group>"; };
 		28A88FC52700FA4A00003EB7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseNavigationController.swift; sourceTree = "<group>"; };
+		28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuTableViewCell.xib; sourceTree = "<group>"; };
+		28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewCell.swift; sourceTree = "<group>"; };
+		28CCA64C2703AACD00DB1421 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		5EE034CF885286C63D4DB69E /* Pods-Customer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.release.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.release.xcconfig"; sourceTree = "<group>"; };
 		93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Customer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8486B28AB1E1F1158B3B864 /* Pods-Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.debug.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +228,7 @@
 		280576EC26FCFA9A0035BC2B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				28CCA64C2703AACD00DB1421 /* Poppins-Medium.otf */,
 				280576EF26FCFAC10035BC2B /* Poppins-Black.otf */,
 				280576F126FCFAC10035BC2B /* Poppins-BlackItalic.otf */,
 				280576F726FCFAC10035BC2B /* Poppins-Bold.otf */,
@@ -253,6 +261,8 @@
 			children = (
 				28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */,
 				28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */,
+				28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */,
+				28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -261,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				28A88FB82700F24400003EB7 /* HomeViewController.swift */,
+				28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -354,6 +365,7 @@
 				280576F926FCFAC10035BC2B /* Poppins-ExtraBold.otf in Resources */,
 				280575C926FBA1620035BC2B /* LaunchScreen.storyboard in Resources */,
 				280576FA26FCFAC10035BC2B /* Poppins-Black.otf in Resources */,
+				28CCA64927039D7000DB1421 /* LeftMenuTableViewCell.xib in Resources */,
 				2805770126FCFAC10035BC2B /* Poppins-Regular.otf in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
@@ -431,7 +443,9 @@
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
+				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
+				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,

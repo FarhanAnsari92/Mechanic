@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeftMenuTableViewCell" rowHeight="97" id="KGk-i7-Jjw" customClass="LeftMenuTableViewCell" customModule="Customer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqJ-7Q-5fJ" userLabel="Separator">
+                        <rect key="frame" x="15" y="0.0" width="383" height="5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="hno-FL-RsR"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0e-Uh-C8a">
+                        <rect key="frame" x="15" y="38.5" width="20" height="20"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="p0e-Uh-C8a" secondAttribute="height" multiplier="1:1" id="P2l-QO-INc"/>
+                            <constraint firstAttribute="height" constant="20" id="Q4I-2Y-jvc"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_right_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="ZKB-dD-jaV">
+                        <rect key="frame" x="378" y="38.5" width="20" height="20"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ZKB-dD-jaV" secondAttribute="height" multiplier="1:1" id="Ccf-DU-u5A"/>
+                            <constraint firstAttribute="height" constant="20" id="V3H-zf-y5u"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-Jr-C5C">
+                        <rect key="frame" x="50" y="37.5" width="42" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJU-Hr-tcu" userLabel="Separator">
+                        <rect key="frame" x="15" y="92" width="383" height="5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="Pg8-aH-AqE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="ZKB-dD-jaV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Vs-iA-TK4"/>
+                    <constraint firstItem="hhp-Jr-C5C" firstAttribute="leading" secondItem="p0e-Uh-C8a" secondAttribute="trailing" constant="15" id="2fb-r4-b1K"/>
+                    <constraint firstItem="hhp-Jr-C5C" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3uZ-kg-6np"/>
+                    <constraint firstAttribute="bottom" secondItem="XJU-Hr-tcu" secondAttribute="bottom" id="454-p9-3pE"/>
+                    <constraint firstItem="XJU-Hr-tcu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="5Dq-WM-D3D"/>
+                    <constraint firstItem="pqJ-7Q-5fJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="5rX-m2-hPU"/>
+                    <constraint firstItem="p0e-Uh-C8a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8bo-IO-Lbs"/>
+                    <constraint firstAttribute="trailing" secondItem="ZKB-dD-jaV" secondAttribute="trailing" constant="15" id="Suw-k7-i02"/>
+                    <constraint firstItem="p0e-Uh-C8a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XZY-nm-p3B"/>
+                    <constraint firstAttribute="trailing" secondItem="XJU-Hr-tcu" secondAttribute="trailing" constant="15" id="bhC-iM-mb2"/>
+                    <constraint firstAttribute="trailing" secondItem="pqJ-7Q-5fJ" secondAttribute="trailing" constant="15" id="yYu-2f-bXm"/>
+                    <constraint firstItem="pqJ-7Q-5fJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zHa-pY-c0h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imageVU" destination="p0e-Uh-C8a" id="nqB-iP-WNZ"/>
+                <outlet property="lblTitle" destination="hhp-Jr-C5C" id="kG4-xA-Drj"/>
+                <outlet property="lowerLine" destination="XJU-Hr-tcu" id="u7a-17-bjS"/>
+                <outlet property="upperLine" destination="pqJ-7Q-5fJ" id="zkL-g4-8hc"/>
+            </connections>
+            <point key="canvasLocation" x="-38.405797101449281" y="81.361607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_green_right_indicator" width="10" height="17"/>
+    </resources>
+</document>
