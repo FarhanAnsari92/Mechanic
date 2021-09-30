@@ -11,12 +11,7 @@ class RegistrationViewController: BaseViewController {
 
     @IBOutlet weak var scrollView: BaseScrollView!
     
-    @IBOutlet weak var btnSubmit: UIButton! {
-        didSet {
-            btnSubmit.layer.cornerRadius = 10
-            btnSubmit.backgroundColor = UIColor.Theme.green
-        }
-    }
+    @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var btnLoginWithGoogle: UIButton! {
         didSet {
             btnLoginWithGoogle.layer.cornerRadius = 10

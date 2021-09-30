@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LGSideMenuController
 
 enum LeftMenuType: String {
     case home = "Home"
@@ -21,8 +22,8 @@ enum LeftMenuType: String {
 struct LeftMenuData {
     var title: LeftMenuType
     var image: UIImage
-    var shouldHideUpperLine: Bool = true
-    var shouldHideLowerLine: Bool = true
+    var shouldHideUpperLine: Bool
+    var shouldHideLowerLine: Bool
     
     init(
         imageName: String,
@@ -32,6 +33,8 @@ struct LeftMenuData {
     ) {
         self.image = UIImage(named: imageName)!
         self.title = title
+        self.shouldHideUpperLine = shouldHideUpperLine
+        self.shouldHideLowerLine = shouldHideLowerLine
     }
 }
 
@@ -44,6 +47,8 @@ class LeftMenuViewController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView! {
         didSet {
             imgProfile.roundView()
+            imgProfile.layer.borderWidth = 5
+            imgProfile.layer.borderColor = UIColor.white.cgColor
         }
     }
     @IBOutlet weak var lblProfile: UILabel!
@@ -63,14 +68,14 @@ class LeftMenuViewController: UIViewController {
     }
 
     var cellData: [LeftMenuData] = [LeftMenuData]()
-    weak var delegate: LeftMenuContainerViewControllerDelegate?
+    weak var leftMenuDelegate: LeftMenuContainerViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.Theme.green
         
-        cellData.append(LeftMenuData(imageName: "ic_side_home", title: .home, shouldHideUpperLine: false))
+        cellData.append(LeftMenuData(imageName: "ic_side_home", title: .home))
         cellData.append(LeftMenuData(imageName: "ic_side_profile", title: .myProfile))
         cellData.append(LeftMenuData(imageName: "ic_side_pin", title: .address))
         cellData.append(LeftMenuData(imageName: "ic_side_search", title: .track))
@@ -127,13 +132,17 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.dismiss(animated: true, completion: nil)
+        let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController
+        glController?.toggleLeftView()
         let data = self.cellData[indexPath.row]
-        self.delegate?.didSelect(data.title)
+        self.leftMenuDelegate?.didSelect(data.title)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 65
+        if self.cellData[indexPath.row].title == .logout {        
+            return 65
+        }
+        return 45
     }
     
 }

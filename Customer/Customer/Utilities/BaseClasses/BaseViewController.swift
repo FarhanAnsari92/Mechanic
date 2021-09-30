@@ -6,15 +6,31 @@
 //
 
 import UIKit
+import LGSideMenuController
 
-class BaseViewController: UIViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+protocol Transparetable {
+    func makeTransparent()
+}
+
+extension Transparetable where Self: UIViewController {
+    func makeTransparent() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = .white
     }
+}
 
+class BaseViewController: UIViewController, Transparetable {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.makeTransparent()
+    }
+}
+
+class SideMenuBaseController: LGSideMenuController, Transparetable {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.makeTransparent()
+    }
 }

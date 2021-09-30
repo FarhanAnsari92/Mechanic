@@ -15,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeftMenuTableViewCell" rowHeight="97" id="KGk-i7-Jjw" customClass="LeftMenuTableViewCell" customModule="Customer" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LeftMenuTableViewCell" rowHeight="97" id="KGk-i7-Jjw" customClass="LeftMenuTableViewCell" customModule="Customer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="413" height="97"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -23,10 +23,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqJ-7Q-5fJ" userLabel="Separator">
-                        <rect key="frame" x="15" y="0.0" width="383" height="5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="15" y="0.0" width="383" height="1"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="0.50382742976510764" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="5" id="hno-FL-RsR"/>
+                            <constraint firstAttribute="height" constant="1" id="hno-FL-RsR"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0e-Uh-C8a">
@@ -38,11 +38,11 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_right_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="ZKB-dD-jaV">
-                        <rect key="frame" x="378" y="38.5" width="20" height="20"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="388" y="43.5" width="10" height="10"/>
+                        <color key="tintColor" red="0.3411764706" green="0.52941176469999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ZKB-dD-jaV" secondAttribute="height" multiplier="1:1" id="Ccf-DU-u5A"/>
-                            <constraint firstAttribute="height" constant="20" id="V3H-zf-y5u"/>
+                            <constraint firstAttribute="height" constant="10" id="V3H-zf-y5u"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-Jr-C5C">
@@ -52,10 +52,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJU-Hr-tcu" userLabel="Separator">
-                        <rect key="frame" x="15" y="92" width="383" height="5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="15" y="96" width="383" height="1"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="5" id="Pg8-aH-AqE"/>
+                            <constraint firstAttribute="height" constant="1" id="Pg8-aH-AqE"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -79,6 +79,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="imageVU" destination="p0e-Uh-C8a" id="nqB-iP-WNZ"/>
+                <outlet property="indicatorImage" destination="ZKB-dD-jaV" id="czr-f7-sfh"/>
                 <outlet property="lblTitle" destination="hhp-Jr-C5C" id="kG4-xA-Drj"/>
                 <outlet property="lowerLine" destination="XJU-Hr-tcu" id="u7a-17-bjS"/>
                 <outlet property="upperLine" destination="pqJ-7Q-5fJ" id="zkL-g4-8hc"/>

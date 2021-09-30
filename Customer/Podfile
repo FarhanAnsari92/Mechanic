@@ -13,6 +13,9 @@ target 'Customer' do
   # https://github.com/jonkykong/SideMenu
   pod 'SideMenu', '~> 6.0'
   
+  # https://github.com/Friend-LGA/LGSideMenuController
+  pod 'LGSideMenuController'
+  
   # https://github.com/Alamofire/Alamofire
   pod 'Alamofire', '~> 4.8.2'
 
@@ -30,5 +33,7 @@ target 'Customer' do
 
   # https://github.com/SDWebImage/SDWebImage
   pod 'SDWebImage', '~> 5.8.3'
+  
+  pod 'TTTAttributedLabel'
 
 end

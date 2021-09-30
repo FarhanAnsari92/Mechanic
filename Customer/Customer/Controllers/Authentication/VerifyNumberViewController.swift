@@ -6,72 +6,46 @@
 //
 
 import UIKit
+import LGSideMenuController
 
 class VerifyNumberViewController: BaseViewController {
     
-    @IBOutlet weak var lblResendNow: InteractiveLinkLabel!
-    @IBOutlet weak var btnConfirm: UIButton! {
-        didSet {
-            btnConfirm.layer.cornerRadius = 10
-            btnConfirm.backgroundColor = UIColor.Theme.green
-        }
-    }
+    @IBOutlet weak var lblResendNow: AppLinkLabel!
+    @IBOutlet weak var btnConfirm: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Register"
         self.setupBackButton(color: .black)
-        self.setupRegisterNowLabel()
-    }
-    
-    func setupRegisterNowLabel() {
         
-        //Did not receive yet? Resend Now
-        
-        let plainText = "Did not receive yet? "
-        let tappableText = "Resend Now"
-        
-        let plainTextColor = UIColor(hexString: "242323")
-        let TappableTextColor = UIColor.Theme.green
-        
-        lblResendNow.tintColor = UIColor.Theme.green
-        
-        let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: plainTextColor])
-        
-        let attributedLinkString = NSMutableAttributedString(string: tappableText,
-                                                             attributes:[
-//                                                                .link: URL(string: "http://www.google.com")!,
-                                                                .foregroundColor: TappableTextColor,
-                                                                .strokeColor: UIColor.clear,
-                                                                NSAttributedString.Key.underlineColor: UIColor.clear
-                                                             ])
-        let fullAttributedString = NSMutableAttributedString()
-        fullAttributedString.append(plainAttributedString)
-        fullAttributedString.append(attributedLinkString)
-        
-        lblResendNow.isUserInteractionEnabled = true
-        lblResendNow.attributedText = fullAttributedString
-        lblResendNow.didTapAtLink = {
-            // Use debounce here
-            print("didTapAtLink")
+        lblResendNow.link = "Resend Now"
+        lblResendNow.text = "Did not receive yet? Resend Now"
+        lblResendNow.didSelectLink = { link in
+            print("link ----- ", (link?.absoluteString ?? ""))
         }
-        
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .home)
-        let vc = sb.instantiateInitialViewController()
-        guard let window = Helper.appDelegate.window else { return }
-        
-        window.makeKeyAndVisible()
-            UIView.transition(with: window,
-                              duration: 0.3,
-                              options: .transitionCrossDissolve,
-                              animations: nil,
-                              completion: nil)
-        
-        window.rootViewController = vc
-        
+        if let homeVC = sb.instantiateViewController(withIdentifier: HomeViewController.storyboardIdentifier) as? HomeViewController {
+            let leftMenu = sb.instantiateViewController(withIdentifier: LeftMenuViewController.storyboardIdentifier)
+            
+            let homeNav = HomeBaseNavigationController(rootViewController: homeVC)
+            
+            let sideMenuController =
+                LGSideMenuController(rootViewController: homeNav,
+                                     leftViewController: leftMenu)
+            
+            sideMenuController.leftViewPresentationStyle = .scaleFromLittle
+            sideMenuController.rootView?.layer.cornerRadius = 20
+            sideMenuController.rootViewLayerShadowColor = .clear
+            sideMenuController.rootViewLayerShadowRadius = 0
+            sideMenuController.isLeftViewSwipeGestureEnabled = false
+            
+            sideMenuController.leftViewWidth = view.frame.width - (view.frame.width / 4)
+            sideMenuController.leftViewBackgroundColor = UIColor.Theme.green
+            AppDelegate.instance.setRootViewController(sideMenuController)
+        }
     }
 
 }

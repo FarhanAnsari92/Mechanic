@@ -6,21 +6,16 @@
 //
 
 import UIKit
-import ZSWTappableLabel
 
 class InitialViewController: BaseViewController {
     
-    @IBOutlet weak var btnCreateAccount: UIButton! {
-        didSet {
-            btnCreateAccount.layer.cornerRadius = 10
-        }
-    }
+    @IBOutlet weak var btnCreateAccount: UIButton!
     @IBOutlet weak var btnLogin: UIButton! {
         didSet {
             btnLogin.layer.cornerRadius = 10
         }
     }
-    @IBOutlet weak var lblTermsAndCondition: InteractiveLinkLabel!
+    @IBOutlet weak var lblTermsAndCondition: AppLinkLabel!
     @IBOutlet weak var lblDescription: UILabel! {
         didSet {
             lblDescription.text = "Before using our Services\n Please Register First"
@@ -38,41 +33,11 @@ class InitialViewController: BaseViewController {
         skipButton.tintColor = UIColor.Theme.green
         self.navigationItem.rightBarButtonItem = skipButton                
         
-        self.setupTermsAndConditionLabel()
-    }
-    
-    func setupTermsAndConditionLabel() {
-        
-        //By logging in or registering, you have agreed to the Terms and Conditions and Privacy Policy.
-        
-        let plainText = "By logging in or registering, you have agreed to "
-        let tappableText = "the Terms and Conditions and Privacy Policy."
-        
-        let plainTextColor = UIColor(hexString: "242323")
-        let TappableTextColor = UIColor.Theme.green
-        
-        lblTermsAndCondition.tintColor = UIColor.Theme.green
-        
-        let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: plainTextColor])
-        
-        let attributedLinkString = NSMutableAttributedString(string: tappableText,
-                                                             attributes:[
-//                                                                .link: URL(string: "http://www.google.com")!,
-                                                                .foregroundColor: TappableTextColor,
-                                                                .strokeColor: UIColor.clear,
-                                                                NSAttributedString.Key.underlineColor: UIColor.clear
-                                                             ])
-        let fullAttributedString = NSMutableAttributedString()
-        fullAttributedString.append(plainAttributedString)
-        fullAttributedString.append(attributedLinkString)
-        
-        lblTermsAndCondition.isUserInteractionEnabled = true
-        lblTermsAndCondition.attributedText = fullAttributedString
-        lblTermsAndCondition.didTapAtLink = {
-            // Use debounce here
-            print("didTapAtLink")
+        self.lblTermsAndCondition.link = "the Terms and Conditions and Privacy Policy."
+        self.lblTermsAndCondition.text = "By logging in or registering, you have agreed to the Terms and Conditions and Privacy Policy."
+        self.lblTermsAndCondition.didSelectLink = { link in
+            print("Link ----- ", (link?.absoluteString ?? "Link not provided"))
         }
-        
     }
     
     @objc func skipButtonHandler() {
@@ -90,5 +55,4 @@ class InitialViewController: BaseViewController {
         let vc = sb.instantiateViewController(withIdentifier: LoginViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
 }

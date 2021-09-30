@@ -7,12 +7,31 @@
 
 import UIKit
 import SideMenu
+import LGSideMenuController
 
-class HomeViewController: BaseViewController {
+class HomeViewController: SideMenuBaseController {
+    
+//    override var sideMenuController: LGSideMenuController? {
+//        if let controller = self as? LGSideMenuController {
+//            return controller
+//        }
+//        if let controller = LGSideMenuHelper.getSideMenuController(from: self) {
+//            return controller
+//        }
+//        if let controller = self.parent?.sideMenuController {
+//            return controller
+//        }
+//        return nil
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.delegate = self
+
+        if let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController {
+            if let leftMenuControllerr = glController.leftViewController as? LeftMenuViewController {
+                leftMenuControllerr.leftMenuDelegate = self
+            }
+        }
         
         let leftMenuBtn = UIBarButtonItem(image: UIImage(named: "ic_side_menu"), style: .plain, target: self, action: #selector(self.openLeftMenu))
         leftMenuBtn.tintColor = .black
@@ -20,25 +39,12 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func openLeftMenu() {
-        
-        let sb = UIStoryboard(storyboard: .home)
-        let leftRootVC = sb.instantiateViewController(withIdentifier: LeftMenuViewController.storyboardIdentifier) as! LeftMenuViewController
-        leftRootVC.delegate = self
-        
-        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: leftRootVC)
-        leftMenuNavigationController.setNavigationBarHidden(true, animated: false)
-        leftMenuNavigationController.leftSide = true
-        leftMenuNavigationController.presentationStyle = .menuSlideIn
-//        leftMenuNavigationController.blurEffectStyle = .regular
-        leftMenuNavigationController.menuWidth = self.view.bounds.width * 0.8
-        self.present(leftMenuNavigationController, animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func orderList(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .order)
-        let vc = sb.instantiateViewController(withIdentifier: OrderHistoryViewController.storyboardIdentifier)
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController {
+            if let leftMenuControllerr = glController.leftViewController as? LeftMenuViewController {
+                leftMenuControllerr.leftMenuDelegate = self
+            }
+            glController.showLeftView(animated: true, completion: nil)
+        }
     }
 
 }
@@ -52,28 +58,26 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
         case .myProfile:
             print(title.rawValue)
         case .address:
-            print(title.rawValue)
+            let sb = UIStoryboard(storyboard: .address)            
+            let vc = sb.instantiateViewController(withIdentifier: AddressListViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
         case .track:
             print(title.rawValue)
         case .orderHistory:
-            print(title.rawValue)
+            
+            let sb = UIStoryboard(storyboard: .order)
+            let vc = sb.instantiateViewController(withIdentifier: OrderHistoryViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         case .termAndConditions:
             print(title.rawValue)
         case .contact:
             print(title.rawValue)
         case .logout:
             let sb = UIStoryboard(storyboard: .authentication)
-            let vc = sb.instantiateInitialViewController()
-            guard let window = Helper.appDelegate.window else { return }
-            
-            window.makeKeyAndVisible()
-                UIView.transition(with: window,
-                                  duration: 0.3,
-                                  options: .transitionCrossDissolve,
-                                  animations: nil,
-                                  completion: nil)
-            
-            window.rootViewController = vc
+            if let vc = sb.instantiateInitialViewController() {
+                AppDelegate.instance.setRootViewController(vc)
+            }
         }
     }
     

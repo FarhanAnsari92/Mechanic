@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Address List View Controller-->
+        <scene sceneID="xFN-kA-w2U">
+            <objects>
+                <viewController storyboardIdentifier="AddressListViewController" id="msz-AQ-Jvl" customClass="AddressListViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipK-ac-wdq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sfz-SN-0w2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="743"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ue-1h-nel" customClass="AppButton" customModule="Customer" customModuleProvider="target">
+                                <rect key="frame" x="20" y="797" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="LkM-xh-T2l"/>
+                                </constraints>
+                                <state key="normal" title="Add New Address"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ygB-zb-t1t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sfz-SN-0w2" firstAttribute="leading" secondItem="ygB-zb-t1t" secondAttribute="leading" id="92P-yr-92X"/>
+                            <constraint firstItem="ygB-zb-t1t" firstAttribute="bottom" secondItem="1ue-1h-nel" secondAttribute="bottom" constant="10" id="9NX-ew-WAd"/>
+                            <constraint firstItem="1ue-1h-nel" firstAttribute="leading" secondItem="ygB-zb-t1t" secondAttribute="leading" constant="20" id="FRp-jn-KNI"/>
+                            <constraint firstItem="ygB-zb-t1t" firstAttribute="trailing" secondItem="1ue-1h-nel" secondAttribute="trailing" constant="20" id="RXr-er-RXG"/>
+                            <constraint firstItem="ygB-zb-t1t" firstAttribute="trailing" secondItem="Sfz-SN-0w2" secondAttribute="trailing" id="d4A-Lg-jFh"/>
+                            <constraint firstItem="Sfz-SN-0w2" firstAttribute="top" secondItem="ygB-zb-t1t" secondAttribute="top" id="fwF-Np-B16"/>
+                            <constraint firstItem="1ue-1h-nel" firstAttribute="top" secondItem="Sfz-SN-0w2" secondAttribute="bottom" constant="10" id="iTT-Db-reb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Sfz-SN-0w2" id="107-SM-KAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ye2-0G-V95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

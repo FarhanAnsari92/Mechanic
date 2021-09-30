@@ -12,18 +12,13 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var txtEmailAddress: AuthTextField!
     @IBOutlet weak var txtPassword: AuthTextField!
     
-    @IBOutlet weak var btnLogin: UIButton! {
-        didSet {
-            btnLogin.layer.cornerRadius = 10
-            btnLogin.backgroundColor = UIColor.Theme.green
-        }
-    }
+    @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnLoginWithGoogle: UIButton! {
         didSet {
             btnLoginWithGoogle.layer.cornerRadius = 10
         }
     }
-    @IBOutlet weak var lblRegisterNow: InteractiveLinkLabel!
+    @IBOutlet weak var lblRegisterNow: AppLinkLabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,39 +35,10 @@ class LoginViewController: BaseViewController {
         
         self.title = "Login"
         
-        self.setupRegisterNowLabel()
-    }
-    
-    func setupRegisterNowLabel() {
-        
-        //Don't Have an Account yet? Register Now
-        
-        let plainText = "Don't Have an Account yet? "
-        let tappableText = "Register Now"
-        
-        let plainTextColor = UIColor(hexString: "242323")
-        let TappableTextColor = UIColor.Theme.green
-        
-        lblRegisterNow.tintColor = UIColor.Theme.green
-        
-        let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: plainTextColor])
-        
-        let attributedLinkString = NSMutableAttributedString(string: tappableText,
-                                                             attributes:[
-//                                                                .link: URL(string: "http://www.google.com")!,
-                                                                .foregroundColor: TappableTextColor,
-                                                                .strokeColor: UIColor.clear,
-                                                                NSAttributedString.Key.underlineColor: UIColor.clear
-                                                             ])
-        let fullAttributedString = NSMutableAttributedString()
-        fullAttributedString.append(plainAttributedString)
-        fullAttributedString.append(attributedLinkString)
-        
-        lblRegisterNow.isUserInteractionEnabled = true
-        lblRegisterNow.attributedText = fullAttributedString
-        lblRegisterNow.didTapAtLink = {
-            // Use debounce here
-            print("didTapAtLink")
+        lblRegisterNow.link = "Register Now"
+        lblRegisterNow.text = "Don't Have an Account yet? Register Now"
+        lblRegisterNow.didSelectLink = { link in
+            print("link ----- ", (link?.absoluteString ?? ""))            
         }
         
     }
