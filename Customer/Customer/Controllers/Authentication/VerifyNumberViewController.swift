@@ -37,12 +37,13 @@ class VerifyNumberViewController: BaseViewController {
                                      leftViewController: leftMenu)
             
             sideMenuController.leftViewPresentationStyle = .scaleFromLittle
+            sideMenuController.isLeftViewStatusBarHidden = true
             sideMenuController.rootView?.layer.cornerRadius = 20
             sideMenuController.rootViewLayerShadowColor = .clear
             sideMenuController.rootViewLayerShadowRadius = 0
             sideMenuController.isLeftViewSwipeGestureEnabled = false
             
-            sideMenuController.leftViewWidth = view.frame.width - (view.frame.width / 4)
+            sideMenuController.leftViewWidth = view.frame.width * 0.75 // - (view.frame.width / 4)
             sideMenuController.leftViewBackgroundColor = UIColor.Theme.green
             AppDelegate.instance.setRootViewController(sideMenuController)
         }

@@ -56,10 +56,14 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
         case .home:
             print(title.rawValue)
         case .myProfile:
-            print(title.rawValue)
+            let sb = UIStoryboard(storyboard: .profile)
+            let vc = sb.instantiateViewController(withIdentifier: EditProfileViewController.storyboardIdentifier)
+            
+            self.navigationController?.pushViewController(vc, animated: true)
         case .address:
             let sb = UIStoryboard(storyboard: .address)            
             let vc = sb.instantiateViewController(withIdentifier: AddressListViewController.storyboardIdentifier)
+            
             self.navigationController?.pushViewController(vc, animated: true)
         case .track:
             print(title.rawValue)
@@ -72,7 +76,11 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
         case .termAndConditions:
             print(title.rawValue)
         case .contact:
-            print(title.rawValue)
+            
+            let sb = UIStoryboard(storyboard: .contact)
+            let vc = sb.instantiateViewController(withIdentifier: ContactUsViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         case .logout:
             let sb = UIStoryboard(storyboard: .authentication)
             if let vc = sb.instantiateInitialViewController() {

@@ -42,6 +42,10 @@
 		280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577C826FF38C60035BC2B /* VerifyNumberViewController.swift */; };
 		280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577CB26FF3C070035BC2B /* OTPTextField.swift */; };
 		28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E142706378D0071E93D /* AppLinkLabel.swift */; };
+		28373E1827063EC80071E93D /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1727063EC80071E93D /* Contact.storyboard */; };
+		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
+		28373E20270647A30071E93D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1F270647A30071E93D /* Profile.storyboard */; };
+		28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E23270647DE0071E93D /* EditProfileViewController.swift */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -100,6 +104,10 @@
 		280577C826FF38C60035BC2B /* VerifyNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNumberViewController.swift; sourceTree = "<group>"; };
 		280577CB26FF3C070035BC2B /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		28373E142706378D0071E93D /* AppLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinkLabel.swift; sourceTree = "<group>"; };
+		28373E1727063EC80071E93D /* Contact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contact.storyboard; sourceTree = "<group>"; };
+		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		28373E1F270647A30071E93D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		28373E23270647DE0071E93D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -191,6 +199,8 @@
 				28A88F9E26FFBEB500003EB7 /* Order.storyboard */,
 				28A88FB42700EC8B00003EB7 /* Home.storyboard */,
 				28CCA6AA2704EC4100DB1421 /* Address.storyboard */,
+				28373E1727063EC80071E93D /* Contact.storyboard */,
+				28373E1F270647A30071E93D /* Profile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -198,6 +208,8 @@
 		280575DC26FBA5160035BC2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28373E22270647C40071E93D /* Profile */,
+				28373E1A270642D00071E93D /* Contact */,
 				28CCA6AD2704EC8600DB1421 /* Address */,
 				280575DD26FBA52D0035BC2B /* Authentication */,
 				28A88FB72700F21B00003EB7 /* Home */,
@@ -262,6 +274,22 @@
 				2805770826FD05590035BC2B /* Poppins-LightItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		28373E1A270642D00071E93D /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				28373E1B270642E80071E93D /* ContactUsViewController.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		28373E22270647C40071E93D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				28373E23270647DE0071E93D /* EditProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		28A88FA126FFBEFB00003EB7 /* Order */ = {
@@ -392,9 +420,11 @@
 				280576FF26FCFAC10035BC2B /* Poppins-ExtraBoldItalic.otf in Resources */,
 				280576F926FCFAC10035BC2B /* Poppins-ExtraBold.otf in Resources */,
 				280575C926FBA1620035BC2B /* LaunchScreen.storyboard in Resources */,
+				28373E1827063EC80071E93D /* Contact.storyboard in Resources */,
 				280576FA26FCFAC10035BC2B /* Poppins-Black.otf in Resources */,
 				28CCA64927039D7000DB1421 /* LeftMenuTableViewCell.xib in Resources */,
 				2805770126FCFAC10035BC2B /* Poppins-Regular.otf in Resources */,
+				28373E20270647A30071E93D /* Profile.storyboard in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
@@ -462,6 +492,7 @@
 				280577C326FE8A400035BC2B /* RegistrationViewController.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
+				28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */,
 				28CCA6B42704ED2F00DB1421 /* AddressListTableViewCell.swift in Sources */,
 				28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */,
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
@@ -479,6 +510,7 @@
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
+				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,

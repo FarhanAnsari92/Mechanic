@@ -12,6 +12,8 @@ enum Storyboard: String {
     case order = "Order"
     case home = "Home"
     case address = "Address"
+    case contact = "Contact"
+    case profile = "Profile"
 //    case tabBar = "TabBar"
 //    case laundryService = "LaundryService"
 //    case faqs = "FAQs"
