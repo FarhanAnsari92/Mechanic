@@ -61,17 +61,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aoH-6m-z12">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-a3-PVM" customClass="ShadowView" customModule="Customer" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_magnifier" translatesAutoresizingMaskIntoConstraints="NO" id="xY9-8J-JBk">
+                                        <rect key="frame" x="10" y="12.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xY9-8J-JBk" secondAttribute="height" multiplier="1:1" id="Vqi-LP-srT"/>
+                                            <constraint firstAttribute="height" constant="25" id="aWP-Kv-qjl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S10-xX-4sb">
+                                        <rect key="frame" x="40" y="0.0" width="324" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="S10-xX-4sb" firstAttribute="centerY" secondItem="aKO-a3-PVM" secondAttribute="centerY" id="5yF-pv-DBE"/>
+                                    <constraint firstAttribute="trailing" secondItem="S10-xX-4sb" secondAttribute="trailing" constant="10" id="9Fy-G2-K4b"/>
+                                    <constraint firstAttribute="height" constant="50" id="C5u-P0-QdI"/>
+                                    <constraint firstAttribute="bottom" secondItem="S10-xX-4sb" secondAttribute="bottom" id="Ihp-YK-9Rp"/>
+                                    <constraint firstItem="xY9-8J-JBk" firstAttribute="leading" secondItem="aKO-a3-PVM" secondAttribute="leading" constant="10" id="W7J-oQ-qTT"/>
+                                    <constraint firstItem="S10-xX-4sb" firstAttribute="top" secondItem="aKO-a3-PVM" secondAttribute="top" id="f9d-eE-3Tv"/>
+                                    <constraint firstItem="S10-xX-4sb" firstAttribute="leading" secondItem="xY9-8J-JBk" secondAttribute="trailing" constant="5" id="fHl-SX-bn9"/>
+                                    <constraint firstItem="xY9-8J-JBk" firstAttribute="centerY" secondItem="aKO-a3-PVM" secondAttribute="centerY" id="zCQ-bd-8jX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Yr-Ll-qpX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aKO-a3-PVM" firstAttribute="top" secondItem="1Yr-Ll-qpX" secondAttribute="top" constant="20" id="1N2-Oh-g7X"/>
                             <constraint firstItem="aoH-6m-z12" firstAttribute="leading" secondItem="1Yr-Ll-qpX" secondAttribute="leading" id="1VO-Cb-ij4"/>
                             <constraint firstItem="1Yr-Ll-qpX" firstAttribute="bottom" secondItem="aoH-6m-z12" secondAttribute="bottom" id="9ra-aA-G0r"/>
-                            <constraint firstItem="aoH-6m-z12" firstAttribute="top" secondItem="1Yr-Ll-qpX" secondAttribute="top" id="Ets-TO-fGE"/>
+                            <constraint firstItem="aoH-6m-z12" firstAttribute="top" secondItem="aKO-a3-PVM" secondAttribute="bottom" id="LOR-SP-C03"/>
+                            <constraint firstItem="aKO-a3-PVM" firstAttribute="leading" secondItem="1Yr-Ll-qpX" secondAttribute="leading" constant="20" id="Yuq-Zt-0rF"/>
                             <constraint firstItem="1Yr-Ll-qpX" firstAttribute="trailing" secondItem="aoH-6m-z12" secondAttribute="trailing" id="hOh-BM-rJq"/>
+                            <constraint firstItem="1Yr-Ll-qpX" firstAttribute="trailing" secondItem="aKO-a3-PVM" secondAttribute="trailing" constant="20" id="nsb-wb-jVX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -80,10 +111,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOb-cV-ibm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="150"/>
+            <point key="canvasLocation" x="840.57971014492762" y="150"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_magnifier" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

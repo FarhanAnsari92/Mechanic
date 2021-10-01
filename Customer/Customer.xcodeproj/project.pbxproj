@@ -48,6 +48,7 @@
 		28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E23270647DE0071E93D /* EditProfileViewController.swift */; };
 		2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BB27078586000FA706 /* ProfileViewController.swift */; };
 		2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */; };
+		2841B2C227078F37000FA706 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2C127078F37000FA706 /* ShadowView.swift */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -112,6 +113,7 @@
 		28373E23270647DE0071E93D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		2841B2BB27078586000FA706 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewController.swift; sourceTree = "<group>"; };
+		2841B2C127078F37000FA706 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */,
 				28CCA6B72704F29600DB1421 /* AppButton.swift */,
 				28373E142706378D0071E93D /* AppLinkLabel.swift */,
+				2841B2C127078F37000FA706 /* ShadowView.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				28CCA6B42704ED2F00DB1421 /* AddressListTableViewCell.swift in Sources */,
 				28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */,
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
+				2841B2C227078F37000FA706 /* ShadowView.swift in Sources */,
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
