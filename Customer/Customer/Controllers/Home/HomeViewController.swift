@@ -57,7 +57,7 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
             print(title.rawValue)
         case .myProfile:
             let sb = UIStoryboard(storyboard: .profile)
-            let vc = sb.instantiateViewController(withIdentifier: ProfileViewController.storyboardIdentifier)            
+            let vc = sb.instantiateViewController(withIdentifier: ProfileViewController.storyboardIdentifier)
             self.navigationController?.pushViewController(vc, animated: true)
         case .address:
             let sb = UIStoryboard(storyboard: .address)            
@@ -65,7 +65,9 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
             
             self.navigationController?.pushViewController(vc, animated: true)
         case .track:
-            print(title.rawValue)
+            let sb = UIStoryboard(storyboard: .tracking)
+            let vc = sb.instantiateViewController(withIdentifier: TrackingViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
         case .orderHistory:
             
             let sb = UIStoryboard(storyboard: .order)

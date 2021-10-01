@@ -50,6 +50,14 @@
 		2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */; };
 		2841B2C227078F37000FA706 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2C127078F37000FA706 /* ShadowView.swift */; };
 		2841B2C5270797AC000FA706 /* AddNewAddressDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2C4270797AC000FA706 /* AddNewAddressDetailsViewController.swift */; };
+		2841B2C82707A5DB000FA706 /* Tracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2C72707A5DB000FA706 /* Tracking.storyboard */; };
+		2841B2CD2707A696000FA706 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2CC2707A696000FA706 /* TrackingViewController.swift */; };
+		2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2CF2707A71A000FA706 /* ImageTableViewCell.swift */; };
+		2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2D02707A71A000FA706 /* ImageTableViewCell.xib */; };
+		2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2D42707A916000FA706 /* TrackingBookingNumberTableViewCell.swift */; };
+		2841B2D72707A916000FA706 /* TrackingBookingNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2D52707A916000FA706 /* TrackingBookingNumberTableViewCell.xib */; };
+		2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */; };
+		2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -116,6 +124,14 @@
 		2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewController.swift; sourceTree = "<group>"; };
 		2841B2C127078F37000FA706 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		2841B2C4270797AC000FA706 /* AddNewAddressDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressDetailsViewController.swift; sourceTree = "<group>"; };
+		2841B2C72707A5DB000FA706 /* Tracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tracking.storyboard; sourceTree = "<group>"; };
+		2841B2CC2707A696000FA706 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		2841B2CF2707A71A000FA706 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		2841B2D02707A71A000FA706 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		2841B2D42707A916000FA706 /* TrackingBookingNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingBookingNumberTableViewCell.swift; sourceTree = "<group>"; };
+		2841B2D52707A916000FA706 /* TrackingBookingNumberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingBookingNumberTableViewCell.xib; sourceTree = "<group>"; };
+		2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingStatusTableViewCell.swift; sourceTree = "<group>"; };
+		2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingStatusTableViewCell.xib; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,6 +225,7 @@
 				28CCA6AA2704EC4100DB1421 /* Address.storyboard */,
 				28373E1727063EC80071E93D /* Contact.storyboard */,
 				28373E1F270647A30071E93D /* Profile.storyboard */,
+				2841B2C72707A5DB000FA706 /* Tracking.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -216,6 +233,7 @@
 		280575DC26FBA5160035BC2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2841B2CA2707A678000FA706 /* Tracking */,
 				28373E22270647C40071E93D /* Profile */,
 				28373E1A270642D00071E93D /* Contact */,
 				28CCA6AD2704EC8600DB1421 /* Address */,
@@ -302,6 +320,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		2841B2CA2707A678000FA706 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				2841B2CC2707A696000FA706 /* TrackingViewController.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
 		28A88FA126FFBEFB00003EB7 /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +345,12 @@
 				28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */,
 				28CCA6B22704ED2F00DB1421 /* AddressListTableViewCell.swift */,
 				28CCA6B32704ED2F00DB1421 /* AddressListTableViewCell.xib */,
+				2841B2CF2707A71A000FA706 /* ImageTableViewCell.swift */,
+				2841B2D02707A71A000FA706 /* ImageTableViewCell.xib */,
+				2841B2D42707A916000FA706 /* TrackingBookingNumberTableViewCell.swift */,
+				2841B2D52707A916000FA706 /* TrackingBookingNumberTableViewCell.xib */,
+				2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */,
+				2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -418,6 +450,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2841B2C82707A5DB000FA706 /* Tracking.storyboard in Resources */,
+				2841B2D72707A916000FA706 /* TrackingBookingNumberTableViewCell.xib in Resources */,
 				28A88FB52700EC8B00003EB7 /* Home.storyboard in Resources */,
 				2805770C26FD05590035BC2B /* Poppins-LightItalic.ttf in Resources */,
 				2805770B26FD05590035BC2B /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -428,6 +462,7 @@
 				28CCA6AB2704EC4100DB1421 /* Address.storyboard in Resources */,
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
 				280576FD26FCFAC10035BC2B /* Poppins-SemiBold.otf in Resources */,
+				2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */,
 				28CCA6B52704ED2F00DB1421 /* AddressListTableViewCell.xib in Resources */,
 				280576FF26FCFAC10035BC2B /* Poppins-ExtraBoldItalic.otf in Resources */,
 				280576F926FCFAC10035BC2B /* Poppins-ExtraBold.otf in Resources */,
@@ -438,6 +473,7 @@
 				2805770126FCFAC10035BC2B /* Poppins-Regular.otf in Resources */,
 				28373E20270647A30071E93D /* Profile.storyboard in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
+				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
@@ -510,13 +546,16 @@
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
 				2841B2C227078F37000FA706 /* ShadowView.swift in Sources */,
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
+				2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				2841B2C5270797AC000FA706 /* AddNewAddressDetailsViewController.swift in Sources */,
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
+				2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */,
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
+				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
@@ -526,6 +565,7 @@
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
 				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
+				2841B2CD2707A696000FA706 /* TrackingViewController.swift in Sources */,
 				2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
