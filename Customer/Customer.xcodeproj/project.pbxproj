@@ -46,6 +46,8 @@
 		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
 		28373E20270647A30071E93D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1F270647A30071E93D /* Profile.storyboard */; };
 		28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E23270647DE0071E93D /* EditProfileViewController.swift */; };
+		2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BB27078586000FA706 /* ProfileViewController.swift */; };
+		2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -108,6 +110,8 @@
 		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		28373E1F270647A30071E93D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		28373E23270647DE0071E93D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		2841B2BB27078586000FA706 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewController.swift; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				28373E23270647DE0071E93D /* EditProfileViewController.swift */,
+				2841B2BB27078586000FA706 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				28CCA6AE2704EC9D00DB1421 /* AddressListViewController.swift */,
+				2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 				28CCA6B42704ED2F00DB1421 /* AddressListTableViewCell.swift in Sources */,
 				28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */,
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
+				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
@@ -511,6 +518,7 @@
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
 				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
+				2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,

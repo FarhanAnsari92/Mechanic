@@ -57,8 +57,7 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
             print(title.rawValue)
         case .myProfile:
             let sb = UIStoryboard(storyboard: .profile)
-            let vc = sb.instantiateViewController(withIdentifier: EditProfileViewController.storyboardIdentifier)
-            
+            let vc = sb.instantiateViewController(withIdentifier: ProfileViewController.storyboardIdentifier)            
             self.navigationController?.pushViewController(vc, animated: true)
         case .address:
             let sb = UIStoryboard(storyboard: .address)            
