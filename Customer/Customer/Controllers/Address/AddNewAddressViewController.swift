@@ -56,6 +56,11 @@ extension AddNewAddressViewController: UITableViewDataSource, UITableViewDelegat
         return AddressListTableViewCell.height
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(storyboard: .address)
+        let vc = sb.instantiateViewController(withIdentifier: AddNewAddressDetailsViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
