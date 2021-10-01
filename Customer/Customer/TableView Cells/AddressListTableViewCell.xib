@@ -29,31 +29,45 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E33-o9-Cao">
                         <rect key="frame" x="0.0" y="0.0" width="412" height="102"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="a36-ZC-qlE">
-                                <rect key="frame" x="20" y="28.5" width="337" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4iA-xe-Whz">
+                                <rect key="frame" x="20" y="10" width="372" height="81"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gulzar-e- Hijri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLo-UA-4U1">
-                                        <rect key="frame" x="0.0" y="0.0" width="337" height="20"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                                        <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaneez Fatima Society, Scheme 33, Karachi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrT-vZ-fTC">
-                                        <rect key="frame" x="0.0" y="25" width="337" height="20"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="10"/>
-                                        <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_grey_pin" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-q9-6nH">
+                                        <rect key="frame" x="0.0" y="34.5" width="10" height="12.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="XQg-YB-5Tm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="a36-ZC-qlE">
+                                        <rect key="frame" x="20" y="18" width="322" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gulzar-e- Hijri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLo-UA-4U1">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaneez Fatima Society, Scheme 33, Karachi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrT-vZ-fTC">
+                                                <rect key="frame" x="0.0" y="25" width="322" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="10"/>
+                                                <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit_address" translatesAutoresizingMaskIntoConstraints="NO" id="bdh-bm-ydt">
+                                        <rect key="frame" x="352" y="30.5" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bdh-bm-ydt" secondAttribute="height" multiplier="1:1" id="Bug-W5-tW4"/>
+                                            <constraint firstAttribute="width" constant="20" id="DMh-lE-AdU"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
-                            </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit_address" translatesAutoresizingMaskIntoConstraints="NO" id="bdh-bm-ydt">
-                                <rect key="frame" x="372" y="41" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="7fJ-aP-JlO"/>
-                                    <constraint firstAttribute="width" secondItem="bdh-bm-ydt" secondAttribute="height" multiplier="1:1" id="ZnA-Mk-XVx"/>
+                                    <constraint firstItem="Ngp-q9-6nH" firstAttribute="centerY" secondItem="4iA-xe-Whz" secondAttribute="centerY" id="SWr-pF-uSb"/>
                                 </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUW-b8-VtE">
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUW-b8-VtE" userLabel="Separator">
                                 <rect key="frame" x="15" y="101" width="382" height="1"/>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -64,13 +78,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="lUW-b8-VtE" secondAttribute="bottom" id="0TW-1Q-niY"/>
-                            <constraint firstItem="a36-ZC-qlE" firstAttribute="centerY" secondItem="E33-o9-Cao" secondAttribute="centerY" id="3sU-Op-gjf"/>
-                            <constraint firstItem="a36-ZC-qlE" firstAttribute="leading" secondItem="E33-o9-Cao" secondAttribute="leading" constant="20" id="4Oe-wP-mXy"/>
-                            <constraint firstAttribute="trailing" secondItem="bdh-bm-ydt" secondAttribute="trailing" constant="20" id="NIT-J7-Lrc"/>
-                            <constraint firstItem="bdh-bm-ydt" firstAttribute="centerY" secondItem="E33-o9-Cao" secondAttribute="centerY" id="Odd-pq-IYN"/>
+                            <constraint firstAttribute="trailing" secondItem="4iA-xe-Whz" secondAttribute="trailing" constant="20" id="I2r-02-OOb"/>
+                            <constraint firstItem="lUW-b8-VtE" firstAttribute="top" secondItem="4iA-xe-Whz" secondAttribute="bottom" constant="10" id="Myy-vm-loB"/>
                             <constraint firstAttribute="trailing" secondItem="lUW-b8-VtE" secondAttribute="trailing" constant="15" id="bAS-Ds-hMC"/>
+                            <constraint firstItem="4iA-xe-Whz" firstAttribute="top" secondItem="E33-o9-Cao" secondAttribute="top" constant="10" id="cPW-88-z0B"/>
                             <constraint firstItem="lUW-b8-VtE" firstAttribute="leading" secondItem="E33-o9-Cao" secondAttribute="leading" constant="15" id="i06-Ot-zxw"/>
-                            <constraint firstItem="bdh-bm-ydt" firstAttribute="leading" secondItem="a36-ZC-qlE" secondAttribute="trailing" constant="15" id="kRi-7T-IsC"/>
+                            <constraint firstItem="4iA-xe-Whz" firstAttribute="leading" secondItem="E33-o9-Cao" secondAttribute="leading" constant="20" id="ncI-cc-w6q"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -82,11 +95,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgEdit" destination="bdh-bm-ydt" id="Dp1-yf-ow5"/>
+                <outlet property="imgPin" destination="Ngp-q9-6nH" id="GMz-HZ-RBN"/>
+            </connections>
             <point key="canvasLocation" x="191.30434782608697" y="82.366071428571431"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="ic_edit_address" width="21" height="21"/>
+        <image name="ic_grey_pin" width="8.5" height="12.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

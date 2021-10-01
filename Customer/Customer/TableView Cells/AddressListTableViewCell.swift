@@ -10,6 +10,8 @@ import UIKit
 class AddressListTableViewCell: UITableViewCell {
     
     static let height: CGFloat = 60
+    @IBOutlet weak var imgPin: UIImageView!
+    @IBOutlet weak var imgEdit: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
