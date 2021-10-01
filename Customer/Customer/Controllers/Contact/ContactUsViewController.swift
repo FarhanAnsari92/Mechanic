@@ -8,6 +8,13 @@
 import UIKit
 
 class ContactUsViewController: HomeBaseViewController {
+    
+    @IBOutlet weak var contantNumberParentView: UIView! {
+        didSet {
+            contantNumberParentView.dropShadow()
+            contantNumberParentView.layer.cornerRadius = 10
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +23,8 @@ class ContactUsViewController: HomeBaseViewController {
         self.setupBackButton(color: .white)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func callNowButtonHandler(_ sender: UIButton) {
+        print("callNowButtonHandler")
     }
-    */
 
 }
