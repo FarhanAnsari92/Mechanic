@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,7 +25,34 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaL-B2-oRM" customClass="ShadowView" customModule="Customer" customModuleProvider="target">
                         <rect key="frame" x="60" y="10" width="479" height="127"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhN-dF-nyq">
+                                <rect key="frame" x="15" y="53.5" width="449" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YhN-dF-nyq" secondAttribute="trailing" constant="15" id="9xe-Zl-jU9"/>
+                            <constraint firstItem="YhN-dF-nyq" firstAttribute="centerY" secondItem="zaL-B2-oRM" secondAttribute="centerY" id="kKc-vk-zcU"/>
+                            <constraint firstItem="YhN-dF-nyq" firstAttribute="leading" secondItem="zaL-B2-oRM" secondAttribute="leading" constant="15" id="ka9-79-Mv4"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-nE-ePW" userLabel="Upper  Line">
+                        <rect key="frame" x="29" y="0.0" width="2" height="58.5"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="pRT-US-RJj"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyn-7N-scr" userLabel="Lower  Line">
+                        <rect key="frame" x="29" y="88.5" width="2" height="58.5"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="0Gq-Bp-GLo"/>
+                        </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tick" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-4e-fWR">
                         <rect key="frame" x="20" y="63.5" width="20" height="20"/>
@@ -29,17 +61,41 @@
                             <constraint firstAttribute="height" constant="20" id="Of0-3d-gbB"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-xD-XNJ">
+                        <rect key="frame" x="20" y="63.5" width="20" height="20"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Bcg-xD-XNJ" secondAttribute="height" multiplier="1:1" id="Mew-AT-ku3"/>
+                            <constraint firstAttribute="height" constant="20" id="s9q-Gf-tXd"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Gyn-7N-scr" firstAttribute="top" secondItem="ubh-4e-fWR" secondAttribute="bottom" constant="5" id="I3n-6m-lgU"/>
                     <constraint firstItem="ubh-4e-fWR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LRb-Pn-vva"/>
+                    <constraint firstItem="MH2-nE-ePW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LS4-v4-y3E"/>
                     <constraint firstItem="zaL-B2-oRM" firstAttribute="leading" secondItem="ubh-4e-fWR" secondAttribute="trailing" constant="20" id="PcK-ca-ukR"/>
                     <constraint firstAttribute="bottom" secondItem="zaL-B2-oRM" secondAttribute="bottom" constant="10" id="Uj5-UO-DUO"/>
                     <constraint firstItem="ubh-4e-fWR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XgZ-hy-mtA"/>
+                    <constraint firstItem="zaL-B2-oRM" firstAttribute="leading" secondItem="Bcg-xD-XNJ" secondAttribute="trailing" constant="20" id="bz5-cs-cri"/>
+                    <constraint firstItem="Bcg-xD-XNJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="d92-z6-vJK"/>
                     <constraint firstItem="zaL-B2-oRM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="gQb-A8-eWq"/>
+                    <constraint firstItem="ubh-4e-fWR" firstAttribute="top" secondItem="MH2-nE-ePW" secondAttribute="bottom" constant="5" id="iew-Dl-Wb3"/>
                     <constraint firstAttribute="trailing" secondItem="zaL-B2-oRM" secondAttribute="trailing" constant="20" id="ikf-Ha-j8q"/>
+                    <constraint firstItem="Bcg-xD-XNJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oDb-Zb-ty9"/>
+                    <constraint firstItem="MH2-nE-ePW" firstAttribute="centerX" secondItem="Bcg-xD-XNJ" secondAttribute="centerX" id="q6I-fK-OmS"/>
+                    <constraint firstAttribute="bottom" secondItem="Gyn-7N-scr" secondAttribute="bottom" id="rrQ-24-FnF"/>
+                    <constraint firstItem="Gyn-7N-scr" firstAttribute="centerX" secondItem="ubh-4e-fWR" secondAttribute="centerX" id="z4F-cy-1Sb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deselectView" destination="Bcg-xD-XNJ" id="JFZ-4w-FsQ"/>
+                <outlet property="imgTick" destination="ubh-4e-fWR" id="iOd-uJ-3XA"/>
+                <outlet property="lblStatus" destination="YhN-dF-nyq" id="LyP-Kl-Tyu"/>
+                <outlet property="lowerLine" destination="Gyn-7N-scr" id="oL2-r5-rWf"/>
+                <outlet property="upperLine" destination="MH2-nE-ePW" id="QOk-NP-Qvs"/>
+            </connections>
             <point key="canvasLocation" x="289.13043478260875" y="128.23660714285714"/>
         </tableViewCell>
     </objects>

@@ -37,7 +37,7 @@
 		<string>Poppins-ExtraLightItalic.ttf</string>
 		<string>Poppins-Light.ttf</string>
 		<string>Poppins-LightItalic.ttf</string>
-		<string>Poppins-Medium.otf</string>
+		<string>Poppins-Medium.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>

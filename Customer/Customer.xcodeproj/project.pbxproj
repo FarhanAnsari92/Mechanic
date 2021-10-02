@@ -58,6 +58,7 @@
 		2841B2D72707A916000FA706 /* TrackingBookingNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2D52707A916000FA706 /* TrackingBookingNumberTableViewCell.xib */; };
 		2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */; };
 		2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */; };
+		2841B2E027084478000FA706 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2DE27083AF9000FA706 /* Poppins-Medium.ttf */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -132,6 +133,7 @@
 		2841B2D52707A916000FA706 /* TrackingBookingNumberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingBookingNumberTableViewCell.xib; sourceTree = "<group>"; };
 		2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingStatusTableViewCell.swift; sourceTree = "<group>"; };
 		2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingStatusTableViewCell.xib; sourceTree = "<group>"; };
+		2841B2DE27083AF9000FA706 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,7 +146,6 @@
 		28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuTableViewCell.xib; sourceTree = "<group>"; };
 		28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewCell.swift; sourceTree = "<group>"; };
-		28CCA64C2703AACD00DB1421 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		28CCA6AA2704EC4100DB1421 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		28CCA6AE2704EC9D00DB1421 /* AddressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
 		28CCA6B22704ED2F00DB1421 /* AddressListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListTableViewCell.swift; sourceTree = "<group>"; };
@@ -283,7 +284,7 @@
 		280576EC26FCFA9A0035BC2B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				28CCA64C2703AACD00DB1421 /* Poppins-Medium.otf */,
+				2841B2DE27083AF9000FA706 /* Poppins-Medium.ttf */,
 				280576EF26FCFAC10035BC2B /* Poppins-Black.otf */,
 				280576F126FCFAC10035BC2B /* Poppins-BlackItalic.otf */,
 				280576F726FCFAC10035BC2B /* Poppins-Bold.otf */,
@@ -450,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2841B2E027084478000FA706 /* Poppins-Medium.ttf in Resources */,
 				2841B2C82707A5DB000FA706 /* Tracking.storyboard in Resources */,
 				2841B2D72707A916000FA706 /* TrackingBookingNumberTableViewCell.xib in Resources */,
 				28A88FB52700EC8B00003EB7 /* Home.storyboard in Resources */,

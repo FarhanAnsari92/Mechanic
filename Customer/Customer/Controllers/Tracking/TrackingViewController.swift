@@ -18,13 +18,33 @@ class TrackingViewController: HomeBaseViewController {
             tableView.dataSource = self
         }
     }
+    
+    let status: [String] = [
+        "Vehicle picked from location",
+        "Vehicle Inspection",
+        "Repairing Vehicle",
+        "Delivery"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tracking"
         setupBackButton(color: .white)
-        
+        setupHistoryButton()
         tableView.estimatedRowHeight = 50
+    }
+    
+    func setupHistoryButton() {
+        let btnHistory = UIBarButtonItem(title: "History", style: .plain, target: self, action: #selector(self.historyButtonHandler))
+        
+        btnHistory.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.Poppins(.medium, size: 14)], for: .normal)
+        
+        btnHistory.tintColor = .white
+        navigationItem.rightBarButtonItem = btnHistory
+    }
+    
+    @objc func historyButtonHandler() {
+        print("History")
     }
 
 }
@@ -69,7 +89,13 @@ extension TrackingViewController: UITableViewDelegate, UITableViewDataSource {
                 
             }
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: TrackingStatusTableViewCell.identifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: TrackingStatusTableViewCell.identifier, for: indexPath) as! TrackingStatusTableViewCell
+            cell.lblStatus.textColor = indexPath.row == 0 ? cell.selectedColor : cell.deselectedColor
+            cell.imgTick.isHidden = indexPath.row > 0
+            cell.deselectView.isHidden = indexPath.row == 0
+            cell.upperLine.isHidden = indexPath.row == 0
+            cell.lowerLine.isHidden = indexPath.row == status.count - 1
+            cell.lblStatus.text = status[indexPath.row]
             return cell
             
         }

@@ -8,6 +8,21 @@
 import UIKit
 
 class TrackingStatusTableViewCell: UITableViewCell {
+    
+    let selectedColor: UIColor = UIColor(hexString: "252525")
+    let deselectedColor: UIColor = UIColor.fill(white: 212)
+    
+    @IBOutlet weak var imgTick: UIImageView!
+    @IBOutlet weak var deselectView: UIView! {
+        didSet {
+            deselectView.layer.cornerRadius = 10
+            deselectView.layer.borderColor = UIColor.white.cgColor
+        }
+    }
+    @IBOutlet weak var upperLine: UIView!
+    @IBOutlet weak var lowerLine: UIView!
+    
+    @IBOutlet weak var lblStatus: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
