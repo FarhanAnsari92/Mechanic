@@ -70,6 +70,7 @@ extension HomeViewController {
         let width: CGFloat = view.frame.width - 40
         let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 55))
         let fixMyVehicleView = FixMyVehicleView().loadViewFromNib()
+        fixMyVehicleView.isUserInteractionEnabled = false
         fixMyVehicleView.frame = frame
         
         let gradient = CAGradientLayer()
