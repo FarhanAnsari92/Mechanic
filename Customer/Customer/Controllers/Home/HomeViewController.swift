@@ -10,32 +10,37 @@ import SideMenu
 import LGSideMenuController
 
 class HomeViewController: SideMenuBaseController {
-    
-//    override var sideMenuController: LGSideMenuController? {
-//        if let controller = self as? LGSideMenuController {
-//            return controller
-//        }
-//        if let controller = LGSideMenuHelper.getSideMenuController(from: self) {
-//            return controller
-//        }
-//        if let controller = self.parent?.sideMenuController {
-//            return controller
-//        }
-//        return nil
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupTitle()
+        setupLeftBarButtons()
+        setupRightBarButtons()
+        
         if let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController {
             if let leftMenuControllerr = glController.leftViewController as? LeftMenuViewController {
                 leftMenuControllerr.leftMenuDelegate = self
             }
         }
-        
+    }
+    
+    func setupLeftBarButtons() {
         let leftMenuBtn = UIBarButtonItem(image: UIImage(named: "ic_side_menu"), style: .plain, target: self, action: #selector(self.openLeftMenu))
         leftMenuBtn.tintColor = .black
-        navigationItem.leftBarButtonItem = leftMenuBtn
+
+        let leftChatBtn = UIBarButtonItem(image: UIImage(named: "ic_chat"), style: .plain, target: self, action: #selector(self.openChat))
+        leftChatBtn.tintColor = .black
+        navigationItem.leftBarButtonItems = [leftMenuBtn, leftChatBtn]
+    }
+    
+    func setupRightBarButtons() {
+        let rightNotificationBtn = UIBarButtonItem(image: UIImage(named: "ic_bell"), style: .plain, target: self, action: #selector(self.openNotifications))
+        rightNotificationBtn.tintColor = .black
+
+        let rightCartBtn = UIBarButtonItem(image: UIImage(named: "ic_cart"), style: .plain, target: self, action: #selector(self.openCart))
+        rightCartBtn.tintColor = .black
+        navigationItem.rightBarButtonItems = [rightCartBtn, rightNotificationBtn]
     }
     
     @objc func openLeftMenu() {
@@ -45,6 +50,25 @@ class HomeViewController: SideMenuBaseController {
             }
             glController.showLeftView(animated: true, completion: nil)
         }
+    }
+    
+    @objc func openChat() {
+        print("openChat")
+    }
+    
+    @objc func openNotifications() {
+        print("openNotifications")
+    }
+    @objc func openCart() {
+        print("openNotifications")
+    }
+    
+    func setupTitle() {
+        let imageName = "ic_motor_service"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
     }
 
 }
