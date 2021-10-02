@@ -37,14 +37,19 @@ class TrackingViewController: HomeBaseViewController {
     func setupHistoryButton() {
         let btnHistory = UIBarButtonItem(title: "History", style: .plain, target: self, action: #selector(self.historyButtonHandler))
         
-        btnHistory.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.Poppins(.medium, size: 14)], for: .normal)
+        btnHistory.setTitleTextAttributes(
+            [.font: UIFont.Poppins(.medium, size: 14)],
+            for: .normal
+        )
         
         btnHistory.tintColor = .white
         navigationItem.rightBarButtonItem = btnHistory
     }
     
     @objc func historyButtonHandler() {
-        print("History")
+        let sb = UIStoryboard(storyboard: .tracking)
+        let vc = sb.instantiateViewController(withIdentifier: BookingHistoryViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }

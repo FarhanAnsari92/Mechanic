@@ -59,6 +59,10 @@
 		2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */; };
 		2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */; };
 		2841B2E027084478000FA706 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2DE27083AF9000FA706 /* Poppins-Medium.ttf */; };
+		2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2E22708453C000FA706 /* BookingHistoryViewController.swift */; };
+		2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2E5270846D9000FA706 /* BookingHistoryTableViewCell.swift */; };
+		2841B2E8270846D9000FA706 /* BookingHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2E6270846D9000FA706 /* BookingHistoryTableViewCell.xib */; };
+		2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -134,6 +138,10 @@
 		2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingStatusTableViewCell.swift; sourceTree = "<group>"; };
 		2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingStatusTableViewCell.xib; sourceTree = "<group>"; };
 		2841B2DE27083AF9000FA706 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		2841B2E22708453C000FA706 /* BookingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryViewController.swift; sourceTree = "<group>"; };
+		2841B2E5270846D9000FA706 /* BookingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		2841B2E6270846D9000FA706 /* BookingHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -325,6 +333,8 @@
 			isa = PBXGroup;
 			children = (
 				2841B2CC2707A696000FA706 /* TrackingViewController.swift */,
+				2841B2E22708453C000FA706 /* BookingHistoryViewController.swift */,
+				2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */,
 			);
 			path = Tracking;
 			sourceTree = "<group>";
@@ -352,6 +362,8 @@
 				2841B2D52707A916000FA706 /* TrackingBookingNumberTableViewCell.xib */,
 				2841B2D92707ADB7000FA706 /* TrackingStatusTableViewCell.swift */,
 				2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */,
+				2841B2E5270846D9000FA706 /* BookingHistoryTableViewCell.swift */,
+				2841B2E6270846D9000FA706 /* BookingHistoryTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -465,6 +477,7 @@
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
 				280576FD26FCFAC10035BC2B /* Poppins-SemiBold.otf in Resources */,
 				2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */,
+				2841B2E8270846D9000FA706 /* BookingHistoryTableViewCell.xib in Resources */,
 				28CCA6B52704ED2F00DB1421 /* AddressListTableViewCell.xib in Resources */,
 				280576FF26FCFAC10035BC2B /* Poppins-ExtraBoldItalic.otf in Resources */,
 				280576F926FCFAC10035BC2B /* Poppins-ExtraBold.otf in Resources */,
@@ -548,6 +561,7 @@
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
 				2841B2C227078F37000FA706 /* ShadowView.swift in Sources */,
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
+				2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */,
 				2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				2841B2C5270797AC000FA706 /* AddNewAddressDetailsViewController.swift in Sources */,
@@ -556,6 +570,8 @@
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
+				2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */,
+				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,

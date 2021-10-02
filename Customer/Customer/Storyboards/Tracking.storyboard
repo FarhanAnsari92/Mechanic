@@ -39,6 +39,51 @@
             </objects>
             <point key="canvasLocation" x="-475" y="56"/>
         </scene>
+        <!--Booking History View Controller-->
+        <scene sceneID="q3F-vO-84A">
+            <objects>
+                <viewController storyboardIdentifier="BookingHistoryViewController" id="lV7-pN-Ba2" customClass="BookingHistoryViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vQj-gW-qRj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="12O-0C-VG3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0ja-8P-JsY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="12O-0C-VG3" firstAttribute="leading" secondItem="0ja-8P-JsY" secondAttribute="leading" id="Cwn-Wv-mOJ"/>
+                            <constraint firstItem="0ja-8P-JsY" firstAttribute="bottom" secondItem="12O-0C-VG3" secondAttribute="bottom" id="N2K-hK-lr5"/>
+                            <constraint firstItem="12O-0C-VG3" firstAttribute="top" secondItem="0ja-8P-JsY" secondAttribute="top" id="RkY-Fj-erf"/>
+                            <constraint firstItem="0ja-8P-JsY" firstAttribute="trailing" secondItem="12O-0C-VG3" secondAttribute="trailing" id="ctk-q1-MXg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="12O-0C-VG3" id="Tjf-pK-bcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIB-uY-hxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="56"/>
+        </scene>
+        <!--Booking Details View Controller-->
+        <scene sceneID="roL-EI-aac">
+            <objects>
+                <viewController storyboardIdentifier="BookingDetailsViewController" id="S9d-wZ-lVA" customClass="BookingDetailsViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Umh-Z4-G09">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vug-6v-D7G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvs-aQ-PWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="56"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
