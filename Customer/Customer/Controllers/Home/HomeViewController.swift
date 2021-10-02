@@ -10,6 +10,9 @@ import SideMenu
 import LGSideMenuController
 
 class HomeViewController: SideMenuBaseController {
+    
+    @IBOutlet weak var btnFixMyVehicle: UIButton!
+    @IBOutlet weak var lblAutoParts: InteractiveLinkLabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +20,32 @@ class HomeViewController: SideMenuBaseController {
         setupTitle()
         setupLeftBarButtons()
         setupRightBarButtons()
+        setupAutoPartsLabel()
         
         if let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController {
             if let leftMenuControllerr = glController.leftViewController as? LeftMenuViewController {
                 leftMenuControllerr.leftMenuDelegate = self
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupFixMyVehicleButton()
+    }
+    
+}
+
+// MARK: View Setup
+
+extension HomeViewController {
+    
+    func setupTitle() {
+        let imageName = "ic_motor_service"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
     }
     
     func setupLeftBarButtons() {
@@ -43,6 +66,55 @@ class HomeViewController: SideMenuBaseController {
         navigationItem.rightBarButtonItems = [rightCartBtn, rightNotificationBtn]
     }
     
+    func setupFixMyVehicleButton() {
+        let width: CGFloat = view.frame.width - 40
+        let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 55))
+        let fixMyVehicleView = FixMyVehicleView().loadViewFromNib()
+        fixMyVehicleView.frame = frame
+        
+        let gradient = CAGradientLayer()
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradient.endPoint = CGPoint(x: 5.0, y: 0.0)
+        gradient.colors = [
+            UIColor.Theme.green.cgColor,
+            UIColor.fill(red: 93, green: 197, blue: 123).cgColor
+        ]
+        gradient.locations = [0.0, 0.1]
+        gradient.frame = frame
+        fixMyVehicleView.layer.insertSublayer(gradient, at: 0)
+        fixMyVehicleView.layer.masksToBounds = true
+        fixMyVehicleView.layer.cornerRadius = 10
+        btnFixMyVehicle.addSubview(fixMyVehicleView)
+    }
+    
+    private func setupAutoPartsLabel() {
+        
+        let plainText = "1000+ Auto Parts & "
+        let tappableText = "Accessories"
+        
+        let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: UIColor(hexString: "1F2937"), .font: UIFont.Poppins(.semiBold, size: 18)])
+        
+        let attributedLinkString = NSMutableAttributedString(
+            string: tappableText,
+            attributes:[
+                .foregroundColor: UIColor(hexString: "1F2937"),
+                .font: UIFont.Poppins(.regular, size: 18)
+            ]
+        )
+        let fullAttributedString = NSMutableAttributedString()
+        fullAttributedString.append(plainAttributedString)
+        fullAttributedString.append(attributedLinkString)
+        lblAutoParts.isUserInteractionEnabled = false
+        lblAutoParts.attributedText = fullAttributedString
+
+    }
+    
+}
+
+// MARK: Actions
+
+extension HomeViewController {
+    
     @objc func openLeftMenu() {
         if let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController {
             if let leftMenuControllerr = glController.leftViewController as? LeftMenuViewController {
@@ -59,18 +131,23 @@ class HomeViewController: SideMenuBaseController {
     @objc func openNotifications() {
         print("openNotifications")
     }
+    
     @objc func openCart() {
         print("openNotifications")
     }
     
-    func setupTitle() {
-        let imageName = "ic_motor_service"
-        let image = UIImage(named: imageName)
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFit
-        self.navigationItem.titleView = imageView
+    @IBAction func filterButtonHandler(_ sender: UIButton) {
+        print("filterButtonHandler")
     }
-
+    
+    @IBAction func searchGoButtonHandler(_ sender: UIButton) {
+        print("searchGoButtonHandler")
+    }
+    
+    @IBAction func fixMyVehicleButtonHandler(_ sender: UIButton) {
+        print("fixMyVehicleButtonHandler")
+    }
+    
 }
 
 extension HomeViewController: LeftMenuContainerViewControllerDelegate {
@@ -114,4 +191,16 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
         }
     }
     
+}
+
+class Colors {
+    var gl:CAGradientLayer!
+
+    init(color1: UIColor, color2: UIColor) {
+        self.gl = CAGradientLayer()
+        self.gl.startPoint = CGPoint(x: 0, y: 0)
+        self.gl.endPoint = CGPoint(x: 1, y: 0)
+        self.gl.colors = [color1.cgColor, color1.cgColor]
+        self.gl.locations = [0.0, 1.0]
+    }
 }

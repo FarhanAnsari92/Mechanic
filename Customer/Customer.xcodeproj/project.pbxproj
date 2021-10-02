@@ -63,6 +63,8 @@
 		2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2E5270846D9000FA706 /* BookingHistoryTableViewCell.swift */; };
 		2841B2E8270846D9000FA706 /* BookingHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2E6270846D9000FA706 /* BookingHistoryTableViewCell.xib */; };
 		2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */; };
+		2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2EE2708BB6D000FA706 /* FixMyVehicleView.swift */; };
+		2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2F12708BB82000FA706 /* FixMyVehicleView.xib */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -142,6 +144,8 @@
 		2841B2E5270846D9000FA706 /* BookingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		2841B2E6270846D9000FA706 /* BookingHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
+		2841B2EE2708BB6D000FA706 /* FixMyVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixMyVehicleView.swift; sourceTree = "<group>"; };
+		2841B2F12708BB82000FA706 /* FixMyVehicleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixMyVehicleView.xib; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				280575DC26FBA5160035BC2B /* Controllers */,
 				280575D826FBA4B30035BC2B /* Storyboards */,
 				28A88FA626FFC18100003EB7 /* TableView Cells */,
+				2841B2ED2708BB40000FA706 /* CustomViews */,
 				280575D326FBA2F10035BC2B /* Utilities */,
 				280576EB26FCFA830035BC2B /* Resources */,
 			);
@@ -337,6 +342,15 @@
 				2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */,
 			);
 			path = Tracking;
+			sourceTree = "<group>";
+		};
+		2841B2ED2708BB40000FA706 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2841B2EE2708BB6D000FA706 /* FixMyVehicleView.swift */,
+				2841B2F12708BB82000FA706 /* FixMyVehicleView.xib */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		28A88FA126FFBEFB00003EB7 /* Order */ = {
@@ -489,6 +503,7 @@
 				28373E20270647A30071E93D /* Profile.storyboard in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
+				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
@@ -578,6 +593,7 @@
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
 				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
+				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
