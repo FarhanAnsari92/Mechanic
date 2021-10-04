@@ -65,6 +65,13 @@
 		2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */; };
 		2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2EE2708BB6D000FA706 /* FixMyVehicleView.swift */; };
 		2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2F12708BB82000FA706 /* FixMyVehicleView.xib */; };
+		2841B2F62708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2F42708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift */; };
+		2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2F52708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib */; };
+		2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2FA270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift */; };
+		2841B2FD270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B2FB270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib */; };
+		2841B300270A4401000FA706 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2FF270A4401000FA706 /* SectionHeader.swift */; };
+		2841B304270A455C000FA706 /* AccessoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B302270A455C000FA706 /* AccessoriesCollectionViewCell.swift */; };
+		2841B305270A455C000FA706 /* AccessoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B303270A455C000FA706 /* AccessoriesCollectionViewCell.xib */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -146,6 +153,13 @@
 		2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
 		2841B2EE2708BB6D000FA706 /* FixMyVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixMyVehicleView.swift; sourceTree = "<group>"; };
 		2841B2F12708BB82000FA706 /* FixMyVehicleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixMyVehicleView.xib; sourceTree = "<group>"; };
+		2841B2F42708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPartsAndAccessoriesTableViewCell.swift; sourceTree = "<group>"; };
+		2841B2F52708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoPartsAndAccessoriesTableViewCell.xib; sourceTree = "<group>"; };
+		2841B2FA270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPartsAndAccessoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		2841B2FB270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoPartsAndAccessoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		2841B2FF270A4401000FA706 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		2841B302270A455C000FA706 /* AccessoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		2841B303270A455C000FA706 /* AccessoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -208,6 +222,7 @@
 				280575DC26FBA5160035BC2B /* Controllers */,
 				280575D826FBA4B30035BC2B /* Storyboards */,
 				28A88FA626FFC18100003EB7 /* TableView Cells */,
+				2841B2F9270A390A000FA706 /* ColletionView Cells */,
 				2841B2ED2708BB40000FA706 /* CustomViews */,
 				280575D326FBA2F10035BC2B /* Utilities */,
 				280576EB26FCFA830035BC2B /* Resources */,
@@ -353,6 +368,18 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		2841B2F9270A390A000FA706 /* ColletionView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2841B2FA270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift */,
+				2841B2FB270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib */,
+				2841B2FF270A4401000FA706 /* SectionHeader.swift */,
+				2841B302270A455C000FA706 /* AccessoriesCollectionViewCell.swift */,
+				2841B303270A455C000FA706 /* AccessoriesCollectionViewCell.xib */,
+			);
+			path = "ColletionView Cells";
+			sourceTree = "<group>";
+		};
 		28A88FA126FFBEFB00003EB7 /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +405,8 @@
 				2841B2DA2707ADB7000FA706 /* TrackingStatusTableViewCell.xib */,
 				2841B2E5270846D9000FA706 /* BookingHistoryTableViewCell.swift */,
 				2841B2E6270846D9000FA706 /* BookingHistoryTableViewCell.xib */,
+				2841B2F42708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift */,
+				2841B2F52708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -488,6 +517,7 @@
 				2805770A26FD05590035BC2B /* Poppins-Light.ttf in Resources */,
 				280576FB26FCFAC10035BC2B /* Poppins-SemiBoldItalic.otf in Resources */,
 				28CCA6AB2704EC4100DB1421 /* Address.storyboard in Resources */,
+				2841B305270A455C000FA706 /* AccessoriesCollectionViewCell.xib in Resources */,
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
 				280576FD26FCFAC10035BC2B /* Poppins-SemiBold.otf in Resources */,
 				2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */,
@@ -503,12 +533,14 @@
 				28373E20270647A30071E93D /* Profile.storyboard in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
+				2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */,
 				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
 				280576FC26FCFAC10035BC2B /* Poppins-BlackItalic.otf in Resources */,
+				2841B2FD270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib in Resources */,
 				28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +609,7 @@
 				2841B2C227078F37000FA706 /* ShadowView.swift in Sources */,
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
 				2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */,
+				2841B304270A455C000FA706 /* AccessoriesCollectionViewCell.swift in Sources */,
 				2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				2841B2C5270797AC000FA706 /* AddNewAddressDetailsViewController.swift in Sources */,
@@ -586,6 +619,7 @@
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */,
+				2841B2F62708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift in Sources */,
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
@@ -593,6 +627,7 @@
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
 				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
+				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
 				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
@@ -604,6 +639,7 @@
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,
+				2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

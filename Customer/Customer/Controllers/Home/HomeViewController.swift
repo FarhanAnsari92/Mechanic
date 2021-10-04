@@ -14,6 +14,18 @@ class HomeViewController: SideMenuBaseController {
     @IBOutlet weak var btnFixMyVehicle: UIButton!
     @IBOutlet weak var lblAutoParts: InteractiveLinkLabel!
 
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
+            
+            collectionView.register(AutoPartsAndAccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier)
+            collectionView.register(AccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoriesCollectionViewCell.identifier)
+            
+            collectionView.delegate = self
+            collectionView.dataSource = self
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -151,6 +163,66 @@ extension HomeViewController {
     
 }
 
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! SectionHeader
+        sectionHeader.label.text = "Categories"
+        sectionHeader.configure()
+        return sectionHeader
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 40)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return section == 0 ? 1 : 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier, for: indexPath)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoriesCollectionViewCell.identifier, for: indexPath)
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 0 {
+            let itemsPerRow:CGFloat = 1
+            let padding:CGFloat = 20
+            let itemWidth = (collectionView.bounds.width / itemsPerRow) - padding
+            return CGSize(width: itemWidth, height: 60)
+        } else {
+            
+            let numberOfItemsPerRow: CGFloat = 2
+            let spacing: CGFloat = 20
+            let totalSpace: CGFloat = (spacing * numberOfItemsPerRow) + 5
+            let totalWidth = collectionView.frame.width - totalSpace
+            let itemWidth = totalWidth / 2
+            
+            return CGSize(width: itemWidth, height: itemWidth * 1.3)
+            
+        }
+        
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+    }
+}
+
 extension HomeViewController: LeftMenuContainerViewControllerDelegate {
     
     func didSelect(_ title: LeftMenuType) {
@@ -192,16 +264,4 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
         }
     }
     
-}
-
-class Colors {
-    var gl:CAGradientLayer!
-
-    init(color1: UIColor, color2: UIColor) {
-        self.gl = CAGradientLayer()
-        self.gl.startPoint = CGPoint(x: 0, y: 0)
-        self.gl.endPoint = CGPoint(x: 1, y: 0)
-        self.gl.colors = [color1.cgColor, color1.cgColor]
-        self.gl.locations = [0.0, 1.0]
-    }
 }
