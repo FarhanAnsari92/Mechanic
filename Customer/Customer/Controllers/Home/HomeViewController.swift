@@ -20,6 +20,7 @@ class HomeViewController: SideMenuBaseController {
             
             collectionView.register(AutoPartsAndAccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier)
             collectionView.register(AccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoriesCollectionViewCell.identifier)
+            collectionView.register(BannerViewCollectionViewCell.nib, forCellWithReuseIdentifier: BannerViewCollectionViewCell.identifier)
             
             collectionView.delegate = self
             collectionView.dataSource = self
@@ -166,7 +167,7 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -177,16 +178,22 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 40)
+        return CGSize(width: collectionView.frame.width, height: section == 1 ? 0 : 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 20
+        if section == 0 || section == 1 {
+            return 1
+        }
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier, for: indexPath)
+            return cell
+        } else if indexPath.section == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerViewCollectionViewCell.identifier, for: indexPath)
             return cell
         } else {
             // 2 liner item name will not work in iPhone 5s sized devices.
@@ -204,6 +211,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let padding:CGFloat = 20
             let itemWidth = (collectionView.bounds.width / itemsPerRow) - padding
             return CGSize(width: itemWidth, height: 60)
+        } else if indexPath.section == 1 {
+            let itemWidth = collectionView.bounds.width
+            return CGSize(width: itemWidth, height: itemWidth * 0.4)
         } else {
             
             let numberOfItemsPerRow: CGFloat = 2
