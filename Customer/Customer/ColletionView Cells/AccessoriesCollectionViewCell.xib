@@ -8,22 +8,77 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AccessoriesCollectionViewCell" id="gTV-IL-0wX" customClass="AccessoriesCollectionViewCell" customModule="Customer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="261" height="263"/>
+            <rect key="frame" x="0.0" y="0.0" width="240" height="319"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="261" height="263"/>
+                <rect key="frame" x="0.0" y="0.0" width="240" height="319"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8V-Qn-NRE">
-                        <rect key="frame" x="0.0" y="0.0" width="261" height="263"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="319"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-Ys-yM3" customClass="ShadowView" customModule="Customer" customModuleProvider="target">
-                                <rect key="frame" x="5" y="5" width="251" height="253"/>
+                                <rect key="frame" x="5" y="5" width="230" height="309"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="winter_maks" translatesAutoresizingMaskIntoConstraints="NO" id="pKA-MA-Up6">
+                                        <rect key="frame" x="5" y="5" width="220" height="240.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHc-nD-aRe">
+                                        <rect key="frame" x="5" y="250.5" width="220" height="14"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                        <color key="textColor" red="0.12156862745098039" green="0.16078431372549018" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs. 2,300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htT-nn-FKB">
+                                        <rect key="frame" x="5" y="269.5" width="220" height="17"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                        <color key="textColor" red="0.3411764705882353" green="0.52941176470588236" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52h-Fr-nJh">
+                                        <rect key="frame" x="17" y="291.5" width="208" height="10"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="7"/>
+                                        <color key="textColor" red="0.12156862745098039" green="0.16078431372549018" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rating_star_small" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-b8-Ofg">
+                                        <rect key="frame" x="5" y="289" width="10" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="WOq-uL-deg"/>
+                                            <constraint firstAttribute="height" constant="15" id="h7w-Sl-gqQ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="52h-Fr-nJh" firstAttribute="leading" secondItem="KYw-b8-Ofg" secondAttribute="trailing" constant="2" id="0iC-L0-vGk"/>
+                                    <constraint firstItem="pKA-MA-Up6" firstAttribute="top" secondItem="dq0-Ys-yM3" secondAttribute="top" constant="5" id="5Xl-60-rLS"/>
+                                    <constraint firstItem="htT-nn-FKB" firstAttribute="top" secondItem="QHc-nD-aRe" secondAttribute="bottom" constant="5" id="Agi-DH-JAA"/>
+                                    <constraint firstItem="htT-nn-FKB" firstAttribute="leading" secondItem="dq0-Ys-yM3" secondAttribute="leading" constant="5" id="B1V-Mf-Mgk"/>
+                                    <constraint firstAttribute="trailing" secondItem="52h-Fr-nJh" secondAttribute="trailing" constant="5" id="IoY-47-9s7"/>
+                                    <constraint firstAttribute="trailing" secondItem="htT-nn-FKB" secondAttribute="trailing" constant="5" id="ORt-bL-Bnk"/>
+                                    <constraint firstItem="52h-Fr-nJh" firstAttribute="centerY" secondItem="KYw-b8-Ofg" secondAttribute="centerY" id="UEc-77-jAp"/>
+                                    <constraint firstItem="pKA-MA-Up6" firstAttribute="leading" secondItem="dq0-Ys-yM3" secondAttribute="leading" constant="5" id="WTW-PD-xMD"/>
+                                    <constraint firstItem="QHc-nD-aRe" firstAttribute="top" secondItem="pKA-MA-Up6" secondAttribute="bottom" constant="5" id="Waw-M0-xWj"/>
+                                    <constraint firstAttribute="bottom" secondItem="KYw-b8-Ofg" secondAttribute="bottom" constant="5" id="YCq-rO-dk9"/>
+                                    <constraint firstItem="52h-Fr-nJh" firstAttribute="top" secondItem="htT-nn-FKB" secondAttribute="bottom" constant="5" id="YhQ-wU-AAo"/>
+                                    <constraint firstItem="QHc-nD-aRe" firstAttribute="leading" secondItem="dq0-Ys-yM3" secondAttribute="leading" constant="5" id="ZfO-XS-HX3"/>
+                                    <constraint firstAttribute="trailing" secondItem="pKA-MA-Up6" secondAttribute="trailing" constant="5" id="gnn-lQ-0uP"/>
+                                    <constraint firstAttribute="trailing" secondItem="QHc-nD-aRe" secondAttribute="trailing" constant="5" id="ksc-Ic-UgQ"/>
+                                    <constraint firstItem="KYw-b8-Ofg" firstAttribute="leading" secondItem="dq0-Ys-yM3" secondAttribute="leading" constant="5" id="p0I-cf-RxD"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,11 +98,18 @@
                 <constraint firstAttribute="trailing" secondItem="G8V-Qn-NRE" secondAttribute="trailing" id="eZw-FA-hEX"/>
                 <constraint firstAttribute="bottom" secondItem="G8V-Qn-NRE" secondAttribute="bottom" id="zkn-SK-M5f"/>
             </constraints>
-            <size key="customSize" width="261" height="263"/>
-            <point key="canvasLocation" x="276.08695652173913" y="140.95982142857142"/>
+            <size key="customSize" width="240" height="319"/>
+            <connections>
+                <outlet property="lblPrice" destination="htT-nn-FKB" id="IMD-8C-int"/>
+                <outlet property="lblRating" destination="52h-Fr-nJh" id="3bN-BV-E54"/>
+                <outlet property="lblTitle" destination="QHc-nD-aRe" id="URe-nZ-kiK"/>
+            </connections>
+            <point key="canvasLocation" x="259.4202898550725" y="159.70982142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="ic_rating_star_small" width="9" height="8.5"/>
+        <image name="winter_maks" width="145" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

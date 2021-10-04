@@ -8,10 +8,18 @@
 import UIKit
 
 class AccessoriesCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var lblTitle: UILabel! {
+        didSet{
+            lblTitle.text = "aasd"
+        }
+    }
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblRating: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
 }
