@@ -143,7 +143,9 @@ extension HomeViewController {
     }
     
     @objc func openNotifications() {
-        print("openNotifications")
+        let sb = UIStoryboard(storyboard: .notification)
+        let vc = sb.instantiateViewController(withIdentifier: NotificationViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func openCart() {

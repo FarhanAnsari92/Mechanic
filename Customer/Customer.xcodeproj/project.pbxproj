@@ -96,6 +96,8 @@
 		28CCA6B52704ED2F00DB1421 /* AddressListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CCA6B32704ED2F00DB1421 /* AddressListTableViewCell.xib */; };
 		28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA6B72704F29600DB1421 /* AppButton.swift */; };
 		5953FB0EB47E9C42D53DD4BD /* Pods_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */; };
+		C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8533D270CCC2F00066B1E /* Notification.storyboard */; };
+		C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85340270CCCA400066B1E /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +194,8 @@
 		5EE034CF885286C63D4DB69E /* Pods-Customer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.release.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.release.xcconfig"; sourceTree = "<group>"; };
 		93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Customer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8486B28AB1E1F1158B3B864 /* Pods-Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.debug.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.debug.xcconfig"; sourceTree = "<group>"; };
+		C9A8533D270CCC2F00066B1E /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		C9A85340270CCCA400066B1E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,7 @@
 				28373E1727063EC80071E93D /* Contact.storyboard */,
 				28373E1F270647A30071E93D /* Profile.storyboard */,
 				2841B2C72707A5DB000FA706 /* Tracking.storyboard */,
+				C9A8533D270CCC2F00066B1E /* Notification.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 		280575DC26FBA5160035BC2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9A8533F270CCC7700066B1E /* Notification */,
 				2841B2CA2707A678000FA706 /* Tracking */,
 				28373E22270647C40071E93D /* Profile */,
 				28373E1A270642D00071E93D /* Contact */,
@@ -457,6 +463,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C9A8533F270CCC7700066B1E /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				C9A85340270CCCA400066B1E /* NotificationViewController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		F3D35D5C440184DC2D1DAA9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +567,7 @@
 				2805770126FCFAC10035BC2B /* Poppins-Regular.otf in Resources */,
 				28373E20270647A30071E93D /* Profile.storyboard in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
+				C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */,
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
 				2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */,
 				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
@@ -625,6 +640,7 @@
 				2841B458270B92BD000FA706 /* BannerCollectionViewCell.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
+				C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */,
 				28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */,
 				28CCA6B42704ED2F00DB1421 /* AddressListTableViewCell.swift in Sources */,
 				28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */,
