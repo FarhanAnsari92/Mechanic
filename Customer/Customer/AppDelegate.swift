@@ -9,7 +9,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import LGSideMenuController
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
