@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Order History View Controller-->
         <scene sceneID="F3l-w0-ksk">
@@ -19,17 +23,17 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="klT-GF-1qG">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="UYD-3H-0EB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="UYD-3H-0EB" firstAttribute="trailing" secondItem="klT-GF-1qG" secondAttribute="trailing" id="B8H-sS-nh8"/>
                             <constraint firstItem="klT-GF-1qG" firstAttribute="top" secondItem="UYD-3H-0EB" secondAttribute="top" id="EDW-tH-0jl"/>
                             <constraint firstItem="klT-GF-1qG" firstAttribute="leading" secondItem="UYD-3H-0EB" secondAttribute="leading" id="neS-Yh-eL6"/>
                             <constraint firstItem="UYD-3H-0EB" firstAttribute="bottom" secondItem="klT-GF-1qG" secondAttribute="bottom" id="rVM-bV-BFl"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="UYD-3H-0EB"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="klT-GF-1qG" id="giU-dd-RXk"/>
@@ -37,12 +41,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="se0-cl-b6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-326" y="93"/>
+            <point key="canvasLocation" x="-704" y="-276"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="ysh-YC-6Ng">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" id="cQg-ED-DlW" customClass="HistoryViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wW6-87-zdB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vGG-f8-o7y">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cur-mk-PnB">
+                                <rect key="frame" x="17" y="66" width="182" height="26"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cur-mk-PnB" firstAttribute="leading" secondItem="E06-a9-f0s" secondAttribute="leading" constant="17" id="8Pc-ae-oor"/>
+                            <constraint firstItem="E06-a9-f0s" firstAttribute="trailing" secondItem="cur-mk-PnB" secondAttribute="trailing" constant="215" id="9U7-UR-vGl"/>
+                            <constraint firstItem="E06-a9-f0s" firstAttribute="trailing" secondItem="vGG-f8-o7y" secondAttribute="trailing" id="HP4-Ay-lCF"/>
+                            <constraint firstItem="E06-a9-f0s" firstAttribute="bottom" secondItem="vGG-f8-o7y" secondAttribute="bottom" id="M7D-x5-7qE"/>
+                            <constraint firstItem="cur-mk-PnB" firstAttribute="top" secondItem="E06-a9-f0s" secondAttribute="top" constant="22" id="MOX-8g-GCM"/>
+                            <constraint firstItem="vGG-f8-o7y" firstAttribute="leading" secondItem="E06-a9-f0s" secondAttribute="leading" id="dSB-9w-GbV"/>
+                            <constraint firstItem="vGG-f8-o7y" firstAttribute="top" secondItem="E06-a9-f0s" secondAttribute="top" constant="50" id="g2a-XR-hRj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E06-a9-f0s"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblview" destination="vGG-f8-o7y" id="ncB-Y5-dpY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWa-vq-pO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="-279"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

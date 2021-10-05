@@ -59,8 +59,8 @@ class VerifyNumberViewController: BaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .order)
-        let vc = sb.instantiateViewController(withIdentifier: OrderHistoryViewController.storyboardIdentifier)
+        let sb = UIStoryboard(storyboard: .vehicle)
+        let vc = sb.instantiateViewController(withIdentifier: MyVehicleViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

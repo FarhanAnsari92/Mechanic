@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--My Vehicle View Controller-->
+        <scene sceneID="Pnh-Ei-UAJ">
+            <objects>
+                <viewController storyboardIdentifier="MyVehicleViewController" id="4mJ-dU-1dC" customClass="MyVehicleViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vdd-Dg-TeN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Kb-KG-PNb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="051-au-yog">
+                                <rect key="frame" x="22" y="719" width="376" height="55"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.52941176469999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Dls-kB-P0t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
+                                <state key="normal" title="Add New">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddNewButtonHandler:" destination="4mJ-dU-1dC" eventType="touchUpInside" id="wrV-sx-qmi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kp3-aZ-nGU" firstAttribute="bottom" secondItem="051-au-yog" secondAttribute="bottom" constant="88" id="35t-qU-NJb"/>
+                            <constraint firstItem="Kp3-aZ-nGU" firstAttribute="trailing" secondItem="051-au-yog" secondAttribute="trailing" constant="16" id="EOx-NS-D99"/>
+                            <constraint firstItem="4Kb-KG-PNb" firstAttribute="leading" secondItem="Kp3-aZ-nGU" secondAttribute="leading" id="H1Z-rJ-uXU"/>
+                            <constraint firstItem="Kp3-aZ-nGU" firstAttribute="bottom" secondItem="4Kb-KG-PNb" secondAttribute="bottom" constant="200" id="o5o-gk-eHl"/>
+                            <constraint firstItem="4Kb-KG-PNb" firstAttribute="trailing" secondItem="Kp3-aZ-nGU" secondAttribute="trailing" id="obJ-JL-apb"/>
+                            <constraint firstItem="051-au-yog" firstAttribute="leading" secondItem="Kp3-aZ-nGU" secondAttribute="leading" constant="22" id="tP2-Bv-KaI"/>
+                            <constraint firstItem="4Kb-KG-PNb" firstAttribute="top" secondItem="Kp3-aZ-nGU" secondAttribute="top" id="whO-x7-Mx0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kp3-aZ-nGU"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAddNew" destination="051-au-yog" id="aIR-ar-L3v"/>
+                        <outlet property="tblview_vic" destination="4Kb-KG-PNb" id="GAg-F8-fCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afa-2V-MzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-603" y="141"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0q1-Wm-SJw">
+            <objects>
+                <viewController id="qLv-IK-nbW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CuR-XI-Dwf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NIo-f7-0g1">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Services Below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT8-K9-f8M">
+                                <rect key="frame" x="17" y="66" width="172.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="16"/>
+                                <color key="textColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kT8-K9-f8M" firstAttribute="top" secondItem="a4n-0I-KnA" secondAttribute="top" constant="22" id="F1N-15-cj3"/>
+                            <constraint firstItem="NIo-f7-0g1" firstAttribute="top" secondItem="a4n-0I-KnA" secondAttribute="top" constant="50" id="IHZ-qG-9gz"/>
+                            <constraint firstItem="a4n-0I-KnA" firstAttribute="bottom" secondItem="NIo-f7-0g1" secondAttribute="bottom" id="JCI-44-FZa"/>
+                            <constraint firstItem="kT8-K9-f8M" firstAttribute="leading" secondItem="a4n-0I-KnA" secondAttribute="leading" constant="17" id="Zr4-rV-tUV"/>
+                            <constraint firstItem="NIo-f7-0g1" firstAttribute="leading" secondItem="a4n-0I-KnA" secondAttribute="leading" id="br9-d5-mEQ"/>
+                            <constraint firstItem="a4n-0I-KnA" firstAttribute="trailing" secondItem="NIo-f7-0g1" secondAttribute="trailing" id="ygQ-6B-bMm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a4n-0I-KnA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ii-wa-UEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="143"/>
+        </scene>
+    </scenes>
+</document>

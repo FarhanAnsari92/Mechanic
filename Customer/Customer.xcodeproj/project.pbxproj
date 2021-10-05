@@ -46,6 +46,14 @@
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
 		28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */; };
 		5953FB0EB47E9C42D53DD4BD /* Pods_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */; };
+		C973517C2708274000E976AC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973517B2708274000E976AC /* HistoryViewController.swift */; };
+		C973517F2708298100E976AC /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973517D2708298100E976AC /* HistoryTableViewCell.swift */; };
+		C97351802708298100E976AC /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C973517E2708298100E976AC /* HistoryTableViewCell.xib */; };
+		C97918B0270998A200E4ECDF /* SelectServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97918AF270998A200E4ECDF /* SelectServicesViewController.swift */; };
+		C979BA3C270850540026D6F3 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C979BA3B270850540026D6F3 /* Vehicle.storyboard */; };
+		C979BA3E270850AB0026D6F3 /* MyVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C979BA3D270850AB0026D6F3 /* MyVehicleViewController.swift */; };
+		C98694DC27088BF00012F466 /* MyVehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98694DA27088BF00012F466 /* MyVehicleTableViewCell.swift */; };
+		C98694DD27088BF00012F466 /* MyVehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98694DB27088BF00012F466 /* MyVehicleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +100,14 @@
 		5EE034CF885286C63D4DB69E /* Pods-Customer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.release.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.release.xcconfig"; sourceTree = "<group>"; };
 		93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Customer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8486B28AB1E1F1158B3B864 /* Pods-Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.debug.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.debug.xcconfig"; sourceTree = "<group>"; };
+		C973517B2708274000E976AC /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		C973517D2708298100E976AC /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		C973517E2708298100E976AC /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		C97918AF270998A200E4ECDF /* SelectServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesViewController.swift; sourceTree = "<group>"; };
+		C979BA3B270850540026D6F3 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
+		C979BA3D270850AB0026D6F3 /* MyVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleViewController.swift; sourceTree = "<group>"; };
+		C98694DA27088BF00012F466 /* MyVehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleTableViewCell.swift; sourceTree = "<group>"; };
+		C98694DB27088BF00012F466 /* MyVehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyVehicleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +175,7 @@
 			children = (
 				280575D926FBA4F70035BC2B /* Authentication.storyboard */,
 				28A88F9E26FFBEB500003EB7 /* Order.storyboard */,
+				C979BA3B270850540026D6F3 /* Vehicle.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -229,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */,
+				C973517B2708274000E976AC /* HistoryViewController.swift */,
+				C979BA3A27084FAD0026D6F3 /* Vehicle */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -238,6 +257,10 @@
 			children = (
 				28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */,
 				28A88FA826FFC1A300003EB7 /* OrderHistoryTableViewCell.xib */,
+				C973517D2708298100E976AC /* HistoryTableViewCell.swift */,
+				C973517E2708298100E976AC /* HistoryTableViewCell.xib */,
+				C98694DA27088BF00012F466 /* MyVehicleTableViewCell.swift */,
+				C98694DB27088BF00012F466 /* MyVehicleTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -249,6 +272,15 @@
 				5EE034CF885286C63D4DB69E /* Pods-Customer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C979BA3A27084FAD0026D6F3 /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				C979BA3D270850AB0026D6F3 /* MyVehicleViewController.swift */,
+				C97918AF270998A200E4ECDF /* SelectServicesViewController.swift */,
+			);
+			path = Vehicle;
 			sourceTree = "<group>";
 		};
 		F3D35D5C440184DC2D1DAA9E /* Frameworks */ = {
@@ -321,8 +353,10 @@
 				2805770C26FD05590035BC2B /* Poppins-LightItalic.ttf in Resources */,
 				2805770B26FD05590035BC2B /* Poppins-ExtraLightItalic.ttf in Resources */,
 				280575DA26FBA4F70035BC2B /* Authentication.storyboard in Resources */,
+				C979BA3C270850540026D6F3 /* Vehicle.storyboard in Resources */,
 				28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */,
 				2805770A26FD05590035BC2B /* Poppins-Light.ttf in Resources */,
+				C98694DD27088BF00012F466 /* MyVehicleTableViewCell.xib in Resources */,
 				280576FB26FCFAC10035BC2B /* Poppins-SemiBoldItalic.otf in Resources */,
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
 				280576FD26FCFAC10035BC2B /* Poppins-SemiBold.otf in Resources */,
@@ -337,6 +371,7 @@
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
 				280576FC26FCFAC10035BC2B /* Poppins-BlackItalic.otf in Resources */,
+				C97351802708298100E976AC /* HistoryTableViewCell.xib in Resources */,
 				28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,10 +425,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98694DC27088BF00012F466 /* MyVehicleTableViewCell.swift in Sources */,
 				280575E926FBA8F70035BC2B /* StoryboardIdentifiable.swift in Sources */,
 				280575E326FBA8610035BC2B /* Extensions.swift in Sources */,
+				C979BA3E270850AB0026D6F3 /* MyVehicleViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
 				280575EF26FBA9F30035BC2B /* NibLoadable.swift in Sources */,
+				C97918B0270998A200E4ECDF /* SelectServicesViewController.swift in Sources */,
 				280577C326FE8A400035BC2B /* RegistrationViewController.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
@@ -404,8 +442,10 @@
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
+				C973517F2708298100E976AC /* HistoryTableViewCell.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
+				C973517C2708274000E976AC /* HistoryViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,
 			);
