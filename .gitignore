@@ -48,8 +48,8 @@ playground.xcworkspace
 
 .build/
 
-* Pods/
-* Podfile.lock.*
+Pods/
+Podfile.lock.*
 
 # CocoaPods
 #
