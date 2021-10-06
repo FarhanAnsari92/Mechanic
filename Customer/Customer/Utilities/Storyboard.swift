@@ -16,6 +16,7 @@ enum Storyboard: String {
     case profile = "Profile"
     case tracking = "Tracking"
     case notification = "Notification"
+    case chat = "Chat"
 //    case tabBar = "TabBar"
 //    case laundryService = "LaundryService"
 //    case faqs = "FAQs"

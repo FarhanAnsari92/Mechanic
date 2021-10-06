@@ -78,6 +78,12 @@
 		2841B458270B92BD000FA706 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B456270B92BD000FA706 /* BannerCollectionViewCell.swift */; };
 		2841B45C270B949C000FA706 /* BannerViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B45A270B949C000FA706 /* BannerViewCollectionViewCell.swift */; };
 		2841B45D270B949C000FA706 /* BannerViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2841B45B270B949C000FA706 /* BannerViewCollectionViewCell.xib */; };
+		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
+		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
+		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
+		289802ED270E2A6F002565B6 /* ChatSenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289802EB270E2A6F002565B6 /* ChatSenderTableViewCell.xib */; };
+		289802F1270E3572002565B6 /* ChatReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EF270E3572002565B6 /* ChatReceiverTableViewCell.swift */; };
+		289802F2270E3572002565B6 /* ChatReceiverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289802F0270E3572002565B6 /* ChatReceiverTableViewCell.xib */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -180,6 +186,12 @@
 		2841B456270B92BD000FA706 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		2841B45A270B949C000FA706 /* BannerViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		2841B45B270B949C000FA706 /* BannerViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
+		289802EB270E2A6F002565B6 /* ChatSenderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatSenderTableViewCell.xib; sourceTree = "<group>"; };
+		289802EF270E3572002565B6 /* ChatReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiverTableViewCell.swift; sourceTree = "<group>"; };
+		289802F0270E3572002565B6 /* ChatReceiverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatReceiverTableViewCell.xib; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -284,6 +296,7 @@
 				28373E1F270647A30071E93D /* Profile.storyboard */,
 				2841B2C72707A5DB000FA706 /* Tracking.storyboard */,
 				C9A8533D270CCC2F00066B1E /* Notification.storyboard */,
+				289802E3270E2984002565B6 /* Chat.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -291,6 +304,7 @@
 		280575DC26FBA5160035BC2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				289802E6270E29DC002565B6 /* Chat */,
 				C9A8533F270CCC7700066B1E /* Notification */,
 				2841B2CA2707A678000FA706 /* Tracking */,
 				28373E22270647C40071E93D /* Profile */,
@@ -418,6 +432,14 @@
 			path = "ColletionView Cells";
 			sourceTree = "<group>";
 		};
+		289802E6270E29DC002565B6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				289802E7270E29F1002565B6 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		28A88FA126FFBEFB00003EB7 /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +471,10 @@
 				C9A85343270CF1A900066B1E /* NotificationTableViewCell.xib */,
 				C94CAC98270E143300FF1FCC /* BookingDetailsTableViewCell.swift */,
 				C94CAC99270E143300FF1FCC /* BookingDetailsTableViewCell.xib */,
+				289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */,
+				289802EB270E2A6F002565B6 /* ChatSenderTableViewCell.xib */,
+				289802EF270E3572002565B6 /* ChatReceiverTableViewCell.swift */,
+				289802F0270E3572002565B6 /* ChatReceiverTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -568,12 +594,14 @@
 				28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */,
 				2805770A26FD05590035BC2B /* Poppins-Light.ttf in Resources */,
 				280576FB26FCFAC10035BC2B /* Poppins-SemiBoldItalic.otf in Resources */,
+				289802F2270E3572002565B6 /* ChatReceiverTableViewCell.xib in Resources */,
 				28CCA6AB2704EC4100DB1421 /* Address.storyboard in Resources */,
 				2841B305270A455C000FA706 /* AccessoriesCollectionViewCell.xib in Resources */,
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
 				280576FD26FCFAC10035BC2B /* Poppins-SemiBold.otf in Resources */,
 				2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */,
 				2841B2E8270846D9000FA706 /* BookingHistoryTableViewCell.xib in Resources */,
+				289802ED270E2A6F002565B6 /* ChatSenderTableViewCell.xib in Resources */,
 				2841B453270B9200000FA706 /* BannerView.xib in Resources */,
 				28CCA6B52704ED2F00DB1421 /* AddressListTableViewCell.xib in Resources */,
 				280576FF26FCFAC10035BC2B /* Poppins-ExtraBoldItalic.otf in Resources */,
@@ -590,6 +618,7 @@
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
 				C9A85345270CF1A900066B1E /* NotificationTableViewCell.xib in Resources */,
 				2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */,
+				289802E4270E2984002565B6 /* Chat.storyboard in Resources */,
 				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
@@ -677,6 +706,7 @@
 				2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */,
 				C9A85344270CF1A900066B1E /* NotificationTableViewCell.swift in Sources */,
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
+				289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */,
@@ -692,6 +722,7 @@
 				C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */,
 				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
+				289802F1270E3572002565B6 /* ChatReceiverTableViewCell.swift in Sources */,
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
@@ -703,6 +734,7 @@
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,
+				289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */,
 				2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

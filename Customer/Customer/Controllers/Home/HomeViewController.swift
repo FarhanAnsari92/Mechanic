@@ -139,7 +139,9 @@ extension HomeViewController {
     }
     
     @objc func openChat() {
-        print("openChat")
+        let sb = UIStoryboard(storyboard: .chat)
+        let vc = sb.instantiateViewController(withIdentifier: ChatViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func openNotifications() {
