@@ -98,6 +98,8 @@
 		5953FB0EB47E9C42D53DD4BD /* Pods_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */; };
 		C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8533D270CCC2F00066B1E /* Notification.storyboard */; };
 		C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85340270CCCA400066B1E /* NotificationViewController.swift */; };
+		C9A85344270CF1A900066B1E /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85342270CF1A900066B1E /* NotificationTableViewCell.swift */; };
+		C9A85345270CF1A900066B1E /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A85343270CF1A900066B1E /* NotificationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +198,8 @@
 		C8486B28AB1E1F1158B3B864 /* Pods-Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.debug.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.debug.xcconfig"; sourceTree = "<group>"; };
 		C9A8533D270CCC2F00066B1E /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		C9A85340270CCCA400066B1E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		C9A85342270CF1A900066B1E /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		C9A85343270CF1A900066B1E /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +435,8 @@
 				2841B2E6270846D9000FA706 /* BookingHistoryTableViewCell.xib */,
 				2841B2F42708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift */,
 				2841B2F52708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib */,
+				C9A85342270CF1A900066B1E /* NotificationTableViewCell.swift */,
+				C9A85343270CF1A900066B1E /* NotificationTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -569,6 +575,7 @@
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
 				C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */,
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
+				C9A85345270CF1A900066B1E /* NotificationTableViewCell.xib in Resources */,
 				2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */,
 				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
@@ -654,6 +661,7 @@
 				2841B2C5270797AC000FA706 /* AddNewAddressDetailsViewController.swift in Sources */,
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
 				2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */,
+				C9A85344270CF1A900066B1E /* NotificationTableViewCell.swift in Sources */,
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
