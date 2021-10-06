@@ -96,6 +96,10 @@
 		28CCA6B52704ED2F00DB1421 /* AddressListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CCA6B32704ED2F00DB1421 /* AddressListTableViewCell.xib */; };
 		28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA6B72704F29600DB1421 /* AppButton.swift */; };
 		5953FB0EB47E9C42D53DD4BD /* Pods_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */; };
+		C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94CAC98270E143300FF1FCC /* BookingDetailsTableViewCell.swift */; };
+		C94CAC9B270E143300FF1FCC /* BookingDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94CAC99270E143300FF1FCC /* BookingDetailsTableViewCell.xib */; };
+		C94CAC9D270E171100FF1FCC /* BookingDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94CAC9C270E171100FF1FCC /* BookingDetailsHeader.swift */; };
+		C94CAC9F270E172200FF1FCC /* BookingDetailsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94CAC9E270E172200FF1FCC /* BookingDetailsHeader.xib */; };
 		C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8533D270CCC2F00066B1E /* Notification.storyboard */; };
 		C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85340270CCCA400066B1E /* NotificationViewController.swift */; };
 		C9A85344270CF1A900066B1E /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85342270CF1A900066B1E /* NotificationTableViewCell.swift */; };
@@ -196,6 +200,10 @@
 		5EE034CF885286C63D4DB69E /* Pods-Customer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.release.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.release.xcconfig"; sourceTree = "<group>"; };
 		93C816A28EB3D3A6298FE00B /* Pods_Customer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Customer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8486B28AB1E1F1158B3B864 /* Pods-Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Customer.debug.xcconfig"; path = "Target Support Files/Pods-Customer/Pods-Customer.debug.xcconfig"; sourceTree = "<group>"; };
+		C94CAC98270E143300FF1FCC /* BookingDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		C94CAC99270E143300FF1FCC /* BookingDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		C94CAC9C270E171100FF1FCC /* BookingDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsHeader.swift; sourceTree = "<group>"; };
+		C94CAC9E270E172200FF1FCC /* BookingDetailsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailsHeader.xib; sourceTree = "<group>"; };
 		C9A8533D270CCC2F00066B1E /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		C9A85340270CCCA400066B1E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		C9A85342270CF1A900066B1E /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -388,6 +396,8 @@
 				2841B451270B9200000FA706 /* BannerView.xib */,
 				2841B2EE2708BB6D000FA706 /* FixMyVehicleView.swift */,
 				2841B2F12708BB82000FA706 /* FixMyVehicleView.xib */,
+				C94CAC9C270E171100FF1FCC /* BookingDetailsHeader.swift */,
+				C94CAC9E270E172200FF1FCC /* BookingDetailsHeader.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -437,6 +447,8 @@
 				2841B2F52708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib */,
 				C9A85342270CF1A900066B1E /* NotificationTableViewCell.swift */,
 				C9A85343270CF1A900066B1E /* NotificationTableViewCell.xib */,
+				C94CAC98270E143300FF1FCC /* BookingDetailsTableViewCell.swift */,
+				C94CAC99270E143300FF1FCC /* BookingDetailsTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -552,6 +564,7 @@
 				2805770C26FD05590035BC2B /* Poppins-LightItalic.ttf in Resources */,
 				2805770B26FD05590035BC2B /* Poppins-ExtraLightItalic.ttf in Resources */,
 				280575DA26FBA4F70035BC2B /* Authentication.storyboard in Resources */,
+				C94CAC9F270E172200FF1FCC /* BookingDetailsHeader.xib in Resources */,
 				28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */,
 				2805770A26FD05590035BC2B /* Poppins-Light.ttf in Resources */,
 				280576FB26FCFAC10035BC2B /* Poppins-SemiBoldItalic.otf in Resources */,
@@ -582,6 +595,7 @@
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
+				C94CAC9B270E143300FF1FCC /* BookingDetailsTableViewCell.xib in Resources */,
 				280576FC26FCFAC10035BC2B /* Poppins-BlackItalic.otf in Resources */,
 				2841B2FD270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib in Resources */,
 				28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */,
@@ -675,12 +689,14 @@
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
 				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
+				C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */,
 				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
 				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
+				C94CAC9D270E171100FF1FCC /* BookingDetailsHeader.swift in Sources */,
 				2841B452270B9200000FA706 /* BannerView.swift in Sources */,
 				2841B2CD2707A696000FA706 /* TrackingViewController.swift in Sources */,
 				2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */,
