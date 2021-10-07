@@ -35,5 +35,8 @@ target 'Customer' do
   pod 'SDWebImage', '~> 5.8.3'
   
   pod 'TTTAttributedLabel'
+  
+  # https://github.com/KennethTsang/GrowingTextView
+  pod 'GrowingTextView', '0.7.2'
 
 end
