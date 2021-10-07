@@ -30,6 +30,7 @@ class ChatViewController: HomeBaseViewController {
         self.title = "Chat"
         setupBackButton(color: .white)
         setupTextView()
+        scrollToBottom()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +52,13 @@ class ChatViewController: HomeBaseViewController {
         textView.maxHeight = 70.0
         textView.backgroundColor = UIColor(hexString: "F1F1F1")
         textView.layer.cornerRadius = textView.frame.height / 2
+    }
+    
+    func scrollToBottom() {
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: 9, section: 0)
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
     }
     
     func addObserver() {
@@ -92,7 +100,7 @@ class ChatViewController: HomeBaseViewController {
     }
     
     @IBAction func sendMessageButtonHandler(_ sender: UIButton) {
-        print("message to send - ", self.textView.text)
+        print("message to send - ", self.textView.text ?? "")
     }
     
 }
