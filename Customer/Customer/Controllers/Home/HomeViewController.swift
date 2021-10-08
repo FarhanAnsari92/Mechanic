@@ -163,7 +163,10 @@ extension HomeViewController {
     }
     
     @IBAction func fixMyVehicleButtonHandler(_ sender: UIButton) {
-        print("fixMyVehicleButtonHandler")
+        
+        let sb = UIStoryboard(storyboard: .vehicle)
+        let vc = sb.instantiateViewController(withIdentifier: MyVehicleViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
