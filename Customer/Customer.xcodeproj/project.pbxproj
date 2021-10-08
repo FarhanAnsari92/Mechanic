@@ -84,6 +84,21 @@
 		289802ED270E2A6F002565B6 /* ChatSenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289802EB270E2A6F002565B6 /* ChatSenderTableViewCell.xib */; };
 		289802F1270E3572002565B6 /* ChatReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EF270E3572002565B6 /* ChatReceiverTableViewCell.swift */; };
 		289802F2270E3572002565B6 /* ChatReceiverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289802F0270E3572002565B6 /* ChatReceiverTableViewCell.xib */; };
+		289803EA270F7FE5002565B6 /* Accessories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289803E9270F7FE5002565B6 /* Accessories.storyboard */; };
+		289803EE270F80DF002565B6 /* AccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289803ED270F80DF002565B6 /* AccessoriesViewController.swift */; };
+		289803F1270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289803F0270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift */; };
+		289805312710309A002565B6 /* ConfirmBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898052F2710309A002565B6 /* ConfirmBookingTableViewCell.swift */; };
+		289805322710309A002565B6 /* ConfirmBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289805302710309A002565B6 /* ConfirmBookingTableViewCell.xib */; };
+		2898054727104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898054527104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.swift */; };
+		2898054827104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2898054627104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.xib */; };
+		2898054E27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898054C2710538F002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.swift */; };
+		2898054F27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2898054D27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.xib */; };
+		2898055227105575002565B6 /* BasketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2898055127105575002565B6 /* BasketView.xib */; };
+		2898055527105589002565B6 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898055427105589002565B6 /* BasketView.swift */; };
+		289805A327106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289805A127106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift */; };
+		289805A427106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289805A227106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib */; };
+		289805A727106D2E002565B6 /* AppRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289805A627106D2E002565B6 /* AppRadioView.swift */; };
+		289805AA27106D44002565B6 /* AppRadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289805A927106D44002565B6 /* AppRadioView.xib */; };
 		28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
 		28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */; };
 		28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */; };
@@ -199,6 +214,21 @@
 		289802EB270E2A6F002565B6 /* ChatSenderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatSenderTableViewCell.xib; sourceTree = "<group>"; };
 		289802EF270E3572002565B6 /* ChatReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiverTableViewCell.swift; sourceTree = "<group>"; };
 		289802F0270E3572002565B6 /* ChatReceiverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatReceiverTableViewCell.xib; sourceTree = "<group>"; };
+		289803E9270F7FE5002565B6 /* Accessories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accessories.storyboard; sourceTree = "<group>"; };
+		289803ED270F80DF002565B6 /* AccessoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesViewController.swift; sourceTree = "<group>"; };
+		289803F0270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAccessoriesConfirmationViewController.swift; sourceTree = "<group>"; };
+		2898052F2710309A002565B6 /* ConfirmBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmBookingTableViewCell.swift; sourceTree = "<group>"; };
+		289805302710309A002565B6 /* ConfirmBookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmBookingTableViewCell.xib; sourceTree = "<group>"; };
+		2898054527104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAccessoriesConfirmationAddressTableViewCell.swift; sourceTree = "<group>"; };
+		2898054627104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAccessoriesConfirmationAddressTableViewCell.xib; sourceTree = "<group>"; };
+		2898054C2710538F002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAccessoriesConfirmationBasketTableViewCell.swift; sourceTree = "<group>"; };
+		2898054D27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAccessoriesConfirmationBasketTableViewCell.xib; sourceTree = "<group>"; };
+		2898055127105575002565B6 /* BasketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketView.xib; sourceTree = "<group>"; };
+		2898055427105589002565B6 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		289805A127106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift; sourceTree = "<group>"; };
+		289805A227106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib; sourceTree = "<group>"; };
+		289805A627106D2E002565B6 /* AppRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRadioView.swift; sourceTree = "<group>"; };
+		289805A927106D44002565B6 /* AppRadioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppRadioView.xib; sourceTree = "<group>"; };
 		28A88F9E26FFBEB500003EB7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		28A88FA226FFBF3B00003EB7 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		28A88FA726FFC1A300003EB7 /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -312,6 +342,7 @@
 				C9A8533D270CCC2F00066B1E /* Notification.storyboard */,
 				289802E3270E2984002565B6 /* Chat.storyboard */,
 				C9E43155270F8321008056C5 /* Vehicle.storyboard */,
+				289803E9270F7FE5002565B6 /* Accessories.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -320,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				C9E43157270F837D008056C5 /* Vehicle */,
+				289803EC270F80C5002565B6 /* Accessories */,
 				289802E6270E29DC002565B6 /* Chat */,
 				C9A8533F270CCC7700066B1E /* Notification */,
 				2841B2CA2707A678000FA706 /* Tracking */,
@@ -428,6 +460,10 @@
 				2841B2F12708BB82000FA706 /* FixMyVehicleView.xib */,
 				C94CAC9C270E171100FF1FCC /* BookingDetailsHeader.swift */,
 				C94CAC9E270E172200FF1FCC /* BookingDetailsHeader.xib */,
+				2898055127105575002565B6 /* BasketView.xib */,
+				2898055427105589002565B6 /* BasketView.swift */,
+				289805A627106D2E002565B6 /* AppRadioView.swift */,
+				289805A927106D44002565B6 /* AppRadioView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -454,6 +490,15 @@
 				289802E7270E29F1002565B6 /* ChatViewController.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		289803EC270F80C5002565B6 /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				289803ED270F80DF002565B6 /* AccessoriesViewController.swift */,
+				289803F0270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift */,
+			);
+			path = Accessories;
 			sourceTree = "<group>";
 		};
 		28A88FA126FFBEFB00003EB7 /* Order */ = {
@@ -495,6 +540,14 @@
 				C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */,
 				C9CA74BE27109B780091A051 /* SelectServicesTableViewCell.swift */,
 				C9CA74BF27109B780091A051 /* SelectServicesTableViewCell.xib */,
+				2898052F2710309A002565B6 /* ConfirmBookingTableViewCell.swift */,
+				289805302710309A002565B6 /* ConfirmBookingTableViewCell.xib */,
+				2898054527104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.swift */,
+				2898054627104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.xib */,
+				2898054C2710538F002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.swift */,
+				2898054D27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.xib */,
+				289805A127106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift */,
+				289805A227106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -616,6 +669,7 @@
 				C9E43156270F8321008056C5 /* Vehicle.storyboard in Resources */,
 				2841B2D72707A916000FA706 /* TrackingBookingNumberTableViewCell.xib in Resources */,
 				28A88FB52700EC8B00003EB7 /* Home.storyboard in Resources */,
+				2898054F27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.xib in Resources */,
 				2841B457270B92BD000FA706 /* BannerCollectionViewCell.xib in Resources */,
 				2805770C26FD05590035BC2B /* Poppins-LightItalic.ttf in Resources */,
 				2805770B26FD05590035BC2B /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -627,6 +681,7 @@
 				289802F2270E3572002565B6 /* ChatReceiverTableViewCell.xib in Resources */,
 				28CCA6AB2704EC4100DB1421 /* Address.storyboard in Resources */,
 				2841B305270A455C000FA706 /* AccessoriesCollectionViewCell.xib in Resources */,
+				289803EA270F7FE5002565B6 /* Accessories.storyboard in Resources */,
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
 				280576FD26FCFAC10035BC2B /* Poppins-SemiBold.otf in Resources */,
 				2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */,
@@ -646,6 +701,7 @@
 				2805770126FCFAC10035BC2B /* Poppins-Regular.otf in Resources */,
 				28373E20270647A30071E93D /* Profile.storyboard in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
+				289805AA27106D44002565B6 /* AppRadioView.xib in Resources */,
 				C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */,
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
 				C9A85345270CF1A900066B1E /* NotificationTableViewCell.xib in Resources */,
@@ -653,10 +709,14 @@
 				289802E4270E2984002565B6 /* Chat.storyboard in Resources */,
 				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
+				2898054827104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.xib in Resources */,
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
+				2898055227105575002565B6 /* BasketView.xib in Resources */,
 				C94CAC9B270E143300FF1FCC /* BookingDetailsTableViewCell.xib in Resources */,
+				289805322710309A002565B6 /* ConfirmBookingTableViewCell.xib in Resources */,
+				289805A427106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib in Resources */,
 				280576FC26FCFAC10035BC2B /* Poppins-BlackItalic.otf in Resources */,
 				2841B2FD270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib in Resources */,
 				28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */,
@@ -719,6 +779,7 @@
 				2841B45C270B949C000FA706 /* BannerViewCollectionViewCell.swift in Sources */,
 				280575EF26FBA9F30035BC2B /* NibLoadable.swift in Sources */,
 				280577C326FE8A400035BC2B /* RegistrationViewController.swift in Sources */,
+				289803EE270F80DF002565B6 /* AccessoriesViewController.swift in Sources */,
 				2841B458270B92BD000FA706 /* BannerCollectionViewCell.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
 				C9CA74C027109B780091A051 /* SelectServicesTableViewCell.swift in Sources */,
@@ -730,11 +791,14 @@
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
 				2841B2C227078F37000FA706 /* ShadowView.swift in Sources */,
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
+				2898055527105589002565B6 /* BasketView.swift in Sources */,
 				2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */,
 				2841B304270A455C000FA706 /* AccessoriesCollectionViewCell.swift in Sources */,
 				2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				2841B2C5270797AC000FA706 /* AddNewAddressDetailsViewController.swift in Sources */,
+				289805A727106D2E002565B6 /* AppRadioView.swift in Sources */,
+				2898054E27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.swift in Sources */,
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
 				2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */,
 				C9A85344270CF1A900066B1E /* NotificationTableViewCell.swift in Sources */,
@@ -744,6 +808,7 @@
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */,
 				2841B2F62708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift in Sources */,
+				289805312710309A002565B6 /* ConfirmBookingTableViewCell.swift in Sources */,
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
@@ -763,12 +828,15 @@
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
 				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
 				C94CAC9D270E171100FF1FCC /* BookingDetailsHeader.swift in Sources */,
+				289803F1270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift in Sources */,
 				2841B452270B9200000FA706 /* BannerView.swift in Sources */,
 				2841B2CD2707A696000FA706 /* TrackingViewController.swift in Sources */,
 				2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
+				2898054727104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,
+				289805A327106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift in Sources */,
 				289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */,
 				C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */,
 				2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */,

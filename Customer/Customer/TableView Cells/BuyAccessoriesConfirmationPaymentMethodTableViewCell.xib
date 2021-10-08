@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BuyAccessoriesConfirmationPaymentMethodTableViewCell" rowHeight="220" id="KGk-i7-Jjw" customClass="BuyAccessoriesConfirmationPaymentMethodTableViewCell" customModule="Customer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="523" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="523" height="220"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgJ-wT-YoA" customClass="ShadowView" customModule="Customer" customModuleProvider="target">
+                        <rect key="frame" x="20" y="10" width="483" height="105"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bs8-ca-Eec">
+                                <rect key="frame" x="10" y="10" width="463" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSx-D5-jrw">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XSx-D5-jrw" firstAttribute="centerY" secondItem="Bs8-ca-Eec" secondAttribute="centerY" id="cRX-iH-iLa"/>
+                                    <constraint firstItem="XSx-D5-jrw" firstAttribute="leading" secondItem="Bs8-ca-Eec" secondAttribute="leading" id="tJx-fe-VW5"/>
+                                    <constraint firstAttribute="height" constant="25" id="yj3-EX-jvz"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tdq-7u-9KJ">
+                                <rect key="frame" x="10" y="35" width="463" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-t1-GmV">
+                                        <rect key="frame" x="0.0" y="0.0" width="463" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit/Debit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgV-FY-cUr">
+                                                <rect key="frame" x="0.0" y="6.5" width="106" height="17"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
+                                                <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5Z-ch-6gW" customClass="AppRadioView" customModule="Customer" customModuleProvider="target">
+                                                <rect key="frame" x="443" y="5" width="20" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="K5Z-ch-6gW" secondAttribute="height" multiplier="1:1" id="g0O-Zs-uMv"/>
+                                                    <constraint firstAttribute="height" constant="20" id="zkZ-YP-zCJ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="K5Z-ch-6gW" secondAttribute="trailing" id="EcE-mw-4cy"/>
+                                            <constraint firstItem="rgV-FY-cUr" firstAttribute="centerY" secondItem="y7e-t1-GmV" secondAttribute="centerY" id="EsW-uS-UUi"/>
+                                            <constraint firstAttribute="height" constant="30" id="Fsw-39-nzV"/>
+                                            <constraint firstItem="rgV-FY-cUr" firstAttribute="leading" secondItem="y7e-t1-GmV" secondAttribute="leading" id="JXh-BQ-iR5"/>
+                                            <constraint firstItem="K5Z-ch-6gW" firstAttribute="centerY" secondItem="y7e-t1-GmV" secondAttribute="centerY" id="YNY-q7-LH8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sX5-1B-6df">
+                                        <rect key="frame" x="0.0" y="30" width="463" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gds-TV-XmE">
+                                                <rect key="frame" x="0.0" y="6.5" width="31.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
+                                                <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2P6-bt-zNU" customClass="AppRadioView" customModule="Customer" customModuleProvider="target">
+                                                <rect key="frame" x="443" y="5" width="20" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="hoL-pf-4D3"/>
+                                                    <constraint firstAttribute="width" secondItem="2P6-bt-zNU" secondAttribute="height" multiplier="1:1" id="vEH-tk-Nit"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JEI-2e-ZmA"/>
+                                            <constraint firstItem="2P6-bt-zNU" firstAttribute="centerY" secondItem="sX5-1B-6df" secondAttribute="centerY" id="YsJ-F9-Equ"/>
+                                            <constraint firstAttribute="trailing" secondItem="2P6-bt-zNU" secondAttribute="trailing" id="Z99-89-kPD"/>
+                                            <constraint firstItem="gds-TV-XmE" firstAttribute="centerY" secondItem="sX5-1B-6df" secondAttribute="centerY" id="g5X-Ta-W44"/>
+                                            <constraint firstItem="gds-TV-XmE" firstAttribute="leading" secondItem="sX5-1B-6df" secondAttribute="leading" id="yVv-EU-6AK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tdq-7u-9KJ" firstAttribute="top" secondItem="Bs8-ca-Eec" secondAttribute="bottom" id="0CJ-SJ-kee"/>
+                            <constraint firstItem="Bs8-ca-Eec" firstAttribute="top" secondItem="dgJ-wT-YoA" secondAttribute="top" constant="10" id="Bne-uw-jPX"/>
+                            <constraint firstAttribute="trailing" secondItem="Bs8-ca-Eec" secondAttribute="trailing" constant="10" id="Iv4-Yp-MKh"/>
+                            <constraint firstAttribute="bottom" secondItem="tdq-7u-9KJ" secondAttribute="bottom" constant="10" id="NIb-Av-Sog"/>
+                            <constraint firstItem="tdq-7u-9KJ" firstAttribute="leading" secondItem="dgJ-wT-YoA" secondAttribute="leading" constant="10" id="euX-vp-4Mp"/>
+                            <constraint firstAttribute="trailing" secondItem="tdq-7u-9KJ" secondAttribute="trailing" constant="10" id="voa-ol-m9f"/>
+                            <constraint firstItem="Bs8-ca-Eec" firstAttribute="leading" secondItem="dgJ-wT-YoA" secondAttribute="leading" constant="10" id="zbq-7S-0wd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="dgJ-wT-YoA" secondAttribute="bottom" constant="10" id="CdM-Ec-e8a"/>
+                    <constraint firstItem="dgJ-wT-YoA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="gle-wy-CRV"/>
+                    <constraint firstAttribute="trailing" secondItem="dgJ-wT-YoA" secondAttribute="trailing" constant="20" id="iUa-da-4sW"/>
+                    <constraint firstItem="dgJ-wT-YoA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ts1-zZ-wf7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cashRadioApp" destination="2P6-bt-zNU" id="Eas-J9-Nwe"/>
+                <outlet property="creditRadioApp" destination="K5Z-ch-6gW" id="SSb-If-ffu"/>
+            </connections>
+            <point key="canvasLocation" x="205.07246376811597" y="135.26785714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
