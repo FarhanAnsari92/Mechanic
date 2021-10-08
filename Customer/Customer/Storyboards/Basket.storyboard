@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Basket List View Controller-->
+        <scene sceneID="6LU-PB-yQQ">
+            <objects>
+                <viewController storyboardIdentifier="BasketListViewController" id="R5Z-1g-qVg" customClass="BasketListViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSc-kZ-ggh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="53N-kb-11Y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="753"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cav-7R-xAT" customClass="AppButton" customModule="Customer" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="0gY-LR-fe7"/>
+                                </constraints>
+                                <state key="normal" title="Buy Now"/>
+                                <connections>
+                                    <action selector="buyNowButtonHandler:" destination="R5Z-1g-qVg" eventType="touchUpInside" id="0Sd-3T-Rfg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sD4-E4-D11"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cav-7R-xAT" firstAttribute="top" secondItem="53N-kb-11Y" secondAttribute="bottom" constant="5" id="8ls-xy-uc6"/>
+                            <constraint firstItem="cav-7R-xAT" firstAttribute="leading" secondItem="sD4-E4-D11" secondAttribute="leading" constant="20" id="ArO-fn-chO"/>
+                            <constraint firstItem="53N-kb-11Y" firstAttribute="top" secondItem="sD4-E4-D11" secondAttribute="top" id="T3E-ay-ZvT"/>
+                            <constraint firstItem="53N-kb-11Y" firstAttribute="leading" secondItem="sD4-E4-D11" secondAttribute="leading" id="dYf-7D-7GA"/>
+                            <constraint firstItem="sD4-E4-D11" firstAttribute="bottom" secondItem="cav-7R-xAT" secondAttribute="bottom" constant="5" id="gMp-wb-WQD"/>
+                            <constraint firstItem="sD4-E4-D11" firstAttribute="trailing" secondItem="53N-kb-11Y" secondAttribute="trailing" id="oSI-89-IjV"/>
+                            <constraint firstItem="sD4-E4-D11" firstAttribute="trailing" secondItem="cav-7R-xAT" secondAttribute="trailing" constant="20" id="zrx-FF-LUT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="53N-kb-11Y" id="0QL-Cm-BIX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWj-zA-ZAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="152.67857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

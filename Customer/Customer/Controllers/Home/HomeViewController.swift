@@ -151,7 +151,10 @@ extension HomeViewController {
     }
     
     @objc func openCart() {
-        print("openNotifications")
+        
+        let sb = UIStoryboard(storyboard: .basket)
+        let vc = sb.instantiateViewController(withIdentifier: BasketListViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func filterButtonHandler(_ sender: UIButton) {
