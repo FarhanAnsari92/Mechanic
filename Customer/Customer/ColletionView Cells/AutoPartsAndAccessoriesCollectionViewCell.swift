@@ -8,10 +8,20 @@
 import UIKit
 
 class AutoPartsAndAccessoriesCollectionViewCell: UICollectionViewCell {
+    
+    var autoPartsCompletion: (() -> Void)?
+    var accessoriesCompletion: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    @IBAction func autoPartsButtonHandler(_ sender: UIButton) {
+        autoPartsCompletion?()
+    }
+    
+    @IBAction func accessoriesButtonHandler(_ sender: UIButton) {
+        accessoriesCompletion?()
     }
 
 }

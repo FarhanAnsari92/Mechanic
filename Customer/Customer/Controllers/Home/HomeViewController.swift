@@ -194,7 +194,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier, for: indexPath) as! AutoPartsAndAccessoriesCollectionViewCell
+            cell.accessoriesCompletion = { [weak self] in
+                let sb = UIStoryboard(storyboard: .accessories)
+                let vc = sb.instantiateViewController(withIdentifier: AccessoriesViewController.storyboardIdentifier)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
             return cell
         } else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerViewCollectionViewCell.identifier, for: indexPath)
