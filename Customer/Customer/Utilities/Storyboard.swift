@@ -19,6 +19,7 @@ enum Storyboard: String {
     case chat = "Chat"
     case vehicle = "Vehicle"
     case accessories = "Accessories"
+    case basket = "Basket"
 //    case tabBar = "TabBar"
 //    case laundryService = "LaundryService"
 //    case faqs = "FAQs"

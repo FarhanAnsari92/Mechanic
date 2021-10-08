@@ -325,15 +325,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Th5-Oy-Z1h">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU8-jw-lk4" customClass="AppButton" customModule="Customer" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5ST-KJ-CQH"/>
+                                </constraints>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmButtonHandler:" destination="i0L-AJ-6SS" eventType="touchUpInside" id="XFu-H4-VEo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Gm-Zz-MV5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5Gm-Zz-MV5" firstAttribute="bottom" secondItem="vU8-jw-lk4" secondAttribute="bottom" constant="5" id="2zy-9j-SB3"/>
                             <constraint firstItem="5Gm-Zz-MV5" firstAttribute="trailing" secondItem="Th5-Oy-Z1h" secondAttribute="trailing" id="PTl-We-Tvz"/>
-                            <constraint firstItem="5Gm-Zz-MV5" firstAttribute="bottom" secondItem="Th5-Oy-Z1h" secondAttribute="bottom" id="T52-Nb-4z1"/>
+                            <constraint firstItem="5Gm-Zz-MV5" firstAttribute="trailing" secondItem="vU8-jw-lk4" secondAttribute="trailing" constant="20" id="Y4N-bO-Q5Z"/>
+                            <constraint firstItem="vU8-jw-lk4" firstAttribute="top" secondItem="Th5-Oy-Z1h" secondAttribute="bottom" constant="5" id="jMD-rv-eBV"/>
+                            <constraint firstItem="vU8-jw-lk4" firstAttribute="leading" secondItem="5Gm-Zz-MV5" secondAttribute="leading" constant="20" id="lMd-T1-Ybt"/>
                             <constraint firstItem="Th5-Oy-Z1h" firstAttribute="top" secondItem="5Gm-Zz-MV5" secondAttribute="top" id="npE-q7-PlV"/>
                             <constraint firstItem="Th5-Oy-Z1h" firstAttribute="leading" secondItem="5Gm-Zz-MV5" secondAttribute="leading" id="tSa-Ov-QcH"/>
                         </constraints>
@@ -344,12 +357,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmO-fC-ihN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567" y="118"/>
+            <point key="canvasLocation" x="1566.6666666666667" y="117.85714285714285"/>
+        </scene>
+        <!--Buy Accessories Successfull View Controller-->
+        <scene sceneID="AfY-Ph-5u5">
+            <objects>
+                <viewController storyboardIdentifier="BuyAccessoriesSuccessfullViewController" id="xYK-9q-3EI" customClass="BuyAccessoriesSuccessfullViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d9o-rc-qNh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_successfull" translatesAutoresizingMaskIntoConstraints="NO" id="pNL-av-fGc">
+                                <rect key="frame" x="83" y="139.5" width="248" height="248.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pNL-av-fGc" secondAttribute="height" multiplier="1:1" id="Ci4-lA-hb3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Delivery Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDe-kH-heC">
+                                <rect key="frame" x="20" y="64" width="374" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.12156862745098039" green="0.16078431372549018" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 to 4 Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYs-6F-m7d">
+                                <rect key="frame" x="20" y="99" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                <color key="textColor" red="0.1215686275" green="0.16078431369999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Item is on the way to delivery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmJ-l0-tbA">
+                                <rect key="frame" x="20" y="408" width="374" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.1215686275" green="0.16078431369999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anK-SI-Zhv" customClass="AppButton" customModule="Customer" customModuleProvider="target">
+                                <rect key="frame" x="20" y="458" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="BpG-5V-rhK"/>
+                                </constraints>
+                                <state key="normal" title="Back to Home"/>
+                                <connections>
+                                    <action selector="backToHomeButtonHandler:" destination="xYK-9q-3EI" eventType="touchUpInside" id="JQ4-ZY-PV3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j8O-Rf-CcF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pNL-av-fGc" firstAttribute="top" secondItem="tYs-6F-m7d" secondAttribute="bottom" constant="15" id="4bf-Wm-KG4"/>
+                            <constraint firstItem="pNL-av-fGc" firstAttribute="centerX" secondItem="d9o-rc-qNh" secondAttribute="centerX" id="9Rw-oH-Lr2"/>
+                            <constraint firstItem="tYs-6F-m7d" firstAttribute="top" secondItem="IDe-kH-heC" secondAttribute="bottom" constant="15" id="C22-NX-Mws"/>
+                            <constraint firstItem="IDe-kH-heC" firstAttribute="top" secondItem="j8O-Rf-CcF" secondAttribute="top" constant="20" id="Dl7-s8-WVI"/>
+                            <constraint firstItem="anK-SI-Zhv" firstAttribute="leading" secondItem="j8O-Rf-CcF" secondAttribute="leading" constant="20" id="S0S-7d-TdV"/>
+                            <constraint firstItem="WmJ-l0-tbA" firstAttribute="leading" secondItem="j8O-Rf-CcF" secondAttribute="leading" constant="20" id="TcF-8v-ahU"/>
+                            <constraint firstItem="j8O-Rf-CcF" firstAttribute="trailing" secondItem="anK-SI-Zhv" secondAttribute="trailing" constant="20" id="XP1-xE-xml"/>
+                            <constraint firstItem="WmJ-l0-tbA" firstAttribute="top" secondItem="pNL-av-fGc" secondAttribute="bottom" constant="20" id="bto-BU-Dg1"/>
+                            <constraint firstItem="pNL-av-fGc" firstAttribute="width" secondItem="d9o-rc-qNh" secondAttribute="width" multiplier="0.6" id="eHa-RI-uSQ"/>
+                            <constraint firstItem="IDe-kH-heC" firstAttribute="leading" secondItem="j8O-Rf-CcF" secondAttribute="leading" constant="20" id="itF-Zf-ITF"/>
+                            <constraint firstItem="tYs-6F-m7d" firstAttribute="leading" secondItem="j8O-Rf-CcF" secondAttribute="leading" constant="20" id="q87-sU-VNU"/>
+                            <constraint firstItem="j8O-Rf-CcF" firstAttribute="trailing" secondItem="WmJ-l0-tbA" secondAttribute="trailing" constant="20" id="usI-8c-udv"/>
+                            <constraint firstItem="anK-SI-Zhv" firstAttribute="top" secondItem="WmJ-l0-tbA" secondAttribute="bottom" constant="30" id="wTq-K4-4Ny"/>
+                            <constraint firstItem="j8O-Rf-CcF" firstAttribute="trailing" secondItem="tYs-6F-m7d" secondAttribute="trailing" constant="20" id="xfy-A3-Juf"/>
+                            <constraint firstItem="j8O-Rf-CcF" firstAttribute="trailing" secondItem="IDe-kH-heC" secondAttribute="trailing" constant="20" id="ytw-72-VL9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eB-2e-seX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="118"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic_filter" width="20.5" height="20.5"/>
         <image name="ic_magnifier" width="16" height="16"/>
+        <image name="img_successfull" width="197" height="139"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

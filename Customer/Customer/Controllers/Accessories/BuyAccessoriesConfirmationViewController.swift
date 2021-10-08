@@ -33,6 +33,12 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
         tableView.estimatedRowHeight = 100
         
     }
+    
+    @IBAction func confirmButtonHandler(_ sender: UIButton) {
+        let sb = UIStoryboard(storyboard: .accessories)
+        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesSuccessfullViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
