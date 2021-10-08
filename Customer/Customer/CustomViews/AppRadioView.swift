@@ -26,6 +26,7 @@ class AppRadioView: NibDesignable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        isSelected = true
     }
 
 }

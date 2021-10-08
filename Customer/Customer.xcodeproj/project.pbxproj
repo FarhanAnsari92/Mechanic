@@ -128,6 +128,7 @@
 		C9A85345270CF1A900066B1E /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A85343270CF1A900066B1E /* NotificationTableViewCell.xib */; };
 		C9CA74C027109B780091A051 /* SelectServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CA74BE27109B780091A051 /* SelectServicesTableViewCell.swift */; };
 		C9CA74C127109B780091A051 /* SelectServicesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9CA74BF27109B780091A051 /* SelectServicesTableViewCell.xib */; };
+		C9CA74C32710C9840091A051 /* SelectModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CA74C22710C9840091A051 /* SelectModeViewController.swift */; };
 		C9E43156270F8321008056C5 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E43155270F8321008056C5 /* Vehicle.storyboard */; };
 		C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */; };
 		C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */; };
@@ -260,6 +261,7 @@
 		C9A85343270CF1A900066B1E /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		C9CA74BE27109B780091A051 /* SelectServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesTableViewCell.swift; sourceTree = "<group>"; };
 		C9CA74BF27109B780091A051 /* SelectServicesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectServicesTableViewCell.xib; sourceTree = "<group>"; };
+		C9CA74C22710C9840091A051 /* SelectModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeViewController.swift; sourceTree = "<group>"; };
 		C9E43155270F8321008056C5 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
 		C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleViewController.swift; sourceTree = "<group>"; };
 		C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleTableViewCell.swift; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 			children = (
 				C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */,
 				C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */,
+				C9CA74C22710C9840091A051 /* SelectModeViewController.swift */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
 				C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */,
+				C9CA74C32710C9840091A051 /* SelectModeViewController.swift in Sources */,
 				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				289802F1270E3572002565B6 /* ChatReceiverTableViewCell.swift in Sources */,

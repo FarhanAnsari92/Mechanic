@@ -29,6 +29,14 @@ class SelectServicesViewController: HomeBaseViewController {
         
     }
     
+    
+    @IBAction func btn_proceed(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(storyboard: .vehicle)
+        let vc = sb.instantiateViewController(withIdentifier: SelectModeViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension SelectServicesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -39,8 +47,13 @@ extension SelectServicesViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: SelectServicesTableViewCell.identifier, for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: SelectServicesTableViewCell.identifier, for: indexPath) as! SelectServicesTableViewCell
+        if indexPath.row == 1 {
+            cell.isSelected = false
+            cell.lblDesc.text = "Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text"
+        } else {
+            cell.isSelected = true
+        }
         return cell
     
     }
