@@ -71,7 +71,7 @@ extension AccessoriesViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 1 {
             let sb = UIStoryboard(storyboard: .accessories)
-            let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier)
+            let vc = sb.instantiateViewController(withIdentifier: AccessoriesDetailsViewController.storyboardIdentifier)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

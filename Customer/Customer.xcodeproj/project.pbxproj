@@ -89,6 +89,15 @@
 		28512E182711A5B4002979AD /* TopPickTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E162711A5B4002979AD /* TopPickTableViewCell.xib */; };
 		28512E1C2711A78F002979AD /* TopPickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E1A2711A78F002979AD /* TopPickCollectionViewCell.swift */; };
 		28512E1D2711A78F002979AD /* TopPickCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E1B2711A78F002979AD /* TopPickCollectionViewCell.xib */; };
+		28512E202711AE9A002979AD /* AccessoriesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E1F2711AE9A002979AD /* AccessoriesDetailsViewController.swift */; };
+		28512E232711B8CF002979AD /* ProductDetailsAndRatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E222711B8CF002979AD /* ProductDetailsAndRatingsView.swift */; };
+		28512E262711B8DA002979AD /* ProductDetailsAndRatingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E252711B8DA002979AD /* ProductDetailsAndRatingsView.xib */; };
+		28512E292711BA02002979AD /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E282711BA02002979AD /* ProductDetailsView.swift */; };
+		28512E2C2711BA14002979AD /* ProductDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E2B2711BA14002979AD /* ProductDetailsView.xib */; };
+		28512E2F2711BAD4002979AD /* ProductReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E2E2711BAD4002979AD /* ProductReviewsView.swift */; };
+		28512E322711BAE3002979AD /* ProductReviewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E312711BAE3002979AD /* ProductReviewsView.xib */; };
+		28512E372711CAC6002979AD /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E352711CAC6002979AD /* ReviewTableViewCell.swift */; };
+		28512E382711CAC6002979AD /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E362711CAC6002979AD /* ReviewTableViewCell.xib */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -231,6 +240,15 @@
 		28512E162711A5B4002979AD /* TopPickTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopPickTableViewCell.xib; sourceTree = "<group>"; };
 		28512E1A2711A78F002979AD /* TopPickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPickCollectionViewCell.swift; sourceTree = "<group>"; };
 		28512E1B2711A78F002979AD /* TopPickCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopPickCollectionViewCell.xib; sourceTree = "<group>"; };
+		28512E1F2711AE9A002979AD /* AccessoriesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesDetailsViewController.swift; sourceTree = "<group>"; };
+		28512E222711B8CF002979AD /* ProductDetailsAndRatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsAndRatingsView.swift; sourceTree = "<group>"; };
+		28512E252711B8DA002979AD /* ProductDetailsAndRatingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsAndRatingsView.xib; sourceTree = "<group>"; };
+		28512E282711BA02002979AD /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		28512E2B2711BA14002979AD /* ProductDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsView.xib; sourceTree = "<group>"; };
+		28512E2E2711BAD4002979AD /* ProductReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReviewsView.swift; sourceTree = "<group>"; };
+		28512E312711BAE3002979AD /* ProductReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductReviewsView.xib; sourceTree = "<group>"; };
+		28512E352711CAC6002979AD /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		28512E362711CAC6002979AD /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -492,6 +510,12 @@
 				289805A927106D44002565B6 /* AppRadioView.xib */,
 				28512E0F2711A1C2002979AD /* TopPicksView.swift */,
 				28512E122711A1CE002979AD /* TopPicksView.xib */,
+				28512E222711B8CF002979AD /* ProductDetailsAndRatingsView.swift */,
+				28512E252711B8DA002979AD /* ProductDetailsAndRatingsView.xib */,
+				28512E282711BA02002979AD /* ProductDetailsView.swift */,
+				28512E2B2711BA14002979AD /* ProductDetailsView.xib */,
+				28512E2E2711BAD4002979AD /* ProductReviewsView.swift */,
+				28512E312711BAE3002979AD /* ProductReviewsView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -536,6 +560,7 @@
 				289803ED270F80DF002565B6 /* AccessoriesViewController.swift */,
 				289803F0270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift */,
 				28512DE12710CB7C002979AD /* BuyAccessoriesSuccessfullViewController.swift */,
+				28512E1F2711AE9A002979AD /* AccessoriesDetailsViewController.swift */,
 			);
 			path = Accessories;
 			sourceTree = "<group>";
@@ -591,6 +616,8 @@
 				28512DEC2710D1FC002979AD /* BasketTableViewCell.xib */,
 				28512E152711A5B4002979AD /* TopPickTableViewCell.swift */,
 				28512E162711A5B4002979AD /* TopPickTableViewCell.xib */,
+				28512E352711CAC6002979AD /* ReviewTableViewCell.swift */,
+				28512E362711CAC6002979AD /* ReviewTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -728,6 +755,7 @@
 				2841B305270A455C000FA706 /* AccessoriesCollectionViewCell.xib in Resources */,
 				289803EA270F7FE5002565B6 /* Accessories.storyboard in Resources */,
 				280576FE26FCFAC10035BC2B /* Poppins-ThinItalic.otf in Resources */,
+				28512E322711BAE3002979AD /* ProductReviewsView.xib in Resources */,
 				280576FD26FCFAC10035BC2B /* Poppins-SemiBold.otf in Resources */,
 				2841B2DC2707ADB7000FA706 /* TrackingStatusTableViewCell.xib in Resources */,
 				2841B2E8270846D9000FA706 /* BookingHistoryTableViewCell.xib in Resources */,
@@ -747,6 +775,7 @@
 				2805770126FCFAC10035BC2B /* Poppins-Regular.otf in Resources */,
 				28373E20270647A30071E93D /* Profile.storyboard in Resources */,
 				2805770D26FD05590035BC2B /* Poppins-ExtraLight.ttf in Resources */,
+				28512E2C2711BA14002979AD /* ProductDetailsView.xib in Resources */,
 				289805AA27106D44002565B6 /* AppRadioView.xib in Resources */,
 				C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */,
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
@@ -754,6 +783,7 @@
 				2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */,
 				28512E132711A1CE002979AD /* TopPicksView.xib in Resources */,
 				289802E4270E2984002565B6 /* Chat.storyboard in Resources */,
+				28512E382711CAC6002979AD /* ReviewTableViewCell.xib in Resources */,
 				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
 				2898054827104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.xib in Resources */,
@@ -768,6 +798,7 @@
 				280576FC26FCFAC10035BC2B /* Poppins-BlackItalic.otf in Resources */,
 				2841B2FD270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib in Resources */,
 				28512E182711A5B4002979AD /* TopPickTableViewCell.xib in Resources */,
+				28512E262711B8DA002979AD /* ProductDetailsAndRatingsView.xib in Resources */,
 				28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,6 +875,7 @@
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
 				2898055527105589002565B6 /* BasketView.swift in Sources */,
 				2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */,
+				28512E292711BA02002979AD /* ProductDetailsView.swift in Sources */,
 				2841B304270A455C000FA706 /* AccessoriesCollectionViewCell.swift in Sources */,
 				2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
@@ -877,18 +909,22 @@
 				C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */,
 				C9CA74C32710C9840091A051 /* SelectModeViewController.swift in Sources */,
 				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
+				28512E372711CAC6002979AD /* ReviewTableViewCell.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				289802F1270E3572002565B6 /* ChatReceiverTableViewCell.swift in Sources */,
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
 				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
+				28512E202711AE9A002979AD /* AccessoriesDetailsViewController.swift in Sources */,
 				C94CAC9D270E171100FF1FCC /* BookingDetailsHeader.swift in Sources */,
 				289803F1270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift in Sources */,
 				2841B452270B9200000FA706 /* BannerView.swift in Sources */,
 				2841B2CD2707A696000FA706 /* TrackingViewController.swift in Sources */,
+				28512E2F2711BAD4002979AD /* ProductReviewsView.swift in Sources */,
 				2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
+				28512E232711B8CF002979AD /* ProductDetailsAndRatingsView.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
 				2898054727104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,
