@@ -21,6 +21,7 @@ class HomeViewController: SideMenuBaseController {
             collectionView.register(AutoPartsAndAccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier)
             collectionView.register(AccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoriesCollectionViewCell.identifier)
             collectionView.register(BannerViewCollectionViewCell.nib, forCellWithReuseIdentifier: BannerViewCollectionViewCell.identifier)
+            collectionView.register(TopPickCollectionViewCell.nib, forCellWithReuseIdentifier: TopPickCollectionViewCell.identifier)
             
             collectionView.delegate = self
             collectionView.dataSource = self
@@ -177,7 +178,7 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -192,7 +193,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 || section == 1 {
+        if section == 0 || section == 1 || section == 3 {
             return 1
         }
         return 20
@@ -210,12 +211,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerViewCollectionViewCell.identifier, for: indexPath)
             return cell
-        } else {
+        } else if indexPath.section == 2 {
             // 2 liner item name will not work in iPhone 5s sized devices.
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoriesCollectionViewCell.identifier, for: indexPath) as! AccessoriesCollectionViewCell
             if indexPath.row == 0 {
                 cell.lblTitle.text = "Pack of 2 - Pro Biker Gloves MCS-01C + Winter Mask"
             }
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopPickCollectionViewCell.identifier, for: indexPath)
             return cell
         }
     }
@@ -229,7 +233,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if indexPath.section == 1 {
             let itemWidth = collectionView.bounds.width
             return CGSize(width: itemWidth, height: itemWidth * 0.4)
-        } else {
+        } else if indexPath.section == 2 {
             
             let numberOfItemsPerRow: CGFloat = 2
             let spacing: CGFloat = 20
@@ -239,6 +243,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             return CGSize(width: itemWidth, height: itemWidth * 1.3)
             
+        } else {
+            let itemWidth = collectionView.bounds.width
+            return CGSize(width: itemWidth, height: (itemWidth / 2) * 1.3)
         }
         
     }

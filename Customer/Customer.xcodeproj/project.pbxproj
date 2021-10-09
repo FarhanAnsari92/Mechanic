@@ -83,6 +83,12 @@
 		28512DE92710CF67002979AD /* BasketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512DE82710CF67002979AD /* BasketListViewController.swift */; };
 		28512DED2710D1FC002979AD /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512DEB2710D1FC002979AD /* BasketTableViewCell.swift */; };
 		28512DEE2710D1FC002979AD /* BasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512DEC2710D1FC002979AD /* BasketTableViewCell.xib */; };
+		28512E102711A1C2002979AD /* TopPicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E0F2711A1C2002979AD /* TopPicksView.swift */; };
+		28512E132711A1CE002979AD /* TopPicksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E122711A1CE002979AD /* TopPicksView.xib */; };
+		28512E172711A5B4002979AD /* TopPickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E152711A5B4002979AD /* TopPickTableViewCell.swift */; };
+		28512E182711A5B4002979AD /* TopPickTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E162711A5B4002979AD /* TopPickTableViewCell.xib */; };
+		28512E1C2711A78F002979AD /* TopPickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E1A2711A78F002979AD /* TopPickCollectionViewCell.swift */; };
+		28512E1D2711A78F002979AD /* TopPickCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E1B2711A78F002979AD /* TopPickCollectionViewCell.xib */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -219,6 +225,12 @@
 		28512DE82710CF67002979AD /* BasketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketListViewController.swift; sourceTree = "<group>"; };
 		28512DEB2710D1FC002979AD /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
 		28512DEC2710D1FC002979AD /* BasketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTableViewCell.xib; sourceTree = "<group>"; };
+		28512E0F2711A1C2002979AD /* TopPicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksView.swift; sourceTree = "<group>"; };
+		28512E122711A1CE002979AD /* TopPicksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopPicksView.xib; sourceTree = "<group>"; };
+		28512E152711A5B4002979AD /* TopPickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPickTableViewCell.swift; sourceTree = "<group>"; };
+		28512E162711A5B4002979AD /* TopPickTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopPickTableViewCell.xib; sourceTree = "<group>"; };
+		28512E1A2711A78F002979AD /* TopPickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPickCollectionViewCell.swift; sourceTree = "<group>"; };
+		28512E1B2711A78F002979AD /* TopPickCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopPickCollectionViewCell.xib; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -478,6 +490,8 @@
 				2898055427105589002565B6 /* BasketView.swift */,
 				289805A627106D2E002565B6 /* AppRadioView.swift */,
 				289805A927106D44002565B6 /* AppRadioView.xib */,
+				28512E0F2711A1C2002979AD /* TopPicksView.swift */,
+				28512E122711A1CE002979AD /* TopPicksView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -494,6 +508,8 @@
 				2841B455270B92BD000FA706 /* BannerCollectionViewCell.xib */,
 				2841B45A270B949C000FA706 /* BannerViewCollectionViewCell.swift */,
 				2841B45B270B949C000FA706 /* BannerViewCollectionViewCell.xib */,
+				28512E1A2711A78F002979AD /* TopPickCollectionViewCell.swift */,
+				28512E1B2711A78F002979AD /* TopPickCollectionViewCell.xib */,
 			);
 			path = "ColletionView Cells";
 			sourceTree = "<group>";
@@ -573,6 +589,8 @@
 				289805A227106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib */,
 				28512DEB2710D1FC002979AD /* BasketTableViewCell.swift */,
 				28512DEC2710D1FC002979AD /* BasketTableViewCell.xib */,
+				28512E152711A5B4002979AD /* TopPickTableViewCell.swift */,
+				28512E162711A5B4002979AD /* TopPickTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -734,6 +752,7 @@
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
 				C9A85345270CF1A900066B1E /* NotificationTableViewCell.xib in Resources */,
 				2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */,
+				28512E132711A1CE002979AD /* TopPicksView.xib in Resources */,
 				289802E4270E2984002565B6 /* Chat.storyboard in Resources */,
 				2841B2F22708BB82000FA706 /* FixMyVehicleView.xib in Resources */,
 				2805770026FCFAC10035BC2B /* Poppins-Thin.otf in Resources */,
@@ -742,11 +761,13 @@
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
 				2898055227105575002565B6 /* BasketView.xib in Resources */,
+				28512E1D2711A78F002979AD /* TopPickCollectionViewCell.xib in Resources */,
 				C94CAC9B270E143300FF1FCC /* BookingDetailsTableViewCell.xib in Resources */,
 				289805322710309A002565B6 /* ConfirmBookingTableViewCell.xib in Resources */,
 				289805A427106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.xib in Resources */,
 				280576FC26FCFAC10035BC2B /* Poppins-BlackItalic.otf in Resources */,
 				2841B2FD270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.xib in Resources */,
+				28512E182711A5B4002979AD /* TopPickTableViewCell.xib in Resources */,
 				28A88F9F26FFBEB500003EB7 /* Order.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,8 +848,10 @@
 				2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */,
 				280575F626FBAF1C0035BC2B /* BaseViewController.swift in Sources */,
 				2841B2C5270797AC000FA706 /* AddNewAddressDetailsViewController.swift in Sources */,
+				28512E102711A1C2002979AD /* TopPicksView.swift in Sources */,
 				289805A727106D2E002565B6 /* AppRadioView.swift in Sources */,
 				2898054E27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.swift in Sources */,
+				28512E1C2711A78F002979AD /* TopPickCollectionViewCell.swift in Sources */,
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
 				2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */,
 				C9A85344270CF1A900066B1E /* NotificationTableViewCell.swift in Sources */,
@@ -839,6 +862,7 @@
 				2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */,
 				2841B2F62708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift in Sources */,
 				289805312710309A002565B6 /* ConfirmBookingTableViewCell.swift in Sources */,
+				28512E172711A5B4002979AD /* TopPickTableViewCell.swift in Sources */,
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
