@@ -27,6 +27,12 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
         setupBackButton(color: .white)
         bannerView.reloadData()
     }
+    
+    @IBAction func buyNowButtonHandler(_ sender: UIButton) {
+        let sb = UIStoryboard(storyboard: .accessories)
+        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 

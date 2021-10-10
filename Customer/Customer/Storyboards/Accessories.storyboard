@@ -197,16 +197,46 @@
                                                     <constraint firstAttribute="height" constant="300" id="ZHE-GZ-Alo"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-N6-nh8">
+                                                <rect key="frame" x="0.0" y="763" width="414" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agC-Vg-oyQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="55"/>
+                                                        <color key="backgroundColor" red="0.3411764706" green="0.52941176469999995" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="Buy Now">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buyNowButtonHandler:" destination="g6J-Nz-XKo" eventType="touchUpInside" id="cYx-Do-l8j"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygb-IK-fwZ">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="55"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="Add to Cart">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="eep-Zn-pwZ"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="AQZ-Bj-4tK" firstAttribute="leading" secondItem="WqW-A2-E5Z" secondAttribute="leading" id="587-Qt-lTd"/>
+                                            <constraint firstItem="Wby-N6-nh8" firstAttribute="leading" secondItem="WqW-A2-E5Z" secondAttribute="leading" id="9rI-2I-YLT"/>
                                             <constraint firstAttribute="trailing" secondItem="AQZ-Bj-4tK" secondAttribute="trailing" id="Mq1-0N-ytT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wby-N6-nh8" secondAttribute="trailing" id="SqY-tH-bqO"/>
                                             <constraint firstItem="FDE-06-o87" firstAttribute="leading" secondItem="WqW-A2-E5Z" secondAttribute="leading" id="TTH-d6-5ZO"/>
                                             <constraint firstItem="FDE-06-o87" firstAttribute="top" secondItem="7qg-m3-Ela" secondAttribute="bottom" id="ZjN-aH-1sd"/>
                                             <constraint firstItem="7qg-m3-Ela" firstAttribute="leading" secondItem="WqW-A2-E5Z" secondAttribute="leading" id="bVD-Sg-K6c"/>
                                             <constraint firstItem="7qg-m3-Ela" firstAttribute="top" secondItem="nwI-NM-9oZ" secondAttribute="bottom" constant="25" id="c74-gn-W2J"/>
                                             <constraint firstAttribute="trailing" secondItem="7qg-m3-Ela" secondAttribute="trailing" id="e8c-mY-XvJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wby-N6-nh8" secondAttribute="bottom" id="gvF-eg-8cG"/>
                                             <constraint firstAttribute="trailing" secondItem="FDE-06-o87" secondAttribute="trailing" id="k19-HZ-wzH"/>
                                             <constraint firstItem="AQZ-Bj-4tK" firstAttribute="top" secondItem="WqW-A2-E5Z" secondAttribute="top" constant="25" id="qS0-Id-ffI"/>
                                             <constraint firstAttribute="trailing" secondItem="nwI-NM-9oZ" secondAttribute="trailing" id="suy-FO-ZkV"/>
@@ -223,10 +253,27 @@
                                     <constraint firstAttribute="bottom" secondItem="WqW-A2-E5Z" secondAttribute="bottom" id="xcT-hs-ku9"/>
                                 </constraints>
                             </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LYs-vs-b1D">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIV-EX-FFv">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="34"/>
+                                        <color key="backgroundColor" red="0.3411764706" green="0.52941176469999995" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgT-SH-r4x">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ioy-w1-hWT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LYs-vs-b1D" firstAttribute="leading" secondItem="IuF-PE-bYS" secondAttribute="leading" id="48Y-3B-1o4"/>
+                            <constraint firstItem="LYs-vs-b1D" firstAttribute="top" secondItem="T0J-Uv-I2M" secondAttribute="bottom" id="JvU-II-dfx"/>
+                            <constraint firstAttribute="trailing" secondItem="LYs-vs-b1D" secondAttribute="trailing" id="Mdg-H3-dOw"/>
+                            <constraint firstAttribute="bottom" secondItem="LYs-vs-b1D" secondAttribute="bottom" id="XRK-Oq-djI"/>
                             <constraint firstItem="Ioy-w1-hWT" firstAttribute="trailing" secondItem="T0J-Uv-I2M" secondAttribute="trailing" id="YtC-1B-Q43"/>
                             <constraint firstItem="Ioy-w1-hWT" firstAttribute="bottom" secondItem="T0J-Uv-I2M" secondAttribute="bottom" id="fEd-wa-hP4"/>
                             <constraint firstItem="T0J-Uv-I2M" firstAttribute="top" secondItem="Ioy-w1-hWT" secondAttribute="top" id="gm1-6v-7dd"/>
