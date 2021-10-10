@@ -9,7 +9,14 @@ import UIKit
 
 class ButtonCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var btn: UIButton!{
+        didSet{
+            
+            btn.backgroundColor = UIColor.Theme.green
+            btn.layer.cornerRadius = 10
+            
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -159,6 +159,10 @@
 		C94CAC9B270E143300FF1FCC /* BookingDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94CAC99270E143300FF1FCC /* BookingDetailsTableViewCell.xib */; };
 		C94CAC9D270E171100FF1FCC /* BookingDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94CAC9C270E171100FF1FCC /* BookingDetailsHeader.swift */; };
 		C94CAC9F270E172200FF1FCC /* BookingDetailsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94CAC9E270E172200FF1FCC /* BookingDetailsHeader.xib */; };
+		C95B568227131701000D6971 /* SelectWorkshopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95B568127131701000D6971 /* SelectWorkshopViewController.swift */; };
+		C95B568527131ACD000D6971 /* SelectWorkshopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95B568327131ACD000D6971 /* SelectWorkshopTableViewCell.swift */; };
+		C95B568627131ACD000D6971 /* SelectWorkshopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95B568427131ACD000D6971 /* SelectWorkshopTableViewCell.xib */; };
+		C95B568827134BE6000D6971 /* ConfirmBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */; };
 		C9A8391827108C0800BD08FA /* SelectServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */; };
 		C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8533D270CCC2F00066B1E /* Notification.storyboard */; };
 		C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85340270CCCA400066B1E /* NotificationViewController.swift */; };
@@ -330,6 +334,10 @@
 		C94CAC99270E143300FF1FCC /* BookingDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		C94CAC9C270E171100FF1FCC /* BookingDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsHeader.swift; sourceTree = "<group>"; };
 		C94CAC9E270E172200FF1FCC /* BookingDetailsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailsHeader.xib; sourceTree = "<group>"; };
+		C95B568127131701000D6971 /* SelectWorkshopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkshopViewController.swift; sourceTree = "<group>"; };
+		C95B568327131ACD000D6971 /* SelectWorkshopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkshopTableViewCell.swift; sourceTree = "<group>"; };
+		C95B568427131ACD000D6971 /* SelectWorkshopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectWorkshopTableViewCell.xib; sourceTree = "<group>"; };
+		C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmBookingViewController.swift; sourceTree = "<group>"; };
 		C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesViewController.swift; sourceTree = "<group>"; };
 		C9A8533D270CCC2F00066B1E /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		C9A85340270CCCA400066B1E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -672,6 +680,8 @@
 				28512E772713373C002979AD /* FilterPriceTableViewCell.xib */,
 				28512E81271340AC002979AD /* FilterWarrantyTypeTableViewCell.swift */,
 				28512E82271340AC002979AD /* FilterWarrantyTypeTableViewCell.xib */,
+				C95B568327131ACD000D6971 /* SelectWorkshopTableViewCell.swift */,
+				C95B568427131ACD000D6971 /* SelectWorkshopTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -718,6 +728,8 @@
 				C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */,
 				C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */,
 				C9CA74C22710C9840091A051 /* SelectModeViewController.swift */,
+				C95B568127131701000D6971 /* SelectWorkshopViewController.swift */,
+				C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -822,6 +834,7 @@
 				28CCA6B52704ED2F00DB1421 /* AddressListTableViewCell.xib in Resources */,
 				28512E84271340AC002979AD /* FilterWarrantyTypeTableViewCell.xib in Resources */,
 				280576FF26FCFAC10035BC2B /* Poppins-ExtraBoldItalic.otf in Resources */,
+				C95B568627131ACD000D6971 /* SelectWorkshopTableViewCell.xib in Resources */,
 				28512DEE2710D1FC002979AD /* BasketTableViewCell.xib in Resources */,
 				28512E892713486C002979AD /* ButtonCollectionViewCell.xib in Resources */,
 				2841B45D270B949C000FA706 /* BannerViewCollectionViewCell.xib in Resources */,
@@ -926,6 +939,7 @@
 				289803EE270F80DF002565B6 /* AccessoriesViewController.swift in Sources */,
 				2841B458270B92BD000FA706 /* BannerCollectionViewCell.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
+				C95B568227131701000D6971 /* SelectWorkshopViewController.swift in Sources */,
 				C9CA74C027109B780091A051 /* SelectServicesTableViewCell.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
 				C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */,
@@ -959,8 +973,10 @@
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
 				289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
+				C95B568527131ACD000D6971 /* SelectWorkshopTableViewCell.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */,
+				C95B568827134BE6000D6971 /* ConfirmBookingViewController.swift in Sources */,
 				2841B2F62708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift in Sources */,
 				289805312710309A002565B6 /* ConfirmBookingTableViewCell.swift in Sources */,
 				28512E172711A5B4002979AD /* TopPickTableViewCell.swift in Sources */,
