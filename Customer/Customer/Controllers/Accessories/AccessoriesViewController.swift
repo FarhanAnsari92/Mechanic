@@ -26,6 +26,12 @@ class AccessoriesViewController: HomeBaseViewController {
         self.title = "Helmets"
         setupBackButton(color: .white)
     }
+    
+    @IBAction func filterButtonHandler(_ sender: UIButton) {
+        let sb = UIStoryboard(storyboard: .accessories)
+        let vc = sb.instantiateViewController(withIdentifier: FilterAccessoryViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
