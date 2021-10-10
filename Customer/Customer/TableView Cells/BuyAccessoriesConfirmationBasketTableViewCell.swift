@@ -21,6 +21,7 @@ class BuyAccessoriesConfirmationBasketTableViewCell: UITableViewCell {
         super.awakeFromNib()
         (0..<2).forEach { i in
             let basketView = BasketView()
+            basketView.stepper.isHidden = true
             basketView.heightAnchor.constraint(equalToConstant: 90).isActive = true
             if i == 0 {
                 basketView.lblName.text = "Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name"

@@ -20,6 +20,7 @@ class BasketView: NibDesignable {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblQuantity: UILabel!
+    @IBOutlet weak var stepper: BaseStepper!
 
     override class func awakeFromNib() {
         super.awakeFromNib()

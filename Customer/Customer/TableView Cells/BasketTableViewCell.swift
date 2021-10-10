@@ -8,10 +8,12 @@
 import UIKit
 
 class BasketTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var basketView: BasketView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        basketView.lblQuantity.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
