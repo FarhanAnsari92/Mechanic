@@ -11,11 +11,10 @@ class AccessoriesViewController: HomeBaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
-//            collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
             
             collectionView.register(AutoPartsAndAccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier)
             collectionView.register(AccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoriesCollectionViewCell.identifier)
-            collectionView.register(BannerViewCollectionViewCell.nib, forCellWithReuseIdentifier: BannerViewCollectionViewCell.identifier)
+            collectionView.register(AccessoryBannerViewCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoryBannerViewCollectionViewCell.identifier)
             
             collectionView.delegate = self
             collectionView.dataSource = self
@@ -35,13 +34,6 @@ extension AccessoriesViewController: UICollectionViewDelegate, UICollectionViewD
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! SectionHeader
-//        sectionHeader.label.text = "Categories"
-//        sectionHeader.configure()
-//        return sectionHeader
-//    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 0)
@@ -56,7 +48,7 @@ extension AccessoriesViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerViewCollectionViewCell.identifier, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoryBannerViewCollectionViewCell.identifier, for: indexPath)
             return cell
         } else {
             // 2 liner item name will not work in iPhone 5s sized devices.

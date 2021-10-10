@@ -15,7 +15,7 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
         }
     }
     
-    @IBOutlet weak var bannerView: BannerView! {
+    @IBOutlet weak var bannerView: AccessoryBanner! {
         didSet {
             bannerView.datasource = self
         }
@@ -25,7 +25,6 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
         super.viewDidLoad()
         self.title = "HELMET BURAAK"
         setupBackButton(color: .white)
-        bannerView.reloadData()
     }
     
     @IBAction func buyNowButtonHandler(_ sender: UIButton) {
@@ -36,12 +35,10 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
 
 }
 
-extension AccessoriesDetailsViewController: BannerViewDatasource {
+extension AccessoriesDetailsViewController: AccessoryBannerViewDatasource {
     
-    func imageURL(index: Int) -> Any {
-        let imageName = "banner\(index+1)"
-        print("imageName - ", imageName)
-        let image = UIImage(named: imageName)!
+    func imageURL(index: Int) -> Any {        
+        let image = UIImage(named: "img_side_mirror")!
         return image
     }
     

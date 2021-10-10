@@ -1,4 +1,5 @@
 PODS:
+  - AdvancedPageControl (0.9.0)
   - Alamofire (4.8.2)
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
@@ -20,6 +21,7 @@ PODS:
   - ZSWTappableLabel (3.3.2)
 
 DEPENDENCIES:
+  - AdvancedPageControl
   - Alamofire (~> 4.8.2)
   - Alamofire-SwiftyJSON
   - GrowingTextView (= 0.7.2)
@@ -35,6 +37,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AdvancedPageControl
     - Alamofire
     - Alamofire-SwiftyJSON
     - GrowingTextView
@@ -58,6 +61,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/FarhanAnsari92/IQKeyboardManager.git
 
 SPEC CHECKSUMS:
+  AdvancedPageControl: 39e3b32b00b2d324c534f8e17cc6c5be9abe84b7
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
@@ -72,6 +76,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   ZSWTappableLabel: 92f11d677bb395a8294df48482316c4981783ca0
 
-PODFILE CHECKSUM: f1e22f2c67ded33c27937a92c3c7edf02cd7c6f9
+PODFILE CHECKSUM: 49e3dfc25a1b4f4f88e72af795b5b58e14e724ad
 
 COCOAPODS: 1.10.1

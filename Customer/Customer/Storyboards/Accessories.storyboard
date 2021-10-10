@@ -183,7 +183,7 @@
                                                     <constraint firstItem="HeF-Hh-Yfz" firstAttribute="centerY" secondItem="BGg-Ry-P6b" secondAttribute="centerY" id="sOG-kx-833"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQZ-Bj-4tK" customClass="BannerView" customModule="Customer" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQZ-Bj-4tK" customClass="AccessoryBanner" customModule="Customer" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="25" width="414" height="188"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -283,7 +283,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bannerView" destination="AQZ-Bj-4tK" id="zIA-oC-gzt"/>
+                        <outlet property="bannerView" destination="AQZ-Bj-4tK" id="Hcz-s6-hAH"/>
                         <outlet property="pricePrentView" destination="7qg-m3-Ela" id="I7e-aY-I78"/>
                     </connections>
                 </viewController>

@@ -38,5 +38,7 @@ target 'Customer' do
   
   # https://github.com/KennethTsang/GrowingTextView
   pod 'GrowingTextView', '0.7.2'
+  # https://github.com/mohn93/AdvancedPageControl
+  pod 'AdvancedPageControl'
 
 end

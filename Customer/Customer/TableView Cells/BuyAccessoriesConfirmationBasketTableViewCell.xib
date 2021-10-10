@@ -153,7 +153,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="eCb-ej-xrR"/>
                                                         </constraints>
-                                                        <state key="normal" title="Apple"/>
+                                                        <state key="normal" title="Apply"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

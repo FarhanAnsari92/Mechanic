@@ -98,6 +98,10 @@
 		28512E322711BAE3002979AD /* ProductReviewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E312711BAE3002979AD /* ProductReviewsView.xib */; };
 		28512E372711CAC6002979AD /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E352711CAC6002979AD /* ReviewTableViewCell.swift */; };
 		28512E382711CAC6002979AD /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E362711CAC6002979AD /* ReviewTableViewCell.xib */; };
+		28512E4B2712B8AF002979AD /* AccessoryBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E4A2712B8AF002979AD /* AccessoryBanner.swift */; };
+		28512E4E2712B8C2002979AD /* AccessoryBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E4D2712B8C2002979AD /* AccessoryBanner.xib */; };
+		28512E622712C45A002979AD /* AccessoryBannerViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E602712C45A002979AD /* AccessoryBannerViewCollectionViewCell.swift */; };
+		28512E632712C45A002979AD /* AccessoryBannerViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E612712C45A002979AD /* AccessoryBannerViewCollectionViewCell.xib */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -249,6 +253,10 @@
 		28512E312711BAE3002979AD /* ProductReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductReviewsView.xib; sourceTree = "<group>"; };
 		28512E352711CAC6002979AD /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		28512E362711CAC6002979AD /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		28512E4A2712B8AF002979AD /* AccessoryBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryBanner.swift; sourceTree = "<group>"; };
+		28512E4D2712B8C2002979AD /* AccessoryBanner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryBanner.xib; sourceTree = "<group>"; };
+		28512E602712C45A002979AD /* AccessoryBannerViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryBannerViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		28512E612712C45A002979AD /* AccessoryBannerViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryBannerViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -516,6 +524,8 @@
 				28512E2B2711BA14002979AD /* ProductDetailsView.xib */,
 				28512E2E2711BAD4002979AD /* ProductReviewsView.swift */,
 				28512E312711BAE3002979AD /* ProductReviewsView.xib */,
+				28512E4A2712B8AF002979AD /* AccessoryBanner.swift */,
+				28512E4D2712B8C2002979AD /* AccessoryBanner.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -534,6 +544,8 @@
 				2841B45B270B949C000FA706 /* BannerViewCollectionViewCell.xib */,
 				28512E1A2711A78F002979AD /* TopPickCollectionViewCell.swift */,
 				28512E1B2711A78F002979AD /* TopPickCollectionViewCell.xib */,
+				28512E602712C45A002979AD /* AccessoryBannerViewCollectionViewCell.swift */,
+				28512E612712C45A002979AD /* AccessoryBannerViewCollectionViewCell.xib */,
 			);
 			path = "ColletionView Cells";
 			sourceTree = "<group>";
@@ -559,8 +571,8 @@
 			children = (
 				289803ED270F80DF002565B6 /* AccessoriesViewController.swift */,
 				289803F0270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift */,
-				28512DE12710CB7C002979AD /* BuyAccessoriesSuccessfullViewController.swift */,
 				28512E1F2711AE9A002979AD /* AccessoriesDetailsViewController.swift */,
+				28512DE12710CB7C002979AD /* BuyAccessoriesSuccessfullViewController.swift */,
 			);
 			path = Accessories;
 			sourceTree = "<group>";
@@ -745,6 +757,7 @@
 				2805770C26FD05590035BC2B /* Poppins-LightItalic.ttf in Resources */,
 				28512DE52710CF28002979AD /* Basket.storyboard in Resources */,
 				2805770B26FD05590035BC2B /* Poppins-ExtraLightItalic.ttf in Resources */,
+				28512E632712C45A002979AD /* AccessoryBannerViewCollectionViewCell.xib in Resources */,
 				280575DA26FBA4F70035BC2B /* Authentication.storyboard in Resources */,
 				C94CAC9F270E172200FF1FCC /* BookingDetailsHeader.xib in Resources */,
 				28A88FAA26FFC1A300003EB7 /* OrderHistoryTableViewCell.xib in Resources */,
@@ -789,6 +802,7 @@
 				2898054827104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.xib in Resources */,
 				280576F826FCFAC10035BC2B /* Poppins-BoldItalic.otf in Resources */,
 				280575C626FBA1620035BC2B /* Assets.xcassets in Resources */,
+				28512E4E2712B8C2002979AD /* AccessoryBanner.xib in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
 				2898055227105575002565B6 /* BasketView.xib in Resources */,
 				28512E1D2711A78F002979AD /* TopPickCollectionViewCell.xib in Resources */,
@@ -872,6 +886,8 @@
 				28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */,
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
 				2841B2C227078F37000FA706 /* ShadowView.swift in Sources */,
+				28512E622712C45A002979AD /* AccessoryBannerViewCollectionViewCell.swift in Sources */,
+				28512E4B2712B8AF002979AD /* AccessoryBanner.swift in Sources */,
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
 				2898055527105589002565B6 /* BasketView.swift in Sources */,
 				2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */,

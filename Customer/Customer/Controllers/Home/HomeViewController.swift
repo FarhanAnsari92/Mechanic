@@ -196,7 +196,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if section == 0 || section == 1 || section == 3 {
             return 1
         }
-        return 20
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
