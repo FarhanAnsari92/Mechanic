@@ -12,7 +12,7 @@
         <array key="Poppins-Light.ttf">
             <string>Poppins-Light</string>
         </array>
-        <array key="Poppins-Medium.otf">
+        <array key="Poppins-Medium.ttf">
             <string>Poppins-Medium</string>
         </array>
         <array key="Poppins-SemiBold.otf">
@@ -138,7 +138,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSD-8X-Goh">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzr-Hi-aXf">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzr-Hi-aXf" customClass="GMSMapView">
                                                 <rect key="frame" x="20" y="20" width="374" height="350"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -281,7 +281,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapParentView" destination="qzr-Hi-aXf" id="Hby-HS-1Q3"/>
+                        <outlet property="gmsMapView" destination="qzr-Hi-aXf" id="qZn-8r-OJh"/>
                         <outlet property="reverseGeocodedAddressParentView" destination="cOt-uP-1Oh" id="l0j-Jn-zVm"/>
                         <outlet property="scrollView" destination="mOB-GE-yfs" id="hcl-bL-7ne"/>
                         <outlet property="streetAddressParentView" destination="DZO-xo-0EZ" id="2oC-d9-FZg"/>

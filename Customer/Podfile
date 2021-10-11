@@ -16,6 +16,9 @@ target 'Customer' do
   # https://github.com/Friend-LGA/LGSideMenuController
   pod 'LGSideMenuController'
   
+  # https://developers.google.com/maps/documentation/ios-sdk/start
+  pod 'GoogleMaps'
+  
   # https://github.com/Alamofire/Alamofire
   pod 'Alamofire', '~> 4.8.2'
 

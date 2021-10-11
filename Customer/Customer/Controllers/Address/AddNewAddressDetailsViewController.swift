@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class AddNewAddressDetailsViewController: HomeBaseViewController {
     
-    @IBOutlet weak var mapParentView: UIView! {
+    @IBOutlet weak var gmsMapView: GMSMapView! {
         didSet {
-            mapParentView.layer.cornerRadius = 15
+            gmsMapView.layer.cornerRadius = 15
         }
     }
     @IBOutlet weak var reverseGeocodedAddressParentView: UIView! {

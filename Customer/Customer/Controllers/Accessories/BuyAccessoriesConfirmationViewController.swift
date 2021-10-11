@@ -11,7 +11,6 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-//            tableView.register(ConfirmBookingTableViewCell.nib, forCellReuseIdentifier: ConfirmBookingTableViewCell.identifier)
             tableView.register(BuyAccessoriesConfirmationAddressTableViewCell.nib, forCellReuseIdentifier: BuyAccessoriesConfirmationAddressTableViewCell.identifier)
             
             tableView.register(BuyAccessoriesConfirmationBasketTableViewCell.nib, forCellReuseIdentifier: BuyAccessoriesConfirmationBasketTableViewCell.identifier)

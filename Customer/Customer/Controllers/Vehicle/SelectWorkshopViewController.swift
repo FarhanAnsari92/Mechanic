@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class SelectWorkshopViewController: HomeBaseViewController {
     
     @IBOutlet weak var btn_done: UIButton!
     @IBOutlet weak var tableview: UITableView!{
-        
         didSet{
             tableview.delegate = self
             tableview.dataSource = self
             tableview.register(SelectWorkshopTableViewCell.nib, forCellReuseIdentifier: SelectWorkshopTableViewCell.identifier)
+        }
+    }
+    @IBOutlet weak var gmsMapView: GMSMapView! {
+        didSet {
+            gmsMapView.layer.cornerRadius = 15
         }
     }
 
@@ -27,13 +32,11 @@ class SelectWorkshopViewController: HomeBaseViewController {
     }
     
     @IBAction func btn_done(_ sender: UIButton) {
-                 
-                 let sb = UIStoryboard(storyboard: .vehicle)
-                 let vc = sb.instantiateViewController(withIdentifier: ConfirmBookingViewController.storyboardIdentifier)
-                 self.navigationController?.pushViewController(vc, animated: true)
-             }
+        let sb = UIStoryboard(storyboard: .vehicle)
+        let vc = sb.instantiateViewController(withIdentifier: ConfirmBookingViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
-
 }
 
 extension SelectWorkshopViewController : UITableViewDelegate , UITableViewDataSource{
