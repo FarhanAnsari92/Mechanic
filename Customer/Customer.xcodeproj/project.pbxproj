@@ -116,6 +116,8 @@
 		28512E84271340AC002979AD /* FilterWarrantyTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E82271340AC002979AD /* FilterWarrantyTypeTableViewCell.xib */; };
 		28512E882713486C002979AD /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28512E862713486C002979AD /* ButtonCollectionViewCell.swift */; };
 		28512E892713486C002979AD /* ButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E872713486C002979AD /* ButtonCollectionViewCell.xib */; };
+		285131342714BB48002979AD /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285131332714BB48002979AD /* KeyValueView.swift */; };
+		285131372714BB5E002979AD /* KeyValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285131362714BB5E002979AD /* KeyValueView.xib */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -289,6 +291,8 @@
 		28512E82271340AC002979AD /* FilterWarrantyTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterWarrantyTypeTableViewCell.xib; sourceTree = "<group>"; };
 		28512E862713486C002979AD /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		28512E872713486C002979AD /* ButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCollectionViewCell.xib; sourceTree = "<group>"; };
+		285131332714BB48002979AD /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
+		285131362714BB5E002979AD /* KeyValueView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyValueView.xib; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -567,6 +571,8 @@
 				28512E672712CC2A002979AD /* BaseStepper.xib */,
 				28512E7B27133E0D002979AD /* SingleSelectionView.swift */,
 				28512E7E27133E2B002979AD /* SingleSelectionView.xib */,
+				285131332714BB48002979AD /* KeyValueView.swift */,
+				285131362714BB5E002979AD /* KeyValueView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -865,6 +871,7 @@
 				28512E4E2712B8C2002979AD /* AccessoryBanner.xib in Resources */,
 				2805770226FCFAC10035BC2B /* Poppins-Bold.otf in Resources */,
 				2898055227105575002565B6 /* BasketView.xib in Resources */,
+				285131372714BB5E002979AD /* KeyValueView.xib in Resources */,
 				28512E1D2711A78F002979AD /* TopPickCollectionViewCell.xib in Resources */,
 				C94CAC9B270E143300FF1FCC /* BookingDetailsTableViewCell.xib in Resources */,
 				289805322710309A002565B6 /* ConfirmBookingTableViewCell.xib in Resources */,
@@ -955,6 +962,7 @@
 				280577C326FE8A400035BC2B /* RegistrationViewController.swift in Sources */,
 				28512DE92710CF67002979AD /* BasketListViewController.swift in Sources */,
 				289803EE270F80DF002565B6 /* AccessoriesViewController.swift in Sources */,
+				285131342714BB48002979AD /* KeyValueView.swift in Sources */,
 				2841B458270B92BD000FA706 /* BannerCollectionViewCell.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
 				C95B568227131701000D6971 /* SelectWorkshopViewController.swift in Sources */,
