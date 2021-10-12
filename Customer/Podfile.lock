@@ -4,10 +4,10 @@ PODS:
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
     - SwiftyJSON (~> 4.0.0)
-  - GoogleMaps (5.1.0):
-    - GoogleMaps/Maps (= 5.1.0)
-  - GoogleMaps/Base (5.1.0)
-  - GoogleMaps/Maps (5.1.0):
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
     - GoogleMaps/Base
   - GrowingTextView (0.7.2)
   - IQKeyboardManagerSwift (6.1.1)
@@ -29,7 +29,7 @@ DEPENDENCIES:
   - AdvancedPageControl
   - Alamofire (~> 4.8.2)
   - Alamofire-SwiftyJSON
-  - GoogleMaps
+  - GoogleMaps (= 2.5.0)
   - GrowingTextView (= 0.7.2)
   - IQKeyboardManagerSwift (from `https://github.com/FarhanAnsari92/IQKeyboardManager.git`)
   - LGSideMenuController
@@ -71,7 +71,7 @@ SPEC CHECKSUMS:
   AdvancedPageControl: 39e3b32b00b2d324c534f8e17cc6c5be9abe84b7
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
-  GoogleMaps: 086ae1dab659eaa7339bdb30fc88e2f44e7c597c
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   LGSideMenuController: 0c7b155b0dbdf14bf8b88d5ac363c5fe1584bb23
@@ -84,6 +84,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   ZSWTappableLabel: 92f11d677bb395a8294df48482316c4981783ca0
 
-PODFILE CHECKSUM: f404101ca34fc6fe620dd86db289facd02718da8
+PODFILE CHECKSUM: 84afbffcbf52919fc1dd04499ef4b7edc21a7f18
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
