@@ -118,6 +118,9 @@
 		28512E892713486C002979AD /* ButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E872713486C002979AD /* ButtonCollectionViewCell.xib */; };
 		285131342714BB48002979AD /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285131332714BB48002979AD /* KeyValueView.swift */; };
 		285131372714BB5E002979AD /* KeyValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285131362714BB5E002979AD /* KeyValueView.xib */; };
+		2851342A27160F72002979AD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342927160F72002979AD /* BaseView.swift */; };
+		2851342D271613B9002979AD /* AddNewVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342C271613B9002979AD /* AddNewVehicleViewController.swift */; };
+		28513430271616CE002979AD /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342F271616CE002979AD /* DropDownButton.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -293,6 +296,9 @@
 		28512E872713486C002979AD /* ButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCollectionViewCell.xib; sourceTree = "<group>"; };
 		285131332714BB48002979AD /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
 		285131362714BB5E002979AD /* KeyValueView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyValueView.xib; sourceTree = "<group>"; };
+		2851342927160F72002979AD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2851342C271613B9002979AD /* AddNewVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewVehicleViewController.swift; sourceTree = "<group>"; };
+		2851342F271616CE002979AD /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -482,6 +488,8 @@
 				28373E142706378D0071E93D /* AppLinkLabel.swift */,
 				2841B2C127078F37000FA706 /* ShadowView.swift */,
 				28512E6B2712CF08002979AD /* PaddingLabel.swift */,
+				2851342927160F72002979AD /* BaseView.swift */,
+				2851342F271616CE002979AD /* DropDownButton.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -736,6 +744,7 @@
 				C9CA74C22710C9840091A051 /* SelectModeViewController.swift */,
 				C95B568127131701000D6971 /* SelectWorkshopViewController.swift */,
 				C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */,
+				2851342C271613B9002979AD /* AddNewVehicleViewController.swift */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -994,6 +1003,7 @@
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
 				2841B2DB2707ADB7000FA706 /* TrackingStatusTableViewCell.swift in Sources */,
 				28512E6C2712CF08002979AD /* PaddingLabel.swift in Sources */,
+				2851342D271613B9002979AD /* AddNewVehicleViewController.swift in Sources */,
 				C9A85344270CF1A900066B1E /* NotificationTableViewCell.swift in Sources */,
 				28512E682712CC2B002979AD /* BaseStepper.swift in Sources */,
 				28A88FA326FFBF3B00003EB7 /* OrderHistoryViewController.swift in Sources */,
@@ -1044,8 +1054,10 @@
 				289805A327106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift in Sources */,
 				289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */,
 				C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */,
+				2851342A27160F72002979AD /* BaseView.swift in Sources */,
 				28512E882713486C002979AD /* ButtonCollectionViewCell.swift in Sources */,
 				2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */,
+				28513430271616CE002979AD /* DropDownButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
