@@ -17,7 +17,7 @@ target 'Customer' do
   pod 'LGSideMenuController'
   
   # https://developers.google.com/maps/documentation/ios-sdk/start
-  pod 'GoogleMaps'
+  pod 'GoogleMaps', '2.5.0'
   
   # https://github.com/Alamofire/Alamofire
   pod 'Alamofire', '~> 4.8.2'

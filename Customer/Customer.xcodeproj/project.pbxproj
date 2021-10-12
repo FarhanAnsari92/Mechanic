@@ -177,6 +177,8 @@
 		C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */; };
 		C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */; };
 		C9E4315D270F84CE008056C5 /* MyVehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */; };
+		C9EFA4CD27160EDF00075D1B /* SuccessfullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EFA4CC27160EDF00075D1B /* SuccessfullViewController.swift */; };
+		C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EFA4CE2716198100075D1B /* SuccessfullRiderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -354,6 +356,8 @@
 		C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleViewController.swift; sourceTree = "<group>"; };
 		C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleTableViewCell.swift; sourceTree = "<group>"; };
 		C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyVehicleTableViewCell.xib; sourceTree = "<group>"; };
+		C9EFA4CC27160EDF00075D1B /* SuccessfullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullViewController.swift; sourceTree = "<group>"; };
+		C9EFA4CE2716198100075D1B /* SuccessfullRiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullRiderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -736,6 +740,8 @@
 				C9CA74C22710C9840091A051 /* SelectModeViewController.swift */,
 				C95B568127131701000D6971 /* SelectWorkshopViewController.swift */,
 				C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */,
+				C9EFA4CC27160EDF00075D1B /* SuccessfullViewController.swift */,
+				C9EFA4CE2716198100075D1B /* SuccessfullRiderViewController.swift */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -760,7 +766,7 @@
 				280575B626FBA1570035BC2B /* Frameworks */,
 				280575B726FBA1570035BC2B /* Resources */,
 				693DCC4111AB8A074FA3D880 /* [CP] Embed Pods Frameworks */,
-				8C2E219DC7AD86DD70561461 /* [CP] Copy Pods Resources */,
+				8A360654AD0AD6AD9BC3B195 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -906,7 +912,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Customer/Pods-Customer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C2E219DC7AD86DD70561461 /* [CP] Copy Pods Resources */ = {
+		8A360654AD0AD6AD9BC3B195 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -954,6 +960,7 @@
 			files = (
 				280575E926FBA8F70035BC2B /* StoryboardIdentifiable.swift in Sources */,
 				280575E326FBA8610035BC2B /* Extensions.swift in Sources */,
+				C9EFA4CD27160EDF00075D1B /* SuccessfullViewController.swift in Sources */,
 				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
 				28512DE22710CB7C002979AD /* BuyAccessoriesSuccessfullViewController.swift in Sources */,
@@ -1015,6 +1022,7 @@
 				C9A8391827108C0800BD08FA /* SelectServicesViewController.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
 				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
+				C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */,
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
 				28512DED2710D1FC002979AD /* BasketTableViewCell.swift in Sources */,

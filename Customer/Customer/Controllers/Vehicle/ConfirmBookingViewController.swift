@@ -89,6 +89,11 @@ class ConfirmBookingViewController: HomeBaseViewController {
         data.append(paymentMethod)
     }
     
+    @IBAction func confirmButtonHandler(_ sender: UIButton) {
+          let sb = UIStoryboard(storyboard: .vehicle)
+          let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
+          self.navigationController?.pushViewController(vc, animated: true)
+      }
 }
 
 extension ConfirmBookingViewController : UITableViewDataSource , UITableViewDelegate{
