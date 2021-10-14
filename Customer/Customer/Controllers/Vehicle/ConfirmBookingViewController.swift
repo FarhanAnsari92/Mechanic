@@ -90,9 +90,15 @@ class ConfirmBookingViewController: HomeBaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
-          let sb = UIStoryboard(storyboard: .vehicle)
-          let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
-          self.navigationController?.pushViewController(vc, animated: true)
+        if AppDelegate.instance.shouldShowMapSuccess {
+            let sb = UIStoryboard(storyboard: .vehicle)
+            let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let sb = UIStoryboard(storyboard: .vehicle)
+            let vc = sb.instantiateViewController(withIdentifier: SuccessfullViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
       }
 }
 

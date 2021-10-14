@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var instance: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
+    
+    var shouldShowMapSuccess: Bool = true
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

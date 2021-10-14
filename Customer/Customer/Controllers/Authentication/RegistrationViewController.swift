@@ -22,13 +22,13 @@ class RegistrationViewController: BaseViewController {
         super.viewDidLoad()
         self.setupBackButton(color: .black)
         
-        let skipButton = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(self.skipButtonHandler))
-        
-        let font = UIFont.Poppins(UIFont.FontType.semiBold, size: 14.0)
-        skipButton.setTitleTextAttributes([NSAttributedString.Key.font: font], for: UIControl.State.normal)
-        
-        skipButton.tintColor = UIColor.Theme.green
-        self.navigationItem.rightBarButtonItem = skipButton
+//        let skipButton = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(self.skipButtonHandler))
+//        
+//        let font = UIFont.Poppins(UIFont.FontType.semiBold, size: 14.0)
+//        skipButton.setTitleTextAttributes([NSAttributedString.Key.font: font], for: UIControl.State.normal)
+//        
+//        skipButton.tintColor = UIColor.Theme.green
+//        self.navigationItem.rightBarButtonItem = skipButton
         
         self.title = "Register"
     }

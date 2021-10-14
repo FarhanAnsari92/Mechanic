@@ -25,6 +25,12 @@ class MyVehicleViewController: HomeBaseViewController {
         tableView.estimatedRowHeight = 100
         
     }
+    
+    @IBAction func addNewVehicleButtonHandler(_ sender: UIButton) {
+        let sb = UIStoryboard(storyboard: .vehicle)
+        let vc = sb.instantiateViewController(withIdentifier: AddNewVehicleViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
  
 }
 

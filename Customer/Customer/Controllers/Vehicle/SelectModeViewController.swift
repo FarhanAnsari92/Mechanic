@@ -70,9 +70,11 @@ class SelectModeViewController: HomeBaseViewController {
         if show {
             pickupShadowView.layer.borderWidth = 1
             workshopShadowView.layer.borderWidth = 0
+            AppDelegate.instance.shouldShowMapSuccess = true
         } else {
             pickupShadowView.layer.borderWidth = 0
             workshopShadowView.layer.borderWidth = 1
+            AppDelegate.instance.shouldShowMapSuccess = false
         }
         
         

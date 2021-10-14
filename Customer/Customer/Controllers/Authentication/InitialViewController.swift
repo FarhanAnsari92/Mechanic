@@ -25,13 +25,13 @@ class InitialViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let skipButton = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(self.skipButtonHandler))
-        
-        let font = UIFont.Poppins(.semiBold, size: 14.0)
-        skipButton.setTitleTextAttributes([NSAttributedString.Key.font: font], for: UIControl.State.normal)
-        
-        skipButton.tintColor = UIColor.Theme.green
-        self.navigationItem.rightBarButtonItem = skipButton                
+//        let skipButton = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(self.skipButtonHandler))
+//        
+//        let font = UIFont.Poppins(.semiBold, size: 14.0)
+//        skipButton.setTitleTextAttributes([NSAttributedString.Key.font: font], for: UIControl.State.normal)
+//        
+//        skipButton.tintColor = UIColor.Theme.green
+//        self.navigationItem.rightBarButtonItem = skipButton                
         
         self.lblTermsAndCondition.link = "the Terms and Conditions and Privacy Policy."
         self.lblTermsAndCondition.text = "By logging in or registering, you have agreed to the Terms and Conditions and Privacy Policy."
