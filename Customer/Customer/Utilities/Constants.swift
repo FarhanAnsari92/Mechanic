@@ -44,4 +44,8 @@ class Constants {
         static let coordinate            = "\\d+\\.\\d+\\s*,\\s*\\d+\\.\\d+"
     }
     
+    struct Device {
+        static let type: String = "ios"
+    }
+    
 }

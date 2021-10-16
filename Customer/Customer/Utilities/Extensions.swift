@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 extension UIColor {
     
@@ -153,7 +154,25 @@ extension UIStoryboard {
     }
 }
 
+extension Data {
+     var hexString: String {
+        let hexString = map { String(format: "%02.2hhx", $0) }.joined()
+        return hexString
+    }
+}
+
 extension UIView {
+    
+    func showHud() {
+        MBProgressHUD.showAdded(to: self, animated: true)
+    }
+    
+    func hideHud() {
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self, animated: true)
+        }
+    }
+    
     func roundView() {
         self.layer.cornerRadius = self.frame.height / 2
     }

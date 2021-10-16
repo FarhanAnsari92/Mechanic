@@ -18,6 +18,13 @@ class RegistrationViewController: BaseViewController {
         }
     }
     
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtCNIC: UITextField!
+    @IBOutlet weak var txtPhone: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtConfirmPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupBackButton(color: .black)
@@ -49,9 +56,29 @@ class RegistrationViewController: BaseViewController {
     }
     
     @IBAction func submitButtonHandler(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .authentication)
-        let vc = sb.instantiateViewController(withIdentifier: VerifyNumberViewController.storyboardIdentifier)
-        self.navigationController?.pushViewController(vc, animated: true)
+        var parameters = [String:String]()
+        parameters["name"] = txtName.text ?? ""
+        parameters["email"] = txtEmail.text ?? ""
+        parameters["cnic"] = txtCNIC.text ?? ""
+        parameters["mobile_no"] = txtPhone.text ?? ""
+        parameters["phone"] = ""
+        parameters["password"] = txtPassword.text ?? ""
+        parameters["password_confirmation"] = txtConfirmPassword.text ?? ""
+        parameters["device_token"] = "DummyToken"
+        parameters["device_type"] = Constants.Device.type
+        parameters["role"] = "0"
+        
+        APIClient.callApi(api: .registration, parameters: parameters, method: .post, view: self.view) { data in
+            if let message = data?["message"] as? String {
+                Helper.showMessage(text: message)
+            }
+        }
+        
+        
+//
+//        let sb = UIStoryboard(storyboard: .authentication)
+//        let vc = sb.instantiateViewController(withIdentifier: VerifyNumberViewController.storyboardIdentifier)
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

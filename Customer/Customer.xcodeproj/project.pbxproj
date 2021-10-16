@@ -121,6 +121,7 @@
 		2851342A27160F72002979AD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342927160F72002979AD /* BaseView.swift */; };
 		2851342D271613B9002979AD /* AddNewVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342C271613B9002979AD /* AddNewVehicleViewController.swift */; };
 		28513430271616CE002979AD /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342F271616CE002979AD /* DropDownButton.swift */; };
+		2851352B271B4E3C002979AD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851352A271B4E3C002979AD /* APIClient.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -301,6 +302,7 @@
 		2851342927160F72002979AD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		2851342C271613B9002979AD /* AddNewVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewVehicleViewController.swift; sourceTree = "<group>"; };
 		2851342F271616CE002979AD /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		2851352A271B4E3C002979AD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				280575EB26FBA9C00035BC2B /* NibDesignable.swift */,
 				280575EE26FBA9F30035BC2B /* NibLoadable.swift */,
 				28A88FC52700FA4A00003EB7 /* Helper.swift */,
+				2851352A271B4E3C002979AD /* APIClient.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -970,6 +973,7 @@
 				280575E926FBA8F70035BC2B /* StoryboardIdentifiable.swift in Sources */,
 				280575E326FBA8610035BC2B /* Extensions.swift in Sources */,
 				C9EFA4CD27160EDF00075D1B /* SuccessfullViewController.swift in Sources */,
+				2851352B271B4E3C002979AD /* APIClient.swift in Sources */,
 				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
 				28512DE22710CB7C002979AD /* BuyAccessoriesSuccessfullViewController.swift in Sources */,

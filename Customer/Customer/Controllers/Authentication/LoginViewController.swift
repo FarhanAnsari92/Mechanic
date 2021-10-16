@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
-    @IBOutlet weak var txtEmailAddress: AuthTextField!
+    @IBOutlet weak var txtPhoneNumber: AuthTextField!
     @IBOutlet weak var txtPassword: AuthTextField!
     
     @IBOutlet weak var btnLogin: UIButton!
@@ -45,6 +45,21 @@ class LoginViewController: BaseViewController {
     
     @objc func skipButtonHandler() {
         print("Skip")
-    }        
+    }
+    
+    @IBAction func loginButtonHandler(_ sender: UIButton) {
+        
+        var parameters = [String : String]()
+        parameters["mobile_no"] = txtPhoneNumber.text ?? ""
+        parameters["password"]  = txtPassword.text ?? ""
+        parameters["device_type"] = Constants.Device.type
+        parameters["device_token"] = "Dummy Token"
+        
+        APIClient.callApi(api: .login, parameters: parameters, method: .post, view: self.view) { data in
+            if let message = data?["message"] as? String {
+                Helper.showMessage(text: message)
+            }
+        }
+    }
 
 }
