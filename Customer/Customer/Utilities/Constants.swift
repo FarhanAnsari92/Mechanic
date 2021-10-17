@@ -48,4 +48,6 @@ class Constants {
         static let type: String = "ios"
     }
     
+    static let role: String = "13"
+    
 }

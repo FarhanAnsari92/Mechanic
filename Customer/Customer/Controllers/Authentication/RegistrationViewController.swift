@@ -22,6 +22,7 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtCNIC: UITextField!
     @IBOutlet weak var txtPhone: UITextField!
+    @IBOutlet weak var txtMobile: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
     
@@ -60,13 +61,13 @@ class RegistrationViewController: BaseViewController {
         parameters["name"] = txtName.text ?? ""
         parameters["email"] = txtEmail.text ?? ""
         parameters["cnic"] = txtCNIC.text ?? ""
-        parameters["mobile_no"] = txtPhone.text ?? ""
-        parameters["phone"] = ""
+        parameters["mobile_no"] = txtMobile.text ?? ""
+        parameters["phone"] = txtPhone.text ?? ""
         parameters["password"] = txtPassword.text ?? ""
         parameters["password_confirmation"] = txtConfirmPassword.text ?? ""
         parameters["device_token"] = "DummyToken"
         parameters["device_type"] = Constants.Device.type
-        parameters["role"] = "0"
+        parameters["role"] = Constants.role
         
         APIClient.callApi(api: .registration, parameters: parameters, method: .post, view: self.view) { data in
             if let message = data?["message"] as? String {
