@@ -7,9 +7,9 @@
 
 import UIKit
 import MBProgressHUD
+import ObjectMapper
 
 class Helper {
-    
     
     class func delay(_ delay:Double, closure:@escaping () -> Void) {
         DispatchQueue.main.asyncAfter(
@@ -30,6 +30,26 @@ class Helper {
             progressHud.hide(animated: true, afterDelay: 2.0)
             
         }
+    }
+    
+    class func save(user: UserModel) {
+        UserDefaults.standard.setValue(user.toJSONString(), forKey: "user")
+    }
+    
+    class func getUser() -> UserModel? {
+        if let strUser = UserDefaults.standard.string(forKey: "user") {
+            let user = Mapper<UserModel>().map(JSONString: strUser)
+            return user
+        }
+        return nil
+    }
+    
+    class func removeUser() {
+        UserDefaults.standard.removeObject(forKey: "user")
+    }
+    
+    class func logout() {
+        Helper.removeUser()
     }
     
 }

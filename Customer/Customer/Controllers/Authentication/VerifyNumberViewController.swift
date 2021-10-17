@@ -26,27 +26,7 @@ class VerifyNumberViewController: BaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .home)
-        if let homeVC = sb.instantiateViewController(withIdentifier: HomeViewController.storyboardIdentifier) as? HomeViewController {
-            let leftMenu = sb.instantiateViewController(withIdentifier: LeftMenuViewController.storyboardIdentifier)
-            
-            let homeNav = HomeBaseNavigationController(rootViewController: homeVC)
-            
-            let sideMenuController =
-                LGSideMenuController(rootViewController: homeNav,
-                                     leftViewController: leftMenu)
-            
-            sideMenuController.leftViewPresentationStyle = .scaleFromLittle
-            sideMenuController.isLeftViewStatusBarHidden = true
-            sideMenuController.rootView?.layer.cornerRadius = 20
-            sideMenuController.rootViewLayerShadowColor = .clear
-            sideMenuController.rootViewLayerShadowRadius = 0
-            sideMenuController.isLeftViewSwipeGestureEnabled = false
-            
-            sideMenuController.leftViewWidth = view.frame.width * 0.75 // - (view.frame.width / 4)
-            sideMenuController.leftViewBackgroundColor = UIColor.Theme.green
-            AppDelegate.instance.setRootViewController(sideMenuController)
-        }
+        AppRoute.navigateUserAppropriately();
     }
 
 }

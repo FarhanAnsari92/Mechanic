@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class LoginViewController: BaseViewController {
     
@@ -24,7 +25,7 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
         
         self.setupBackButton(color: .black)
-
+        setupTextFieldsDelegate()
 //        let skipButton = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(self.skipButtonHandler))
 //        
 //        let font = UIFont.Poppins(UIFont.FontType.semiBold, size: 14.0)
@@ -43,6 +44,11 @@ class LoginViewController: BaseViewController {
         
     }
     
+    func setupTextFieldsDelegate() {
+        txtPhoneNumber.delegate = self
+        txtPassword.delegate = self
+    }
+    
     @objc func skipButtonHandler() {
         print("Skip")
     }
@@ -56,10 +62,44 @@ class LoginViewController: BaseViewController {
         parameters["device_token"] = "Dummy Token"
         
         APIClient.callApi(api: .login, parameters: parameters, method: .post, view: self.view) { data in
-            if let message = data?["message"] as? String {
-                Helper.showMessage(text: message)
+            
+            if let dictionary = data,
+               let object = Mapper<RegistrationDataModel>().map(JSON: dictionary) {
+                if object.success ?? false {
+                    if let user = object.data?.user {
+                        Helper.save(user: user)
+                        AppRoute.navigateUserAppropriately()
+                    }
+                } else {
+                    Helper.showMessage(text: object.message ?? "Something went wrong.")
+                }
+            } else {
+                Helper.showMessage(text: "Something went wrong.")
             }
         }
     }
 
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let originalText = textField.text as NSString?
+        guard let newString = originalText?.replacingCharacters(in: range, with: string) else {
+            return false
+        }
+        
+        switch textField {            
+        case txtPassword:
+            return newString.count < 20
+            
+        case txtPhoneNumber:
+            return Validator.validate(mobile: newString)
+            
+        default:
+            return true
+        }
+    }
+    
 }

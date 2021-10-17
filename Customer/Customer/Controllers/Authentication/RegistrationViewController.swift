@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class RegistrationViewController: BaseViewController {
 
@@ -123,8 +124,15 @@ class RegistrationViewController: BaseViewController {
         parameters["role"] = Constants.role
         
         APIClient.callApi(api: .registration, parameters: parameters, method: .post, view: self.view) { data in
-            if let message = data?["message"] as? String {
-                Helper.showMessage(text: message)
+            if let dictionary = data,
+               let object = Mapper<RegistrationDataModel>().map(JSON: dictionary) {
+                if object.success ?? false {
+                    print("Navigate to OTP Screen")
+                } else {
+                    Helper.showMessage(text: object.message ?? "Something went wrong")
+                }
+            } else {
+                print("Unable to parse model.")
             }
         }
         

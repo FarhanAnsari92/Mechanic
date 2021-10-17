@@ -293,10 +293,8 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
             
         case .logout:
-            let sb = UIStoryboard(storyboard: .authentication)
-            if let vc = sb.instantiateInitialViewController() {
-                AppDelegate.instance.setRootViewController(vc)
-            }
+            Helper.logout()
+            AppRoute.navigateUserToAuthente()
         }
     }
     

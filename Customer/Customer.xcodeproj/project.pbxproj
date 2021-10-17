@@ -47,6 +47,11 @@
 		28373E20270647A30071E93D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1F270647A30071E93D /* Profile.storyboard */; };
 		28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E23270647DE0071E93D /* EditProfileViewController.swift */; };
 		2840A440271C085C0091250F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A43F271C085C0091250F /* Validator.swift */; };
+		2840A444271C18C30091250F /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A443271C18C30091250F /* UserDetailsModel.swift */; };
+		2840A448271C1B050091250F /* RoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A447271C1B050091250F /* RoleModel.swift */; };
+		2840A44B271C1E620091250F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A44A271C1E620091250F /* UserModel.swift */; };
+		2840A44E271C22DA0091250F /* RegistrationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A44D271C22DA0091250F /* RegistrationDataModel.swift */; };
+		2840A451271C60ED0091250F /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A450271C60ED0091250F /* AppRoute.swift */; };
 		2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BB27078586000FA706 /* ProfileViewController.swift */; };
 		2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */; };
 		2841B2C227078F37000FA706 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2C127078F37000FA706 /* ShadowView.swift */; };
@@ -229,6 +234,11 @@
 		28373E1F270647A30071E93D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		28373E23270647DE0071E93D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		2840A43F271C085C0091250F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		2840A443271C18C30091250F /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
+		2840A447271C1B050091250F /* RoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModel.swift; sourceTree = "<group>"; };
+		2840A44A271C1E620091250F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		2840A44D271C22DA0091250F /* RegistrationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDataModel.swift; sourceTree = "<group>"; };
+		2840A450271C60ED0091250F /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		2841B2BB27078586000FA706 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewController.swift; sourceTree = "<group>"; };
 		2841B2C127078F37000FA706 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -413,6 +423,7 @@
 				2841B2F9270A390A000FA706 /* ColletionView Cells */,
 				2841B2ED2708BB40000FA706 /* CustomViews */,
 				280575D326FBA2F10035BC2B /* Utilities */,
+				2840A442271C18430091250F /* Models */,
 				280576EB26FCFA830035BC2B /* Resources */,
 			);
 			path = Customer;
@@ -431,6 +442,7 @@
 				28A88FC52700FA4A00003EB7 /* Helper.swift */,
 				2851352A271B4E3C002979AD /* APIClient.swift */,
 				2840A43F271C085C0091250F /* Validator.swift */,
+				2840A450271C60ED0091250F /* AppRoute.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -550,6 +562,17 @@
 				2841B2BB27078586000FA706 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		2840A442271C18430091250F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2840A443271C18C30091250F /* UserDetailsModel.swift */,
+				2840A447271C1B050091250F /* RoleModel.swift */,
+				2840A44A271C1E620091250F /* UserModel.swift */,
+				2840A44D271C22DA0091250F /* RegistrationDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2841B2CA2707A678000FA706 /* Tracking */ = {
@@ -988,8 +1011,11 @@
 				285131342714BB48002979AD /* KeyValueView.swift in Sources */,
 				2841B458270B92BD000FA706 /* BannerCollectionViewCell.swift in Sources */,
 				28A88FA926FFC1A300003EB7 /* OrderHistoryTableViewCell.swift in Sources */,
+				2840A444271C18C30091250F /* UserDetailsModel.swift in Sources */,
 				C95B568227131701000D6971 /* SelectWorkshopViewController.swift in Sources */,
+				2840A451271C60ED0091250F /* AppRoute.swift in Sources */,
 				C9CA74C027109B780091A051 /* SelectServicesTableViewCell.swift in Sources */,
+				2840A44B271C1E620091250F /* UserModel.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
 				C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */,
 				28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */,
@@ -1043,12 +1069,14 @@
 				C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */,
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
+				2840A44E271C22DA0091250F /* RegistrationDataModel.swift in Sources */,
 				28512DED2710D1FC002979AD /* BasketTableViewCell.swift in Sources */,
 				C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */,
 				C9CA74C32710C9840091A051 /* SelectModeViewController.swift in Sources */,
 				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
 				28512E372711CAC6002979AD /* ReviewTableViewCell.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
+				2840A448271C1B050091250F /* RoleModel.swift in Sources */,
 				289802F1270E3572002565B6 /* ChatReceiverTableViewCell.swift in Sources */,
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
