@@ -29,7 +29,7 @@ class RegistrationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupBackButton(color: .black)
-        
+        self.setTextFieldsDelegate()
 //        let skipButton = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(self.skipButtonHandler))
 //        
 //        let font = UIFont.Poppins(UIFont.FontType.semiBold, size: 14.0)
@@ -41,15 +41,14 @@ class RegistrationViewController: BaseViewController {
         self.title = "Register"
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        var contentRect = CGRect.zero
-        for view in scrollView.subviews {
-            for subView in view.subviews {
-                contentRect = contentRect.union(subView.frame)
-            }
-        }
-        scrollView.contentSize = contentRect.size
+    func setTextFieldsDelegate() {
+        txtName.delegate = self
+        txtEmail.delegate = self
+        txtCNIC.delegate = self
+        txtPhone.delegate = self
+        txtMobile.delegate = self
+        txtPassword.delegate = self
+        txtConfirmPassword.delegate = self
     }
 
     @objc func skipButtonHandler() {
@@ -57,14 +56,68 @@ class RegistrationViewController: BaseViewController {
     }
     
     @IBAction func submitButtonHandler(_ sender: UIButton) {
+        
+        guard let name = txtName.text, name.count > 0 else {
+            Helper.showMessage(text: "Name field is required.")
+            return
+        }
+        
+        guard let email = txtEmail.text, email.count > 0 else {
+            Helper.showMessage(text: "Email field is required.")
+            return
+        }
+        
+        guard Validator.validate(email: email) else {
+            Helper.showMessage(text: "Email must be valid.")
+            return
+        }
+        
+        guard let cnic = txtCNIC.text, cnic.count > 0 else {
+            Helper.showMessage(text: "CNIC field is required.")
+            return
+        }
+        
+        guard Validator.validate(cnic: cnic) else {
+            Helper.showMessage(text: "CNIC should contains 13 digits.")
+            return
+        }
+        
+        guard let mobile = txtMobile.text, mobile.count > 0 else {
+            Helper.showMessage(text: "Mobile Number field is required.")
+            return
+        }
+        
+        guard Validator.validate(mobile: mobile) else {
+            Helper.showMessage(text: "Mobile Number should be valid.")
+            return
+        }
+        
+        guard let password = txtPassword.text, password.count > 0 else {
+            Helper.showMessage(text: "Password field is required.")
+            return
+        }
+        
+        guard password.count >= 6 else {
+            Helper.showMessage(text: "Password should have at least 6 characters.")
+            return
+        }
+        
+        guard
+            let cnfrmPassword = txtConfirmPassword.text,
+            cnfrmPassword.count > 0,
+            cnfrmPassword.count == password.count else {
+            Helper.showMessage(text: "Password and Confirm Password should match.")
+            return
+        }
+        
         var parameters = [String:String]()
-        parameters["name"] = txtName.text ?? ""
+        parameters["name"] = name
         parameters["email"] = txtEmail.text ?? ""
-        parameters["cnic"] = txtCNIC.text ?? ""
-        parameters["mobile_no"] = txtMobile.text ?? ""
+        parameters["cnic"] = cnic
+        parameters["mobile_no"] = mobile
         parameters["phone"] = txtPhone.text ?? ""
-        parameters["password"] = txtPassword.text ?? ""
-        parameters["password_confirmation"] = txtConfirmPassword.text ?? ""
+        parameters["password"] = password
+        parameters["password_confirmation"] = cnfrmPassword
         parameters["device_token"] = "DummyToken"
         parameters["device_type"] = Constants.Device.type
         parameters["role"] = Constants.role
@@ -80,6 +133,34 @@ class RegistrationViewController: BaseViewController {
 //        let sb = UIStoryboard(storyboard: .authentication)
 //        let vc = sb.instantiateViewController(withIdentifier: VerifyNumberViewController.storyboardIdentifier)
 //        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let originalText = textField.text as NSString?
+        guard let newString = originalText?.replacingCharacters(in: range, with: string) else {
+            return false
+        }
+        
+        switch textField {
+        case txtName, txtEmail:
+            return newString.count < 50
+            
+        case txtPassword, txtConfirmPassword:
+            return newString.count < 20
+            
+        case txtPhone, txtMobile:
+            return Validator.validate(mobile: newString)
+            
+        case txtCNIC:
+            return Validator.validate(cnic: newString)
+        default:
+            return true
+        }
     }
     
 }

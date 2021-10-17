@@ -46,6 +46,7 @@
 		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
 		28373E20270647A30071E93D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1F270647A30071E93D /* Profile.storyboard */; };
 		28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E23270647DE0071E93D /* EditProfileViewController.swift */; };
+		2840A440271C085C0091250F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A43F271C085C0091250F /* Validator.swift */; };
 		2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BB27078586000FA706 /* ProfileViewController.swift */; };
 		2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */; };
 		2841B2C227078F37000FA706 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2C127078F37000FA706 /* ShadowView.swift */; };
@@ -227,6 +228,7 @@
 		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		28373E1F270647A30071E93D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		28373E23270647DE0071E93D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		2840A43F271C085C0091250F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2841B2BB27078586000FA706 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewController.swift; sourceTree = "<group>"; };
 		2841B2C127078F37000FA706 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				280575EE26FBA9F30035BC2B /* NibLoadable.swift */,
 				28A88FC52700FA4A00003EB7 /* Helper.swift */,
 				2851352A271B4E3C002979AD /* APIClient.swift */,
+				2840A43F271C085C0091250F /* Validator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1026,6 +1029,7 @@
 				C95B568827134BE6000D6971 /* ConfirmBookingViewController.swift in Sources */,
 				2841B2F62708E5F9000FA706 /* AutoPartsAndAccessoriesTableViewCell.swift in Sources */,
 				289805312710309A002565B6 /* ConfirmBookingTableViewCell.swift in Sources */,
+				2840A440271C085C0091250F /* Validator.swift in Sources */,
 				28512E172711A5B4002979AD /* TopPickTableViewCell.swift in Sources */,
 				28512E7327133067002979AD /* FilterSortTableViewCell.swift in Sources */,
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,

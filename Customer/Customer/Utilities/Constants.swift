@@ -51,3 +51,14 @@ class Constants {
     static let role: String = "13"
     
 }
+
+enum TextFieldType {
+    case mobileNumber
+    case email
+    case name
+    case pinCode
+    case alphaNumeric
+    case alphaNumericWithSpace
+    case iban
+    case cnic
+}
