@@ -691,7 +691,6 @@
         <!--Add New Vehicle View Controller-->
         <scene sceneID="jri-M7-Q1s">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k6A-ax-D3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddNewVehicleViewController" id="6xH-Xr-cua" customClass="AddNewVehicleViewController" customModule="Customer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pWM-Jp-y6Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
@@ -759,6 +758,9 @@
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wt-hZ-go5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                                <connections>
+                                                                    <action selector="brandButtonHandler:" destination="6xH-Xr-cua" eventType="touchUpInside" id="k1j-yW-g19"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1007,6 +1009,9 @@
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWr-hA-qAB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                                <connections>
+                                                                    <action selector="cityButtonHandler:" destination="6xH-Xr-cua" eventType="touchUpInside" id="qHR-YL-k9i"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1144,7 +1149,12 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1100"/>
+                    <connections>
+                        <outlet property="lblBrand" destination="JOp-Dk-6fS" id="un7-xx-bS7"/>
+                        <outlet property="lblCity" destination="oD8-N4-kxK" id="2CS-6O-x5B"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6A-ax-D3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-274" y="858"/>
         </scene>

@@ -15,6 +15,8 @@ struct BaseURL {
 enum API: String {
     case registration = "register"
     case login = "login"
+    case cities = "cities"
+    case brands = "brands"
 }
 
 enum APIVersion: String {
@@ -32,7 +34,7 @@ class APIClient {
     class func callApi(
         api: API,
         apiVersion: APIVersion = .v1,
-        parameters: [String:String],
+        parameters: [String:String]? = nil,
         method: HTTPMethod,
         view: UIView? = nil,
         success: @escaping ([String:Any]?) -> Void) {
@@ -47,16 +49,22 @@ class APIClient {
         print("URL - ", url.absoluteURL)
         
         var urlComponent = URLComponents(string: url.absoluteString)
-        
-        var querryItem = [URLQueryItem]()
-        parameters.forEach { (key, value) in
-            querryItem.append(URLQueryItem(name: key, value: value))
+        if let param = parameters {
+            var querryItem = [URLQueryItem]()
+            param.forEach { (key, value) in
+                querryItem.append(URLQueryItem(name: key, value: value))
+            }
+            
+            urlComponent?.queryItems = querryItem
         }
-        
-        urlComponent?.queryItems = querryItem
         
         var urlRequest = URLRequest(url: (urlComponent?.url)!)
         urlRequest.httpMethod = method.rawValue
+        if let user = User.shared.getUser(),
+           let accessToken = user.accessToken {
+            let headerValue = "Bearer \(accessToken)"
+            urlRequest.setValue(headerValue, forHTTPHeaderField: "Authorization")
+        }
         
         let request = Alamofire.request(urlRequest)
         let responseHandler: ((DataResponse<Any>) -> Void) = { reponse in
@@ -67,7 +75,6 @@ class APIClient {
             switch result {
             case .success(let data):
                 if let dictionary = data as? [String:Any] {
-                    print("data dictionary ---- ", dictionary)
                     success(dictionary)
                 }
                 

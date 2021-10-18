@@ -23,7 +23,8 @@ class AppRoute {
     }
     
     class func navigateUserAppropriately() {
-        if let _ = Helper.getUser() {
+        if let user = Helper.getUser() {
+            User.shared.set(user: user)
             let sb = UIStoryboard(storyboard: .home)
             if let homeVC = sb.instantiateViewController(withIdentifier: HomeViewController.storyboardIdentifier) as? HomeViewController {
                 let leftMenu = sb.instantiateViewController(withIdentifier: LeftMenuViewController.storyboardIdentifier)
