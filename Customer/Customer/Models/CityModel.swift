@@ -25,6 +25,8 @@ class CityModel : Mappable, Equatable {
 	var updatedAt : String?
 	var deletedAt : String?
 
+    init() { }
+    
     required init?(map: Map) {
 
 	}

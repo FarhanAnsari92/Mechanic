@@ -128,6 +128,9 @@
 		2851342D271613B9002979AD /* AddNewVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342C271613B9002979AD /* AddNewVehicleViewController.swift */; };
 		28513430271616CE002979AD /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342F271616CE002979AD /* DropDownButton.swift */; };
 		2851352B271B4E3C002979AD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851352A271B4E3C002979AD /* APIClient.swift */; };
+		287BC10B271EC15100AF5978 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC10A271EC15100AF5978 /* VehicleModel.swift */; };
+		287BC10E271EC1A100AF5978 /* VehicleResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC10D271EC1A100AF5978 /* VehicleResponseModel.swift */; };
+		287BC111271EC43F00AF5978 /* ModelVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC110271EC43F00AF5978 /* ModelVehicle.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -322,6 +325,9 @@
 		2851342C271613B9002979AD /* AddNewVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewVehicleViewController.swift; sourceTree = "<group>"; };
 		2851342F271616CE002979AD /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		2851352A271B4E3C002979AD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		287BC10A271EC15100AF5978 /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		287BC10D271EC1A100AF5978 /* VehicleResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleResponseModel.swift; sourceTree = "<group>"; };
+		287BC110271EC43F00AF5978 /* ModelVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelVehicle.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -459,6 +465,7 @@
 				2840A450271C60ED0091250F /* AppRoute.swift */,
 				28DDE803271DFE0900788D46 /* City.swift */,
 				28DDE816271E0D8500788D46 /* Brand.swift */,
+				287BC110271EC43F00AF5978 /* ModelVehicle.swift */,
 				28DDE806271E018300788D46 /* User.swift */,
 			);
 			path = Utilities;
@@ -592,6 +599,8 @@
 				28DDE809271E053200788D46 /* CityResponseModel.swift */,
 				28DDE810271E0A8E00788D46 /* BrandModel.swift */,
 				28DDE813271E0AB500788D46 /* BrandResponseModel.swift */,
+				287BC10A271EC15100AF5978 /* VehicleModel.swift */,
+				287BC10D271EC1A100AF5978 /* VehicleResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1075,6 +1084,7 @@
 				289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */,
 				280577C626FE97CB0035BC2B /* BaseNavigationController.swift in Sources */,
 				C95B568527131ACD000D6971 /* SelectWorkshopTableViewCell.swift in Sources */,
+				287BC10B271EC15100AF5978 /* VehicleModel.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				2841B2E32708453C000FA706 /* BookingHistoryViewController.swift in Sources */,
 				C95B568827134BE6000D6971 /* ConfirmBookingViewController.swift in Sources */,
@@ -1082,6 +1092,7 @@
 				289805312710309A002565B6 /* ConfirmBookingTableViewCell.swift in Sources */,
 				2840A440271C085C0091250F /* Validator.swift in Sources */,
 				28DDE811271E0A8E00788D46 /* BrandModel.swift in Sources */,
+				287BC111271EC43F00AF5978 /* ModelVehicle.swift in Sources */,
 				28512E172711A5B4002979AD /* TopPickTableViewCell.swift in Sources */,
 				28512E7327133067002979AD /* FilterSortTableViewCell.swift in Sources */,
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
@@ -1091,6 +1102,7 @@
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
 				C9A8391827108C0800BD08FA /* SelectServicesViewController.swift in Sources */,
 				280575E626FBA88F0035BC2B /* Storyboard.swift in Sources */,
+				287BC10E271EC1A100AF5978 /* VehicleResponseModel.swift in Sources */,
 				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
 				C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */,
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
