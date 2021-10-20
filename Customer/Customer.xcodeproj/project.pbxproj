@@ -185,6 +185,8 @@
 		C95B568527131ACD000D6971 /* SelectWorkshopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95B568327131ACD000D6971 /* SelectWorkshopTableViewCell.swift */; };
 		C95B568627131ACD000D6971 /* SelectWorkshopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95B568427131ACD000D6971 /* SelectWorkshopTableViewCell.xib */; };
 		C95B568827134BE6000D6971 /* ConfirmBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */; };
+		C96B9C4C271EE7D7006D9EF8 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B9C4A271EE7D6006D9EF8 /* ServiceModel.swift */; };
+		C96B9C4D271EE7D7006D9EF8 /* ServiceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B9C4B271EE7D6006D9EF8 /* ServiceResponseModel.swift */; };
 		C9A8391827108C0800BD08FA /* SelectServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */; };
 		C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8533D270CCC2F00066B1E /* Notification.storyboard */; };
 		C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85340270CCCA400066B1E /* NotificationViewController.swift */; };
@@ -384,6 +386,8 @@
 		C95B568327131ACD000D6971 /* SelectWorkshopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkshopTableViewCell.swift; sourceTree = "<group>"; };
 		C95B568427131ACD000D6971 /* SelectWorkshopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectWorkshopTableViewCell.xib; sourceTree = "<group>"; };
 		C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmBookingViewController.swift; sourceTree = "<group>"; };
+		C96B9C4A271EE7D6006D9EF8 /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		C96B9C4B271EE7D6006D9EF8 /* ServiceResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponseModel.swift; sourceTree = "<group>"; };
 		C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesViewController.swift; sourceTree = "<group>"; };
 		C9A8533D270CCC2F00066B1E /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		C9A85340270CCCA400066B1E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -595,6 +599,8 @@
 				2840A447271C1B050091250F /* RoleModel.swift */,
 				2840A44A271C1E620091250F /* UserModel.swift */,
 				2840A44D271C22DA0091250F /* RegistrationDataModel.swift */,
+				C96B9C4A271EE7D6006D9EF8 /* ServiceModel.swift */,
+				C96B9C4B271EE7D6006D9EF8 /* ServiceResponseModel.swift */,
 				28DDE80A271E053200788D46 /* CityModel.swift */,
 				28DDE809271E053200788D46 /* CityResponseModel.swift */,
 				28DDE810271E0A8E00788D46 /* BrandModel.swift */,
@@ -1030,6 +1036,7 @@
 				280575E326FBA8610035BC2B /* Extensions.swift in Sources */,
 				C9EFA4CD27160EDF00075D1B /* SuccessfullViewController.swift in Sources */,
 				2851352B271B4E3C002979AD /* APIClient.swift in Sources */,
+				C96B9C4D271EE7D7006D9EF8 /* ServiceResponseModel.swift in Sources */,
 				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
 				28512DE22710CB7C002979AD /* BuyAccessoriesSuccessfullViewController.swift in Sources */,
@@ -1108,6 +1115,7 @@
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
 				2840A44E271C22DA0091250F /* RegistrationDataModel.swift in Sources */,
+				C96B9C4C271EE7D7006D9EF8 /* ServiceModel.swift in Sources */,
 				28512DED2710D1FC002979AD /* BasketTableViewCell.swift in Sources */,
 				C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */,
 				C9CA74C32710C9840091A051 /* SelectModeViewController.swift in Sources */,

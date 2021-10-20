@@ -18,6 +18,7 @@ enum API: String {
     case cities = "cities"
     case brands = "brands"
     case model = "vehicle-models"
+    case service = "services"
 }
 
 enum APIVersion: String {
