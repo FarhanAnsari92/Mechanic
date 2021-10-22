@@ -131,6 +131,9 @@
 		287BC10B271EC15100AF5978 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC10A271EC15100AF5978 /* VehicleModel.swift */; };
 		287BC10E271EC1A100AF5978 /* VehicleResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC10D271EC1A100AF5978 /* VehicleResponseModel.swift */; };
 		287BC111271EC43F00AF5978 /* ModelVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC110271EC43F00AF5978 /* ModelVehicle.swift */; };
+		287BC3342721D7A400AF5978 /* GetVehicleResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */; };
+		287BC3352721D7A400AF5978 /* GetVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC3332721D7A400AF5978 /* GetVehicleModel.swift */; };
+		287BC6B6272334BF00AF5978 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6B5272334BF00AF5978 /* PermissionManager.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -330,6 +333,9 @@
 		287BC10A271EC15100AF5978 /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
 		287BC10D271EC1A100AF5978 /* VehicleResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleResponseModel.swift; sourceTree = "<group>"; };
 		287BC110271EC43F00AF5978 /* ModelVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelVehicle.swift; sourceTree = "<group>"; };
+		287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVehicleResponseModel.swift; sourceTree = "<group>"; };
+		287BC3332721D7A400AF5978 /* GetVehicleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVehicleModel.swift; sourceTree = "<group>"; };
+		287BC6B5272334BF00AF5978 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -471,6 +477,7 @@
 				28DDE816271E0D8500788D46 /* Brand.swift */,
 				287BC110271EC43F00AF5978 /* ModelVehicle.swift */,
 				28DDE806271E018300788D46 /* User.swift */,
+				287BC6B5272334BF00AF5978 /* PermissionManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -607,6 +614,8 @@
 				28DDE813271E0AB500788D46 /* BrandResponseModel.swift */,
 				287BC10A271EC15100AF5978 /* VehicleModel.swift */,
 				287BC10D271EC1A100AF5978 /* VehicleResponseModel.swift */,
+				287BC3332721D7A400AF5978 /* GetVehicleModel.swift */,
+				287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1039,6 +1048,7 @@
 				C96B9C4D271EE7D7006D9EF8 /* ServiceResponseModel.swift in Sources */,
 				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
+				287BC6B6272334BF00AF5978 /* PermissionManager.swift in Sources */,
 				28512DE22710CB7C002979AD /* BuyAccessoriesSuccessfullViewController.swift in Sources */,
 				2841B45C270B949C000FA706 /* BannerViewCollectionViewCell.swift in Sources */,
 				28DDE80B271E053200788D46 /* CityResponseModel.swift in Sources */,
@@ -1105,6 +1115,7 @@
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
+				287BC3352721D7A400AF5978 /* GetVehicleModel.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
 				C9A8391827108C0800BD08FA /* SelectServicesViewController.swift in Sources */,
@@ -1133,6 +1144,7 @@
 				28512E202711AE9A002979AD /* AccessoriesDetailsViewController.swift in Sources */,
 				C94CAC9D270E171100FF1FCC /* BookingDetailsHeader.swift in Sources */,
 				289803F1270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift in Sources */,
+				287BC3342721D7A400AF5978 /* GetVehicleResponseModel.swift in Sources */,
 				2841B452270B9200000FA706 /* BannerView.swift in Sources */,
 				2841B2CD2707A696000FA706 /* TrackingViewController.swift in Sources */,
 				28512E2F2711BAD4002979AD /* ProductReviewsView.swift in Sources */,

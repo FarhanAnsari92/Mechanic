@@ -64,5 +64,9 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Required</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Required</string>
 </dict>
 </plist>

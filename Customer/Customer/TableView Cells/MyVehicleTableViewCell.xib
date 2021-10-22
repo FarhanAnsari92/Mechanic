@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -82,7 +83,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rXU-6T-2IQ" firstAttribute="leading" secondItem="FvV-ms-mE3" secondAttribute="leading" constant="20" id="A4N-Pn-ern"/>
                             <constraint firstItem="PRU-ra-wu3" firstAttribute="top" secondItem="FvV-ms-mE3" secondAttribute="top" constant="10" id="CCa-7h-yUh"/>
@@ -107,6 +108,7 @@
                 <outlet property="lblBrand" destination="MBk-Bm-9iW" id="HLO-6R-Edi"/>
                 <outlet property="lblCity" destination="IQq-8B-FXq" id="Poj-6G-iie"/>
                 <outlet property="lblHousePower" destination="HE5-B1-g3o" id="Y8u-sX-4Vx"/>
+                <outlet property="lblVehicleName" destination="PRU-ra-wu3" id="bax-4z-vhn"/>
                 <outlet property="lblYear" destination="u20-6q-TL4" id="xTg-6Y-Aeq"/>
             </connections>
             <point key="canvasLocation" x="208.69565217391306" y="110.82589285714285"/>
@@ -114,5 +116,8 @@
     </objects>
     <resources>
         <image name="ic_green_right_indicator" width="10" height="17"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

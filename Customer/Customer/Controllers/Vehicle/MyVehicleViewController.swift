@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class MyVehicleViewController: HomeBaseViewController {
     
@@ -16,6 +17,7 @@ class MyVehicleViewController: HomeBaseViewController {
             tableView.register(MyVehicleTableViewCell.nib, forCellReuseIdentifier: MyVehicleTableViewCell.identifier)
         }
     }
+    var vehicles: [GetVehicleModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,18 @@ class MyVehicleViewController: HomeBaseViewController {
         setupBackButton(color: .white)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
-        
+        getVehicle()
     }
+    
+    func getVehicle() {
+        APIClient.callApi(api: .vehicle, method: .get, view: self.view) { [weak self] data in
+            if let dictionary = data, let vehicleResponseModel = Mapper<GetVehicleResponseModel>().map(JSON: dictionary) {
+                self?.vehicles = vehicleResponseModel.vehicleData?.data
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
     
     @IBAction func addNewVehicleButtonHandler(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .vehicle)
@@ -37,21 +49,19 @@ class MyVehicleViewController: HomeBaseViewController {
 extension MyVehicleViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 2
+        return vehicles?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: MyVehicleTableViewCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: MyVehicleTableViewCell.identifier, for: indexPath) as! MyVehicleTableViewCell
+        if let arrayData = self.vehicles?[indexPath.row] {
+            cell.set(data: arrayData)
+        }        
         
         return cell
     }
-    
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        return 110
-//    }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(storyboard: .vehicle)

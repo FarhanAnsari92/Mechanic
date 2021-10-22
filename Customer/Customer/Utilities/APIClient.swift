@@ -19,6 +19,7 @@ enum API: String {
     case brands = "brands"
     case model = "vehicle-models"
     case service = "services"
+    case vehicle = "vehicles"
 }
 
 enum APIVersion: String {
@@ -86,6 +87,66 @@ class APIClient {
         }
         
         request.responseJSON(completionHandler: responseHandler)
+        
+    }
+    
+    class func multipartRequest(
+        api: API,
+        apiVersion: APIVersion = .v1,
+        parameters: [String:String]? = nil,
+        image: UIImage,
+        method: HTTPMethod,
+        view: UIView? = nil,
+        success: @escaping ([String:Any]?) -> Void) {
+        
+        let path = apiVersion.rawValue + "/" + api.rawValue
+        let url: URL = URL(string: path, relativeTo: BaseURL.staging)!
+        let URLStr = url.absoluteString
+        
+        if let _ = view {
+            view?.showHud()
+        }
+        
+        Alamofire.upload(multipartFormData:
+                            {
+                                (multipartFormData) in
+                                multipartFormData.append(image.jpegData(compressionQuality: 0.3)!, withName: "running_doc", fileName: "running_doc.jpeg", mimeType: "image/jpeg")
+                                if let params = parameters {
+                                    for (key, value) in params
+                                    {
+                                        multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                                    }
+                                }
+                            },
+                         to:URLStr,
+                         headers: ["Accept": "application/json", "Content-Type": "application/json", "Authorization": "Bearer \(User.shared.getUser()?.accessToken ?? "")"]
+        )
+        { (result) in
+            if let _ = view {
+                view?.hideHud()
+            }
+            switch result {
+            case .success(let upload,_,_ ):
+                upload.uploadProgress(closure: { (progress) in
+                    print(progress)
+                })
+                upload.responseJSON
+                { response in
+                    if response.result.value != nil {
+                        if let dictionary: [String:Any] = response.result.value! as? [String:Any] {
+                            print("DATA UPLOAD SUCCESSFULLY")
+                            success(dictionary)
+                        }
+                    }
+                }
+            case .failure(let error):
+                if let _ = view {
+                    view?.hideHud()
+                }
+                print(error.localizedDescription)
+            }
+        }
+        
         
     }
     

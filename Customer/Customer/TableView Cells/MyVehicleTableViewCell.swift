@@ -13,26 +13,32 @@ class MyVehicleTableViewCell: UITableViewCell {
     @IBOutlet weak var lblYear: UILabel!
     @IBOutlet weak var lblHousePower: UILabel!
     @IBOutlet weak var lblCity: UILabel!
+    @IBOutlet weak var lblVehicleName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupBrandLabel()
-        setupHousePowerLabel()
+        setupHorsePowerLabel()
         setupYearLabel()
         setupCityLabel()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        
     }
     
+    func set(data: GetVehicleModel) {
+        lblVehicleName.text = data.vehicle?.name ?? ""
+        setupBrandLabel(data.brand?.title ?? "")
+        setupHorsePowerLabel(data.horsePower ?? "")
+        setupCityLabel(data.city?.name ?? "")
+        setupYearLabel(data.year?.description ?? "")
+    }
     
-    private func setupBrandLabel() {
+    private func setupBrandLabel(_ brandName: String = "") {
         
         let plainText = "Brand: "
-        let tappableText = "Honda"
+        let tappableText = brandName
         
         let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: UIColor(hexString: "252525"), .font: UIFont.Poppins(.light, size: 12)])
         
@@ -51,10 +57,10 @@ class MyVehicleTableViewCell: UITableViewCell {
 
     }
     
-    private func setupHousePowerLabel() {
+    private func setupHorsePowerLabel(_ horsePowerName: String = "") {
         
-        let plainText = "House Power: "
-        let tappableText = "125CC"
+        let plainText = "Horse Power: "
+        let tappableText = horsePowerName
         
         let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: UIColor(hexString: "252525"), .font: UIFont.Poppins(.light, size: 12)])
         
@@ -73,10 +79,10 @@ class MyVehicleTableViewCell: UITableViewCell {
 
     }
     
-    private func setupYearLabel() {
+    private func setupYearLabel(_ year: String = "") {
         
         let plainText = "Year: "
-        let tappableText = "2021"
+        let tappableText = year
         
         let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: UIColor(hexString: "252525"), .font: UIFont.Poppins(.light, size: 12)])
         
@@ -95,10 +101,10 @@ class MyVehicleTableViewCell: UITableViewCell {
 
     }
     
-    private func setupCityLabel() {
+    private func setupCityLabel(_ city: String = "") {
         
         let plainText = "City: "
-        let tappableText = "Karachi"
+        let tappableText = city
         
         let plainAttributedString = NSMutableAttributedString(string: plainText, attributes: [.foregroundColor: UIColor(hexString: "252525"), .font: UIFont.Poppins(.light, size: 12)])
         
