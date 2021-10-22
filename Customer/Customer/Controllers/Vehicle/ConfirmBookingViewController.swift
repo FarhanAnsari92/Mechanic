@@ -90,12 +90,11 @@ class ConfirmBookingViewController: HomeBaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
+        let sb = UIStoryboard(storyboard: .vehicle)
         if AppDelegate.instance.shouldShowMapSuccess {
-            let sb = UIStoryboard(storyboard: .vehicle)
             let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
-            let sb = UIStoryboard(storyboard: .vehicle)
             let vc = sb.instantiateViewController(withIdentifier: SuccessfullViewController.storyboardIdentifier)
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -117,6 +116,21 @@ extension ConfirmBookingViewController : UITableViewDataSource , UITableViewDele
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ConfirmBookingTableViewCell.identifier, for: indexPath) as! ConfirmBookingTableViewCell
         cell.setData(section: item)
+        cell.changeCompletion = {
+            if indexPath.row == 0 {
+                if let myVehicle = self.navigationController?.viewControllers.first(where: { $0 is MyVehicleViewController }) {
+                    self.navigationController?.popToViewController(myVehicle, animated: true)
+                }
+            } else if indexPath.row == 1 {
+                if let selectService = self.navigationController?.viewControllers.first(where: { $0 is SelectServicesViewController }) {
+                    self.navigationController?.popToViewController(selectService, animated: true)
+                }
+            } else if indexPath.row == 2 {
+                if let selectMode = self.navigationController?.viewControllers.first(where: { $0 is SelectModeViewController }) {
+                    self.navigationController?.popToViewController(selectMode, animated: true)
+                }
+            }
+        }
         return cell
     }
     

@@ -35,6 +35,9 @@
                                         <state key="normal" title="Change">
                                             <color key="titleColor" red="0.3411764706" green="0.52941176469999995" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changeButtonHandler:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MSC-nZ-SEt"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8Y-Ju-y1K">
                                         <rect key="frame" x="0.0" y="2.5" width="49" height="25.5"/>

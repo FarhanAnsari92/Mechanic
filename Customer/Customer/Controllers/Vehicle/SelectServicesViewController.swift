@@ -46,7 +46,11 @@ class SelectServicesViewController: HomeBaseViewController {
     
     
     @IBAction func btn_proceed(_ sender: UIButton) {
-        
+
+        guard getTotalAmount() > 0 else {
+            Helper.showMessage(text: "Please select service.")
+            return
+        }
         let sb = UIStoryboard(storyboard: .vehicle)
         let vc = sb.instantiateViewController(withIdentifier: SelectModeViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)

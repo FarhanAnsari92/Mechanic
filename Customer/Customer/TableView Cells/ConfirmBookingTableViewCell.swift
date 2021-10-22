@@ -11,6 +11,8 @@ class ConfirmBookingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var lblTitle: UILabel!
+    
+    var changeCompletion: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +41,10 @@ class ConfirmBookingTableViewCell: UITableViewCell {
             
         })
         
+    }
+    
+    @IBAction func changeButtonHandler(_ sender: UIButton) {
+        changeCompletion?()
     }
     
 }
