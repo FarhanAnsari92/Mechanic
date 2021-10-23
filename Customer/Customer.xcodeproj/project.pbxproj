@@ -136,6 +136,7 @@
 		287BC6B6272334BF00AF5978 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6B5272334BF00AF5978 /* PermissionManager.swift */; };
 		287BC6B92723FD2D00AF5978 /* WorkShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */; };
 		287BC6BC272408BE00AF5978 /* ObjectMapperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */; };
+		287BC6BF27242B3B00AF5978 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6BE27242B3B00AF5978 /* LocationManager.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -340,6 +341,7 @@
 		287BC6B5272334BF00AF5978 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkShopModel.swift; sourceTree = "<group>"; };
 		287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperManager.swift; sourceTree = "<group>"; };
+		287BC6BE27242B3B00AF5978 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 				28DDE806271E018300788D46 /* User.swift */,
 				287BC6B5272334BF00AF5978 /* PermissionManager.swift */,
 				287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */,
+				287BC6BE27242B3B00AF5978 /* LocationManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1147,6 +1150,7 @@
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
 				28512E6F27132D40002979AD /* FilterAccessoryViewController.swift in Sources */,
+				287BC6BF27242B3B00AF5978 /* LocationManager.swift in Sources */,
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
 				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
 				28512E202711AE9A002979AD /* AccessoriesDetailsViewController.swift in Sources */,

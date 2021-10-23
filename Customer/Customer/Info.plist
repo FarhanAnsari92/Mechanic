@@ -45,6 +45,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Authentication</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>App will try to access your location for better use</string>
+	<key>NSLocationUsageDescription</key>
+	<string>App will try to access your location for better use</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App will try to access your location for better use</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
