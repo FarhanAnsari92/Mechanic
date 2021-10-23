@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ObjectMapper
 
 class RegistrationViewController: BaseViewController {
 
@@ -125,7 +124,7 @@ class RegistrationViewController: BaseViewController {
         
         APIClient.callApi(api: .registration, parameters: parameters, method: .post, view: self.view) { data in
             if let dictionary = data,
-               let object = Mapper<RegistrationDataModel>().map(JSON: dictionary) {
+               let object = ObjectMapperManager<RegistrationDataModel>().map(dictionary: dictionary) {
                 if object.success ?? false {
                     print("Navigate to OTP Screen")
                 } else {

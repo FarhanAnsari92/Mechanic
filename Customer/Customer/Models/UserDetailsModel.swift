@@ -8,8 +8,6 @@
 import ObjectMapper
 import UIKit
 
-
-
 class UserDetailsModel: Mappable {
     
     var id: Int?

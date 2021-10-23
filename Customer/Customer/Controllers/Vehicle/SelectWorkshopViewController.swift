@@ -23,12 +23,26 @@ class SelectWorkshopViewController: HomeBaseViewController {
             gmsMapView.layer.cornerRadius = 15
         }
     }
+    
+    var workshops: [WorkShopModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Select Workshop"
         setupBackButton(color: .white)
+        getWorkshops()
+    }
+    
+    func getWorkshops() {
+        APIClient.callApi(api: .workShops, parameters: nil, method: .get, view: self.view) { [weak self] data in
+            
+            if let dictionary = data, let workShopResponseModel = ObjectMapperManager<WorkShopResponseModel>().map(dictionary: dictionary) {
+                print("ObjectMapperManager - ", workShopResponseModel.toJSON())
+                self?.workshops = workShopResponseModel.workshops
+                self?.tableview.reloadData()
+            }
+        }
     }
     
     @IBAction func btn_done(_ sender: UIButton) {
@@ -42,23 +56,35 @@ class SelectWorkshopViewController: HomeBaseViewController {
 extension SelectWorkshopViewController : UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return 3
-        
+        return workshops?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SelectWorkshopTableViewCell.identifier, for: indexPath) as!
             SelectWorkshopTableViewCell
-            if indexPath.row == 1 {
-                       cell.isSelected = false
-                
-                   } else {
-                       cell.isSelected = true
-                   }
+        if let workshop = self.workshops?[indexPath.row] {
+            cell.set(data: workshop)
+        }
+//        if indexPath.row == 1 {
+//            cell.isSelected = false
+//
+//        } else {
+//            cell.isSelected = true
+//        }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard !(self.workshops?[indexPath.row].isSelected ?? false) else {
+            print("should not change")
+            return
+        }
+        print("should change")
+        self.workshops?.forEach({ $0.isSelected = false })
+        self.workshops?[indexPath.row].isSelected = true
+        self.tableview.reloadSections(IndexSet(integer: 0), with: .fade)
     }
     
     

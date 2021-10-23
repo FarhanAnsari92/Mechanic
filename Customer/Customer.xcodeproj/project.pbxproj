@@ -134,6 +134,8 @@
 		287BC3342721D7A400AF5978 /* GetVehicleResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */; };
 		287BC3352721D7A400AF5978 /* GetVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC3332721D7A400AF5978 /* GetVehicleModel.swift */; };
 		287BC6B6272334BF00AF5978 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6B5272334BF00AF5978 /* PermissionManager.swift */; };
+		287BC6B92723FD2D00AF5978 /* WorkShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */; };
+		287BC6BC272408BE00AF5978 /* ObjectMapperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -336,6 +338,8 @@
 		287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVehicleResponseModel.swift; sourceTree = "<group>"; };
 		287BC3332721D7A400AF5978 /* GetVehicleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVehicleModel.swift; sourceTree = "<group>"; };
 		287BC6B5272334BF00AF5978 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkShopModel.swift; sourceTree = "<group>"; };
+		287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperManager.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -478,6 +482,7 @@
 				287BC110271EC43F00AF5978 /* ModelVehicle.swift */,
 				28DDE806271E018300788D46 /* User.swift */,
 				287BC6B5272334BF00AF5978 /* PermissionManager.swift */,
+				287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 				287BC10D271EC1A100AF5978 /* VehicleResponseModel.swift */,
 				287BC3332721D7A400AF5978 /* GetVehicleModel.swift */,
 				287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */,
+				287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1115,6 +1121,7 @@
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
+				287BC6B92723FD2D00AF5978 /* WorkShopModel.swift in Sources */,
 				287BC3352721D7A400AF5978 /* GetVehicleModel.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
@@ -1123,6 +1130,7 @@
 				287BC10E271EC1A100AF5978 /* VehicleResponseModel.swift in Sources */,
 				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
 				C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */,
+				287BC6BC272408BE00AF5978 /* ObjectMapperManager.swift in Sources */,
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
 				2840A44E271C22DA0091250F /* RegistrationDataModel.swift in Sources */,

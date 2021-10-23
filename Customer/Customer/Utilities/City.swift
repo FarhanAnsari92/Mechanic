@@ -5,8 +5,6 @@
 //  Created by BYKEA - Hadi Ali on 19/10/2021.
 //
 
-import ObjectMapper
-
 class City {
     
     static let shared: City = City()
@@ -20,7 +18,7 @@ class City {
         } else {
             APIClient.callApi(api: .cities, method: .get) { [weak self] data in
                 if let dictionary = data {
-                    if let cities = Mapper<CityResponseModel>().map(JSON: dictionary) {
+                    if let cities = ObjectMapperManager<CityResponseModel>().map(dictionary: dictionary) {
                         self?.cities = cities.data
                         completion(self?.cities)
                     }

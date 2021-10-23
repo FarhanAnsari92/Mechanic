@@ -5,8 +5,6 @@
 //  Created by BYKEA - Hadi Ali on 19/10/2021.
 //
 
-import ObjectMapper
-
 class ModelVehicle {
     
     static let shared: ModelVehicle = ModelVehicle()
@@ -21,7 +19,7 @@ class ModelVehicle {
         }else{
             APIClient.callApi(api: .model, method: .get) { [weak self] data in
                 if let dictionary = data {
-                    if let modelResponse = Mapper<VehicleResponseModel>().map(JSON: dictionary) {
+                    if let modelResponse = ObjectMapperManager<VehicleResponseModel>().map(dictionary: dictionary) {
                         self?.models = modelResponse.models
                         completion(self?.models)
                     }

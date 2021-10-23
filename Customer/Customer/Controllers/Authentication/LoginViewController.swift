@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ObjectMapper
 
 class LoginViewController: BaseViewController {
     
@@ -64,7 +63,7 @@ class LoginViewController: BaseViewController {
         APIClient.callApi(api: .login, parameters: parameters, method: .post, view: self.view) { data in
             
             if let dictionary = data,
-               let object = Mapper<RegistrationDataModel>().map(JSON: dictionary) {
+               let object = ObjectMapperManager<RegistrationDataModel>().map(dictionary: dictionary) {
                 if object.success ?? false {
                     if let user = object.data?.user {
                         Helper.save(user: user)

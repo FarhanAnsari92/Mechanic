@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ObjectMapper
 
 class MyVehicleViewController: HomeBaseViewController {
     
@@ -30,7 +29,7 @@ class MyVehicleViewController: HomeBaseViewController {
     
     func getVehicle() {
         APIClient.callApi(api: .vehicle, method: .get, view: self.view) { [weak self] data in
-            if let dictionary = data, let vehicleResponseModel = Mapper<GetVehicleResponseModel>().map(JSON: dictionary) {
+            if let dictionary = data, let vehicleResponseModel = ObjectMapperManager<GetVehicleResponseModel>().map(dictionary: dictionary) {
                 self?.vehicles = vehicleResponseModel.vehicleData?.data
                 self?.tableView.reloadData()
             }

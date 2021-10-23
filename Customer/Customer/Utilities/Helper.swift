@@ -7,7 +7,6 @@
 
 import UIKit
 import MBProgressHUD
-import ObjectMapper
 
 class Helper {
     
@@ -38,7 +37,7 @@ class Helper {
     
     class func getUser() -> UserModel? {
         if let strUser = UserDefaults.standard.string(forKey: "user") {
-            let user = Mapper<UserModel>().map(JSONString: strUser)
+            let user = ObjectMapperManager<UserModel>().map(string: strUser)
             return user
         }
         return nil

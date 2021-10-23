@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ObjectMapper
 
 class SelectServicesViewController: HomeBaseViewController {
     
@@ -37,7 +36,7 @@ class SelectServicesViewController: HomeBaseViewController {
     
     func getServeices() {
         APIClient.callApi(api: .service, method: .get, view: self.view) { [weak self] data in
-            if let dictionary = data, let serviceResponseModel = Mapper<ServiceResponseModel>().map(JSON: dictionary) {
+            if let dictionary = data, let serviceResponseModel = ObjectMapperManager<ServiceResponseModel>().map(dictionary: dictionary) {
                 self?.services = serviceResponseModel.service?.services
                 self?.tableview.reloadData()
             }
@@ -92,7 +91,7 @@ extension SelectServicesViewController: UITableViewDataSource, UITableViewDelega
         item?.isSelected = !(item?.isSelected ?? false)
 
         self.lblAmount.text = getTotalAmount().description
-        tableView.reloadData()
+        self.tableview.reloadSections(IndexSet(integer: 0), with: .fade)
     }
     
 }

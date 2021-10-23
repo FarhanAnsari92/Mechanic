@@ -9,7 +9,7 @@ import ObjectMapper
 import UIKit
 
 
-class RoleMode: Mappable{
+class RoleMode: Mappable {
     
     var Id: Int?
     var description: String?

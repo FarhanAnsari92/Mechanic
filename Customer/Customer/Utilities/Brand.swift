@@ -5,8 +5,6 @@
 //  Created by BYKEA - Hadi Ali on 19/10/2021.
 //
 
-import ObjectMapper
-
 class Brand {
     
     static let shared: Brand = Brand()
@@ -21,7 +19,7 @@ class Brand {
         }else{
             APIClient.callApi(api: .brands, method: .get) { [weak self] data in
                 if let dictionary = data {
-                    if let brandsResponse = Mapper<BrandResponseModel>().map(JSON: dictionary) {
+                    if let brandsResponse = ObjectMapperManager<BrandResponseModel>().map(dictionary: dictionary) {
                         self?.brands = brandsResponse.brands
                         completion(self?.brands)
                     }

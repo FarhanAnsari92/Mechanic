@@ -20,6 +20,7 @@ enum API: String {
     case model = "vehicle-models"
     case service = "services"
     case vehicle = "vehicles"
+    case workShops = "work-shops"
 }
 
 enum APIVersion: String {
