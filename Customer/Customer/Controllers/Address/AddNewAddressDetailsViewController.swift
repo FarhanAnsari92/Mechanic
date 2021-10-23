@@ -79,7 +79,7 @@ class AddNewAddressDetailsViewController: HomeBaseViewController {
         var params = [String:String]()
         params["title"] = "FB Area"
         params["address"] = "Block 1"
-        params["street"] = "1"
+        params["street"] = txtStreet.text ?? ""
         params["city_id"] = "1"
         params["latitude"] = self.location?.latitude.description
         params["longitude"] = self.location?.longitude.description
