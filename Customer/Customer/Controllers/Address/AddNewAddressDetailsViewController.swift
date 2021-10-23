@@ -10,6 +10,7 @@ import GoogleMaps
 
 class AddNewAddressDetailsViewController: HomeBaseViewController {
     
+    @IBOutlet weak var txtStreet: UITextField!
     @IBOutlet weak var gmsMapView: GMSMapView! {
         didSet {
             gmsMapView.layer.cornerRadius = 15

@@ -85,13 +85,13 @@ class PermissionManager {
                 PHPhotoLibrary.requestAuthorization { (status) in
                     if status == .authorized{
                         completionHandler(true)
-                    }else{
+                    } else {
                         DispatchQueue.main.async {
                             self.showSettingsAlert(controller: vc, msg: self.PHOTO_LIBRARY_PERMISSION, completionHandler)
                         }
                     }
                 }
-            case .limited:
+            default:
                 break
             }
 //            break
