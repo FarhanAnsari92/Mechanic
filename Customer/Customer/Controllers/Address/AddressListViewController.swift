@@ -16,11 +16,12 @@ class AddressListViewController: HomeBaseViewController {
             tableView.register(AddressListTableViewCell.nib, forCellReuseIdentifier: AddressListTableViewCell.identifier)
         }
     }
-
+    var addresses: [AddressModel]?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Address"
         self.setupBackButton(color: .white)
+        getAddress()
     }
     
     @IBAction func addNewAddressButtonHandler(_ sender: UIButton) {
@@ -28,17 +29,31 @@ class AddressListViewController: HomeBaseViewController {
         let vc = sb.instantiateViewController(withIdentifier: AddNewAddressViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func getAddress(){
+        APIClient.callApi(api: .address, method: .get, view: self.view) { [weak self] data in
+            if let dictionary = data, let addressResponseModel = ObjectMapperManager<AddressResponseModel>().map(dictionary: dictionary) {
+                if addressResponseModel.success ?? false {
+                    self?.addresses = addressResponseModel.addressesModel?.addresses
+                    self?.tableView.reloadData()
+                }
+            }
+        }
+    }
 
 }
 
 extension AddressListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return addresses?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AddressListTableViewCell.identifier, for: indexPath) as! AddressListTableViewCell
+        if let address = self.addresses?[indexPath.row] {
+            cell.set(data: address)
+        }
         cell.imgPin.isHidden = true
         return cell
     }

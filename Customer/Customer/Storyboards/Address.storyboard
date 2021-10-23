@@ -236,6 +236,9 @@
                                                     <constraint firstAttribute="height" constant="55" id="Wsa-Jw-hNa"/>
                                                 </constraints>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButtonHandler:" destination="XnJ-pe-ALe" eventType="touchUpInside" id="HhI-dQ-RrC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

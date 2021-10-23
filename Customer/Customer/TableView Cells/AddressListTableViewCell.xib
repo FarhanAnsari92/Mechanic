@@ -98,6 +98,8 @@
             <connections>
                 <outlet property="imgEdit" destination="bdh-bm-ydt" id="Dp1-yf-ow5"/>
                 <outlet property="imgPin" destination="Ngp-q9-6nH" id="GMz-HZ-RBN"/>
+                <outlet property="lblAddress" destination="nrT-vZ-fTC" id="1zD-SU-Uk6"/>
+                <outlet property="lblAddressTitle" destination="VLo-UA-4U1" id="uqn-Rl-1jP"/>
             </connections>
             <point key="canvasLocation" x="191.30434782608697" y="82.366071428571431"/>
         </tableViewCell>

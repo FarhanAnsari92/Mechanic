@@ -137,6 +137,7 @@
 		287BC6B92723FD2D00AF5978 /* WorkShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */; };
 		287BC6BC272408BE00AF5978 /* ObjectMapperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */; };
 		287BC6BF27242B3B00AF5978 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6BE27242B3B00AF5978 /* LocationManager.swift */; };
+		287BC6C227248E0900AF5978 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6C127248E0900AF5978 /* AddressModel.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -342,6 +343,7 @@
 		287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkShopModel.swift; sourceTree = "<group>"; };
 		287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperManager.swift; sourceTree = "<group>"; };
 		287BC6BE27242B3B00AF5978 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		287BC6C127248E0900AF5978 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -625,6 +627,7 @@
 				287BC3332721D7A400AF5978 /* GetVehicleModel.swift */,
 				287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */,
 				287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */,
+				287BC6C127248E0900AF5978 /* AddressModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1154,6 +1157,7 @@
 				28CCA6AF2704EC9D00DB1421 /* AddressListViewController.swift in Sources */,
 				28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */,
 				28512E202711AE9A002979AD /* AccessoriesDetailsViewController.swift in Sources */,
+				287BC6C227248E0900AF5978 /* AddressModel.swift in Sources */,
 				C94CAC9D270E171100FF1FCC /* BookingDetailsHeader.swift in Sources */,
 				289803F1270F8672002565B6 /* BuyAccessoriesConfirmationViewController.swift in Sources */,
 				287BC3342721D7A400AF5978 /* GetVehicleResponseModel.swift in Sources */,
