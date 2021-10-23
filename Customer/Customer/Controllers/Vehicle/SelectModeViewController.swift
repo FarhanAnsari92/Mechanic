@@ -48,11 +48,16 @@ class SelectModeViewController: HomeBaseViewController {
     }
     
     @IBAction func btn_proceed(_ sender: UIButton) {
-           
-           let sb = UIStoryboard(storyboard: .vehicle)
-           let vc = sb.instantiateViewController(withIdentifier: SelectWorkshopViewController.storyboardIdentifier)
-           self.navigationController?.pushViewController(vc, animated: true)
-       }
+        if AppDelegate.instance.isPickupSelected {
+            let sb = UIStoryboard(storyboard: .address)
+            let vc = sb.instantiateViewController(withIdentifier: AddressListViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let sb = UIStoryboard(storyboard: .vehicle)
+            let vc = sb.instantiateViewController(withIdentifier: SelectWorkshopViewController.storyboardIdentifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     @IBAction func btn_pickupLocation(_ sender: UIButton){
         
@@ -70,11 +75,11 @@ class SelectModeViewController: HomeBaseViewController {
         if show {
             pickupShadowView.layer.borderWidth = 1
             workshopShadowView.layer.borderWidth = 0
-            AppDelegate.instance.shouldShowMapSuccess = true
+            AppDelegate.instance.isPickupSelected = true
         } else {
             pickupShadowView.layer.borderWidth = 0
             workshopShadowView.layer.borderWidth = 1
-            AppDelegate.instance.shouldShowMapSuccess = false
+            AppDelegate.instance.isPickupSelected = false
         }
         
         

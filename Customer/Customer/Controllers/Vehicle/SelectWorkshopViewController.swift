@@ -77,11 +77,9 @@ extension SelectWorkshopViewController : UITableViewDelegate , UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard !(self.workshops?[indexPath.row].isSelected ?? false) else {
-            print("should not change")
+        guard !(self.workshops?[indexPath.row].isSelected ?? false) else {            
             return
         }
-        print("should change")
         self.workshops?.forEach({ $0.isSelected = false })
         self.workshops?[indexPath.row].isSelected = true
         self.tableview.reloadSections(IndexSet(integer: 0), with: .fade)
