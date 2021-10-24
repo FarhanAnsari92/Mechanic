@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AddressListViewControllerDelegate: NSObject {
+    func didSelect(address: AddressModel)
+}
+
 class AddressListViewController: HomeBaseViewController {
 
     @IBOutlet weak var tableView: UITableView! {
@@ -17,6 +21,9 @@ class AddressListViewController: HomeBaseViewController {
         }
     }
     var addresses: [AddressModel]?
+    
+    weak var delegate: AddressListViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Address"
@@ -63,9 +70,13 @@ extension AddressListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(storyboard: .address)
-        let vc = sb.instantiateViewController(withIdentifier: AddNewAddressDetailsViewController.storyboardIdentifier)
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let sb = UIStoryboard(storyboard: .address)
+//        let vc = sb.instantiateViewController(withIdentifier: AddNewAddressDetailsViewController.storyboardIdentifier)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        if let address = self.addresses?[indexPath.row] {
+            self.delegate?.didSelect(address: address)
+        }
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

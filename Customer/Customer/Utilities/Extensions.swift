@@ -263,7 +263,11 @@ extension UIViewController: Backable, StoryboardIdentifiable {
     }
     
     @objc func backButtonHandler() {
-        self.navigationController?.popViewController(animated:true)
+        if (self.navigationController?.viewControllers.count == 1) {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
 }

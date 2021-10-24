@@ -50,8 +50,12 @@ class SelectModeViewController: HomeBaseViewController {
     @IBAction func btn_proceed(_ sender: UIButton) {
         if AppDelegate.instance.isPickupSelected {
             let sb = UIStoryboard(storyboard: .address)
-            let vc = sb.instantiateViewController(withIdentifier: AddressListViewController.storyboardIdentifier)
-            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = sb.instantiateViewController(withIdentifier: AddressListViewController.storyboardIdentifier) as! AddressListViewController
+            vc.delegate = self
+            let navController = HomeBaseNavigationController(rootViewController: vc)
+            navController.modalTransitionStyle = .crossDissolve
+            navController.modalPresentationStyle = .fullScreen
+            self.present(navController, animated: true, completion: nil)
         } else {
             let sb = UIStoryboard(storyboard: .vehicle)
             let vc = sb.instantiateViewController(withIdentifier: SelectWorkshopViewController.storyboardIdentifier)
@@ -84,4 +88,14 @@ class SelectModeViewController: HomeBaseViewController {
         
         
     }
+}
+
+extension SelectModeViewController: AddressListViewControllerDelegate {
+    
+    func didSelect(address: AddressModel) {
+        let sb = UIStoryboard(storyboard: .vehicle)
+        let vc = sb.instantiateViewController(withIdentifier: ConfirmBookingViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
