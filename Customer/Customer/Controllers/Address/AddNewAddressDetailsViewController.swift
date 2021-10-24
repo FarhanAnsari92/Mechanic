@@ -36,6 +36,8 @@ class AddNewAddressDetailsViewController: HomeBaseViewController {
 
     let locationManager = LocationManager(withAccuracy: .bestForNavigation)
     var location: CLLocationCoordinate2D?
+    var addressTitle: String?
+    var address: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,8 +79,8 @@ class AddNewAddressDetailsViewController: HomeBaseViewController {
     
     func saveAddress() {
         var params = [String:String]()
-        params["title"] = "FB Area"
-        params["address"] = "Block 1"
+        params["title"] = self.addressTitle ?? ""
+        params["address"] = self.address ?? ""
         params["street"] = txtStreet.text ?? ""
         params["city_id"] = "1"
         params["latitude"] = self.location?.latitude.description
@@ -101,8 +103,30 @@ class AddNewAddressDetailsViewController: HomeBaseViewController {
 extension AddNewAddressDetailsViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-        print(position.target)
+        
         self.location = position.target
+        GoogleHelper.getAddress(location: position.target, completion: { (data: [String:Any]) in
+            if let addresses = data["results"] as? [[String:Any]] {
+                for item in addresses {
+                    if let addressComponents = item["address_components"] as? [[String:Any]] {
+                        for item in addressComponents {
+                            if let types = item["types"] as? [String] {
+                                if types.contains("neighborhood") || types.contains("political") {
+                                    self.addressTitle = item["long_name"] as? String ?? ""
+                                    break
+                                }
+                            }
+                        }
+                    }
+                    if let address = item["formatted_address"] as? String, address.count > 0 {
+                        self.address = address
+                        break
+                    }
+                }
+            }
+        }) { (errorString) in
+            print(errorString)
+        }
     }
     
 }

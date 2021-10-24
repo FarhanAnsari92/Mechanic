@@ -50,6 +50,11 @@ class Constants {
     
     static let role: String = "3"
     
+    struct Google {
+        static let directionAPIKey = "AIzaSyBclS67APJK6dOTF7cffJkDfke7hPy2QcY"
+        static let mapAPIKey = "AIzaSyBNIpFXAokhl5iyNz0CF-kuDsHvp6JgUEA"
+    }
+    
 }
 
 enum TextFieldType {

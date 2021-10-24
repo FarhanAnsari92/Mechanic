@@ -206,6 +206,7 @@
 		C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */; };
 		C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */; };
 		C9E4315D270F84CE008056C5 /* MyVehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */; };
+		C9E5921F27254BA700EF3947 /* GoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E5921E27254BA700EF3947 /* GoogleHelper.swift */; };
 		C9EFA4CD27160EDF00075D1B /* SuccessfullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EFA4CC27160EDF00075D1B /* SuccessfullViewController.swift */; };
 		C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EFA4CE2716198100075D1B /* SuccessfullRiderViewController.swift */; };
 /* End PBXBuildFile section */
@@ -414,6 +415,7 @@
 		C9E43158270F83E5008056C5 /* MyVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleViewController.swift; sourceTree = "<group>"; };
 		C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleTableViewCell.swift; sourceTree = "<group>"; };
 		C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyVehicleTableViewCell.xib; sourceTree = "<group>"; };
+		C9E5921E27254BA700EF3947 /* GoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleHelper.swift; sourceTree = "<group>"; };
 		C9EFA4CC27160EDF00075D1B /* SuccessfullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullViewController.swift; sourceTree = "<group>"; };
 		C9EFA4CE2716198100075D1B /* SuccessfullRiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullRiderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -488,6 +490,7 @@
 				287BC6B5272334BF00AF5978 /* PermissionManager.swift */,
 				287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */,
 				287BC6BE27242B3B00AF5978 /* LocationManager.swift */,
+				C9E5921E27254BA700EF3947 /* GoogleHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1175,6 +1178,7 @@
 				28DDE814271E0AB500788D46 /* BrandResponseModel.swift in Sources */,
 				C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */,
 				2851342A27160F72002979AD /* BaseView.swift in Sources */,
+				C9E5921F27254BA700EF3947 /* GoogleHelper.swift in Sources */,
 				28512E882713486C002979AD /* ButtonCollectionViewCell.swift in Sources */,
 				2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */,
 				28513430271616CE002979AD /* DropDownButton.swift in Sources */,

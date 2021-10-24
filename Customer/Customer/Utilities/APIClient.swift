@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import GoogleMaps
 
 struct BaseURL {
     static let staging: URL = URL(string: "https://aspenweather.net/motox-services/api/")!
@@ -152,4 +153,28 @@ class APIClient {
         
     }
     
+    class func reversedGeocode(
+        location: CLLocationCoordinate2D,
+        completion: @escaping ((Any?) -> Void),
+        errorCompletion: @escaping ((Error) -> Void)
+    ) {
+        let lat = location.latitude.description
+        let lng = location.longitude.description
+        let key = Constants.Google.directionAPIKey
+        let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(lat),\(lng)&key=\(key)"
+        
+        Alamofire.request(URL(string: url)!).responseJSON { response in
+            
+            let result = response.result
+            switch result {
+            case .success(let data):
+                completion(data)
+                
+            case .failure(let error):
+                errorCompletion(error)
+            }
+            
+        }
+        
+    }
 }
