@@ -32,7 +32,7 @@ class ConfirmBookingTableViewCell: UITableViewCell {
             let item = section.details[i]
             
             let kvo = KeyValueView()
-            kvo.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//            kvo.heightAnchor.constraint(equalToConstant: 30).isActive = true
             kvo.topSeparator.isHidden = item.hideTopSeparator
             kvo.bottomSeparator.isHidden = item.hideBottomSeparator
             kvo.lblKey.text = item.leftTitle

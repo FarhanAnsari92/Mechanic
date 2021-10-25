@@ -46,8 +46,8 @@
                             <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Honda" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwb-1W-Nov">
-                            <rect key="frame" x="207" y="80" width="207" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Honda" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwb-1W-Nov">
+                            <rect key="frame" x="207" y="6" width="207" height="165"/>
                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -67,11 +67,12 @@
                         <constraint firstItem="pMz-2q-mmq" firstAttribute="leading" secondItem="kLk-gl-hVG" secondAttribute="leading" id="3II-cg-WDd"/>
                         <constraint firstAttribute="bottom" secondItem="dV8-Pv-a3P" secondAttribute="bottom" id="4V4-EM-LbK"/>
                         <constraint firstItem="1u1-uk-lpF" firstAttribute="top" secondItem="kLk-gl-hVG" secondAttribute="top" id="Bfz-Hk-77T"/>
-                        <constraint firstItem="nwb-1W-Nov" firstAttribute="centerY" secondItem="kLk-gl-hVG" secondAttribute="centerY" id="D9y-3D-YNB"/>
                         <constraint firstItem="nwb-1W-Nov" firstAttribute="width" secondItem="kLk-gl-hVG" secondAttribute="width" multiplier="0.5" id="Dpb-Pj-Dfy"/>
                         <constraint firstItem="dV8-Pv-a3P" firstAttribute="leading" secondItem="kLk-gl-hVG" secondAttribute="leading" id="LtC-so-8Jb"/>
                         <constraint firstItem="pMz-2q-mmq" firstAttribute="centerY" secondItem="kLk-gl-hVG" secondAttribute="centerY" id="PZJ-An-qL5"/>
+                        <constraint firstItem="dV8-Pv-a3P" firstAttribute="top" secondItem="nwb-1W-Nov" secondAttribute="bottom" constant="5" id="eKK-rM-zAO"/>
                         <constraint firstAttribute="trailing" secondItem="dV8-Pv-a3P" secondAttribute="trailing" id="kTR-Cn-dQT"/>
+                        <constraint firstItem="nwb-1W-Nov" firstAttribute="centerY" secondItem="pMz-2q-mmq" secondAttribute="centerY" id="opG-py-p9w"/>
                         <constraint firstAttribute="trailing" secondItem="nwb-1W-Nov" secondAttribute="trailing" id="tzY-2i-cHq"/>
                         <constraint firstItem="1u1-uk-lpF" firstAttribute="leading" secondItem="kLk-gl-hVG" secondAttribute="leading" id="wcV-fz-xE3"/>
                     </constraints>

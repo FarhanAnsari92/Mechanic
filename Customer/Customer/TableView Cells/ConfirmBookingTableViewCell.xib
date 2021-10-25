@@ -55,7 +55,7 @@
                                     <constraint firstItem="o8Y-Ju-y1K" firstAttribute="centerY" secondItem="7HW-eQ-8Vp" secondAttribute="centerY" id="p7P-gp-ORT"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-tD-CvQ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-tD-CvQ">
                                 <rect key="frame" x="10" y="40" width="496" height="154"/>
                             </stackView>
                         </subviews>
