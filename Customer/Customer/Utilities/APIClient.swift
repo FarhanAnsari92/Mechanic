@@ -23,6 +23,7 @@ enum API: String {
     case vehicle = "vehicles"
     case workShops = "work-shops"
     case address = "addresses"
+    case job = "jobs"
 }
 
 enum APIVersion: String {

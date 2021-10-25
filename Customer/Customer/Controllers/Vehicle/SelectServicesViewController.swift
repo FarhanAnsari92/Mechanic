@@ -50,6 +50,16 @@ class SelectServicesViewController: HomeBaseViewController {
             Helper.showMessage(text: "Please select service.")
             return
         }
+        
+        var selectedServices: [Service] = [Service]()
+        self.services?.forEach({ service in
+            if service.isSelected {
+                selectedServices.append(service)
+            }
+        })
+        Cart.shared.services = nil
+        Cart.shared.services = selectedServices
+        
         let sb = UIStoryboard(storyboard: .vehicle)
         let vc = sb.instantiateViewController(withIdentifier: SelectModeViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)

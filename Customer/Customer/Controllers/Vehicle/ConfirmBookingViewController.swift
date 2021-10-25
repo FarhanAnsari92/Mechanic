@@ -38,13 +38,17 @@ class ConfirmBookingViewController: HomeBaseViewController {
     }
     
     var data: [Section] = [Section]()
+    let viewModel = ConfirmBookingViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Confirm Booking"
         setupBackButton(color: .white)
-        self.setData()
+//        self.setData()
+        if let d = viewModel.getData() {
+            self.data = d
+        }
     }
     
     func setData() {
@@ -90,15 +94,47 @@ class ConfirmBookingViewController: HomeBaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .vehicle)
-        if AppDelegate.instance.isPickupSelected {
-            let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            let vc = sb.instantiateViewController(withIdentifier: SuccessfullViewController.storyboardIdentifier)
-            self.navigationController?.pushViewController(vc, animated: true)
+        self.requestJob()
+//        let sb = UIStoryboard(storyboard: .vehicle)
+//        if AppDelegate.instance.isPickupSelected {
+//            let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        } else {
+//            let vc = sb.instantiateViewController(withIdentifier: SuccessfullViewController.storyboardIdentifier)
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+    }
+    
+    func requestJob() {
+        let cart = Cart.shared
+        var params = [String:String]()
+        
+        params["user_id"] = cart.vehicle?.userId?.description ?? ""
+//        params["rider_id"] = "0" // not used
+        params["job_type"] = AppDelegate.instance.isPickupSelected ? "pick" : "drop"
+//        params["job_status"] = "" // not used
+        params["vehicle_id"] = cart.vehicle?.id?.description ?? ""
+        params["brand_id"] = cart.vehicle?.brand?.id?.description ?? ""
+        params["model_id"] = cart.vehicle?.vehicle?.id?.description ?? ""
+        params["number_plate"] = cart.vehicle?.numberPlate ?? ""
+        params["horse_power"] = cart.vehicle?.horsePower ?? ""
+        params["year"] = cart.vehicle?.year?.description ?? ""
+        params["address"] = cart.address?.address ?? ""
+        params["city_id"] = cart.vehicle?.city?.id?.description ?? ""
+        params["latitude"] = cart.address?.latitude?.description ?? ""
+        params["longitude"] = cart.address?.longitude?.description ?? ""
+        params["total_amount"] = cart.getTotalAmount().description
+        params["payment_type"] = "cash"
+//        params["user_note"] = "string" // not used
+//        params["rider_note"] = "string" // not used
+        
+        print("params --- ", params)
+        
+        APIClient.callApi(api: .job, parameters: params, method: .post, view: self.view) { data in
+            print(data)
         }
-      }
+        
+    }
 }
 
 extension ConfirmBookingViewController : UITableViewDataSource , UITableViewDelegate{

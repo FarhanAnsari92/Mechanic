@@ -63,6 +63,7 @@ extension MyVehicleViewController : UITableViewDelegate, UITableViewDataSource{
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Cart.shared.vehicle = self.vehicles?[indexPath.row]
         let sb = UIStoryboard(storyboard: .vehicle)
         let vc = sb.instantiateViewController(withIdentifier: SelectServicesViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)

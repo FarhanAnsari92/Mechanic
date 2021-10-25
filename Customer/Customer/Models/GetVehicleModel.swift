@@ -21,6 +21,9 @@ class GetVehicleModel : Mappable {
     var vehicle: VehicleModel?
     var horsePower: String?
     var year: Int?
+    var userId: Int?
+    var id: Int?
+    var numberPlate: String?
 
     required init?(map: Map) {
 
@@ -33,6 +36,9 @@ class GetVehicleModel : Mappable {
         vehicle     <- map["vehicle_model"]
         horsePower  <- map["horse_power"]
         year        <- map["year"]
+        userId      <- map["user_id"]
+        id          <- map["id"]
+        numberPlate <- map["number_plate"]
 		
 	}
 

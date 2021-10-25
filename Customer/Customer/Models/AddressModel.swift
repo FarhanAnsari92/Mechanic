@@ -46,8 +46,18 @@ class AddressModel: Mappable {
     var createdAt: String?
     var id: Int?
     var isDefault: Bool?
-    var latitude: String?
-    var longitude: String?
+    private var lat: Double? {
+        didSet {
+            latitude = lat?.rounded(toPlaces: 8)
+        }
+    }
+    var latitude: Double?
+    private var lng: Double? {
+        didSet {
+            longitude = lng?.rounded(toPlaces: 8)
+        }
+    }
+    var longitude: Double?
     var status: Int?
     var street: Int?
     var title: String?
@@ -65,8 +75,8 @@ class AddressModel: Mappable {
         createdAt <- map["created_at"]
         id <- map["id"]
         isDefault <- map["is_default"]
-        latitude <- map["latitude"]
-        longitude <- map["longitude"]
+        lat <- map["latitude"]
+        lng <- map["longitude"]
         status <- map["status"]
         street <- map["street"]
         title <- map["title"]

@@ -93,6 +93,7 @@ class SelectModeViewController: HomeBaseViewController {
 extension SelectModeViewController: AddressListViewControllerDelegate {
     
     func didSelect(address: AddressModel) {
+        Cart.shared.address = address
         let sb = UIStoryboard(storyboard: .vehicle)
         let vc = sb.instantiateViewController(withIdentifier: ConfirmBookingViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)

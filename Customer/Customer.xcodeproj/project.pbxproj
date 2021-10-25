@@ -138,6 +138,8 @@
 		287BC6BC272408BE00AF5978 /* ObjectMapperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */; };
 		287BC6BF27242B3B00AF5978 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6BE27242B3B00AF5978 /* LocationManager.swift */; };
 		287BC6C227248E0900AF5978 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6C127248E0900AF5978 /* AddressModel.swift */; };
+		287BC6EA272573D400AF5978 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6E9272573D400AF5978 /* Cart.swift */; };
+		287BC6EE272576B200AF5978 /* ConfirmBookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BC6ED272576B200AF5978 /* ConfirmBookingViewModel.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -345,6 +347,8 @@
 		287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperManager.swift; sourceTree = "<group>"; };
 		287BC6BE27242B3B00AF5978 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		287BC6C127248E0900AF5978 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		287BC6E9272573D400AF5978 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		287BC6ED272576B200AF5978 /* ConfirmBookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmBookingViewModel.swift; path = ../../../../../../ConfirmBookingViewModel.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -458,6 +462,7 @@
 				280575C726FBA1620035BC2B /* LaunchScreen.storyboard */,
 				280575CA26FBA1620035BC2B /* Info.plist */,
 				280575DC26FBA5160035BC2B /* Controllers */,
+				287BC6EC2725768A00AF5978 /* ViewModels */,
 				280575D826FBA4B30035BC2B /* Storyboards */,
 				28A88FA626FFC18100003EB7 /* TableView Cells */,
 				2841B2F9270A390A000FA706 /* ColletionView Cells */,
@@ -491,6 +496,7 @@
 				287BC6BB272408BE00AF5978 /* ObjectMapperManager.swift */,
 				287BC6BE27242B3B00AF5978 /* LocationManager.swift */,
 				C9E5921E27254BA700EF3947 /* GoogleHelper.swift */,
+				287BC6E9272573D400AF5978 /* Cart.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -706,6 +712,14 @@
 				28512DE82710CF67002979AD /* BasketListViewController.swift */,
 			);
 			path = Basket;
+			sourceTree = "<group>";
+		};
+		287BC6EC2725768A00AF5978 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				287BC6ED272576B200AF5978 /* ConfirmBookingViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		289802E6270E29DC002565B6 /* Chat */ = {
@@ -1083,6 +1097,7 @@
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
 				C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */,
 				28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */,
+				287BC6EE272576B200AF5978 /* ConfirmBookingViewModel.swift in Sources */,
 				28CCA6B42704ED2F00DB1421 /* AddressListTableViewCell.swift in Sources */,
 				28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */,
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
@@ -1180,6 +1195,7 @@
 				2851342A27160F72002979AD /* BaseView.swift in Sources */,
 				C9E5921F27254BA700EF3947 /* GoogleHelper.swift in Sources */,
 				28512E882713486C002979AD /* ButtonCollectionViewCell.swift in Sources */,
+				287BC6EA272573D400AF5978 /* Cart.swift in Sources */,
 				2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */,
 				28513430271616CE002979AD /* DropDownButton.swift in Sources */,
 			);
