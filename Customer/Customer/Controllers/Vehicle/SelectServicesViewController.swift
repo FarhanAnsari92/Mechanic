@@ -57,8 +57,7 @@ class SelectServicesViewController: HomeBaseViewController {
                 selectedServices.append(service)
             }
         })
-        Cart.shared.services = nil
-        Cart.shared.services = selectedServices
+        Cart.shared.set(services: selectedServices)
         
         let sb = UIStoryboard(storyboard: .vehicle)
         let vc = sb.instantiateViewController(withIdentifier: SelectModeViewController.storyboardIdentifier)

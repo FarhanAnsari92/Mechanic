@@ -31,7 +31,7 @@ class ConfirmBookingViewModel {
         
         var lrService = [LeftRight]()
         var total = 0
-        Cart.shared.services?.forEach({ service in
+        Cart.shared.getServices()?.forEach({ service in
             total += service.charges ?? 0
             let charges = service.charges ?? 0
             let formattedCharge = Helper.formatCurrency(value: charges)

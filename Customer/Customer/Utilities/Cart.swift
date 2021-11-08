@@ -10,7 +10,7 @@ import Foundation
 class Cart {
     
     var vehicle: GetVehicleModel?
-    var services: [Service]?
+    private var services: [Service]?
     var address: AddressModel?
     
     private init() {
@@ -27,6 +27,25 @@ class Cart {
             }
         })
         return total
+    }
+    
+    func getServicesIds() -> [String] {
+        var ids: [String] = [String]()
+        self.services?.forEach({ service in
+            if let id = service.id?.description {
+                ids.append(id)
+            }
+        })
+        return ids
+    }
+    
+    func set(services: [Service]) {
+        self.services = nil
+        self.services = services
+    }
+    
+    func getServices() -> [Service]? {
+        return self.services
     }
     
 }

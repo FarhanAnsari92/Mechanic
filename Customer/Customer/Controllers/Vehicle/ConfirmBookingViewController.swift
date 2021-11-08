@@ -95,25 +95,17 @@ class ConfirmBookingViewController: HomeBaseViewController {
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
         self.requestJob()
-//        let sb = UIStoryboard(storyboard: .vehicle)
-//        if AppDelegate.instance.isPickupSelected {
-//            let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        } else {
-//            let vc = sb.instantiateViewController(withIdentifier: SuccessfullViewController.storyboardIdentifier)
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
     }
     
     func requestJob() {
         let cart = Cart.shared
         var params = [String:String]()
         
-        params["user_id"] = cart.vehicle?.userId?.description ?? ""
+        params["user_id"] = cart.vehicle?.userId?.description ?? "0" //?.description ?? ""
 //        params["rider_id"] = "0" // not used
         params["job_type"] = AppDelegate.instance.isPickupSelected ? "pick" : "drop"
 //        params["job_status"] = "" // not used
-        params["vehicle_id"] = cart.vehicle?.id?.description ?? ""
+        params["vehicle_id"] = cart.vehicle?.id?.description ?? "0" //.description ?? ""
         params["brand_id"] = cart.vehicle?.brand?.id?.description ?? ""
         params["model_id"] = cart.vehicle?.vehicle?.id?.description ?? ""
         params["number_plate"] = cart.vehicle?.numberPlate ?? ""
@@ -124,20 +116,34 @@ class ConfirmBookingViewController: HomeBaseViewController {
         params["latitude"] = cart.address?.latitude?.description ?? ""
         params["longitude"] = cart.address?.longitude?.description ?? ""
         params["total_amount"] = cart.getTotalAmount().description
-        params["payment_type"] = "cash"
-//        params["user_note"] = "string" // not used
-//        params["rider_note"] = "string" // not used
+        params["payment_type"] = "creditcard"
+        params["drop_date"] = "2021-11-26"
+        params["drop_time"] = "11:11"
+        for i in 0..<(cart.getServices()?.count ?? 0) {
+            if let id = cart.getServices()?[i].id {
+                params["services[\(i)]"] = id.description
+            }
+        }
         
         print("params --- ", params)
         
-        APIClient.callApi(api: .job, parameters: params, method: .post, view: self.view) { data in
-            print(data)
+        APIClient.callApi(api: .job, parameters: params, method: .post, data: nil, view: self.view) { [weak self] data in
+            
+            let sb = UIStoryboard(storyboard: .vehicle)
+            if AppDelegate.instance.isPickupSelected {
+                let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                let vc = sb.instantiateViewController(withIdentifier: SuccessfullViewController.storyboardIdentifier)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+            
         }
         
     }
 }
 
-extension ConfirmBookingViewController : UITableViewDataSource , UITableViewDelegate{
+extension ConfirmBookingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -152,22 +158,68 @@ extension ConfirmBookingViewController : UITableViewDataSource , UITableViewDele
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ConfirmBookingTableViewCell.identifier, for: indexPath) as! ConfirmBookingTableViewCell
         cell.setData(section: item)
-        cell.changeCompletion = {
+        cell.changeCompletion = { [weak self] in
             if indexPath.row == 0 {
-                if let myVehicle = self.navigationController?.viewControllers.first(where: { $0 is MyVehicleViewController }) {
-                    self.navigationController?.popToViewController(myVehicle, animated: true)
+                if let myVehicle = self?.navigationController?.viewControllers.first(where: { $0 is MyVehicleViewController }) {
+                    self?.navigationController?.popToViewController(myVehicle, animated: true)
                 }
             } else if indexPath.row == 1 {
-                if let selectService = self.navigationController?.viewControllers.first(where: { $0 is SelectServicesViewController }) {
-                    self.navigationController?.popToViewController(selectService, animated: true)
+                if let selectService = self?.navigationController?.viewControllers.first(where: { $0 is SelectServicesViewController }) {
+                    self?.navigationController?.popToViewController(selectService, animated: true)
                 }
             } else if indexPath.row == 2 {
-                if let selectMode = self.navigationController?.viewControllers.first(where: { $0 is SelectModeViewController }) {
-                    self.navigationController?.popToViewController(selectMode, animated: true)
+                if let selectMode = self?.navigationController?.viewControllers.first(where: { $0 is SelectModeViewController }) {
+                    self?.navigationController?.popToViewController(selectMode, animated: true)
                 }
             }
         }
         return cell
     }
     
+}
+
+class BookingRequestModel: Mappable {
+
+    var userId: String?
+    var jobType: String?
+    var vehicleId: String?
+    var brandId: String?
+    var modelId: String?
+    var numberPlate: String?
+    var horsePower: String?
+    var year: String?
+    var cityId: String?
+    var latitude: String?
+    var longitude: String?
+    var totalAmount: String?
+    var paymentType: String?
+    var services: [Int]?
+    var dropDate: String?
+    var dropTime: String?
+    
+
+    required init?(map: Map) {
+
+    }
+
+    func mapping(map: Map) {
+        userId <- map ["user_id"]
+        jobType <- map ["job_type"]
+        vehicleId <- map  ["vehicle_id"]
+        brandId <- map ["brand_id"]
+        modelId <- map ["model_id"]
+        numberPlate <- map ["number_plate"]
+        horsePower <- map ["horse_power"]
+        year <- map ["year"]
+        cityId <- map ["address"]
+        latitude <- map ["city_id"]
+        longitude <- map ["latitude"]
+        totalAmount <- map ["longitude"]
+        paymentType <- map ["total_amount"]
+        services <- map ["payment_type"]
+        dropDate <- map ["services"]
+        dropTime <- map ["drop_date"]
+        userId <- map["drop_time"]
+    }
+
 }

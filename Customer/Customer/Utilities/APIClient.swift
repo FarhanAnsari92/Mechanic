@@ -43,6 +43,7 @@ class APIClient {
         apiVersion: APIVersion = .v1,
         parameters: [String:String]? = nil,
         method: HTTPMethod,
+        data: Data? = nil,
         view: UIView? = nil,
         success: @escaping ([String:Any]?) -> Void) {
         
@@ -52,8 +53,6 @@ class APIClient {
         if let _ = view {
             view?.showHud()
         }
-        
-        print("URL - ", url.absoluteURL)
         
         var urlComponent = URLComponents(string: url.absoluteString)
         if let param = parameters {
@@ -67,10 +66,71 @@ class APIClient {
         
         var urlRequest = URLRequest(url: (urlComponent?.url)!)
         urlRequest.httpMethod = method.rawValue
+        urlRequest.httpBody = data
+        print("--- DATA --- ", data)
+        if let user = User.shared.getUser(),
+           let accessToken = user.accessToken {
+            let headerValue = "Bearer \(accessToken)"
+            print(headerValue)
+            urlRequest.setValue(headerValue, forHTTPHeaderField: "Authorization")
+        }
+        
+        print("URL - ", url.absoluteURL)
+        
+        let request = Alamofire.request(urlRequest)
+        let responseHandler: ((DataResponse<Any>) -> Void) = { reponse in
+            if let _ = view {
+                view?.hideHud()
+            }
+            let result = reponse.result
+            switch result {
+            case .success(let data):
+                if let dictionary = data as? [String:Any] {
+                    success(dictionary)
+                }
+                
+            case .failure(let error):
+                print("error - ", error.localizedDescription)
+            }
+        }
+        
+        request.responseJSON(completionHandler: responseHandler)
+        
+    }
+    
+    class func xcallApi(
+        api: API,
+        apiVersion: APIVersion = .v1,
+        parameters: [String:Any]? = nil,
+        method: HTTPMethod,
+        view: UIView? = nil,
+        success: @escaping ([String:Any]?) -> Void) {
+        
+        let path = apiVersion.rawValue + "/" + api.rawValue
+        let url: URL = URL(string: path, relativeTo: BaseURL.staging)!
+        
+        if let _ = view {
+            view?.showHud()
+        }
+        
+        print("URL - ", url.absoluteURL)
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = method.rawValue
+        let param: Any = parameters!
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed)
         if let user = User.shared.getUser(),
            let accessToken = user.accessToken {
             let headerValue = "Bearer \(accessToken)"
             urlRequest.setValue(headerValue, forHTTPHeaderField: "Authorization")
+        }
+        
+        print(urlRequest.httpBody)
+        do{
+        let json = try JSONSerialization.jsonObject(with: urlRequest.httpBody!, options: []) as? [String : Any]
+            print("sucess json - ", json)
+        } catch {
+            print("erroMsg")
         }
         
         let request = Alamofire.request(urlRequest)
