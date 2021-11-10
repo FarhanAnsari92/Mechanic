@@ -10,6 +10,12 @@ import UIKit
 class BookingHistoryTableViewCell: UITableViewCell {
     
     static let height: CGFloat = 100.0
+    
+    @IBOutlet weak var lblBookingId: UILabel!
+    @IBOutlet weak var lblVehicle: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblCharges: UILabel!
+    
     var viewDetailsCompletion: (() -> Void)?
 
     override func awakeFromNib() {
@@ -25,6 +31,13 @@ class BookingHistoryTableViewCell: UITableViewCell {
     
     @IBAction func viewDetailsButtonHandler(_ sender: UIButton) {
         viewDetailsCompletion?()
+    }
+    
+    func set(data: BookingHistoryModel) {        
+        self.lblBookingId.text = data.displayBookingId
+        self.lblVehicle.text = data.vehicleName
+        self.lblCharges.text = data.charges
+        self.lblDate.text = data.bookingCreatedAt
     }
     
 }

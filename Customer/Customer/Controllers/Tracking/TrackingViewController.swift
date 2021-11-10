@@ -30,7 +30,7 @@ class TrackingViewController: HomeBaseViewController {
         super.viewDidLoad()
         self.title = "Tracking"
         setupBackButton(color: .white)
-        setupHistoryButton()
+//        setupHistoryButton()
         tableView.estimatedRowHeight = 50
     }
     

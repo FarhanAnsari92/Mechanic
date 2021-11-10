@@ -276,7 +276,7 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
         case .track:
             let sb = UIStoryboard(storyboard: .tracking)
-            let vc = sb.instantiateViewController(withIdentifier: TrackingViewController.storyboardIdentifier)
+            let vc = sb.instantiateViewController(withIdentifier: BookingHistoryViewController.storyboardIdentifier)
             self.navigationController?.pushViewController(vc, animated: true)
         case .orderHistory:
             

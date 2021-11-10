@@ -42,6 +42,9 @@
 		280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577C826FF38C60035BC2B /* VerifyNumberViewController.swift */; };
 		280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577CB26FF3C070035BC2B /* OTPTextField.swift */; };
 		2807AA142727CC7100D5A855 /* ConfirmBookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2807AA132727CC7100D5A855 /* ConfirmBookingViewModel.swift */; };
+		2835631D2739AA82008821A1 /* BookingHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835631C2739AA81008821A1 /* BookingHistoryViewModel.swift */; };
+		283563202739AAC1008821A1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835631F2739AAC1008821A1 /* Dynamic.swift */; };
+		283563232739B41A008821A1 /* BookingHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283563222739B41A008821A1 /* BookingHistoryModel.swift */; };
 		28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E142706378D0071E93D /* AppLinkLabel.swift */; };
 		28373E1827063EC80071E93D /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1727063EC80071E93D /* Contact.storyboard */; };
 		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
@@ -251,6 +254,9 @@
 		280577C826FF38C60035BC2B /* VerifyNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNumberViewController.swift; sourceTree = "<group>"; };
 		280577CB26FF3C070035BC2B /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		2807AA132727CC7100D5A855 /* ConfirmBookingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBookingViewModel.swift; sourceTree = "<group>"; };
+		2835631C2739AA81008821A1 /* BookingHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryViewModel.swift; sourceTree = "<group>"; };
+		2835631F2739AAC1008821A1 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		283563222739B41A008821A1 /* BookingHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryModel.swift; sourceTree = "<group>"; };
 		28373E142706378D0071E93D /* AppLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinkLabel.swift; sourceTree = "<group>"; };
 		28373E1727063EC80071E93D /* Contact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contact.storyboard; sourceTree = "<group>"; };
 		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -497,6 +503,7 @@
 				287BC6BE27242B3B00AF5978 /* LocationManager.swift */,
 				C9E5921E27254BA700EF3947 /* GoogleHelper.swift */,
 				287BC6E9272573D400AF5978 /* Cart.swift */,
+				2835631F2739AAC1008821A1 /* Dynamic.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -637,6 +644,7 @@
 				287BC3322721D7A400AF5978 /* GetVehicleResponseModel.swift */,
 				287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */,
 				287BC6C127248E0900AF5978 /* AddressModel.swift */,
+				283563222739B41A008821A1 /* BookingHistoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -718,6 +726,7 @@
 			isa = PBXGroup;
 			children = (
 				2807AA132727CC7100D5A855 /* ConfirmBookingViewModel.swift */,
+				2835631C2739AA81008821A1 /* BookingHistoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1157,13 +1166,16 @@
 				287BC6BC272408BE00AF5978 /* ObjectMapperManager.swift in Sources */,
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
+				2835631D2739AA82008821A1 /* BookingHistoryViewModel.swift in Sources */,
 				2840A44E271C22DA0091250F /* RegistrationDataModel.swift in Sources */,
 				C96B9C4C271EE7D7006D9EF8 /* ServiceModel.swift in Sources */,
 				28512DED2710D1FC002979AD /* BasketTableViewCell.swift in Sources */,
+				283563202739AAC1008821A1 /* Dynamic.swift in Sources */,
 				C94CAC9A270E143300FF1FCC /* BookingDetailsTableViewCell.swift in Sources */,
 				C9CA74C32710C9840091A051 /* SelectModeViewController.swift in Sources */,
 				2841B2EF2708BB6D000FA706 /* FixMyVehicleView.swift in Sources */,
 				28DDE80C271E053200788D46 /* CityModel.swift in Sources */,
+				283563232739B41A008821A1 /* BookingHistoryModel.swift in Sources */,
 				28512E372711CAC6002979AD /* ReviewTableViewCell.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				2840A448271C1B050091250F /* RoleModel.swift in Sources */,

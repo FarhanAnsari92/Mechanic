@@ -14,7 +14,7 @@ class GetVehicleResponseDataModel: Mappable {
     }
 }
 
-class GetVehicleModel : Mappable {
+class GetVehicleModel: Mappable {
 	
     var brand: BrandModel?
     var city: CityModel?

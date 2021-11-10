@@ -16,11 +16,23 @@ class BookingHistoryViewController: HomeBaseViewController {
             tableView.dataSource = self
         }
     }
+    
+    let viewModel = BookingHistoryViewModel()
+    var bookings: [BookingHistoryModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "History"
         setupBackButton(color: .white)
+        addObserver()
+        viewModel.getBookingHistory(self.view)
+    }
+    
+    private func addObserver() {
+        viewModel.bookings.bind({ [weak self] bookings in
+            self?.bookings = bookings            
+            self?.tableView.reloadData()
+        })
     }
     
 }
@@ -42,11 +54,14 @@ extension BookingHistoryViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.bookings?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookingHistoryTableViewCell.identifier, for: indexPath) as! BookingHistoryTableViewCell
+        if let booking: BookingHistoryModel = self.bookings?[indexPath.row] {
+            cell.set(data: booking)
+        }
         cell.viewDetailsCompletion = { [weak self] in
             guard let self = self else { return }
             let sb = UIStoryboard(storyboard: .tracking)
@@ -55,6 +70,12 @@ extension BookingHistoryViewController: UITableViewDelegate, UITableViewDataSour
             
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(storyboard: .tracking)
+        let vc = sb.instantiateViewController(withIdentifier: TrackingViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

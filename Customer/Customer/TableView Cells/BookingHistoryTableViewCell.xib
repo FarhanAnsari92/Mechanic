@@ -102,6 +102,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblBookingId" destination="oo9-8k-pDZ" id="U9E-df-C4g"/>
+                <outlet property="lblCharges" destination="8aR-o9-Iqm" id="xJU-DG-gp6"/>
+                <outlet property="lblDate" destination="eX1-z0-bjV" id="gJT-1R-J9k"/>
+                <outlet property="lblVehicle" destination="yVl-xH-KYE" id="50o-jE-F3W"/>
+            </connections>
             <point key="canvasLocation" x="165.21739130434784" y="67.633928571428569"/>
         </tableViewCell>
     </objects>

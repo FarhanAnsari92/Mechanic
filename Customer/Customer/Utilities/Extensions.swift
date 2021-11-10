@@ -293,6 +293,27 @@ extension UIViewController: UINavigationControllerDelegate {
     }
 }
 
+enum DateFormat: String {
+    case standardFormat = "d MMM yyyy" // 9 Nov 2021
+}
+
+extension String {
+    
+    func toFormattedDate(format: DateFormat) -> String? {
+        let dateFormate = DateFormatter()
+        dateFormate.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        print(self)
+        let dt: Date? = dateFormate.date(from: self)
+        dateFormate.dateFormat = format.rawValue
+        if let date = dt {
+            return dateFormate.string(from: date)
+        } else {
+            return nil
+        }
+    }
+    
+}
+
 extension UITableViewCell: NibLoadable {
     
 }
