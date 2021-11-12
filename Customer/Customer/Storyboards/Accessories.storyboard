@@ -317,6 +317,9 @@
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="AQZ-Bj-4tK" id="Hcz-s6-hAH"/>
+                        <outlet property="lblDescription" destination="8Ot-Qf-xj5" id="pRJ-Wm-c6z"/>
+                        <outlet property="lblPrice" destination="6ZZ-I8-rD5" id="pfb-GL-Hoz"/>
+                        <outlet property="lblRating" destination="HeF-Hh-Yfz" id="CiC-5P-UiD"/>
                         <outlet property="pricePrentView" destination="7qg-m3-Ela" id="I7e-aY-I78"/>
                     </connections>
                 </viewController>

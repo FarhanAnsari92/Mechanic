@@ -60,7 +60,7 @@ extension AccessoriesViewController: UICollectionViewDelegate, UICollectionViewD
             // 2 liner item name will not work in iPhone 5s sized devices.
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoriesCollectionViewCell.identifier, for: indexPath) as! AccessoriesCollectionViewCell
             if indexPath.row == 0 {
-                cell.lblTitle.text = "Pack of 2 - Pro Biker Gloves MCS-01C + Winter Mask"
+                cell.lblDescription.text = "Pack of 2 - Pro Biker Gloves MCS-01C + Winter Mask"
             }
             return cell
         }

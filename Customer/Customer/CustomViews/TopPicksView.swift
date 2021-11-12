@@ -26,7 +26,7 @@ extension TopPicksView: UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoriesCollectionViewCell.identifier, for: indexPath) as! AccessoriesCollectionViewCell
-        cell.lblTitle.text = "Pack of 2 - Pro Biker Gloves MCS-01C + Winter Mask"
+        cell.lblDescription.text = "Pack of 2 - Pro Biker Gloves MCS-01C + Winter Mask"
         return cell
     }
     

@@ -45,6 +45,11 @@
 		2835631D2739AA82008821A1 /* BookingHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835631C2739AA81008821A1 /* BookingHistoryViewModel.swift */; };
 		283563202739AAC1008821A1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835631F2739AAC1008821A1 /* Dynamic.swift */; };
 		283563232739B41A008821A1 /* BookingHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283563222739B41A008821A1 /* BookingHistoryModel.swift */; };
+		2835633D273C4BE0008821A1 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835633A273C4BDF008821A1 /* ImageModel.swift */; };
+		2835633E273C4BE0008821A1 /* ProductResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835633B273C4BDF008821A1 /* ProductResponseModel.swift */; };
+		2835633F273C4BE0008821A1 /* ProductBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835633C273C4BDF008821A1 /* ProductBaseModel.swift */; };
+		28356347273C4D96008821A1 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28356346273C4D96008821A1 /* ProductModel.swift */; };
+		2835634A273C5363008821A1 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28356349273C5363008821A1 /* ImageCacheManager.swift */; };
 		28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E142706378D0071E93D /* AppLinkLabel.swift */; };
 		28373E1827063EC80071E93D /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1727063EC80071E93D /* Contact.storyboard */; };
 		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
@@ -257,6 +262,11 @@
 		2835631C2739AA81008821A1 /* BookingHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryViewModel.swift; sourceTree = "<group>"; };
 		2835631F2739AAC1008821A1 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		283563222739B41A008821A1 /* BookingHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryModel.swift; sourceTree = "<group>"; };
+		2835633A273C4BDF008821A1 /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		2835633B273C4BDF008821A1 /* ProductResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductResponseModel.swift; sourceTree = "<group>"; };
+		2835633C273C4BDF008821A1 /* ProductBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductBaseModel.swift; sourceTree = "<group>"; };
+		28356346273C4D96008821A1 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		28356349273C5363008821A1 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		28373E142706378D0071E93D /* AppLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinkLabel.swift; sourceTree = "<group>"; };
 		28373E1727063EC80071E93D /* Contact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contact.storyboard; sourceTree = "<group>"; };
 		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -504,6 +514,7 @@
 				C9E5921E27254BA700EF3947 /* GoogleHelper.swift */,
 				287BC6E9272573D400AF5978 /* Cart.swift */,
 				2835631F2739AAC1008821A1 /* Dynamic.swift */,
+				28356349273C5363008821A1 /* ImageCacheManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -645,6 +656,10 @@
 				287BC6B82723FD2C00AF5978 /* WorkShopModel.swift */,
 				287BC6C127248E0900AF5978 /* AddressModel.swift */,
 				283563222739B41A008821A1 /* BookingHistoryModel.swift */,
+				2835633C273C4BDF008821A1 /* ProductBaseModel.swift */,
+				2835633A273C4BDF008821A1 /* ImageModel.swift */,
+				2835633B273C4BDF008821A1 /* ProductResponseModel.swift */,
+				28356346273C4D96008821A1 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1083,6 +1098,8 @@
 				280575E326FBA8610035BC2B /* Extensions.swift in Sources */,
 				C9EFA4CD27160EDF00075D1B /* SuccessfullViewController.swift in Sources */,
 				2851352B271B4E3C002979AD /* APIClient.swift in Sources */,
+				2835634A273C5363008821A1 /* ImageCacheManager.swift in Sources */,
+				28356347273C4D96008821A1 /* ProductModel.swift in Sources */,
 				C96B9C4D271EE7D7006D9EF8 /* ServiceResponseModel.swift in Sources */,
 				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
@@ -1104,6 +1121,7 @@
 				C9CA74C027109B780091A051 /* SelectServicesTableViewCell.swift in Sources */,
 				2840A44B271C1E620091250F /* UserModel.swift in Sources */,
 				280575BD26FBA1570035BC2B /* AppDelegate.swift in Sources */,
+				2835633D273C4BE0008821A1 /* ImageModel.swift in Sources */,
 				C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */,
 				28373E24270647DE0071E93D /* EditProfileViewController.swift in Sources */,
 				28CCA6B42704ED2F00DB1421 /* AddressListTableViewCell.swift in Sources */,
@@ -1155,6 +1173,7 @@
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
 				287BC6B92723FD2D00AF5978 /* WorkShopModel.swift in Sources */,
+				2835633F273C4BE0008821A1 /* ProductBaseModel.swift in Sources */,
 				287BC3352721D7A400AF5978 /* GetVehicleModel.swift in Sources */,
 				280575EC26FBA9C00035BC2B /* NibDesignable.swift in Sources */,
 				28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */,
@@ -1209,6 +1228,7 @@
 				28512E882713486C002979AD /* ButtonCollectionViewCell.swift in Sources */,
 				287BC6EA272573D400AF5978 /* Cart.swift in Sources */,
 				2841B2FC270A395A000FA706 /* AutoPartsAndAccessoriesCollectionViewCell.swift in Sources */,
+				2835633E273C4BE0008821A1 /* ProductResponseModel.swift in Sources */,
 				28513430271616CE002979AD /* DropDownButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -106,9 +106,10 @@
             </constraints>
             <size key="customSize" width="240" height="319"/>
             <connections>
+                <outlet property="imgProduct" destination="pKA-MA-Up6" id="jzo-ES-ycQ"/>
+                <outlet property="lblDescription" destination="QHc-nD-aRe" id="jwb-Hi-o6O"/>
                 <outlet property="lblPrice" destination="htT-nn-FKB" id="IMD-8C-int"/>
                 <outlet property="lblRating" destination="52h-Fr-nJh" id="3bN-BV-E54"/>
-                <outlet property="lblTitle" destination="QHc-nD-aRe" id="URe-nZ-kiK"/>
             </connections>
             <point key="canvasLocation" x="259.4202898550725" y="159.70982142857142"/>
         </collectionViewCell>

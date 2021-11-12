@@ -20,11 +20,21 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
             bannerView.datasource = self
         }
     }
+    
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblRating: UILabel!
+    
+    var product: ProductModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "HELMET BURAAK"
         setupBackButton(color: .white)
+        
+        self.lblPrice.text =  product?.displayPrice
+        self.lblDescription.text = product?.description ?? ""
+        self.lblRating.text = (product?.rating ?? 0.0).description
     }
     
     @IBAction func buyNowButtonHandler(_ sender: UIButton) {
@@ -37,13 +47,13 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
 
 extension AccessoriesDetailsViewController: AccessoryBannerViewDatasource {
     
-    func imageURL(index: Int) -> Any {        
-        let image = UIImage(named: "img_side_mirror")!
-        return image
+    func imageURL(index: Int) -> Any {
+        let url = product?.images?[index].url
+        return url
     }
     
     func numberOfImages() -> Int {
-        return 3
+        return product?.images?.count ?? 0
     }
     
 }

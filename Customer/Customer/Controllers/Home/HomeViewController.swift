@@ -27,6 +27,9 @@ class HomeViewController: SideMenuBaseController {
             collectionView.dataSource = self
         }
     }
+    
+    let imageCacheManager: ImageCacheManager = ImageCacheManager()
+    var products: [ProductModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +38,28 @@ class HomeViewController: SideMenuBaseController {
         setupLeftBarButtons()
         setupRightBarButtons()
         setupAutoPartsLabel()
+        getProducts()
         
         if let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController {
             if let leftMenuControllerr = glController.leftViewController as? LeftMenuViewController {
                 leftMenuControllerr.leftMenuDelegate = self
+            }
+        }
+    }
+    
+    func getProducts() {
+        let parameters = [String:String]()
+        APIClient.callApi(api: .products, parameters: parameters, method: .get, view: self.view) { data in
+            if let dictionary = data {
+                if let productResponseModel = ObjectMapperManager<ProductResponseModel>().map(dictionary: dictionary) {
+                    
+                    if let products = productResponseModel.data?.products, products.count > 0 {
+                        self.products = products
+                        self.collectionView.reloadData()
+                    } else {
+                        Helper.showMessage(text: "No Products Found.")
+                    }
+                }
             }
         }
     }
@@ -178,7 +199,7 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -189,14 +210,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: section == 1 ? 0 : 40)
+        return CGSize(width: collectionView.frame.width, height: 40) // section == 0 ? 0 : 40
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 || section == 1 || section == 3 {
+        if section == 0 || section == 2 {
             return 1
         }
-        return 6
+        return self.products?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -208,19 +229,30 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             return cell
-        } else if indexPath.section == 1 {
+        } /* else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerViewCollectionViewCell.identifier, for: indexPath)
             return cell
-        } else if indexPath.section == 2 {
+        } */ else if indexPath.section == 1 {
             // 2 liner item name will not work in iPhone 5s sized devices.
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoriesCollectionViewCell.identifier, for: indexPath) as! AccessoriesCollectionViewCell
-            if indexPath.row == 0 {
-                cell.lblTitle.text = "Pack of 2 - Pro Biker Gloves MCS-01C + Winter Mask"
+            if let product = self.products?[indexPath.row] {
+                cell.set(data: product, imageCacheManager: imageCacheManager)
             }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopPickCollectionViewCell.identifier, for: indexPath)
             return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            let sb = UIStoryboard(storyboard: .accessories)
+            let vc = sb.instantiateViewController(withIdentifier: AccessoriesDetailsViewController.storyboardIdentifier) as! AccessoriesDetailsViewController
+            if let product = self.products?[indexPath.row] {
+                vc.product = product
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -230,10 +262,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let padding:CGFloat = 20
             let itemWidth = (collectionView.bounds.width / itemsPerRow) - padding
             return CGSize(width: itemWidth, height: 60)
-        } else if indexPath.section == 1 {
+        } /* else if indexPath.section == 1 {
             let itemWidth = collectionView.bounds.width
             return CGSize(width: itemWidth, height: itemWidth * 0.4)
-        } else if indexPath.section == 2 {
+        } */ else if indexPath.section == 1 {
             
             let numberOfItemsPerRow: CGFloat = 2
             let spacing: CGFloat = 20
