@@ -19,16 +19,23 @@ class BuyAccessoriesConfirmationBasketTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        (0..<2).forEach { i in
-            let basketView = BasketView()
-            basketView.stepper.isHidden = true
-            basketView.heightAnchor.constraint(equalToConstant: 90).isActive = true
-            if i == 0 {
-                basketView.lblName.text = "Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name"
-            }
-            stackViewBasket.addArrangedSubview(basketView)
-        }
+//        (0..<2).forEach { i in
+//            let basketView = BasketView()
+//            basketView.stepper.isHidden = true
+//            basketView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+//            if i == 0 {
+//                basketView.lblName.text = "Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name Long Name"
+//            }
+//            stackViewBasket.addArrangedSubview(basketView)
+//        }
         
+    }
+    
+    func set(data: ProductModel) {
+        let basketView = BasketView()
+        basketView.set(data: data)        
+        basketView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+        stackViewBasket.addArrangedSubview(basketView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

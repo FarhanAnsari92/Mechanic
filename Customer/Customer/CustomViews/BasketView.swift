@@ -25,5 +25,14 @@ class BasketView: NibDesignable {
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func set(data: ProductModel) {
+        self.stepper.isHidden = true
+        self.lblName.text = data.name ?? "NA"
+        
+        if let urlStr = data.images?.first?.mediaUrl {
+            ImageCacheManager().loadImage(imageView: self.imgViewAccessory, url: urlStr, placeholderImage: nil)
+        }
+    }
 
 }

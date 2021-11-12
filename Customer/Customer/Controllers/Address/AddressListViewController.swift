@@ -37,7 +37,7 @@ class AddressListViewController: HomeBaseViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func getAddress(){
+    func getAddress() {
         APIClient.callApi(api: .address, method: .get, view: self.view) { [weak self] data in
             if let dictionary = data, let addressResponseModel = ObjectMapperManager<AddressResponseModel>().map(dictionary: dictionary) {
                 if addressResponseModel.success ?? false {

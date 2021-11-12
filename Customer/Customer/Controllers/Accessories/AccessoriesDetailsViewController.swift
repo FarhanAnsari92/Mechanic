@@ -29,7 +29,7 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "HELMET BURAAK"
+        self.title = product?.name ?? "NA"
         setupBackButton(color: .white)
         
         self.lblPrice.text =  product?.displayPrice
@@ -39,7 +39,8 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
     
     @IBAction func buyNowButtonHandler(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .accessories)
-        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier)
+        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier) as! BuyAccessoriesConfirmationViewController
+        vc.product = self.product
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

@@ -14,13 +14,16 @@ class BuyAccessoriesConfirmationAddressTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        lblAddress.text = "Gulzar-e-Hijri"
-        lblDetailedAddress.text = "Kaneez Fatima Society, Scheme 33, Karachi"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+    }
+    
+    func set(data: AddressModel) {
+        lblAddress.text = data.title ?? "NA"
+        lblDetailedAddress.text = data.address ?? "NA"
     }
     
 }
