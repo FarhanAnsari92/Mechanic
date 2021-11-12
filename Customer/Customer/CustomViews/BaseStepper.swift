@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol BaseStepperDelegate {
+protocol BaseStepperDelegate: NSObjectProtocol {
     func stepperValueChnaged(_ sender: BaseStepper, isIncremented: Bool)
 }
 
@@ -21,7 +21,7 @@ class BaseStepper: UIView {
         }
     }
     
-    var delegate: BaseStepperDelegate?
+    weak var delegate: BaseStepperDelegate?
     @IBInspectable var maxValue: Int = 5;
     @IBInspectable var minValue: Int = 0 {
         didSet {

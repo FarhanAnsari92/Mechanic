@@ -39,9 +39,14 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
     
     @IBAction func buyNowButtonHandler(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .accessories)
-        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier) as! BuyAccessoriesConfirmationViewController
-        vc.product = self.product
+        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier) as! BuyAccessoriesConfirmationViewController        
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func addToCartButtonHandler(_ sender: UIButton) {
+        if let prod = self.product {
+            ProductCart.shared.add(product: prod)
+        }
     }
 
 }

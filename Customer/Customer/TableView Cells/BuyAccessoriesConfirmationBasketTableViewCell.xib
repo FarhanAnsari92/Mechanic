@@ -171,8 +171,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw0-Fk-F9h">
                                                 <rect key="frame" x="0.0" y="115" width="501" height="35"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Charges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C22-hP-Y9p">
-                                                        <rect key="frame" x="0.0" y="7.5" width="117.5" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C22-hP-Y9p">
+                                                        <rect key="frame" x="0.0" y="7.5" width="82" height="20"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                                         <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -222,6 +222,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="lblDeliveryCharges" destination="fME-H1-uhK" id="G5u-aX-Bev"/>
+                <outlet property="lblGrandTotal" destination="9E9-oW-syt" id="xa3-4r-CYb"/>
+                <outlet property="lblSubTotal" destination="kjX-xb-dXi" id="yuI-NQ-Xa9"/>
                 <outlet property="stackViewBasket" destination="1gV-Nr-b4K" id="qbs-hJ-9LI"/>
                 <outlet property="txtPromo" destination="wYn-qm-Twk" id="3tO-HW-56t"/>
             </connections>

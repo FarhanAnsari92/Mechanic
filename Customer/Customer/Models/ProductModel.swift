@@ -3,6 +3,7 @@ import Foundation
 import ObjectMapper
 
 class ProductModel: Mappable {
+    
 	var id : Int?
 	var name : String?
 	var description : String?
@@ -23,6 +24,11 @@ class ProductModel: Mappable {
         let amount = self.price ?? 0
         let amountInt = Helper.formatCurrency(value: amount) ?? "0"
         return "Rs. " + amountInt
+    }
+    
+    var quantity: Int = 0
+    var displayQuantity: String {
+        return "Qty:\(quantity)"
     }
 
 	required init?(map: Map) {
@@ -48,4 +54,12 @@ class ProductModel: Mappable {
 		deletedAt <- map["deleted_at"]
 	}
 
+}
+
+extension ProductModel: Equatable {
+    
+    static func == (lhs: ProductModel, rhs: ProductModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
 }

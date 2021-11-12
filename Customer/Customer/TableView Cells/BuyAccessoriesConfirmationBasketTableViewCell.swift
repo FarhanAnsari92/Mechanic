@@ -16,6 +16,10 @@ class BuyAccessoriesConfirmationBasketTableViewCell: UITableViewCell {
             txtPromo.backgroundColor = UIColor(hexString: "E9E9E9")
         }
     }
+    
+    @IBOutlet weak var lblSubTotal: UILabel!
+    @IBOutlet weak var lblDeliveryCharges: UILabel!
+    @IBOutlet weak var lblGrandTotal: UILabel!        
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,14 +32,30 @@ class BuyAccessoriesConfirmationBasketTableViewCell: UITableViewCell {
 //            }
 //            stackViewBasket.addArrangedSubview(basketView)
 //        }
-        
+        self.lblDeliveryCharges.text = Constants.Order.displayOrderCharges
     }
     
-    func set(data: ProductModel) {
-        let basketView = BasketView()
-        basketView.set(data: data)        
-        basketView.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        stackViewBasket.addArrangedSubview(basketView)
+    func set(data: [ProductModel]) {
+        var total: Int = 0
+        (0..<data.count).forEach { i in
+            let basketView = BasketView()
+            basketView.stepper.isHidden = true
+            let product = data[i]
+            let price = product.price ?? 0
+            let quantity = product.quantity
+            let _total = price * quantity
+            total += _total
+            basketView.set(data: product)
+            basketView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+            stackViewBasket.addArrangedSubview(basketView)
+        }
+        let formattedTotal = Helper.formatCurrency(value: total) ?? "0"
+        self.lblSubTotal.text = "Rs. " + formattedTotal
+        
+        let grandTotal = total + Constants.Order.orderCharges
+        let formattedGrandTotal = Helper.formatCurrency(value: grandTotal) ?? "0"
+        
+        self.lblGrandTotal.text = formattedGrandTotal
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

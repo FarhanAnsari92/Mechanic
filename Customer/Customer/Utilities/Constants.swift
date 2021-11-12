@@ -55,6 +55,12 @@ class Constants {
         static let mapAPIKey = "AIzaSyBNIpFXAokhl5iyNz0CF-kuDsHvp6JgUEA"
     }
     
+    struct Order {
+        static let orderCharges: Int = 300
+        private static let orderChargesStr = Helper.formatCurrency(value: orderCharges) ?? "0"
+        static let displayOrderCharges: String = "Rs. \(orderChargesStr)"
+    }
+    
 }
 
 enum TextFieldType {

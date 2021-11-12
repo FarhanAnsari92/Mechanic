@@ -10,6 +10,7 @@ import UIKit
 class BasketTableViewCell: UITableViewCell {
     
     @IBOutlet weak var basketView: BasketView!
+    var stepperComplition: ((Bool, Int) -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +21,14 @@ class BasketTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func set(data: ProductModel) {
+        basketView.stepper.isHidden = false
+        basketView.set(data: data)
+        basketView.stepperComplition = { [weak self] (isIncremented, value) in
+            self?.stepperComplition?(isIncremented, value)
+        }
     }
     
 }

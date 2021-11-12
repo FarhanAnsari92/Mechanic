@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BasketView: NibDesignable {
+class BasketView: NibDesignable, BaseStepperDelegate {
     
     @IBOutlet weak var imgParentView: UIView! {
         didSet {
@@ -21,18 +21,27 @@ class BasketView: NibDesignable {
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblQuantity: UILabel!
     @IBOutlet weak var stepper: BaseStepper!
+    
+    var stepperComplition: ((Bool, Int) -> Void)?
 
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
+        self.stepper.delegate = self
     }
     
-    func set(data: ProductModel) {
-        self.stepper.isHidden = true
+    func set(data: ProductModel) {        
         self.lblName.text = data.name ?? "NA"
         
         if let urlStr = data.images?.first?.mediaUrl {
             ImageCacheManager().loadImage(imageView: self.imgViewAccessory, url: urlStr, placeholderImage: nil)
         }
+        self.lblPrice.text = data.displayPrice
+        self.lblQuantity.text = data.displayQuantity
+        stepper.value = data.quantity
+    }
+    
+    func stepperValueChnaged(_ sender: BaseStepper, isIncremented: Bool) {
+        stepperComplition?(isIncremented, sender.value)
     }
 
 }

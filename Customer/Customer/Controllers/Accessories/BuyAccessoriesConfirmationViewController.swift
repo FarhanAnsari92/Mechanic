@@ -23,7 +23,7 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
         }
     }
     
-    var product: ProductModel?
+    var products: [ProductModel]?
     var selectedAddress: AddressModel?
 
     override func viewDidLoad() {
@@ -35,6 +35,9 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
         tableView.estimatedRowHeight = 100
         
         getAddress()
+        self.products = ProductCart.shared.getProducts()
+        self.tableView.reloadSections(IndexSet(integer: 1), with: .fade)
+        
         
     }
     
@@ -52,9 +55,37 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .accessories)
-        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesSuccessfullViewController.storyboardIdentifier)
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let sb = UIStoryboard(storyboard: .accessories)
+//        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesSuccessfullViewController.storyboardIdentifier)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        createOrderRequest()
+        
+    }
+    
+    func createOrderRequest() {
+        
+        var parameters = [String:String]()
+        parameters["address_id"] = self.selectedAddress?.id?.description
+        parameters["delivery_charges"] = "300"
+        parameters["payment_type"] = "creditcard"
+//        parameters["coupon_code"] = "0" // optional
+        
+        for i in 0..<(ProductCart.shared.getProducts()?.count ?? 0) {
+            if let product = ProductCart.shared.getProducts()?[i],
+               let id = product.id {
+                let qty = product.quantity
+                parameters["products[\(i)][id]"] = id.description
+                parameters["products[\(i)][qty]"] = qty.description
+            }
+        }
+        
+        print(parameters)
+        
+        APIClient.callApi(api: .orders, parameters: parameters, method: .post, data: nil, view: self.view) { dictionary in
+            print("res dictionary", dictionary)
+        }
+
     }
 
 }
@@ -77,8 +108,8 @@ extension BuyAccessoriesConfirmationViewController: UITableViewDelegate, UITable
             return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: BuyAccessoriesConfirmationBasketTableViewCell.identifier, for: indexPath) as! BuyAccessoriesConfirmationBasketTableViewCell
-            if let prod = self.product {
-                cell.set(data: prod)
+            if let prdcts = self.products {
+                cell.set(data: prdcts)
             }
             return cell
         } else {

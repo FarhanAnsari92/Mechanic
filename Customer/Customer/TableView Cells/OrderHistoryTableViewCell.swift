@@ -34,4 +34,8 @@ class OrderHistoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func set(data: OrderModel) {
+        
+    }
+    
 }

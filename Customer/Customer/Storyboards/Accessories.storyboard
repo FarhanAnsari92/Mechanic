@@ -251,6 +251,9 @@
                                                         <state key="normal" title="Add to Cart">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="addToCartButtonHandler:" destination="g6J-Nz-XKo" eventType="touchUpInside" id="Epv-5s-EFK"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

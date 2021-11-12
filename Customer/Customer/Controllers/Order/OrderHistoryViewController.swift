@@ -16,11 +16,25 @@ class OrderHistoryViewController: HomeBaseViewController {
             tableView.register(OrderHistoryTableViewCell.nib, forCellReuseIdentifier: OrderHistoryTableViewCell.identifier)
         }
     }
+    
+    var orders: [OrderModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Order History"
         self.setupBackButton(color: .white)
+        getOrders()
+    }
+    
+    func getOrders() {
+        APIClient.callApi(api: .orders,  method: .get, view: self.view) { (data) in
+            if let dictionary = data {
+                let obj = ObjectMapperManager<OrderResponseModel>().map(dictionary: dictionary);
+                let orders = obj?.data?.orders
+                self.orders = orders
+                self.tableView.reloadData()
+            }
+        }
     }
 
 }
@@ -32,7 +46,10 @@ extension OrderHistoryViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: OrderHistoryTableViewCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: OrderHistoryTableViewCell.identifier, for: indexPath) as! OrderHistoryTableViewCell
+        if let order = self.orders?[indexPath.row] {
+            cell.set(data: order)
+        }
         return cell
     }
     

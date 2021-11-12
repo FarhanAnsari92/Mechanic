@@ -25,6 +25,8 @@ enum API: String {
     case address = "addresses"
     case job = "jobs"
     case products = "products"
+    case orders = "orders"
+    
 }
 
 enum APIVersion: String {
