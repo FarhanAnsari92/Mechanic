@@ -35,6 +35,11 @@ class BasketListViewController: HomeBaseViewController {
     
     @IBAction func buyNowButtonHandler(_ sender: UIButton) {
         
+        guard (ProductCart.shared.getProducts()?.count) ?? 0 > 0 else {
+            Helper.showMessage(text: "You must select product to proceed.")
+            return
+        }
+        
         let sb = UIStoryboard(storyboard: .accessories)
         let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)
@@ -65,6 +70,10 @@ extension BasketListViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.set(data: prod)
                 cell.stepperComplition = { [weak self] (isIncremented, value) in
                     ProductCart.shared.set(quantity: value, to: prod)
+                    if value == 0 {
+                        self?.products = ProductCart.shared.getProducts()
+                        self?.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
+                    }
                     self?.tableView.reloadSections(IndexSet(integer: 1), with: .fade)
                 }
             }

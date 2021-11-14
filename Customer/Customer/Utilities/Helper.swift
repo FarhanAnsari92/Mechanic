@@ -44,6 +44,19 @@ class Helper {
         return formattedCurrency
     }
     
+    class func formatCurrency(value: Double?) -> String? {
+        guard  let doubleValue = value else {
+            return nil
+        }
+        let number = NSNumber(value: doubleValue)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        guard let formattedCurrency = numberFormatter.string(from: number) else {
+            return nil
+        }
+        return formattedCurrency
+    }
+    
     class func save(user: UserModel) {
         UserDefaults.standard.setValue(user.toJSONString(), forKey: "user")
     }

@@ -55,9 +55,6 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
     }
     
     @IBAction func confirmButtonHandler(_ sender: UIButton) {
-//        let sb = UIStoryboard(storyboard: .accessories)
-//        let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesSuccessfullViewController.storyboardIdentifier)
-//        self.navigationController?.pushViewController(vc, animated: true)
         
         createOrderRequest()
         
@@ -82,8 +79,11 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
         
         print(parameters)
         
-        APIClient.callApi(api: .orders, parameters: parameters, method: .post, data: nil, view: self.view) { dictionary in
-            print("res dictionary", dictionary)
+        APIClient.callApi(api: .orders, parameters: parameters, method: .post, data: nil, view: self.view) { [weak self] dictionary in
+            
+            let sb = UIStoryboard(storyboard: .accessories)
+            let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesSuccessfullViewController.storyboardIdentifier)
+            self?.navigationController?.pushViewController(vc, animated: true)
         }
 
     }

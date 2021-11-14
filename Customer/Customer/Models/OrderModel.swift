@@ -23,6 +23,20 @@ class OrderModel: Mappable {
 	var createdAt : String?
 	var updatedAt : String?
 	var deletedAt : String?
+    var products: [ProductModel]?
+    
+    var displayFormattedDate: String {
+        if let cAt = self.createdAt {
+            return cAt.toFormattedDate(format: .standardFormat) ?? "NA"
+        }
+        return "NA"
+    }
+    
+    var displaySubTotal: String {
+        let amount = self.subTotal ?? 0
+        let amountInt = Helper.formatCurrency(value: amount) ?? "0"
+        return "Rs. " + amountInt
+    }
 
     required init?(map: Map) {
 
@@ -50,6 +64,7 @@ class OrderModel: Mappable {
 		createdAt <- map["created_at"]
 		updatedAt <- map["updated_at"]
 		deletedAt <- map["deleted_at"]
+        products <- map["order_products"]
 	}
 
 }

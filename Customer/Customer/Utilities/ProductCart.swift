@@ -46,7 +46,11 @@ class ProductCart {
     }
     
     func set(quantity: Int, to product: ProductModel) {
-        self.products?.first(where: { $0 == product })?.quantity = quantity
+        if quantity == 0 {
+            self.products?.removeAll(where: { $0 == product })
+        } else {
+            self.products?.first(where: { $0 == product })?.quantity = quantity
+        }
     }
     
     func removeProducts() {

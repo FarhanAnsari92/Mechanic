@@ -2,6 +2,36 @@
 import Foundation
 import ObjectMapper
 
+class OrderInfo: Mappable {
+    
+    var orderId: Int?
+    var price: String?
+    var productId: Int?
+    var quantity: String?
+    
+    var displayQuantity: String {
+        return "Qty:\((quantity ?? "0"))"
+    }
+    
+    var displayPrice: String {
+        let amountStr = self.price ?? "0"
+        let amount: Double = Double(amountStr) ?? 0
+        let amountInt = Helper.formatCurrency(value: amount) ?? "0"
+        return "Rs. " + amountInt
+    }
+    
+    required init?(map: Map) {
+
+    }
+
+    func mapping(map: Map) {
+        orderId <- map["order_id"]
+        price <- map["price"]
+        productId <- map["product_id"]
+        quantity <- map["qty"]
+    }
+}
+
 class ProductModel: Mappable {
     
 	var id : Int?
@@ -14,11 +44,19 @@ class ProductModel: Mappable {
 	var rating : Double?
 	var status : Int?
     var images: [ImageModel]?
+    var orderInfo: OrderInfo?
 	var createdBy : Int?
 	var updatedBy : Int?
 	var createdAt : String?
 	var updatedAt : String?
 	var deletedAt : String?
+    
+    var displayFormattedDate: String {
+        if let cAt = self.createdAt {
+            return cAt.toFormattedDate(format: .standardFormat) ?? "NA"
+        }
+        return "NA"
+    }
     
     var displayPrice: String {
         let amount = self.price ?? 0
@@ -47,6 +85,7 @@ class ProductModel: Mappable {
 		rating <- map["rating"]
 		status <- map["status"]
         images <- map["images"]
+        orderInfo <- map["order_info"]
 		createdBy <- map["created_by"]
 		updatedBy <- map["updated_by"]
 		createdAt <- map["created_at"]

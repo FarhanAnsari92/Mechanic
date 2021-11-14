@@ -117,6 +117,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imageParentView" destination="q7Z-3N-2y1" id="OqF-Nw-ho4"/>
+                <outlet property="imgOrder" destination="KdR-1m-dn2" id="Rk5-Oq-Ha4"/>
+                <outlet property="lblCreatedAt" destination="nag-PS-qso" id="bZ1-1Z-ktw"/>
+                <outlet property="lblOrderName" destination="EIR-my-kK4" id="JQ2-8e-v9g"/>
+                <outlet property="lblPrice" destination="eUB-52-ZIN" id="TcQ-bR-lIY"/>
+                <outlet property="lblQuantity" destination="IPj-qM-bPd" id="GFi-mR-WOf"/>
                 <outlet property="parentView" destination="7rJ-jC-Th9" id="vfN-Pn-UNL"/>
             </connections>
             <point key="canvasLocation" x="-367.39130434782612" y="165.73660714285714"/>

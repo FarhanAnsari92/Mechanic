@@ -12,7 +12,8 @@ class BuyAccessoriesSuccessfullViewController: HomeBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Successfull"
-        setupBackButton(color: .white)
+//        setupBackButton(color: .white)
+        navigationItem.hidesBackButton = true
     }
 
     @IBAction func backToHomeButtonHandler(_ sender: UIButton) {

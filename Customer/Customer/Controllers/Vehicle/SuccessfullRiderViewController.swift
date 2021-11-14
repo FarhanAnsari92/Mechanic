@@ -13,7 +13,8 @@ class SuccessfullRiderViewController: HomeBaseViewController {
         super.viewDidLoad()
 
         self.title = "Successfull"
-        setupBackButton(color: . white)
+//        setupBackButton(color: . white)
+        navigationItem.hidesBackButton = true
     }
     
 
