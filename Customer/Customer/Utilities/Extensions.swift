@@ -297,6 +297,10 @@ enum DateFormat: String {
     case standardFormat = "d MMM yyyy" // 9 Nov 2021
 }
 
+extension Notification.Name {
+    static let updateProducts = Notification.Name("UPDATE_PRODUCTS")
+}
+
 extension String {
     
     func toFormattedDate(format: DateFormat) -> String? {

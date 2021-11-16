@@ -35,8 +35,8 @@ class BasketListViewController: HomeBaseViewController {
     
     @IBAction func buyNowButtonHandler(_ sender: UIButton) {
         
-        guard (ProductCart.shared.getProducts()?.count) ?? 0 > 0 else {
-            Helper.showMessage(text: "You must select product to proceed.")
+        guard ProductCart.shared.hasItem else {
+            Helper.showMessage(text: "Add items to cart first.")
             return
         }
         

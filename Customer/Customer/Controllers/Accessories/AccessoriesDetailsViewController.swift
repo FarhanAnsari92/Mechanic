@@ -38,6 +38,10 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
     }
     
     @IBAction func buyNowButtonHandler(_ sender: UIButton) {
+        guard ProductCart.shared.hasItem else {
+            Helper.showMessage(text: "Add items to cart first.")
+            return
+        }
         let sb = UIStoryboard(storyboard: .accessories)
         let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesConfirmationViewController.storyboardIdentifier) as! BuyAccessoriesConfirmationViewController        
         self.navigationController?.pushViewController(vc, animated: true)
@@ -45,6 +49,10 @@ class AccessoriesDetailsViewController: HomeBaseViewController {
     
     @IBAction func addToCartButtonHandler(_ sender: UIButton) {
         if let prod = self.product {
+            guard prod.isStockAvailable else {
+                Helper.showMessage(text: "The product is out of stock or \n You have reached the maximum number of stocks available")
+                return
+            }
             ProductCart.shared.add(product: prod)
         }
     }

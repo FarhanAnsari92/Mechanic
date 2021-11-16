@@ -15,6 +15,10 @@ class ProductCart {
     
     static let shared: ProductCart = ProductCart()
     
+    var hasItem: Bool {
+        return (self.products?.count ?? 0) > 0
+    }
+    
     func add(product: ProductModel) {
         if let _ = self.products {
             if let prod = self.products?.first(where: { $0 == product }) {

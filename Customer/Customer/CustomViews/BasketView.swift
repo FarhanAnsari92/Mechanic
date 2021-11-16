@@ -37,6 +37,7 @@ class BasketView: NibDesignable, BaseStepperDelegate {
         }
         self.lblPrice.text = data.displayPrice
         self.lblQuantity.text = data.displayQuantity
+        stepper.maxValue = data.stockAvailable ?? 0
         stepper.value = data.quantity
     }
     

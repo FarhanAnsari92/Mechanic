@@ -55,7 +55,7 @@ class BuyAccessoriesConfirmationBasketTableViewCell: UITableViewCell {
         let grandTotal = total + Constants.Order.orderCharges
         let formattedGrandTotal = Helper.formatCurrency(value: grandTotal) ?? "0"
         
-        self.lblGrandTotal.text = formattedGrandTotal
+        self.lblGrandTotal.text = "Rs. " + formattedGrandTotal
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

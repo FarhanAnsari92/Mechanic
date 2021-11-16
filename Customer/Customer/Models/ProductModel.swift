@@ -68,6 +68,11 @@ class ProductModel: Mappable {
     var displayQuantity: String {
         return "Qty:\(quantity)"
     }
+    
+    var isStockAvailable: Bool {
+        let stock = self.stockAvailable ?? 0        
+        return stock > quantity // && stock != 0
+    }
 
 	required init?(map: Map) {
 

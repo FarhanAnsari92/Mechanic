@@ -45,6 +45,12 @@ class HomeViewController: SideMenuBaseController {
                 leftMenuControllerr.leftMenuDelegate = self
             }
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshProducts), name: .updateProducts, object: nil)
+    }
+    
+    @objc func refreshProducts() {
+        getProducts()
     }
     
     func getProducts() {
@@ -173,7 +179,10 @@ extension HomeViewController {
     }
     
     @objc func openCart() {
-        
+        guard ProductCart.shared.hasItem else {
+            Helper.showMessage(text: "Your cart is empty.\nAdd items to cart first.")
+            return
+        }
         let sb = UIStoryboard(storyboard: .basket)
         let vc = sb.instantiateViewController(withIdentifier: BasketListViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)

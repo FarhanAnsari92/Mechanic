@@ -80,7 +80,8 @@ class BuyAccessoriesConfirmationViewController: HomeBaseViewController {
         print(parameters)
         
         APIClient.callApi(api: .orders, parameters: parameters, method: .post, data: nil, view: self.view) { [weak self] dictionary in
-            
+            ProductCart.shared.removeProducts()
+            NotificationCenter.default.post(name: .updateProducts, object: nil)
             let sb = UIStoryboard(storyboard: .accessories)
             let vc = sb.instantiateViewController(withIdentifier: BuyAccessoriesSuccessfullViewController.storyboardIdentifier)
             self?.navigationController?.pushViewController(vc, animated: true)
