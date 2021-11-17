@@ -13,6 +13,7 @@ class HomeViewController: SideMenuBaseController {
     
     @IBOutlet weak var btnFixMyVehicle: UIButton!
     @IBOutlet weak var lblAutoParts: InteractiveLinkLabel!
+    @IBOutlet weak var txtSearch: UITextField!
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -40,6 +41,8 @@ class HomeViewController: SideMenuBaseController {
         setupAutoPartsLabel()
         getProducts()
         
+        txtSearch.delegate = self
+        
         if let glController = AppDelegate.instance.window?.rootViewController as? LGSideMenuController {
             if let leftMenuControllerr = glController.leftViewController as? LeftMenuViewController {
                 leftMenuControllerr.leftMenuDelegate = self
@@ -53,9 +56,13 @@ class HomeViewController: SideMenuBaseController {
         getProducts()
     }
     
-    func getProducts() {
-        let parameters = [String:String]()
-        APIClient.callApi(api: .products, parameters: parameters, method: .get, view: self.view) { data in
+    func getProducts(text: String = "") {
+        var parameters = [String:String]()
+        if text.count > 0 {
+            parameters["keyword"] = text
+        }
+        APIClient.callApi(api: .products, parameters: parameters, method: .get, view: self.view) { [weak self] data in
+            guard let self = self else { return }
             if let dictionary = data {
                 if let productResponseModel = ObjectMapperManager<ProductResponseModel>().map(dictionary: dictionary) {
                     
@@ -193,7 +200,11 @@ extension HomeViewController {
     }
     
     @IBAction func searchGoButtonHandler(_ sender: UIButton) {
-        print("searchGoButtonHandler")
+        guard (self.txtSearch.text ?? "").count > 0 else {
+            return
+        }
+        self.view.endEditing(true)
+        getProducts(text: self.txtSearch.text ?? "")
     }
     
     @IBAction func fixMyVehicleButtonHandler(_ sender: UIButton) {
@@ -205,15 +216,27 @@ extension HomeViewController {
     
 }
 
+extension HomeViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text,
+           let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange, with: string)
+            return updatedText.count <= 20
+        }
+        return false
+    }
+}
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! SectionHeader
-        sectionHeader.label.text = "Categories"
+        sectionHeader.label.text = indexPath.section == 0 ? "Categories" : "Products"
         sectionHeader.configure()
         return sectionHeader
     }
@@ -223,7 +246,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 || section == 2 {
+        if section == 0 { // || section == 2 {
             return 1
         }
         return self.products?.count ?? 0

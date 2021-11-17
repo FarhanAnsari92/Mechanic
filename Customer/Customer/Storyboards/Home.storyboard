@@ -149,6 +149,7 @@
                         <outlet property="btnFixMyVehicle" destination="NjQ-8J-F6A" id="9ta-RX-wat"/>
                         <outlet property="collectionView" destination="z2Z-zb-puy" id="MnN-qx-peN"/>
                         <outlet property="lblAutoParts" destination="0EI-g7-9lP" id="niJ-ta-z01"/>
+                        <outlet property="txtSearch" destination="pM4-w0-qja" id="MDD-ET-Bw0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtE-bJ-c78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
