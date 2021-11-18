@@ -24,6 +24,7 @@ class OrderModel: Mappable {
 	var updatedAt : String?
 	var deletedAt : String?
     var products: [ProductModel]?
+    var shouldExpand: Bool = false
     
     var displayFormattedDate: String {
         if let cAt = self.createdAt {
@@ -36,6 +37,13 @@ class OrderModel: Mappable {
         let amount = self.subTotal ?? 0
         let amountInt = Helper.formatCurrency(value: amount) ?? "0"
         return "Rs. " + amountInt
+    }
+    
+    var displayOrderId: String {
+        if let ref = self.reference {
+            return "Order Id # " + ref
+        }
+        return "NA"
     }
 
     required init?(map: Map) {

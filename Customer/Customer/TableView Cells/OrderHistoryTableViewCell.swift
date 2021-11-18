@@ -39,14 +39,13 @@ class OrderHistoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func set(data: OrderModel) {
-        let product = data.products?.first
-        let orderInfo = product?.orderInfo
+    func set(product: ProductModel) {
+        let orderInfo = product.orderInfo
         self.lblQuantity.text = orderInfo?.displayQuantity
-        self.lblPrice.text = data.displaySubTotal
-        self.lblOrderName.text = product?.name ?? "NA"
-        self.lblCreatedAt.text = data.displayFormattedDate
-        let url = product?.images?.first?.mediaUrl ?? ""
+        self.lblPrice.text = product.displayPrice
+        self.lblOrderName.text = product.name ?? "NA"
+        self.lblCreatedAt.text = product.displayFormattedDate
+        let url = product.images?.first?.mediaUrl ?? ""
         ImageCacheManager().loadImage(imageView: self.imgOrder, url: url, placeholderImage: nil)
     }
     

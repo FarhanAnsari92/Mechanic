@@ -41,19 +41,44 @@ class OrderHistoryViewController: HomeBaseViewController {
 
 extension OrderHistoryViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.orders?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let orderInfoView = OrderInfoView.loadNib
+        if let order = self.orders?[section] {
+            orderInfoView.tapCompletion = {
+                order.shouldExpand.toggle()
+                tableView.reloadSections(IndexSet(integer: section), with: .fade)
+            }
+            orderInfoView.set(data: order)
+        }
+        return orderInfoView
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let order = self.orders?[section] {
+            return order.shouldExpand ? (order.products?.count ?? 0) : 0
+        }
+        return 0
+        //return self.orders?[section].products?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: OrderHistoryTableViewCell.identifier, for: indexPath) as! OrderHistoryTableViewCell
-        if let order = self.orders?[indexPath.row] {
-            cell.set(data: order)
+        if let order = self.orders?[indexPath.section],
+           let product = order.products?[indexPath.row] {
+            cell.set(product: product)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 110
     }
     
