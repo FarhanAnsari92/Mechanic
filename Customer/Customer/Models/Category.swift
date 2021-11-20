@@ -4,7 +4,7 @@ import ObjectMapper
 
 class Category : Mappable {
 	var currentPage : Int?
-	var Categories : [CategoryModel]?
+	var categories : [CategoryModel]?
 	var firstPageUrl : String?
 	var from : Int?
 	var lastPage : Int?
@@ -23,7 +23,7 @@ class Category : Mappable {
 	func mapping(map: Map) {
 
 		currentPage <- map["current_page"]
-        Categories <- map["dataarr"]
+        categories <- map["data"]
 		firstPageUrl <- map["first_page_url"]
 		from <- map["from"]
 		lastPage <- map["last_page"]

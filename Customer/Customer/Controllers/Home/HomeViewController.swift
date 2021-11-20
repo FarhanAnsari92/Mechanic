@@ -19,10 +19,10 @@ class HomeViewController: SideMenuBaseController {
         didSet {
             collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
             
-            collectionView.register(AutoPartsAndAccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier)
             collectionView.register(AccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoriesCollectionViewCell.identifier)
             collectionView.register(BannerViewCollectionViewCell.nib, forCellWithReuseIdentifier: BannerViewCollectionViewCell.identifier)
             collectionView.register(TopPickCollectionViewCell.nib, forCellWithReuseIdentifier: TopPickCollectionViewCell.identifier)
+            collectionView.register(CategoryListCollectionViewCell.nib, forCellWithReuseIdentifier: CategoryListCollectionViewCell.identifier)
             
             collectionView.delegate = self
             collectionView.dataSource = self
@@ -31,6 +31,7 @@ class HomeViewController: SideMenuBaseController {
     
     let imageCacheManager: ImageCacheManager = ImageCacheManager()
     var products: [ProductModel]?
+    var categories: [CategoryModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +59,12 @@ class HomeViewController: SideMenuBaseController {
     }
     
     func getCategories() {
-        APIClient.callApi(api: .categories, method: .get) { data in
+        APIClient.callApi(api: .categories, method: .get) { [weak self] data in
+            guard let self = self else { return }
             if let dictionary = data,
                let responseObject = ObjectMapperManager<CategoryResponseModel>().map(dictionary: dictionary) {
-                responseObject.category?.Categories
+                self.categories = responseObject.category?.categories
+                self.collectionView.reloadSections(IndexSet(integer: 0))
             }
         } error: { error in
             Helper.showMessage(text: error)
@@ -69,11 +72,11 @@ class HomeViewController: SideMenuBaseController {
 
     }
     
-    func getProducts(text: String = "") {
-        var parameters = [String:String]()
-        if text.count > 0 {
-            parameters["keyword"] = text
-        }
+    func getProducts(parameters: [String:String]? = nil) {
+//        var parameters = [String:String]()
+//        if text.count > 0 {
+//            parameters["keyword"] = text
+//        }
         APIClient.callApi(api: .products, parameters: parameters, method: .get, view: self.view) { [weak self] data in
             guard let self = self else { return }
             if let dictionary = data {
@@ -81,7 +84,7 @@ class HomeViewController: SideMenuBaseController {
                     
                     if let products = productResponseModel.data?.products, products.count > 0 {
                         self.products = products
-                        self.collectionView.reloadData()
+                        self.collectionView.reloadSections(IndexSet(integer: 1))
                     } else {
                         Helper.showMessage(text: "No Products Found.")
                     }
@@ -213,11 +216,15 @@ extension HomeViewController {
     }
     
     @IBAction func searchGoButtonHandler(_ sender: UIButton) {
-        guard (self.txtSearch.text ?? "").count > 0 else {
-            return
-        }
         self.view.endEditing(true)
-        getProducts(text: self.txtSearch.text ?? "")
+        
+        var parameters: [String:String] = [String:String]()
+        let text = self.txtSearch.text ?? ""
+        if text.count > 0 {
+            parameters["keyword"] = text
+        }
+        
+        getProducts(parameters: parameters)
     }
     
     @IBAction func fixMyVehicleButtonHandler(_ sender: UIButton) {
@@ -267,11 +274,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier, for: indexPath) as! AutoPartsAndAccessoriesCollectionViewCell
-            cell.accessoriesCompletion = { [weak self] in
-                let sb = UIStoryboard(storyboard: .accessories)
-                let vc = sb.instantiateViewController(withIdentifier: AccessoriesViewController.storyboardIdentifier)
-                self?.navigationController?.pushViewController(vc, animated: true)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryListCollectionViewCell.identifier, for: indexPath) as! CategoryListCollectionViewCell
+            cell.categoryCompletion = { [weak self] categoryId in
+                if let id = categoryId?.description {
+                    var parameters: [String:String] = [String:String]()
+                    parameters["category_ids"] = id
+                    self?.getProducts(parameters: parameters)
+                }
+            }
+            if let ctgrs = self.categories {
+                cell.set(data: ctgrs)
             }
             return cell
         } /* else if indexPath.section == 1 {
