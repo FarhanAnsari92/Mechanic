@@ -40,6 +40,7 @@ class HomeViewController: SideMenuBaseController {
         setupRightBarButtons()
         setupAutoPartsLabel()
         getProducts()
+        getCategories()
         
         txtSearch.delegate = self
         
@@ -54,6 +55,18 @@ class HomeViewController: SideMenuBaseController {
     
     @objc func refreshProducts() {
         getProducts()
+    }
+    
+    func getCategories() {
+        APIClient.callApi(api: .categories, method: .get) { data in
+            if let dictionary = data,
+               let responseObject = ObjectMapperManager<CategoryResponseModel>().map(dictionary: dictionary) {
+                responseObject.category?.Categories
+            }
+        } error: { error in
+            Helper.showMessage(text: error)
+        }
+
     }
     
     func getProducts(text: String = "") {

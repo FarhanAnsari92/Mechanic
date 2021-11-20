@@ -26,6 +26,7 @@ enum API: String {
     case job = "jobs"
     case products = "products"
     case orders = "orders"
+    case categories = "categories"
     
 }
 
