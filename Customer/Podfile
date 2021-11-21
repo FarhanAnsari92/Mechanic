@@ -8,6 +8,7 @@ target 'Customer' do
   # Pods for Customer
 
   pod 'IQKeyboardManagerSwift', :git => 'https://github.com/FarhanAnsari92/IQKeyboardManager.git'
+  pod 'NHRangeSlider', :git => 'https://github.com/FarhanAnsari92/NHRangeSlider.git'
   pod "ZSWTappableLabel", "~> 3.3"
   
   # https://github.com/jonkykong/SideMenu

@@ -29,6 +29,7 @@ class FilterAccessoryViewController: HomeBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Filter"
+        tableView.rowHeight = 100
         setupBackButton(color: .white)
         addObserver()
         filterViewModel.getData()
@@ -117,7 +118,7 @@ extension FilterAccessoryViewController: UITableViewDelegate, UITableViewDataSou
         if indexPath.section == 0 {
             return 45
         }
-        return 0
+        return UITableView.automaticDimension
     }
     
     

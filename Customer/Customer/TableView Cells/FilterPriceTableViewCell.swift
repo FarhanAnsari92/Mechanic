@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NHRangeSlider
 
 class FilterPriceTableViewCell: UITableViewCell {
     
@@ -24,16 +25,36 @@ class FilterPriceTableViewCell: UITableViewCell {
             txtMax.layer.cornerRadius = 10
         }
     }
+    
+    @IBOutlet weak var priceRange: NHRangeSliderView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        priceRange.minimumValue = 0
+        priceRange.maximumValue = 100000
+        priceRange.lowerValue = 0
+        priceRange.upperValue =  100000
+        priceRange.thumbBorderWidth = 0
+        priceRange.thumbTintColor = UIColor.Theme.green
+        priceRange.trackHighlightTintColor = UIColor.Theme.green
+        priceRange.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+}
+
+extension FilterPriceTableViewCell: NHRangeSliderViewDelegate {
+    
+    func sliderValueChanged(slider: NHRangeSlider?) {
+        let lower: Int = Int(slider?.lowerValue ?? 0)
+        let upper: Int = Int(slider?.upperValue ?? 0)
+        self.txtMin.text = lower.description
+        self.txtMax.text = upper.description
     }
     
 }

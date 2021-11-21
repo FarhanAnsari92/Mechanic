@@ -13,6 +13,7 @@ PODS:
   - IQKeyboardManagerSwift (6.1.1)
   - LGSideMenuController (3.1.2)
   - MBProgressHUD (1.1.0)
+  - NHRangeSlider (0.2)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (from `https://github.com/FarhanAnsari92/IQKeyboardManager.git`)
   - LGSideMenuController
   - MBProgressHUD (~> 1.1.0)
+  - NHRangeSlider (from `https://github.com/FarhanAnsari92/NHRangeSlider.git`)
   - NVActivityIndicatorView
   - ObjectMapper (~> 3.4)
   - RSSelectionMenu (~> 7.1.3)
@@ -64,11 +66,16 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   IQKeyboardManagerSwift:
     :git: https://github.com/FarhanAnsari92/IQKeyboardManager.git
+  NHRangeSlider:
+    :git: https://github.com/FarhanAnsari92/NHRangeSlider.git
 
 CHECKOUT OPTIONS:
   IQKeyboardManagerSwift:
     :commit: 89cb74ffaa9a419ebc74d8a3eb8574feb050a989
     :git: https://github.com/FarhanAnsari92/IQKeyboardManager.git
+  NHRangeSlider:
+    :commit: e0eff3dd42ef97efb3dafbe2e535da18b7ee637a
+    :git: https://github.com/FarhanAnsari92/NHRangeSlider.git
 
 SPEC CHECKSUMS:
   AdvancedPageControl: 39e3b32b00b2d324c534f8e17cc6c5be9abe84b7
@@ -79,6 +86,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   LGSideMenuController: 0c7b155b0dbdf14bf8b88d5ac363c5fe1584bb23
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  NHRangeSlider: dae06d7b8fc74a38b026c2a962d591766a30bf16
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   RSSelectionMenu: 873d62ebbaef138519f6cf3f073412c2b5d94c2c
@@ -88,6 +96,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   ZSWTappableLabel: 92f11d677bb395a8294df48482316c4981783ca0
 
-PODFILE CHECKSUM: b260a19fc1069f88f779f459a80ffc80ff2e88c2
+PODFILE CHECKSUM: d6659f1b4f7266aed7ac0f4d886687c90850c44a
 
 COCOAPODS: 1.10.1
