@@ -22,11 +22,23 @@ class FilterAccessoryViewController: HomeBaseViewController {
             
         }
     }
+    
+    var filters = [Filter]()
+    var filterViewModel: FilterViewModel = FilterViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Filter"
         setupBackButton(color: .white)
+        addObserver()
+        filterViewModel.getData()
+    }
+    
+    func addObserver() {
+        filterViewModel.filters.bind { [weak self] filters in
+            self?.filters = filters
+            self?.tableView.reloadData()
+        }
     }
     
 }
@@ -34,60 +46,58 @@ class FilterAccessoryViewController: HomeBaseViewController {
 extension FilterAccessoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 2
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let vu = BookingDetailsHeader.loadNib
-        if section == 0 || section ==  1 {
-            vu.isClickable = false
-        } else {
-            vu.isClickable = true
-            vu.completion = {
-                print("header click")
-            }
-        }
-        
-        switch section {
-        case 0:
-            vu.lblHeaderTitle.text = "Sort"
-            
-        case 1:
-            vu.lblHeaderTitle.text = "Price"
-            
-        case 2:
-            vu.lblHeaderTitle.text = "Warranty Type"
-            vu.isExpand = true
-            
-        case 3:
-            vu.lblHeaderTitle.text = "Services"
-            vu.isExpand = false
-            
-        default:
-            vu.lblHeaderTitle.text = "Model Year"
-            vu.isExpand = false
-        }
-        return vu
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let vu = BookingDetailsHeader.loadNib
+//        if section == 0 || section ==  1 {
+//            vu.isClickable = false
+//        } else {
+//            vu.isClickable = true
+//            vu.completion = {
+//                print("header click")
+//            }
+//        }
+//
+//        switch section {
+//        case 0:
+//            vu.lblHeaderTitle.text = "Sort"
+//
+//        case 1:
+//            vu.lblHeaderTitle.text = "Price"
+//
+//        case 2:
+//            vu.lblHeaderTitle.text = "Warranty Type"
+//            vu.isExpand = true
+//
+//        case 3:
+//            vu.lblHeaderTitle.text = "Services"
+//            vu.isExpand = false
+//
+//        default:
+//            vu.lblHeaderTitle.text = "Model Year"
+//            vu.isExpand = false
+//        }
+//        return vu
+//    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
-        } else if section == 3 || section == 4 {
-            return 0
+            return self.filters.count
         }
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-        let cell = tableView.dequeueReusableCell(withIdentifier: FilterSortTableViewCell.identifier, for: indexPath) as! FilterSortTableViewCell
-        cell.isSelected = indexPath.row == 0
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: FilterSortTableViewCell.identifier, for: indexPath) as! FilterSortTableViewCell;
+            cell.set(data: self.filters[indexPath.row])
+            return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: FilterPriceTableViewCell.identifier, for: indexPath) as! FilterPriceTableViewCell
             return cell
@@ -97,11 +107,17 @@ extension FilterAccessoryViewController: UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 2 {
-            return 80
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            self.filterViewModel.setActive(filter: self.filters[indexPath.row])
         }
-        return 45
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 45
+        }
+        return 0
     }
     
     

@@ -79,6 +79,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="filterName" destination="gus-l7-YHY" id="h7z-Vf-jYt"/>
                 <outlet property="radioInnerView" destination="kaT-Sr-9jz" id="qWW-5B-moE"/>
                 <outlet property="radioOutsiderView" destination="zSw-IS-oPk" id="izC-nT-YBi"/>
             </connections>

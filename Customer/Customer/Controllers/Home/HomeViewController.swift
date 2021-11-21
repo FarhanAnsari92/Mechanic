@@ -212,7 +212,9 @@ extension HomeViewController {
     }
     
     @IBAction func filterButtonHandler(_ sender: UIButton) {
-        print("filterButtonHandler")
+        let sb = UIStoryboard(storyboard: .accessories)
+        let vc = sb.instantiateViewController(withIdentifier: FilterAccessoryViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func searchGoButtonHandler(_ sender: UIButton) {

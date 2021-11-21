@@ -12,7 +12,6 @@ class AccessoriesViewController: HomeBaseViewController {
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             
-            collectionView.register(AutoPartsAndAccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AutoPartsAndAccessoriesCollectionViewCell.identifier)
             collectionView.register(AccessoriesCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoriesCollectionViewCell.identifier)
             collectionView.register(AccessoryBannerViewCollectionViewCell.nib, forCellWithReuseIdentifier: AccessoryBannerViewCollectionViewCell.identifier)
             

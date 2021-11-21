@@ -22,6 +22,7 @@ class FilterSortTableViewCell: UITableViewCell {
             radioInnerView.backgroundColor = UIColor.Theme.green
         }
     }
+    @IBOutlet weak var filterName: UILabel!
     
     override var isSelected: Bool {
         didSet {
@@ -38,6 +39,11 @@ class FilterSortTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func set(data: Filter) {
+        self.isSelected = data.isSelected
+        self.filterName.text = data.filterTitle
     }
     
 }
