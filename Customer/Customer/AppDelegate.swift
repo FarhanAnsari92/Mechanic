@@ -24,6 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        /*
+         -- CREDENTIAL
+         03352266407 customer pwd 1-7
+         03472455159 mechanic pwd 1-7
+         */
+        
+        #if Customer
+        print("---- customer")
+        #else
+        print("---- mechanic")
+        #endif
+        
         GMSServices.provideAPIKey(Constants.Google.mapAPIKey)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.disabledDistanceHandlingClasses = [ChatViewController.self]

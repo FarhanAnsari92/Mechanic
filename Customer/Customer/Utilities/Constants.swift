@@ -47,8 +47,11 @@ class Constants {
     struct Device {
         static let type: String = "ios"
     }
-    
-    static let role: String = "3"
+        
+    struct Role {
+        static let user: String = "3"
+        static let mechanic: String = "4"
+    }
     
     struct Google {
         static let directionAPIKey = "AIzaSyBclS67APJK6dOTF7cffJkDfke7hPy2QcY"

@@ -120,7 +120,13 @@ class RegistrationViewController: BaseViewController {
         parameters["password_confirmation"] = cnfrmPassword
         parameters["device_token"] = "DummyToken"
         parameters["device_type"] = Constants.Device.type
-        parameters["role"] = Constants.role
+        #if Customer
+        parameters["role"] = Constants.Role.user
+        #else
+        parameters["role"] = Constants.Role.mechanic
+        #endif
+        
+        print("parameters - ", parameters)
         
         APIClient.callApi(api: .registration, parameters: parameters, method: .post, view: self.view) { data in
             if let dictionary = data,

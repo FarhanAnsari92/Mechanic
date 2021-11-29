@@ -1,9 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
 
-target 'Customer' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+# Comment the next line if you don't want to use dynamic frameworks
+use_frameworks!
+
+def shared_pods
 
   # Pods for Customer
 
@@ -48,4 +49,12 @@ target 'Customer' do
   # https://github.com/rushisangani/RSSelectionMenu
   pod 'RSSelectionMenu', '~> 7.1.3'
 
+end
+
+target 'Customer' do
+  shared_pods
+end
+
+target 'Mechanic' do
+  shared_pods
 end
