@@ -68,7 +68,7 @@ class HomeViewController: SideMenuBaseController {
             }
         }
 
-    }
+    } 
     
     func getProducts(parameters: [String:String]? = nil) {
 //        var parameters = [String:String]()
