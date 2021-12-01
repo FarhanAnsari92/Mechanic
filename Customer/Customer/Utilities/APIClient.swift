@@ -49,8 +49,7 @@ class APIClient {
         method: HTTPMethod,
         data: Data? = nil,
         view: UIView? = nil,
-        success: @escaping (([String:Any]?) -> Void),
-        error: ((String) -> Void)? = nil) {
+        success: @escaping (([String:Any]?) -> Void)) {        
         
         let path = apiVersion.rawValue + "/" + api.rawValue
         let url: URL = URL(string: path, relativeTo: BaseURL.staging)!

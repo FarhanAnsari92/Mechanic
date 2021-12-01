@@ -383,6 +383,11 @@
 		2896CC57275555CC0099E70A /* TopPickTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E162711A5B4002979AD /* TopPickTableViewCell.xib */; };
 		2896CC58275555CC0099E70A /* ProductDetailsAndRatingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28512E252711B8DA002979AD /* ProductDetailsAndRatingsView.xib */; };
 		2896CC59275555CC0099E70A /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A88F9E26FFBEB500003EB7 /* Order.storyboard */; };
+		2896CDCB275687F20099E70A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDCA275687F20099E70A /* DashboardViewController.swift */; };
+		2896CDD1275688670099E70A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2896CDD0275688670099E70A /* Dashboard.storyboard */; };
+		2896CDEA27569F4B0099E70A /* DriverLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */; };
+		2896CDED2756A2470099E70A /* DriverLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */; };
+		2896CDF02756A7A70099E70A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDCA275687F20099E70A /* DashboardViewController.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -617,6 +622,9 @@
 		287BC6E9272573D400AF5978 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		2896CC60275555CC0099E70A /* Mechanic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mechanic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2896CC61275555CD0099E70A /* Mechanic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mechanic-Info.plist"; path = "/Users/bykea/Documents/Mechanic/Mechanic/Customer/Mechanic-Info.plist"; sourceTree = "<absolute>"; };
+		2896CDCA275687F20099E70A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		2896CDD0275688670099E70A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLeftMenuViewController.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -800,6 +808,7 @@
 				C9E43155270F8321008056C5 /* Vehicle.storyboard */,
 				289803E9270F7FE5002565B6 /* Accessories.storyboard */,
 				28512DE42710CF28002979AD /* Basket.storyboard */,
+				2896CDD0275688670099E70A /* Dashboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -807,6 +816,7 @@
 		280575DC26FBA5160035BC2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2896CDC92756879A0099E70A /* DriverDashboard */,
 				28512DE72710CF49002979AD /* Basket */,
 				C9E43157270F837D008056C5 /* Vehicle */,
 				289803EC270F80C5002565B6 /* Accessories */,
@@ -1021,6 +1031,15 @@
 				284F4768274984BD00DEF537 /* FilterViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2896CDC92756879A0099E70A /* DriverDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				2896CDCA275687F20099E70A /* DashboardViewController.swift */,
+				2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */,
+			);
+			path = DriverDashboard;
 			sourceTree = "<group>";
 		};
 		289802E6270E29DC002565B6 /* Chat */ = {
@@ -1380,6 +1399,7 @@
 				2896CC35275555CC0099E70A /* Contact.storyboard in Resources */,
 				2896CC36275555CC0099E70A /* Poppins-Black.otf in Resources */,
 				2896CC37275555CC0099E70A /* OrderInfoView.xib in Resources */,
+				2896CDD1275688670099E70A /* Dashboard.storyboard in Resources */,
 				2896CC38275555CC0099E70A /* LeftMenuTableViewCell.xib in Resources */,
 				2896CC39275555CC0099E70A /* Poppins-Regular.otf in Resources */,
 				2896CC3A275555CC0099E70A /* Profile.storyboard in Resources */,
@@ -1674,6 +1694,7 @@
 				28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */,
 				C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */,
 				287BC6BC272408BE00AF5978 /* ObjectMapperManager.swift in Sources */,
+				2896CDEA27569F4B0099E70A /* DriverLeftMenuViewController.swift in Sources */,
 				C9E43159270F83E5008056C5 /* MyVehicleViewController.swift in Sources */,
 				2841B300270A4401000FA706 /* SectionHeader.swift in Sources */,
 				2835631D2739AA82008821A1 /* BookingHistoryViewModel.swift in Sources */,
@@ -1717,6 +1738,7 @@
 				C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */,
 				2851342A27160F72002979AD /* BaseView.swift in Sources */,
 				C9E5921F27254BA700EF3947 /* GoogleHelper.swift in Sources */,
+				2896CDF02756A7A70099E70A /* DashboardViewController.swift in Sources */,
 				28512E882713486C002979AD /* ButtonCollectionViewCell.swift in Sources */,
 				287BC6EA272573D400AF5978 /* Cart.swift in Sources */,
 				2835633E273C4BE0008821A1 /* ProductResponseModel.swift in Sources */,
@@ -1832,6 +1854,7 @@
 				2896CBDD275555CC0099E70A /* BookingHistoryViewModel.swift in Sources */,
 				2896CBDE275555CC0099E70A /* RegistrationDataModel.swift in Sources */,
 				2896CBDF275555CC0099E70A /* ServiceModel.swift in Sources */,
+				2896CDED2756A2470099E70A /* DriverLeftMenuViewController.swift in Sources */,
 				2896CBE0275555CC0099E70A /* BasketTableViewCell.swift in Sources */,
 				2896CBE1275555CC0099E70A /* Dynamic.swift in Sources */,
 				2896CBE2275555CC0099E70A /* BookingDetailsTableViewCell.swift in Sources */,
@@ -1855,6 +1878,7 @@
 				2896CBF4275555CC0099E70A /* BuyAccessoriesConfirmationViewController.swift in Sources */,
 				2896CBF5275555CC0099E70A /* GetVehicleResponseModel.swift in Sources */,
 				2896CBF6275555CC0099E70A /* BannerView.swift in Sources */,
+				2896CDCB275687F20099E70A /* DashboardViewController.swift in Sources */,
 				2896CBF7275555CC0099E70A /* TrackingViewController.swift in Sources */,
 				2896CBF8275555CC0099E70A /* ProductReviewsView.swift in Sources */,
 				2896CBF9275555CC0099E70A /* AddNewAddressViewController.swift in Sources */,

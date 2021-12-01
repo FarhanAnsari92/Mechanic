@@ -66,8 +66,6 @@ class HomeViewController: SideMenuBaseController {
                 self.categories = responseObject.category?.categories
                 self.collectionView.reloadSections(IndexSet(integer: 0))
             }
-        } error: { error in
-            Helper.showMessage(text: error)
         }
 
     }
@@ -385,7 +383,7 @@ extension HomeViewController: LeftMenuContainerViewControllerDelegate {
             
         case .logout:
             Helper.logout()
-            AppRoute.navigateUserToAuthente()
+            AppRoute.navigateUserToAuthenticate()
         }
     }
     

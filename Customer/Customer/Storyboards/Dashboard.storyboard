@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1lt-2e-bVm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="Zss-6e-fu8">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" id="EL5-Vm-jYb" customClass="DashboardViewController" customModule="Mechanic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WPh-lX-btm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uyQ-dA-nbD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HsP-j3-TI1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fy3-HB-OGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.0144927536232" y="101.78571428571428"/>
+        </scene>
+        <!--Driver Left Menu View Controller-->
+        <scene sceneID="dUJ-1P-7Pw">
+            <objects>
+                <viewController storyboardIdentifier="DriverLeftMenuViewController" id="SeA-sd-gFC" customClass="DriverLeftMenuViewController" customModule="Mechanic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1W-HY-TDf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyUser" translatesAutoresizingMaskIntoConstraints="NO" id="mku-9U-hUh">
+                                <rect key="frame" x="157" y="64" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MqE-f1-Brb"/>
+                                    <constraint firstAttribute="width" secondItem="mku-9U-hUh" secondAttribute="height" multiplier="1:1" id="ZBT-kW-a5f"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-u5-Y0V">
+                                <rect key="frame" x="169" y="174" width="76" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-MZ-nNX" userLabel="Separator">
+                                <rect key="frame" x="30" y="216.5" width="354" height="1"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="0.50382742979999995" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="po5-Ca-AjR"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-xo-7hv">
+                                <rect key="frame" x="15" y="237.5" width="384" height="614.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FeQ-GG-GEA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xZa-MZ-nNX" secondAttribute="trailing" constant="30" id="2bw-Ue-SYT"/>
+                            <constraint firstItem="FeQ-GG-GEA" firstAttribute="trailing" secondItem="n2g-xo-7hv" secondAttribute="trailing" constant="15" id="8nH-5o-Nxg"/>
+                            <constraint firstItem="l8e-u5-Y0V" firstAttribute="centerX" secondItem="L1W-HY-TDf" secondAttribute="centerX" id="BM3-cQ-kY5"/>
+                            <constraint firstItem="l8e-u5-Y0V" firstAttribute="top" secondItem="mku-9U-hUh" secondAttribute="bottom" constant="10" id="Hup-BS-GVs"/>
+                            <constraint firstItem="xZa-MZ-nNX" firstAttribute="leading" secondItem="L1W-HY-TDf" secondAttribute="leading" constant="30" id="VmA-Wz-lO3"/>
+                            <constraint firstItem="n2g-xo-7hv" firstAttribute="leading" secondItem="FeQ-GG-GEA" secondAttribute="leading" constant="15" id="ahn-04-t8c"/>
+                            <constraint firstItem="n2g-xo-7hv" firstAttribute="top" secondItem="xZa-MZ-nNX" secondAttribute="bottom" constant="20" id="djT-gv-aOT"/>
+                            <constraint firstItem="mku-9U-hUh" firstAttribute="centerX" secondItem="L1W-HY-TDf" secondAttribute="centerX" id="gPP-dW-IK0"/>
+                            <constraint firstItem="xZa-MZ-nNX" firstAttribute="top" secondItem="l8e-u5-Y0V" secondAttribute="bottom" constant="20" id="pNP-Dn-vvO"/>
+                            <constraint firstItem="mku-9U-hUh" firstAttribute="top" secondItem="FeQ-GG-GEA" secondAttribute="top" constant="20" id="s0z-I3-9uF"/>
+                            <constraint firstItem="FeQ-GG-GEA" firstAttribute="bottom" secondItem="n2g-xo-7hv" secondAttribute="bottom" constant="10" id="s6m-Y5-CkU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgProfile" destination="mku-9U-hUh" id="8N1-aJ-jax"/>
+                        <outlet property="lblProfile" destination="l8e-u5-Y0V" id="SK6-bK-HbQ"/>
+                        <outlet property="tableView" destination="n2g-xo-7hv" id="52D-Us-1Zi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGb-Gl-Tux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762" y="102"/>
+        </scene>
+        <!--Home Base Navigation Controller-->
+        <scene sceneID="8Gb-s9-SHT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1lt-2e-bVm" customClass="HomeBaseNavigationController" customModule="Mechanic" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JEJ-14-obv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EL5-Vm-jYb" kind="relationship" relationship="rootViewController" id="36V-Wj-U8e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xln-uW-bsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dummyUser" width="122.5" height="122.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
