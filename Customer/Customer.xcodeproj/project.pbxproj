@@ -462,6 +462,10 @@
 		C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */; };
 		C9E4315D270F84CE008056C5 /* MyVehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */; };
 		C9E5921F27254BA700EF3947 /* GoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E5921E27254BA700EF3947 /* GoogleHelper.swift */; };
+		C9E82D3E275808C5007DD3F4 /* DashBoardPickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D3D275808C5007DD3F4 /* DashBoardPickupViewController.swift */; };
+		C9E82D422758094B007DD3F4 /* DashBoardDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D412758094B007DD3F4 /* DashBoardDropViewController.swift */; };
+		C9E82D4327594D3B007DD3F4 /* DashBoardPickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D3D275808C5007DD3F4 /* DashBoardPickupViewController.swift */; };
+		C9E82D4427594D9D007DD3F4 /* DashBoardDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D412758094B007DD3F4 /* DashBoardDropViewController.swift */; };
 		C9EFA4CD27160EDF00075D1B /* SuccessfullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EFA4CC27160EDF00075D1B /* SuccessfullViewController.swift */; };
 		C9EFA4CF2716198100075D1B /* SuccessfullRiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EFA4CE2716198100075D1B /* SuccessfullRiderViewController.swift */; };
 /* End PBXBuildFile section */
@@ -704,6 +708,8 @@
 		C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVehicleTableViewCell.swift; sourceTree = "<group>"; };
 		C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyVehicleTableViewCell.xib; sourceTree = "<group>"; };
 		C9E5921E27254BA700EF3947 /* GoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleHelper.swift; sourceTree = "<group>"; };
+		C9E82D3D275808C5007DD3F4 /* DashBoardPickupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardPickupViewController.swift; sourceTree = "<group>"; };
+		C9E82D412758094B007DD3F4 /* DashBoardDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardDropViewController.swift; sourceTree = "<group>"; };
 		C9EFA4CC27160EDF00075D1B /* SuccessfullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullViewController.swift; sourceTree = "<group>"; };
 		C9EFA4CE2716198100075D1B /* SuccessfullRiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullRiderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1044,6 +1050,8 @@
 			children = (
 				2896CDCA275687F20099E70A /* DashboardViewController.swift */,
 				2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */,
+				C9E82D3D275808C5007DD3F4 /* DashBoardPickupViewController.swift */,
+				C9E82D412758094B007DD3F4 /* DashBoardDropViewController.swift */,
 				2896CDF927589BD80099E70A /* JobDetailsViewController.swift */,
 			);
 			path = DriverDashboard;
@@ -1741,8 +1749,10 @@
 				284F475F27496CBD00DEF537 /* CategoryListCollectionViewCell.swift in Sources */,
 				280575E026FBA55C0035BC2B /* InitialViewController.swift in Sources */,
 				2898054727104FD2002565B6 /* BuyAccessoriesConfirmationAddressTableViewCell.swift in Sources */,
+				C9E82D422758094B007DD3F4 /* DashBoardDropViewController.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,
 				289805A327106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift in Sources */,
+				C9E82D3E275808C5007DD3F4 /* DashBoardPickupViewController.swift in Sources */,
 				289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */,
 				28DDE814271E0AB500788D46 /* BrandResponseModel.swift in Sources */,
 				C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */,
@@ -1897,8 +1907,10 @@
 				2896CBFB275555CC0099E70A /* ProductDetailsAndRatingsView.swift in Sources */,
 				2896CBFC275555CC0099E70A /* CategoryListCollectionViewCell.swift in Sources */,
 				2896CBFD275555CC0099E70A /* InitialViewController.swift in Sources */,
+				C9E82D4427594D9D007DD3F4 /* DashBoardDropViewController.swift in Sources */,
 				2896CBFE275555CC0099E70A /* BuyAccessoriesConfirmationAddressTableViewCell.swift in Sources */,
 				2896CBFF275555CC0099E70A /* VerifyNumberViewController.swift in Sources */,
+				C9E82D4327594D3B007DD3F4 /* DashBoardPickupViewController.swift in Sources */,
 				2896CDFB27589BD90099E70A /* JobDetailsViewController.swift in Sources */,
 				2896CC00275555CC0099E70A /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift in Sources */,
 				2896CC01275555CC0099E70A /* ChatViewController.swift in Sources */,

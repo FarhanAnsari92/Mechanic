@@ -45,6 +45,45 @@ extension UIColor {
     
 }
 
+extension UISegmentedControl {
+    /// Tint color doesn't have any effect on iOS 13.
+//    func dashboadSegment() {
+//        if #available(iOS 13, *) {
+//            let tintColorImage = UIImage(ciImage: .white)
+//            // Must set the background image for normal to something (even clear) else the rest won't work
+//            setBackgroundImage(UIImage(ciImage: backgroundColor), for: .normal, barMetrics: .default)
+////            setBackgroundImage(tintColorImage, for: .selected, barMetrics: .default)
+//            setBackgroundImage(UIImage(color: tintColor.withAlphaComponent(0.2)), for: .highlighted, barMetrics: .default)
+//            setBackgroundImage(tintColorImage, for: [.highlighted, .selected], barMetrics: .default)
+//            setTitleTextAttributes([.foregroundColor: tintColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular)], for: .normal)
+//            setDividerImage(tintColorImage, forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+//            layer.borderWidth = 1
+//            layer.borderColor = tintColor.cgColor
+//        }
+//    }
+//    
+    func setupDashboardSegment() {
+        self.layer.borderColor = UIColor.Theme.green.cgColor
+        self.layer.borderWidth = 1
+//        setDividerImage(tintColorImage, forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+//        self.setDividerImage(UIImage(cgImage: UIColor.Theme.green as! CGImage), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+        
+        if #available(iOS 13.0, *) {
+            self.selectedSegmentTintColor = .white
+        } else {
+            print("fallback-------------")
+        }
+        self.backgroundColor = .white
+        self.tintColor = .white
+        
+        let selectedAtt = [NSAttributedString.Key.foregroundColor: UIColor.Theme.green]
+        self.setTitleTextAttributes(selectedAtt, for: .selected)
+        
+        let deselectedAtt = [NSAttributedString.Key.foregroundColor: UIColor.gray]
+        self.setTitleTextAttributes(deselectedAtt, for: .normal)
+    }
+}
+
 extension UIBezierPath {
     convenience init(shouldRoundRect rect: CGRect, topLeftRadius: CGSize = .zero, topRightRadius: CGSize = .zero, bottomLeftRadius: CGSize = .zero, bottomRightRadius: CGSize = .zero){
 

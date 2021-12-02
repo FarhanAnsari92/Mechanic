@@ -10,40 +10,53 @@ import LGSideMenuController
 
 class DashboardViewController: HomeBaseViewController {
     
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.register(DashboardJobTableViewCell.nib, forCellReuseIdentifier: DashboardJobTableViewCell.identifier)
-            tableView.rowHeight = UITableView.automaticDimension
-            tableView.estimatedRowHeight = 50
-            tableView.delegate = self
-            tableView.dataSource = self
-        }
-    }
-    
-    var jobs: [BookingHistoryModel]?
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
 
+    lazy var pickupDashboardController: UIViewController? = {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: DashBoardPickupViewController.storyboardIdentifier)
+        return controller
+    }()
+    
+    lazy var dropoffDashboardController: UIViewController? = {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: DashBoardDropViewController.storyboardIdentifier)
+        return controller
+    }()
+    
+    var currentController: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Dashboard"
         view.backgroundColor = UIColor.Theme.green
+        segmentControl.setupDashboardSegment()
+        self.switchController(self.pickupDashboardController)
         setupLeftBarButtons()
         setupRightBarButtons()
         
-        getJob()
     }
     
-    func getJob() {
-        APIClient.callApi(api: .job, method: .get, view: view) { [weak self] data in
-            if let dictionary = data {
-                if let obj = ObjectMapperManager<BookingHistoryResponseModel>().map(dictionary: dictionary),
-                   obj.success ?? false {
-                    if let bookings = obj.bookings {
-                        self?.jobs = bookings
-                        self?.tableView.reloadData()
-                    }
-                }
-            }
+    @IBAction func didTabSegment(sigment: UISegmentedControl) {
+        print("sigment.selectedSegmentIndex - ", sigment.selectedSegmentIndex)
+        if sigment.selectedSegmentIndex == 0 {
+            self.switchController(self.pickupDashboardController)
+        } else {
+            self.switchController(self.dropoffDashboardController)
         }
+        print(self.currentController)
+    }
+    
+    func switchController(_ controller: UIViewController?) {
+        guard let vc = controller, vc != self.currentController else {
+            return
+        }
+        
+        self.addChild(vc)
+        vc.didMove(toParent: self)
+        vc.view.frame = self.containerView.bounds
+        self.containerView.addSubview(vc.view)
+        self.currentController = vc
+        
     }
     
     func setupLeftBarButtons() {
@@ -114,23 +127,6 @@ extension DashboardViewController: LeftMenuContainerViewControllerDelegate {
         default:
             break
         }
-    }
-    
-}
-
-extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jobs?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DashboardJobTableViewCell.identifier, for: indexPath)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
-        print("- DashboardViewController -")
     }
     
 }
