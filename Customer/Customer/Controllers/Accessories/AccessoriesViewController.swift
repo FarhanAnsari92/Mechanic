@@ -20,10 +20,43 @@ class AccessoriesViewController: HomeBaseViewController {
         }
     }
 
+    let imageCacheManager: ImageCacheManager = ImageCacheManager()
+    var products: [ProductModel]?
+    
+    var categoryId: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Helmets"
+        self.title = "Products"
         setupBackButton(color: .white)
+        
+        var parameters = [String:String]()
+        if let catId = categoryId {
+            parameters["category_ids"] = catId.description
+        }
+        getProducts(parameters: parameters)
+        
+    }
+    
+    func getProducts(parameters: [String:String]? = nil) {
+//        var parameters = [String:String]()
+//        if text.count > 0 {
+//            parameters["keyword"] = text
+//        }
+        APIClient.callApi(api: .products, parameters: parameters, method: .get, view: self.view) { [weak self] data in
+            guard let self = self else { return }
+            if let dictionary = data {
+                if let productResponseModel = ObjectMapperManager<ProductResponseModel>().map(dictionary: dictionary) {
+                    
+                    if let products = productResponseModel.data?.products, products.count > 0 {
+                        self.products = products
+                        self.collectionView.reloadData()
+                    } else {
+                        Helper.showMessage(text: "No Products Found.")
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func filterButtonHandler(_ sender: UIButton) {
@@ -36,59 +69,38 @@ class AccessoriesViewController: HomeBaseViewController {
 
 extension AccessoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
-    }
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }
-        return 20
+        return self.products?.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoryBannerViewCollectionViewCell.identifier, for: indexPath)
-            return cell
-        } else {
-            // 2 liner item name will not work in iPhone 5s sized devices.
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoriesCollectionViewCell.identifier, for: indexPath) as! AccessoriesCollectionViewCell
-            if indexPath.row == 0 {
-                cell.lblDescription.text = "Pack of 2 - Pro Biker Gloves MCS-01C + Winter Mask"
-            }
-            return cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {        // 2 liner item name will not work in iPhone 5s sized devices.
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccessoriesCollectionViewCell.identifier, for: indexPath) as! AccessoriesCollectionViewCell
+        if let product = self.products?[indexPath.row] {
+            cell.set(data: product, imageCacheManager: imageCacheManager)
         }
+        return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            let sb = UIStoryboard(storyboard: .accessories)
-            let vc = sb.instantiateViewController(withIdentifier: AccessoriesDetailsViewController.storyboardIdentifier)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let sb = UIStoryboard(storyboard: .accessories)
+        let vc = sb.instantiateViewController(withIdentifier: AccessoriesDetailsViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.section == 0 {
-            let itemWidth = collectionView.bounds.width
-            return CGSize(width: itemWidth, height: itemWidth * 0.4)
-        } else {
             
-            let numberOfItemsPerRow: CGFloat = 2
-            let spacing: CGFloat = 20
-            let totalSpace: CGFloat = (spacing * numberOfItemsPerRow) + 5
-            let totalWidth = collectionView.frame.width - totalSpace
-            let itemWidth = totalWidth / 2
-            
-            return CGSize(width: itemWidth, height: itemWidth * 1.3)
-            
-        }
+        let numberOfItemsPerRow: CGFloat = 2
+        let spacing: CGFloat = 20
+        let totalSpace: CGFloat = (spacing * numberOfItemsPerRow) + 5
+        let totalWidth = collectionView.frame.width - totalSpace
+        let itemWidth = totalWidth / 2
         
+        return CGSize(width: itemWidth, height: itemWidth * 1.3)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

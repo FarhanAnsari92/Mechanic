@@ -388,6 +388,9 @@
 		2896CDEA27569F4B0099E70A /* DriverLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */; };
 		2896CDED2756A2470099E70A /* DriverLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */; };
 		2896CDF02756A7A70099E70A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDCA275687F20099E70A /* DashboardViewController.swift */; };
+		2896CDF5275805890099E70A /* DashboardJobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDF3275805890099E70A /* DashboardJobTableViewCell.swift */; };
+		2896CDF6275805890099E70A /* DashboardJobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2896CDF4275805890099E70A /* DashboardJobTableViewCell.xib */; };
+		2896CDFB27589BD90099E70A /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDF927589BD80099E70A /* JobDetailsViewController.swift */; };
 		289802E4270E2984002565B6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289802E3270E2984002565B6 /* Chat.storyboard */; };
 		289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802E7270E29F1002565B6 /* ChatViewController.swift */; };
 		289802EC270E2A6F002565B6 /* ChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */; };
@@ -625,6 +628,9 @@
 		2896CDCA275687F20099E70A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		2896CDD0275688670099E70A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLeftMenuViewController.swift; sourceTree = "<group>"; };
+		2896CDF3275805890099E70A /* DashboardJobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardJobTableViewCell.swift; sourceTree = "<group>"; };
+		2896CDF4275805890099E70A /* DashboardJobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardJobTableViewCell.xib; sourceTree = "<group>"; };
+		2896CDF927589BD80099E70A /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
 		289802E3270E2984002565B6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		289802E7270E29F1002565B6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		289802EA270E2A6F002565B6 /* ChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSenderTableViewCell.swift; sourceTree = "<group>"; };
@@ -1038,6 +1044,7 @@
 			children = (
 				2896CDCA275687F20099E70A /* DashboardViewController.swift */,
 				2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */,
+				2896CDF927589BD80099E70A /* JobDetailsViewController.swift */,
 			);
 			path = DriverDashboard;
 			sourceTree = "<group>";
@@ -1123,6 +1130,8 @@
 				28512E82271340AC002979AD /* FilterWarrantyTypeTableViewCell.xib */,
 				C95B568327131ACD000D6971 /* SelectWorkshopTableViewCell.swift */,
 				C95B568427131ACD000D6971 /* SelectWorkshopTableViewCell.xib */,
+				2896CDF3275805890099E70A /* DashboardJobTableViewCell.swift */,
+				2896CDF4275805890099E70A /* DashboardJobTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -1382,6 +1391,7 @@
 				2896CC24275555CC0099E70A /* ProductReviewsView.xib in Resources */,
 				2896CC25275555CC0099E70A /* Poppins-SemiBold.otf in Resources */,
 				2896CC26275555CC0099E70A /* TrackingStatusTableViewCell.xib in Resources */,
+				2896CDF6275805890099E70A /* DashboardJobTableViewCell.xib in Resources */,
 				2896CC27275555CC0099E70A /* BookingHistoryTableViewCell.xib in Resources */,
 				2896CC28275555CC0099E70A /* MyVehicleTableViewCell.xib in Resources */,
 				2896CC29275555CC0099E70A /* ChatSenderTableViewCell.xib in Resources */,
@@ -1860,6 +1870,7 @@
 				2896CBE2275555CC0099E70A /* BookingDetailsTableViewCell.swift in Sources */,
 				2896CBE3275555CC0099E70A /* SelectModeViewController.swift in Sources */,
 				2896CBE4275555CC0099E70A /* FixMyVehicleView.swift in Sources */,
+				2896CDF5275805890099E70A /* DashboardJobTableViewCell.swift in Sources */,
 				2896CBE5275555CC0099E70A /* CityModel.swift in Sources */,
 				2896CBE6275555CC0099E70A /* BookingHistoryModel.swift in Sources */,
 				2896CBE7275555CC0099E70A /* ReviewTableViewCell.swift in Sources */,
@@ -1888,6 +1899,7 @@
 				2896CBFD275555CC0099E70A /* InitialViewController.swift in Sources */,
 				2896CBFE275555CC0099E70A /* BuyAccessoriesConfirmationAddressTableViewCell.swift in Sources */,
 				2896CBFF275555CC0099E70A /* VerifyNumberViewController.swift in Sources */,
+				2896CDFB27589BD90099E70A /* JobDetailsViewController.swift in Sources */,
 				2896CC00275555CC0099E70A /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift in Sources */,
 				2896CC01275555CC0099E70A /* ChatViewController.swift in Sources */,
 				2896CC02275555CC0099E70A /* BrandResponseModel.swift in Sources */,

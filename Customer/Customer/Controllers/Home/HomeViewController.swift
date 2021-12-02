@@ -276,11 +276,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryListCollectionViewCell.identifier, for: indexPath) as! CategoryListCollectionViewCell
             cell.categoryCompletion = { [weak self] categoryId in
-                if let id = categoryId?.description {
-                    var parameters: [String:String] = [String:String]()
-                    parameters["category_ids"] = id
-                    self?.getProducts(parameters: parameters)
-                }
+//                if let id = categoryId?.description {
+//                    var parameters: [String:String] = [String:String]()
+//                    parameters["category_ids"] = id
+//                    self?.getProducts(parameters: parameters)
+//                }
+                
+                
+                let vc = UIStoryboard(storyboard: .accessories).instantiateViewController(withIdentifier: AccessoriesViewController.storyboardIdentifier) as! AccessoriesViewController
+                vc.categoryId = categoryId
+                self?.navigationController?.pushViewController(vc, animated: true)
+                
             }
             if let ctgrs = self.categories {
                 cell.set(data: ctgrs)
