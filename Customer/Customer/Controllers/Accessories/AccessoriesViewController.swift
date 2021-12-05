@@ -19,21 +19,18 @@ class AccessoriesViewController: HomeBaseViewController {
             collectionView.dataSource = self
         }
     }
+    @IBOutlet weak var txtSearch: UITextField!
 
     let imageCacheManager: ImageCacheManager = ImageCacheManager()
     var products: [ProductModel]?
     
-    var categoryId: Int?
+    var parameters: [String:String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Products"
         setupBackButton(color: .white)
         
-        var parameters = [String:String]()
-        if let catId = categoryId {
-            parameters["category_ids"] = catId.description
-        }
         getProducts(parameters: parameters)
         
     }
@@ -59,12 +56,33 @@ class AccessoriesViewController: HomeBaseViewController {
         }
     }
     
+    @IBAction func searchGoButtonHandler(_ sender: UIButton) {
+        self.view.endEditing(true)
+
+        var parameters: [String:String] = [String:String]()
+        let text = self.txtSearch.text ?? ""
+        if text.count > 0 {
+            parameters["keyword"] = text
+        }
+
+        getProducts(parameters: parameters)
+    }
+    
     @IBAction func filterButtonHandler(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .accessories)
-        let vc = sb.instantiateViewController(withIdentifier: FilterAccessoryViewController.storyboardIdentifier)
+        let vc = sb.instantiateViewController(withIdentifier: FilterAccessoryViewController.storyboardIdentifier) as! FilterAccessoryViewController
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+}
+
+extension AccessoriesViewController: FilterAccessoryViewControllerDelegate {
+    
+    func didFinishSelecting(_ params: [String : String]?) {
+        getProducts(parameters: params)
+    }
+    
 }
 
 extension AccessoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -111,4 +129,17 @@ extension AccessoriesViewController: UICollectionViewDelegate, UICollectionViewD
         return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     }
     
+}
+
+extension AccessoriesViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text,
+           let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange, with: string)
+            return updatedText.count <= 20
+        }
+        return false
+    }
+
 }

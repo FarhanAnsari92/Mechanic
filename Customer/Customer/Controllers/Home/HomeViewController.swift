@@ -54,6 +54,11 @@ class HomeViewController: SideMenuBaseController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshProducts), name: .updateProducts, object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupFixMyVehicleButton()
+    }
+    
     @objc func refreshProducts() {
         getProducts()
     }
@@ -89,11 +94,6 @@ class HomeViewController: SideMenuBaseController {
                 }
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setupFixMyVehicleButton()
     }
     
 }
@@ -210,21 +210,19 @@ extension HomeViewController {
     }
     
     @IBAction func filterButtonHandler(_ sender: UIButton) {
-        let sb = UIStoryboard(storyboard: .accessories)
-        let vc = sb.instantiateViewController(withIdentifier: FilterAccessoryViewController.storyboardIdentifier)
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigateToAccessoryVC()
     }
     
     @IBAction func searchGoButtonHandler(_ sender: UIButton) {
         self.view.endEditing(true)
-        
-        var parameters: [String:String] = [String:String]()
-        let text = self.txtSearch.text ?? ""
-        if text.count > 0 {
-            parameters["keyword"] = text
-        }
-        
-        getProducts(parameters: parameters)
+//
+//        var parameters: [String:String] = [String:String]()
+//        let text = self.txtSearch.text ?? ""
+//        if text.count > 0 {
+//            parameters["keyword"] = text
+//        }
+//
+//        getProducts(parameters: parameters)
     }
     
     @IBAction func fixMyVehicleButtonHandler(_ sender: UIButton) {
@@ -234,18 +232,30 @@ extension HomeViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func navigateToAccessoryVC(with params: [String:String]? = nil) {
+        let vc = UIStoryboard(storyboard: .accessories).instantiateViewController(withIdentifier: AccessoriesViewController.storyboardIdentifier) as! AccessoriesViewController
+            vc.parameters = params
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension HomeViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let text = textField.text,
-           let textRange = Range(range, in: text) {
-            let updatedText = text.replacingCharacters(in: textRange, with: string)
-            return updatedText.count <= 20
-        }
+//        if let text = textField.text,
+//           let textRange = Range(range, in: text) {
+//            let updatedText = text.replacingCharacters(in: textRange, with: string)
+//            return updatedText.count <= 20
+//        }
         return false
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        view.endEditing(true)
+        self.navigateToAccessoryVC()
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -281,11 +291,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //                    parameters["category_ids"] = id
 //                    self?.getProducts(parameters: parameters)
 //                }
-                
-                
-                let vc = UIStoryboard(storyboard: .accessories).instantiateViewController(withIdentifier: AccessoriesViewController.storyboardIdentifier) as! AccessoriesViewController
-                vc.categoryId = categoryId
-                self?.navigationController?.pushViewController(vc, animated: true)
+                if let catId = categoryId?.description {
+                    self?.navigateToAccessoryVC(with: ["category_ids": catId])
+                }
                 
             }
             if let ctgrs = self.categories {

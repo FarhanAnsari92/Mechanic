@@ -125,7 +125,10 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DashboardJobTableViewCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: DashboardJobTableViewCell.identifier, for: indexPath) as! DashboardJobTableViewCell
+        if let data = self.jobs?[indexPath.row] {
+            cell.set(data: data)
+        }
         return cell
     }
     

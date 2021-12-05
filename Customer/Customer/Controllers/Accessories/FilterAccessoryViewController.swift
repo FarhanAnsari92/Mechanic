@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FilterAccessoryViewControllerDelegate: NSObjectProtocol {
+    func didFinishSelecting(_ params: [String:String]?)
+}
+
 class FilterAccessoryViewController: HomeBaseViewController {
     
     @IBOutlet weak var tableView: UITableView! {
@@ -22,6 +26,9 @@ class FilterAccessoryViewController: HomeBaseViewController {
             
         }
     }
+    
+    weak var delegate: FilterAccessoryViewControllerDelegate?
+    var params: [String:String]? // = [String:String]()
     
     var filters = [Filter]()
     var filterViewModel: FilterViewModel = FilterViewModel()
@@ -42,6 +49,14 @@ class FilterAccessoryViewController: HomeBaseViewController {
         }
     }
     
+    @IBAction func doneButtonHandler(_ sender: UIButton) {
+        if let filter = self.filters.first(where: { $0.isSelected }),
+           let param = filter.parameter {
+            self.params = param
+        }
+        delegate?.didFinishSelecting(self.params)
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension FilterAccessoryViewController: UITableViewDelegate, UITableViewDataSource {

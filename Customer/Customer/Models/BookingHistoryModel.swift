@@ -47,8 +47,16 @@ class BookingHistoryModel: Mappable {
         return "Booking ID: N/A"
     }
     
+    var brandName: String {
+        return self.vehicle?.brand?.title ?? "NA"
+    }
+    
+    var vehicleTitle: String {
+        return self.vehicle?.vehicle?.name ?? "NA"
+    }
+    
     var vehicleName: String {
-        return "Vehicle: " + (self.vehicle?.vehicle?.name ?? "NA")
+        return "Vehicle: " + vehicleTitle
     }
     
     var charges: String {

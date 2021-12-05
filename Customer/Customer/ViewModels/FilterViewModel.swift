@@ -11,14 +11,12 @@ class Filter: Equatable {
     
     var filterTitle: String
     var isSelected: Bool
-    var minPrice: Int
-    var maxPrice: Int
+    var parameter: [String:String]?
     
-    init(filterTitle: String, isSelected: Bool, minPrice: Int, maxPrice: Int) {
+    init(filterTitle: String, isSelected: Bool, parameter: [String:String]? = nil) {
         self.filterTitle = filterTitle
         self.isSelected = isSelected
-        self.minPrice = minPrice
-        self.maxPrice = maxPrice
+        self.parameter = parameter
     }
     
     static func == (lhs: Filter, rhs: Filter) -> Bool {
@@ -32,12 +30,12 @@ class FilterViewModel {
     
     func getData() {
         var _filters = [Filter]()
-        _filters.append(Filter(filterTitle: "Recommended (Default)", isSelected: true, minPrice: 0, maxPrice: 0))
-        _filters.append(Filter(filterTitle: "Price Low To High", isSelected: false, minPrice: 0, maxPrice: 0))
-        _filters.append(Filter(filterTitle: "Price High To Low", isSelected: false, minPrice: 0, maxPrice: 0))
-        _filters.append(Filter(filterTitle: "Top Rated", isSelected: false, minPrice: 0, maxPrice: 0))
-        _filters.append(Filter(filterTitle: "Ascending (A-Z)", isSelected: false, minPrice: 0, maxPrice: 0))
-        _filters.append(Filter(filterTitle: "Descending (Z-A)", isSelected: false, minPrice: 0, maxPrice: 0))
+        _filters.append(Filter(filterTitle: "Recommended (Default)", isSelected: true))
+        _filters.append(Filter(filterTitle: "Price Low To High", isSelected: false, parameter: ["sort": "plth"]))
+        _filters.append(Filter(filterTitle: "Price High To Low", isSelected: false, parameter: ["sort": "phtl"]))
+        _filters.append(Filter(filterTitle: "Top Rated", isSelected: false, parameter: ["sort": "tr"]))
+        _filters.append(Filter(filterTitle: "Ascending (A-Z)", isSelected: false, parameter: ["sort": "a-z"]))
+        _filters.append(Filter(filterTitle: "Descending (Z-A)", isSelected: false, parameter: ["sort": "z-a"]))
         self.filters.value = _filters
     }
     

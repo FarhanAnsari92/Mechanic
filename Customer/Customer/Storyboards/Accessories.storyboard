@@ -46,6 +46,9 @@
                                                 <state key="normal" title="  Go  ">
                                                     <color key="titleColor" red="0.3411764706" green="0.52941176469999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="searchGoButtonHandler:" destination="PlB-vh-xrg" eventType="touchUpInside" id="PEp-hU-71X"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lM-Fq-UIU">
                                                 <rect key="frame" x="45" y="5" width="230" height="35"/>
@@ -117,6 +120,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="bbL-Dj-lPr" id="zPd-gE-Cj1"/>
+                        <outlet property="txtSearch" destination="6lM-Fq-UIU" id="lnX-O7-L14"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52R-BK-IxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -132,17 +136,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Th-Vg-TUl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxd-oq-Dsq" customClass="AppButton" customModule="Customer" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="0O7-I8-I2u"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonHandler:" destination="Mjv-Ho-CPX" eventType="touchUpInside" id="Rjo-Fc-fJo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qOQ-Nk-FLl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3Th-Vg-TUl" firstAttribute="top" secondItem="qOQ-Nk-FLl" secondAttribute="top" id="3XB-4F-Unh"/>
-                            <constraint firstItem="qOQ-Nk-FLl" firstAttribute="bottom" secondItem="3Th-Vg-TUl" secondAttribute="bottom" id="946-oO-rVb"/>
+                            <constraint firstItem="sxd-oq-Dsq" firstAttribute="leading" secondItem="qOQ-Nk-FLl" secondAttribute="leading" constant="20" id="LcT-cf-T4T"/>
                             <constraint firstItem="3Th-Vg-TUl" firstAttribute="leading" secondItem="qOQ-Nk-FLl" secondAttribute="leading" id="ONG-L2-i2k"/>
                             <constraint firstItem="qOQ-Nk-FLl" firstAttribute="trailing" secondItem="3Th-Vg-TUl" secondAttribute="trailing" id="OVs-q3-5eN"/>
+                            <constraint firstItem="sxd-oq-Dsq" firstAttribute="top" secondItem="3Th-Vg-TUl" secondAttribute="bottom" constant="5" id="Pdv-Sp-AOe"/>
+                            <constraint firstItem="qOQ-Nk-FLl" firstAttribute="trailing" secondItem="sxd-oq-Dsq" secondAttribute="trailing" constant="20" id="uju-fN-tQw"/>
+                            <constraint firstItem="qOQ-Nk-FLl" firstAttribute="bottom" secondItem="sxd-oq-Dsq" secondAttribute="bottom" constant="5" id="vN1-NN-hl7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -151,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6s8-xk-hhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="803"/>
+            <point key="canvasLocation" x="57.971014492753625" y="802.90178571428567"/>
         </scene>
         <!--Accessories Details View Controller-->
         <scene sceneID="rtN-bo-Sxc">

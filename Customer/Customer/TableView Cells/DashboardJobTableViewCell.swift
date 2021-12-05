@@ -43,4 +43,22 @@ class DashboardJobTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func set(data: BookingHistoryModel) {
+        self.lblVehicleName.text = data.brandName
+        self.lblVehicleModel.text = data.vehicleTitle
+        if let address = data.address {
+            self.lblAddress.isHidden = false
+            self.lblAddress.text = address
+        } else {
+            self.lblAddress.isHidden = true
+        }
+        if let createdAt = data.createdAt {
+            self.lblDateTime.isHidden = false
+            self.lblDateTime.text = createdAt
+        } else {
+            self.lblDateTime.isHidden = true
+        }
+        
+        
+    }
 }
