@@ -293,7 +293,7 @@ extension UIViewController: Backable, StoryboardIdentifiable {
         navigationItem.leftBarButtonItem = backBtn
     }
     
-    @objc func backButtonHandler() {
+    @objc private func backButtonHandler() {
         if (self.navigationController?.viewControllers.count == 1) {
             self.dismiss(animated: true, completion: nil)
         } else {

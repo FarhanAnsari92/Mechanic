@@ -39,6 +39,7 @@ class BookingHistoryModel: Mappable {
     var paymentType: String?
     var totalAmount: String?
     var createdAt: String?
+    var user: UserModel?
     
     var displayBookingId: String {
         if let bId = self.id {
@@ -49,6 +50,18 @@ class BookingHistoryModel: Mappable {
     
     var brandName: String {
         return self.vehicle?.brand?.title ?? "NA"
+    }
+    
+    var horsePower: String {
+        return self.vehicle?.horsePower ?? "NA"
+    }
+    
+    var year: String {
+        return (self.vehicle?.year ?? 0).description + "HP"
+    }
+    
+    var cityName: String {
+        return self.city?.name ?? "NA"
     }
     
     var vehicleTitle: String {
@@ -90,6 +103,6 @@ class BookingHistoryModel: Mappable {
         vehicle <- map["vehicle"]
         id <- map["id"]
         createdAt <- map["created_at"]
-        
+        user <- map["user"]
     }
 }

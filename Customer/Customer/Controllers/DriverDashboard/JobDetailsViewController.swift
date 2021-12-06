@@ -6,59 +6,138 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class JobDetailsViewController: UIViewController {
     
-    @IBOutlet weak var tableview: UITableView! {
+//    @IBOutlet weak var tableview: UITableView! {
+//        didSet {
+//            tableview.delegate = self
+//            tableview.dataSource = self
+//            tableview.register(ConfirmBookingTableViewCell.nib, forCellReuseIdentifier: ConfirmBookingTableViewCell.identifier)
+//            tableview.register(BuyAccessoriesConfirmationPaymentMethodTableViewCell.nib, forCellReuseIdentifier: BuyAccessoriesConfirmationPaymentMethodTableViewCell.identifier)
+//        }
+//    }
+    @IBOutlet weak var gmsMapView: GMSMapView! {
         didSet {
-            tableview.delegate = self
-            tableview.dataSource = self
-            tableview.register(ConfirmBookingTableViewCell.nib, forCellReuseIdentifier: ConfirmBookingTableViewCell.identifier)
-            tableview.register(BuyAccessoriesConfirmationPaymentMethodTableViewCell.nib, forCellReuseIdentifier: BuyAccessoriesConfirmationPaymentMethodTableViewCell.identifier)
+            gmsMapView.layer.cornerRadius = 15
+            gmsMapView.clipsToBounds = true
+            gmsMapView.layer.masksToBounds = true
         }
     }
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var jobDetails: BookingHistoryModel?
     
     var data: [Section] = [Section]()
+    
+//    @IBOutlet weak var vehicleDetailsContainer: KeyValueViewContainer!
+//    @IBOutlet weak var customerDetailsContainer: KeyValueViewContainer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Task Details"
+        self.setupBackButton(color: .white)
 
-        // Do any additional setup after loading the view.
-    }
-
-}
-
-extension JobDetailsViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        self.setData()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func setData() {
+        guard let job = self.jobDetails else {
+            return
+        }
+        var vehiclelr = [LeftRight]()
         
-        let item = data[indexPath.row]
-//        if item.title == "Payment Method" {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: BuyAccessoriesConfirmationPaymentMethodTableViewCell.identifier, for: indexPath)
-//            return cell
-//        }
+        vehiclelr.append(LeftRight(leftTitle: "Number Plate", rightTitle: job.vehicleName))
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ConfirmBookingTableViewCell.identifier, for: indexPath) as! ConfirmBookingTableViewCell
-        cell.setData(section: item)
-        cell.changeCompletion = { [weak self] in
-            if indexPath.row == 0 {
-                if let myVehicle = self?.navigationController?.viewControllers.first(where: { $0 is MyVehicleViewController }) {
-                    self?.navigationController?.popToViewController(myVehicle, animated: true)
-                }
-            } else if indexPath.row == 1 {
-                if let selectService = self?.navigationController?.viewControllers.first(where: { $0 is SelectServicesViewController }) {
-                    self?.navigationController?.popToViewController(selectService, animated: true)
-                }
-            } else if indexPath.row == 2 {
-                if let selectMode = self?.navigationController?.viewControllers.first(where: { $0 is SelectModeViewController }) {
-                    self?.navigationController?.popToViewController(selectMode, animated: true)
-                }
+        vehiclelr.append(LeftRight(leftTitle: "Brand", rightTitle: job.brandName))
+        
+        vehiclelr.append(LeftRight(leftTitle: "Horse Power", rightTitle: job.horsePower))
+        
+        vehiclelr.append(LeftRight(leftTitle: "Year", rightTitle: job.year))
+        
+        vehiclelr.append(LeftRight(leftTitle: "City", rightTitle: job.cityName))
+        let vehicleDetailsContainer = KeyValueViewContainer()
+        vehicleDetailsContainer.btnChange.isHidden = true
+        vehicleDetailsContainer.setData(section: Section(title: "Vehicle Details", details: vehiclelr))
+        
+        self.stackView.addArrangedSubview(vehicleDetailsContainer)
+        
+        
+        let userName = job.user?.name ?? "NA"
+        let mobileNumber = job.user?.mobileNumber ?? "NA"
+        let address = job.user?.details?.address ?? "NA"
+        
+        var customerDetailslr = [LeftRight]()
+        customerDetailslr.append(LeftRight(leftTitle: "Name", rightTitle: userName))
+        customerDetailslr.append(LeftRight(leftTitle: "Mobile Number", rightTitle: mobileNumber))
+        customerDetailslr.append(LeftRight(leftTitle: "Address", rightTitle: address))
+        
+        let customerDetailsContainer = KeyValueViewContainer()
+        customerDetailsContainer.btnChange.isHidden = true
+        customerDetailsContainer.setData(section: Section(title: "Customer Details", details: customerDetailslr))
+        
+        self.stackView.addArrangedSubview(customerDetailsContainer)
+        
+        let pickupBtn = AppButton(frame: CGRect(origin: .zero, size: CGSize(width: self.stackView.frame.width, height: 100)))
+        pickupBtn.setTitle("PICK UP NOW", for: .normal)
+        pickupBtn.addTarget(self, action: #selector(self.pickuopNowButtonHandler(_:)), for: .touchUpInside)
+        self.stackView.addArrangedSubview(pickupBtn)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        var contentRect = CGRect.zero
+        for view in scrollView.subviews {
+            for subView in view.subviews {
+                contentRect = contentRect.union(subView.frame)
             }
         }
-        return cell
+        contentRect.size.height += 10.0
+        scrollView.contentSize = contentRect.size
     }
     
+    @objc func pickuopNowButtonHandler(_ sender: UIButton) {
+        let sb = UIStoryboard(storyboard: .dashboard)
+        let vc = sb.instantiateViewController(withIdentifier: MapViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 }
+
+//extension JobDetailsViewController: UITableViewDataSource, UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return data.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let item = data[indexPath.row]
+////        if item.title == "Payment Method" {
+////            let cell = tableView.dequeueReusableCell(withIdentifier: BuyAccessoriesConfirmationPaymentMethodTableViewCell.identifier, for: indexPath)
+////            return cell
+////        }
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: ConfirmBookingTableViewCell.identifier, for: indexPath) as! ConfirmBookingTableViewCell
+//        cell.setData(section: item)
+//        cell.changeCompletion = { [weak self] in
+//            if indexPath.row == 0 {
+//                if let myVehicle = self?.navigationController?.viewControllers.first(where: { $0 is MyVehicleViewController }) {
+//                    self?.navigationController?.popToViewController(myVehicle, animated: true)
+//                }
+//            } else if indexPath.row == 1 {
+//                if let selectService = self?.navigationController?.viewControllers.first(where: { $0 is SelectServicesViewController }) {
+//                    self?.navigationController?.popToViewController(selectService, animated: true)
+//                }
+//            } else if indexPath.row == 2 {
+//                if let selectMode = self?.navigationController?.viewControllers.first(where: { $0 is SelectModeViewController }) {
+//                    self?.navigationController?.popToViewController(selectMode, animated: true)
+//                }
+//            }
+//        }
+//        return cell
+//    }
+//
+//}

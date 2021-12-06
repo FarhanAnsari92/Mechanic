@@ -8,11 +8,17 @@
 import UIKit
 
 class AppButton: UIButton {
+    
+    @IBInspectable var buttonColor: UIColor = UIColor.Theme.green {
+        didSet {
+            self.backgroundColor = buttonColor
+        }
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.backgroundColor = UIColor.Theme.green
+        self.backgroundColor = buttonColor
         self.titleLabel?.font = UIFont.Poppins(.light, size: 14)
         self.setTitleColor(UIColor.white, for: .normal)
         self.layer.cornerRadius = 10

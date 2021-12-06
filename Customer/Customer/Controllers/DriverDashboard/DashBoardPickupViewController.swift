@@ -33,6 +33,7 @@ class DashBoardPickupViewController: UIViewController {
                 if let obj = ObjectMapperManager<BookingHistoryResponseModel>().map(dictionary: dictionary),
                    obj.success ?? false {
                     if let bookings = obj.bookings {
+                        print("--- ", bookings.first?.toJSON())
                         self?.jobs = bookings
                         self?.tableView.reloadData()
                     }
@@ -58,7 +59,11 @@ extension DashBoardPickupViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("- DashboardViewController -")
+        
+        let sb = UIStoryboard(storyboard: .dashboard)
+        let vc = sb.instantiateViewController(withIdentifier: JobDetailsViewController.storyboardIdentifier) as! JobDetailsViewController
+        vc.jobDetails = self.jobs?[indexPath.row]
+        self.parent?.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
