@@ -17,6 +17,7 @@ class InspectionTableViewCell: UITableViewCell {
         }
     }
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var radioView: AppRadioView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,7 @@ class InspectionTableViewCell: UITableViewCell {
     
     func set(data: InspectionModel) {
         self.lblTitle.text = data.title ?? ""
+        self.radioView.isSelected = data.isSelected
     }
     
 }

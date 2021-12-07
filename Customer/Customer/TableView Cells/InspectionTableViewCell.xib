@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InspectionTableViewCell" rowHeight="178" id="KGk-i7-Jjw" customClass="InspectionTableViewCell" customModule="Mechanic" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InspectionTableViewCell" rowHeight="178" id="KGk-i7-Jjw" customClass="InspectionTableViewCell" customModule="Mechanic" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="617" height="178"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -32,10 +32,20 @@
                                 <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5a-n2-IDi" customClass="AppRadioView" customModule="Mechanic" customModuleProvider="target">
+                                <rect key="frame" x="537" y="74" width="20" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="i5a-n2-IDi" secondAttribute="height" multiplier="1:1" id="Ir2-py-51h"/>
+                                    <constraint firstAttribute="height" constant="20" id="Onr-VE-YPz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="i5a-n2-IDi" firstAttribute="centerY" secondItem="ala-Md-u3U" secondAttribute="centerY" id="Frw-yI-uyC"/>
                             <constraint firstItem="Gnf-uC-aEg" firstAttribute="leading" secondItem="ala-Md-u3U" secondAttribute="leading" constant="20" id="LAZ-GT-aYS"/>
+                            <constraint firstAttribute="trailing" secondItem="i5a-n2-IDi" secondAttribute="trailing" constant="20" id="eei-hb-2Nd"/>
                             <constraint firstItem="Gnf-uC-aEg" firstAttribute="top" secondItem="ala-Md-u3U" secondAttribute="top" constant="20" id="l6n-3i-bvj"/>
                             <constraint firstAttribute="bottom" secondItem="Gnf-uC-aEg" secondAttribute="bottom" constant="20" id="sxn-Y6-qYe"/>
                         </constraints>
@@ -52,6 +62,7 @@
             <connections>
                 <outlet property="lblTitle" destination="Gnf-uC-aEg" id="vve-8j-Fsu"/>
                 <outlet property="parentView" destination="ala-Md-u3U" id="c1y-94-l6u"/>
+                <outlet property="radioView" destination="i5a-n2-IDi" id="07Y-Be-jMg"/>
             </connections>
             <point key="canvasLocation" x="315.21739130434787" y="61.607142857142854"/>
         </tableViewCell>

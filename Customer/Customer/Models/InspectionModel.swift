@@ -34,6 +34,7 @@ class InspectionModel: Mappable {
     var createdAt : String?
     var updatedAt : String?
     var deletedAt : String?
+    var isSelected: Bool = false
 
     required init?(map: Map) {
 

@@ -54,6 +54,14 @@
 		28356352273EE2DD008821A1 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835634F273EE2DD008821A1 /* Order.swift */; };
 		28356353273EE2DD008821A1 /* OrderResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28356350273EE2DD008821A1 /* OrderResponseModel.swift */; };
 		28356354273EE2DD008821A1 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28356351273EE2DD008821A1 /* OrderModel.swift */; };
+		28360F66275F7DA8006A6C29 /* InspectionImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F64275F7DA8006A6C29 /* InspectionImagesTableViewCell.swift */; };
+		28360F67275F7DA8006A6C29 /* InspectionImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F65275F7DA8006A6C29 /* InspectionImagesTableViewCell.xib */; };
+		28360F6B275F7ECB006A6C29 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F6A275F7ECB006A6C29 /* TitleHeaderView.swift */; };
+		28360F6C275F7ECB006A6C29 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F6A275F7ECB006A6C29 /* TitleHeaderView.swift */; };
+		28360F70275F7EDB006A6C29 /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F6F275F7EDB006A6C29 /* TitleHeaderView.xib */; };
+		28360F71275F7EDB006A6C29 /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F6F275F7EDB006A6C29 /* TitleHeaderView.xib */; };
+		28360F76275F8087006A6C29 /* InspectionCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F74275F8087006A6C29 /* InspectionCommentTableViewCell.swift */; };
+		28360F77275F8087006A6C29 /* InspectionCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F75275F8087006A6C29 /* InspectionCommentTableViewCell.xib */; };
 		28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E142706378D0071E93D /* AppLinkLabel.swift */; };
 		28373E1827063EC80071E93D /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1727063EC80071E93D /* Contact.storyboard */; };
 		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
@@ -149,7 +157,6 @@
 		2851342D271613B9002979AD /* AddNewVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342C271613B9002979AD /* AddNewVehicleViewController.swift */; };
 		28513430271616CE002979AD /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851342F271616CE002979AD /* DropDownButton.swift */; };
 		2851352B271B4E3C002979AD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851352A271B4E3C002979AD /* APIClient.swift */; };
-		286E36FA275E83240038A317 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E36F9275E83240038A317 /* MapViewController.swift */; };
 		286E36FB275E83240038A317 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E36F9275E83240038A317 /* MapViewController.swift */; };
 		286E3700275E8B900038A317 /* InspectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E36FE275E8B900038A317 /* InspectDetailsViewController.swift */; };
 		286E3706275E99C10038A317 /* InspectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E3705275E99C10038A317 /* InspectionModel.swift */; };
@@ -393,7 +400,6 @@
 		2896CDD1275688670099E70A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2896CDD0275688670099E70A /* Dashboard.storyboard */; };
 		2896CDEA27569F4B0099E70A /* DriverLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */; };
 		2896CDED2756A2470099E70A /* DriverLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDE927569F4B0099E70A /* DriverLeftMenuViewController.swift */; };
-		2896CDF02756A7A70099E70A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDCA275687F20099E70A /* DashboardViewController.swift */; };
 		2896CDF5275805890099E70A /* DashboardJobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDF3275805890099E70A /* DashboardJobTableViewCell.swift */; };
 		2896CDF6275805890099E70A /* DashboardJobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2896CDF4275805890099E70A /* DashboardJobTableViewCell.xib */; };
 		2896CDFB27589BD90099E70A /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896CDF927589BD80099E70A /* JobDetailsViewController.swift */; };
@@ -472,7 +478,6 @@
 		C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4315A270F84CE008056C5 /* MyVehicleTableViewCell.swift */; };
 		C9E4315D270F84CE008056C5 /* MyVehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E4315B270F84CE008056C5 /* MyVehicleTableViewCell.xib */; };
 		C9E5921F27254BA700EF3947 /* GoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E5921E27254BA700EF3947 /* GoogleHelper.swift */; };
-		C9E82D3E275808C5007DD3F4 /* DashBoardPickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D3D275808C5007DD3F4 /* DashBoardPickupViewController.swift */; };
 		C9E82D422758094B007DD3F4 /* DashBoardDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D412758094B007DD3F4 /* DashBoardDropViewController.swift */; };
 		C9E82D4327594D3B007DD3F4 /* DashBoardPickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D3D275808C5007DD3F4 /* DashBoardPickupViewController.swift */; };
 		C9E82D4427594D9D007DD3F4 /* DashBoardDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E82D412758094B007DD3F4 /* DashBoardDropViewController.swift */; };
@@ -531,6 +536,12 @@
 		2835634F273EE2DD008821A1 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		28356350273EE2DD008821A1 /* OrderResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderResponseModel.swift; sourceTree = "<group>"; };
 		28356351273EE2DD008821A1 /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		28360F64275F7DA8006A6C29 /* InspectionImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionImagesTableViewCell.swift; sourceTree = "<group>"; };
+		28360F65275F7DA8006A6C29 /* InspectionImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspectionImagesTableViewCell.xib; sourceTree = "<group>"; };
+		28360F6A275F7ECB006A6C29 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
+		28360F6F275F7EDB006A6C29 /* TitleHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeaderView.xib; sourceTree = "<group>"; };
+		28360F74275F8087006A6C29 /* InspectionCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionCommentTableViewCell.swift; sourceTree = "<group>"; };
+		28360F75275F8087006A6C29 /* InspectionCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspectionCommentTableViewCell.xib; sourceTree = "<group>"; };
 		28373E142706378D0071E93D /* AppLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinkLabel.swift; sourceTree = "<group>"; };
 		28373E1727063EC80071E93D /* Contact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contact.storyboard; sourceTree = "<group>"; };
 		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -1019,6 +1030,8 @@
 				284F47012746DF5D00DEF537 /* OrderInfoView.xib */,
 				2896CE21275CEA0B0099E70A /* KeyValueViewContainer.swift */,
 				2896CE28275CEA1B0099E70A /* KeyValueViewContainer.xib */,
+				28360F6A275F7ECB006A6C29 /* TitleHeaderView.swift */,
+				28360F6F275F7EDB006A6C29 /* TitleHeaderView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1164,6 +1177,10 @@
 				2896CDF4275805890099E70A /* DashboardJobTableViewCell.xib */,
 				286E3709275E9B8E0038A317 /* InspectionTableViewCell.swift */,
 				286E370A275E9B8E0038A317 /* InspectionTableViewCell.xib */,
+				28360F64275F7DA8006A6C29 /* InspectionImagesTableViewCell.swift */,
+				28360F65275F7DA8006A6C29 /* InspectionImagesTableViewCell.xib */,
+				28360F74275F8087006A6C29 /* InspectionCommentTableViewCell.swift */,
+				28360F75275F8087006A6C29 /* InspectionCommentTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -1354,6 +1371,7 @@
 				2841B45D270B949C000FA706 /* BannerViewCollectionViewCell.xib in Resources */,
 				280576F926FCFAC10035BC2B /* Poppins-ExtraBold.otf in Resources */,
 				280575C926FBA1620035BC2B /* LaunchScreen.storyboard in Resources */,
+				28360F70275F7EDB006A6C29 /* TitleHeaderView.xib in Resources */,
 				28373E1827063EC80071E93D /* Contact.storyboard in Resources */,
 				280576FA26FCFAC10035BC2B /* Poppins-Black.otf in Resources */,
 				284F47022746DF5D00DEF537 /* OrderInfoView.xib in Resources */,
@@ -1403,6 +1421,7 @@
 				2896CC0F275555CC0099E70A /* Vehicle.storyboard in Resources */,
 				2896CC10275555CC0099E70A /* TrackingBookingNumberTableViewCell.xib in Resources */,
 				2896CC11275555CC0099E70A /* Home.storyboard in Resources */,
+				28360F71275F7EDB006A6C29 /* TitleHeaderView.xib in Resources */,
 				2896CC12275555CC0099E70A /* BuyAccessoriesConfirmationBasketTableViewCell.xib in Resources */,
 				2896CC13275555CC0099E70A /* CategoryCollectionViewCell.xib in Resources */,
 				2896CC14275555CC0099E70A /* BaseStepper.xib in Resources */,
@@ -1410,6 +1429,7 @@
 				2896CC16275555CC0099E70A /* Poppins-LightItalic.ttf in Resources */,
 				2896CC17275555CC0099E70A /* Basket.storyboard in Resources */,
 				2896CC18275555CC0099E70A /* Poppins-ExtraLightItalic.ttf in Resources */,
+				28360F77275F8087006A6C29 /* InspectionCommentTableViewCell.xib in Resources */,
 				2896CC19275555CC0099E70A /* AccessoryBannerViewCollectionViewCell.xib in Resources */,
 				2896CC1A275555CC0099E70A /* Authentication.storyboard in Resources */,
 				2896CC1B275555CC0099E70A /* BookingDetailsHeader.xib in Resources */,
@@ -1441,6 +1461,7 @@
 				2896CC34275555CC0099E70A /* LaunchScreen.storyboard in Resources */,
 				2896CC35275555CC0099E70A /* Contact.storyboard in Resources */,
 				2896CC36275555CC0099E70A /* Poppins-Black.otf in Resources */,
+				28360F67275F7DA8006A6C29 /* InspectionImagesTableViewCell.xib in Resources */,
 				2896CC37275555CC0099E70A /* OrderInfoView.xib in Resources */,
 				2896CDD1275688670099E70A /* Dashboard.storyboard in Resources */,
 				2896CC38275555CC0099E70A /* LeftMenuTableViewCell.xib in Resources */,
@@ -1647,7 +1668,6 @@
 				2851352B271B4E3C002979AD /* APIClient.swift in Sources */,
 				2835634A273C5363008821A1 /* ImageCacheManager.swift in Sources */,
 				28356347273C4D96008821A1 /* ProductModel.swift in Sources */,
-				286E36FA275E83240038A317 /* MapViewController.swift in Sources */,
 				C96B9C4D271EE7D7006D9EF8 /* ServiceResponseModel.swift in Sources */,
 				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
@@ -1771,6 +1791,7 @@
 				2841B452270B9200000FA706 /* BannerView.swift in Sources */,
 				2841B2CD2707A696000FA706 /* TrackingViewController.swift in Sources */,
 				28512E2F2711BAD4002979AD /* ProductReviewsView.swift in Sources */,
+				28360F6B275F7ECB006A6C29 /* TitleHeaderView.swift in Sources */,
 				2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				28512E232711B8CF002979AD /* ProductDetailsAndRatingsView.swift in Sources */,
@@ -1780,13 +1801,11 @@
 				C9E82D422758094B007DD3F4 /* DashBoardDropViewController.swift in Sources */,
 				280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */,
 				289805A327106B8C002565B6 /* BuyAccessoriesConfirmationPaymentMethodTableViewCell.swift in Sources */,
-				C9E82D3E275808C5007DD3F4 /* DashBoardPickupViewController.swift in Sources */,
 				289802E8270E29F1002565B6 /* ChatViewController.swift in Sources */,
 				28DDE814271E0AB500788D46 /* BrandResponseModel.swift in Sources */,
 				C9E4315C270F84CE008056C5 /* MyVehicleTableViewCell.swift in Sources */,
 				2851342A27160F72002979AD /* BaseView.swift in Sources */,
 				C9E5921F27254BA700EF3947 /* GoogleHelper.swift in Sources */,
-				2896CDF02756A7A70099E70A /* DashboardViewController.swift in Sources */,
 				28512E882713486C002979AD /* ButtonCollectionViewCell.swift in Sources */,
 				2896CE22275CEA0B0099E70A /* KeyValueViewContainer.swift in Sources */,
 				287BC6EA272573D400AF5978 /* Cart.swift in Sources */,
@@ -1864,6 +1883,7 @@
 				2896CBB4275555CC0099E70A /* BaseStepper.swift in Sources */,
 				2896CBB5275555CC0099E70A /* OrderHistoryViewController.swift in Sources */,
 				2896CBB6275555CC0099E70A /* CategoryModel.swift in Sources */,
+				28360F76275F8087006A6C29 /* InspectionCommentTableViewCell.swift in Sources */,
 				2896CBB7275555CC0099E70A /* City.swift in Sources */,
 				2896CBB8275555CC0099E70A /* ChatSenderTableViewCell.swift in Sources */,
 				2896CBB9275555CC0099E70A /* BaseNavigationController.swift in Sources */,
@@ -1908,6 +1928,7 @@
 				2896CBDE275555CC0099E70A /* RegistrationDataModel.swift in Sources */,
 				2896CBDF275555CC0099E70A /* ServiceModel.swift in Sources */,
 				2896CDED2756A2470099E70A /* DriverLeftMenuViewController.swift in Sources */,
+				28360F6C275F7ECB006A6C29 /* TitleHeaderView.swift in Sources */,
 				2896CBE0275555CC0099E70A /* BasketTableViewCell.swift in Sources */,
 				2896CBE1275555CC0099E70A /* Dynamic.swift in Sources */,
 				2896CBE2275555CC0099E70A /* BookingDetailsTableViewCell.swift in Sources */,
@@ -1920,6 +1941,7 @@
 				2896CBE8275555CC0099E70A /* HomeBaseNavigationController.swift in Sources */,
 				2896CBE9275555CC0099E70A /* RoleModel.swift in Sources */,
 				2896CBEA275555CC0099E70A /* ChatReceiverTableViewCell.swift in Sources */,
+				28360F66275F7DA8006A6C29 /* InspectionImagesTableViewCell.swift in Sources */,
 				2896CBEB275555CC0099E70A /* LeftMenuViewController.swift in Sources */,
 				2896CBEC275555CC0099E70A /* AuthTextField.swift in Sources */,
 				2896CBED275555CC0099E70A /* FilterAccessoryViewController.swift in Sources */,
