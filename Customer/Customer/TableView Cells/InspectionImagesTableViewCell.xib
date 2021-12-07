@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,25 +14,41 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InspectionImagesTableViewCell" rowHeight="92" id="KGk-i7-Jjw" customClass="InspectionImagesTableViewCell" customModule="Mechanic" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="453" height="92"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="453" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images Of CollectionView Will Go Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOA-gT-J1I">
-                        <rect key="frame" x="80" y="20" width="293.5" height="52"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DMl-g8-GpA">
+                        <rect key="frame" x="20" y="5" width="413" height="80"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="bxN-rt-Amk"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8lU-U7-nJh">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hOA-gT-J1I" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bSe-Vs-4sT"/>
-                    <constraint firstAttribute="bottom" secondItem="hOA-gT-J1I" secondAttribute="bottom" constant="20" id="cYz-i9-jR6"/>
-                    <constraint firstItem="hOA-gT-J1I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="jmW-Hi-pmU"/>
+                    <constraint firstAttribute="trailing" secondItem="DMl-g8-GpA" secondAttribute="trailing" constant="20" id="LFr-2J-5TF"/>
+                    <constraint firstItem="DMl-g8-GpA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="MKU-R3-qHw"/>
+                    <constraint firstAttribute="bottom" secondItem="DMl-g8-GpA" secondAttribute="bottom" constant="5" id="beT-OT-YVo"/>
+                    <constraint firstItem="DMl-g8-GpA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="duc-83-ko9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="DMl-g8-GpA" id="vvV-Jy-EC3"/>
+            </connections>
             <point key="canvasLocation" x="121.0144927536232" y="50.892857142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

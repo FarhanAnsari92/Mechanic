@@ -62,6 +62,10 @@
 		28360F71275F7EDB006A6C29 /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F6F275F7EDB006A6C29 /* TitleHeaderView.xib */; };
 		28360F76275F8087006A6C29 /* InspectionCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F74275F8087006A6C29 /* InspectionCommentTableViewCell.swift */; };
 		28360F77275F8087006A6C29 /* InspectionCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F75275F8087006A6C29 /* InspectionCommentTableViewCell.xib */; };
+		28360F7C275FBE57006A6C29 /* InspectionAudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F7A275FBE57006A6C29 /* InspectionAudioTableViewCell.swift */; };
+		28360F7D275FBE57006A6C29 /* InspectionAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F7B275FBE57006A6C29 /* InspectionAudioTableViewCell.xib */; };
+		28360F82275FC372006A6C29 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F80275FC372006A6C29 /* ImageCollectionViewCell.swift */; };
+		28360F83275FC372006A6C29 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F81275FC372006A6C29 /* ImageCollectionViewCell.xib */; };
 		28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E142706378D0071E93D /* AppLinkLabel.swift */; };
 		28373E1827063EC80071E93D /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1727063EC80071E93D /* Contact.storyboard */; };
 		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
@@ -542,6 +546,10 @@
 		28360F6F275F7EDB006A6C29 /* TitleHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeaderView.xib; sourceTree = "<group>"; };
 		28360F74275F8087006A6C29 /* InspectionCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionCommentTableViewCell.swift; sourceTree = "<group>"; };
 		28360F75275F8087006A6C29 /* InspectionCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspectionCommentTableViewCell.xib; sourceTree = "<group>"; };
+		28360F7A275FBE57006A6C29 /* InspectionAudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionAudioTableViewCell.swift; sourceTree = "<group>"; };
+		28360F7B275FBE57006A6C29 /* InspectionAudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspectionAudioTableViewCell.xib; sourceTree = "<group>"; };
+		28360F80275FC372006A6C29 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		28360F81275FC372006A6C29 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		28373E142706378D0071E93D /* AppLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinkLabel.swift; sourceTree = "<group>"; };
 		28373E1727063EC80071E93D /* Contact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contact.storyboard; sourceTree = "<group>"; };
 		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -1056,6 +1064,8 @@
 				284F475E27496CBD00DEF537 /* CategoryListCollectionViewCell.xib */,
 				284F476227496E3100DEF537 /* CategoryCollectionViewCell.swift */,
 				284F476327496E3100DEF537 /* CategoryCollectionViewCell.xib */,
+				28360F80275FC372006A6C29 /* ImageCollectionViewCell.swift */,
+				28360F81275FC372006A6C29 /* ImageCollectionViewCell.xib */,
 			);
 			path = "ColletionView Cells";
 			sourceTree = "<group>";
@@ -1181,6 +1191,8 @@
 				28360F65275F7DA8006A6C29 /* InspectionImagesTableViewCell.xib */,
 				28360F74275F8087006A6C29 /* InspectionCommentTableViewCell.swift */,
 				28360F75275F8087006A6C29 /* InspectionCommentTableViewCell.xib */,
+				28360F7A275FBE57006A6C29 /* InspectionAudioTableViewCell.swift */,
+				28360F7B275FBE57006A6C29 /* InspectionAudioTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -1440,9 +1452,11 @@
 				2896CC20275555CC0099E70A /* Address.storyboard in Resources */,
 				2896CC21275555CC0099E70A /* AccessoriesCollectionViewCell.xib in Resources */,
 				2896CC22275555CC0099E70A /* Accessories.storyboard in Resources */,
+				28360F7D275FBE57006A6C29 /* InspectionAudioTableViewCell.xib in Resources */,
 				2896CC23275555CC0099E70A /* Poppins-ThinItalic.otf in Resources */,
 				2896CC24275555CC0099E70A /* ProductReviewsView.xib in Resources */,
 				2896CC25275555CC0099E70A /* Poppins-SemiBold.otf in Resources */,
+				28360F83275FC372006A6C29 /* ImageCollectionViewCell.xib in Resources */,
 				2896CC26275555CC0099E70A /* TrackingStatusTableViewCell.xib in Resources */,
 				2896CDF6275805890099E70A /* DashboardJobTableViewCell.xib in Resources */,
 				2896CC27275555CC0099E70A /* BookingHistoryTableViewCell.xib in Resources */,
@@ -1906,6 +1920,7 @@
 				2896CBC8275555CC0099E70A /* ModelVehicle.swift in Sources */,
 				2896CBC9275555CC0099E70A /* TopPickTableViewCell.swift in Sources */,
 				2896CBCA275555CC0099E70A /* FilterSortTableViewCell.swift in Sources */,
+				28360F7C275FBE57006A6C29 /* InspectionAudioTableViewCell.swift in Sources */,
 				2896CBCB275555CC0099E70A /* BookingDetailsViewController.swift in Sources */,
 				2896CBCC275555CC0099E70A /* AppLinkLabel.swift in Sources */,
 				2896CBCD275555CC0099E70A /* ImageTableViewCell.swift in Sources */,
@@ -1913,6 +1928,7 @@
 				2896CBCF275555CC0099E70A /* ProductBaseModel.swift in Sources */,
 				2896CBD0275555CC0099E70A /* GetVehicleModel.swift in Sources */,
 				2896CBD1275555CC0099E70A /* Category.swift in Sources */,
+				28360F82275FC372006A6C29 /* ImageCollectionViewCell.swift in Sources */,
 				2896CBD2275555CC0099E70A /* NibDesignable.swift in Sources */,
 				2896CBD3275555CC0099E70A /* HomeBaseViewController.swift in Sources */,
 				2896CBD4275555CC0099E70A /* FilterViewModel.swift in Sources */,

@@ -19,7 +19,7 @@ class InspectDetailsViewController: UIViewController {
             tableView.register(InspectionTableViewCell.nib, forCellReuseIdentifier: InspectionTableViewCell.identifier)
             tableView.register(InspectionImagesTableViewCell.nib, forCellReuseIdentifier: InspectionImagesTableViewCell.identifier)
             tableView.register(InspectionCommentTableViewCell.nib, forCellReuseIdentifier: InspectionCommentTableViewCell.identifier)
-            
+            tableView.register(InspectionAudioTableViewCell.nib, forCellReuseIdentifier: InspectionAudioTableViewCell.identifier)
             
         }
     }
@@ -77,27 +77,7 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
             headerView.lblTitle.text = "Add Comments"
         }
         
-        return headerView
-        
-//        let vu = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width / 2, height: 35))
-//        vu.backgroundColor = .white
-//        let lbl = UILabel(frame: CGRect(x: 20, y: 10, width: self.view.frame.width / 2, height: 25))
-//        switch section {
-//        case 0:
-//            lbl.text = "Add Photo"
-//
-//        case 1:
-//            lbl.text = "Inspection List"
-//
-//        case 2:
-//            lbl.text = "Record Audio Message"
-//        default:
-//            lbl.text = "Add Comments"
-//        }
-//
-//        lbl.font = UIFont.Poppins(.semiBold, size: 18)
-//        vu.addSubview(lbl)
-//        return vu
+        return headerView        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,6 +93,10 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: InspectionImagesTableViewCell.identifier, for: indexPath) as! InspectionImagesTableViewCell
+            var images = [UIImage]()
+            images.append(UIImage(named: "ic_photo")!)
+            images.append(UIImage(named: "ic_mic")!)
+            cell.set(data: images)
             
             return cell
             
@@ -121,6 +105,12 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
             if let inspection = self.inspections?[indexPath.row] {
                 cell.set(data: inspection)
             }
+            return cell
+            
+        case 2:
+                        
+            let cell = tableView.dequeueReusableCell(withIdentifier: InspectionAudioTableViewCell.identifier, for: indexPath) as! InspectionAudioTableViewCell
+            
             return cell
             
         case 3:
@@ -135,8 +125,20 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.inspections?[indexPath.row].isSelected.toggle()
-        self.tableView.reloadSections(IndexSet(integer: 1), with: .fade)
+        switch indexPath.section {
+        case 0:
+            print("open photo")
+            
+        case 1:
+            self.inspections?[indexPath.row].isSelected.toggle()
+            self.tableView.reloadSections(IndexSet(integer: 1), with: .fade)
+            
+        case 2:
+            print("record audio")
+            
+        default:
+            break
+        }
     }
     
 }
