@@ -25,6 +25,7 @@ class InspectDetailsViewController: UIViewController {
     }
     
     var inspections: [InspectionModel]?
+    var images = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,10 +94,10 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: InspectionImagesTableViewCell.identifier, for: indexPath) as! InspectionImagesTableViewCell
-            var images = [UIImage]()
-            images.append(UIImage(named: "ic_photo")!)
-            images.append(UIImage(named: "ic_mic")!)
-            cell.set(data: images)
+            cell.selectImageCompletion = { [weak self] in
+                self?.openActionSheet()
+            }
+            cell.set(data: self.images)
             
             return cell
             
@@ -135,10 +136,68 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
             
         case 2:
             print("record audio")
+            let audioPopup = AudioPlayerPopupViewController()
+            self.present(audioPopup, animated: true, completion: nil)
             
         default:
             break
         }
+    }
+    
+}
+
+extension InspectDetailsViewController: UIImagePickerControllerDelegate {
+    
+    func openActionSheet() {
+        let alert = UIAlertController(title: "Select Image", message: "Select Image", preferredStyle: .actionSheet)
+        
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default) { [weak self] action in
+            alert.dismiss(animated: true, completion: nil)
+            guard let self = self else { return }
+            PermissionManager.shared.requestAccess(vc: self, .cameraUsage) { isAllowed in
+                if isAllowed {
+                    self.openImagePicker(sourceType: .photoLibrary)
+                }
+            }
+        }
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] action in
+            alert.dismiss(animated: true, completion: nil)
+            guard let self = self else { return }
+            PermissionManager.shared.requestAccess(vc: self, .photoLibraryUsage) { isAllowed in
+                if isAllowed {
+                    self.openImagePicker(sourceType: .camera)
+                }
+            }
+        }
+        
+        alert.addAction(galleryAction)
+        alert.addAction(cameraAction)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in alert.dismiss(animated: true, completion: nil) }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func openImagePicker(sourceType: UIImagePickerController.SourceType) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let picker = UIImagePickerController()
+            picker.sourceType = sourceType
+            picker.allowsEditing = true
+            picker.delegate = self
+            picker.modalPresentationStyle = .fullScreen
+            self.present(picker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let originalImage = info[.originalImage] as? UIImage {
+            self.images.append(originalImage)
+        } else if let editedImage = info[.editedImage] as? UIImage {
+            self.images.append(editedImage)
+        }
+        self.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }

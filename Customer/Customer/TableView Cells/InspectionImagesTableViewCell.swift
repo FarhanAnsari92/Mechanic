@@ -17,6 +17,7 @@ class InspectionImagesTableViewCell: UITableViewCell {
             collectionView.register(ImageCollectionViewCell.nib, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         }
     }
+    var selectImageCompletion: (() -> Void)?
     
     var images: [UIImage] = [UIImage]()
 
@@ -40,13 +41,22 @@ class InspectionImagesTableViewCell: UITableViewCell {
 
 extension InspectionImagesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 1 { return 1 }
         return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as! ImageCollectionViewCell
-        cell.imgView.image = self.images[indexPath.row]
+        if indexPath.section == 1 {
+            cell.imgView.image = UIImage(named: "ic_photo")
+        } else {
+            cell.imgView.image = self.images[indexPath.row]
+        }
         return cell
     }
     
@@ -57,7 +67,9 @@ extension InspectionImagesTableViewCell: UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("open action sheet")
+        if indexPath.section == 1 {
+            selectImageCompletion?()
+        }
     }
     
 }

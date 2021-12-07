@@ -66,6 +66,12 @@
 		28360F7D275FBE57006A6C29 /* InspectionAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F7B275FBE57006A6C29 /* InspectionAudioTableViewCell.xib */; };
 		28360F82275FC372006A6C29 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F80275FC372006A6C29 /* ImageCollectionViewCell.swift */; };
 		28360F83275FC372006A6C29 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F81275FC372006A6C29 /* ImageCollectionViewCell.xib */; };
+		28360F88275FE3C3006A6C29 /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F87275FE3C3006A6C29 /* BasePopupViewController.swift */; };
+		28360F89275FE3C3006A6C29 /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F87275FE3C3006A6C29 /* BasePopupViewController.swift */; };
+		28360F90275FE45F006A6C29 /* AudioPlayerPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F8F275FE45F006A6C29 /* AudioPlayerPopupViewController.swift */; };
+		28360F91275FE45F006A6C29 /* AudioPlayerPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360F8F275FE45F006A6C29 /* AudioPlayerPopupViewController.swift */; };
+		28360F97275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F96275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib */; };
+		28360F98275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28360F96275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib */; };
 		28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E142706378D0071E93D /* AppLinkLabel.swift */; };
 		28373E1827063EC80071E93D /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28373E1727063EC80071E93D /* Contact.storyboard */; };
 		28373E1C270642E80071E93D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373E1B270642E80071E93D /* ContactUsViewController.swift */; };
@@ -550,6 +556,9 @@
 		28360F7B275FBE57006A6C29 /* InspectionAudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspectionAudioTableViewCell.xib; sourceTree = "<group>"; };
 		28360F80275FC372006A6C29 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		28360F81275FC372006A6C29 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		28360F87275FE3C3006A6C29 /* BasePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePopupViewController.swift; sourceTree = "<group>"; };
+		28360F8F275FE45F006A6C29 /* AudioPlayerPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerPopupViewController.swift; sourceTree = "<group>"; };
+		28360F96275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayerPopupViewController.xib; sourceTree = "<group>"; };
 		28373E142706378D0071E93D /* AppLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinkLabel.swift; sourceTree = "<group>"; };
 		28373E1727063EC80071E93D /* Contact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contact.storyboard; sourceTree = "<group>"; };
 		28373E1B270642E80071E93D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -943,6 +952,24 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		28360F86275FE3AB006A6C29 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				28360F87275FE3C3006A6C29 /* BasePopupViewController.swift */,
+				28360F8E275FE438006A6C29 /* AudioPlayer */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		28360F8E275FE438006A6C29 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				28360F8F275FE45F006A6C29 /* AudioPlayerPopupViewController.swift */,
+				28360F96275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
 		28373E1A270642D00071E93D /* Contact */ = {
 			isa = PBXGroup;
 			children = (
@@ -1008,6 +1035,7 @@
 		2841B2ED2708BB40000FA706 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				28360F86275FE3AB006A6C29 /* Popups */,
 				2841B450270B9200000FA706 /* BannerView.swift */,
 				2841B451270B9200000FA706 /* BannerView.xib */,
 				2841B2EE2708BB6D000FA706 /* FixMyVehicleView.swift */,
@@ -1383,6 +1411,7 @@
 				2841B45D270B949C000FA706 /* BannerViewCollectionViewCell.xib in Resources */,
 				280576F926FCFAC10035BC2B /* Poppins-ExtraBold.otf in Resources */,
 				280575C926FBA1620035BC2B /* LaunchScreen.storyboard in Resources */,
+				28360F97275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib in Resources */,
 				28360F70275F7EDB006A6C29 /* TitleHeaderView.xib in Resources */,
 				28373E1827063EC80071E93D /* Contact.storyboard in Resources */,
 				280576FA26FCFAC10035BC2B /* Poppins-Black.otf in Resources */,
@@ -1446,6 +1475,7 @@
 				2896CC1A275555CC0099E70A /* Authentication.storyboard in Resources */,
 				2896CC1B275555CC0099E70A /* BookingDetailsHeader.xib in Resources */,
 				2896CC1C275555CC0099E70A /* OrderHistoryTableViewCell.xib in Resources */,
+				28360F98275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib in Resources */,
 				2896CC1D275555CC0099E70A /* Poppins-Light.ttf in Resources */,
 				2896CC1E275555CC0099E70A /* Poppins-SemiBoldItalic.otf in Resources */,
 				2896CC1F275555CC0099E70A /* ChatReceiverTableViewCell.xib in Resources */,
@@ -1716,8 +1746,10 @@
 				28512E7C27133E0D002979AD /* SingleSelectionView.swift in Sources */,
 				2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */,
 				28DDE807271E018300788D46 /* User.swift in Sources */,
+				28360F90275FE45F006A6C29 /* AudioPlayerPopupViewController.swift in Sources */,
 				2898055527105589002565B6 /* BasketView.swift in Sources */,
 				2841B2E7270846D9000FA706 /* BookingHistoryTableViewCell.swift in Sources */,
+				28360F88275FE3C3006A6C29 /* BasePopupViewController.swift in Sources */,
 				28512E292711BA02002979AD /* ProductDetailsView.swift in Sources */,
 				2841B304270A455C000FA706 /* AccessoriesCollectionViewCell.swift in Sources */,
 				2841B2D62707A916000FA706 /* TrackingBookingNumberTableViewCell.swift in Sources */,
@@ -1859,6 +1891,7 @@
 				2896CB8F275555CC0099E70A /* SelectWorkshopViewController.swift in Sources */,
 				2896CB90275555CC0099E70A /* AppRoute.swift in Sources */,
 				2896CB91275555CC0099E70A /* SelectServicesTableViewCell.swift in Sources */,
+				28360F89275FE3C3006A6C29 /* BasePopupViewController.swift in Sources */,
 				2896CB92275555CC0099E70A /* UserModel.swift in Sources */,
 				2896CB93275555CC0099E70A /* AppDelegate.swift in Sources */,
 				2896CB94275555CC0099E70A /* ImageModel.swift in Sources */,
@@ -1944,6 +1977,7 @@
 				2896CBDE275555CC0099E70A /* RegistrationDataModel.swift in Sources */,
 				2896CBDF275555CC0099E70A /* ServiceModel.swift in Sources */,
 				2896CDED2756A2470099E70A /* DriverLeftMenuViewController.swift in Sources */,
+				28360F91275FE45F006A6C29 /* AudioPlayerPopupViewController.swift in Sources */,
 				28360F6C275F7ECB006A6C29 /* TitleHeaderView.swift in Sources */,
 				2896CBE0275555CC0099E70A /* BasketTableViewCell.swift in Sources */,
 				2896CBE1275555CC0099E70A /* Dynamic.swift in Sources */,
