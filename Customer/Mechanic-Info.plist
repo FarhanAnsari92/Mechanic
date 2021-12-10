@@ -51,6 +51,8 @@
 	<string>App will try to access your location for better use</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App will try to access your location for better use</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>In order to record voice, app needs your permission</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

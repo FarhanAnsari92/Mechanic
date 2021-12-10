@@ -136,8 +136,12 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
             
         case 2:
             print("record audio")
-            let audioPopup = AudioPlayerPopupViewController()
-            self.present(audioPopup, animated: true, completion: nil)
+            PermissionManager.shared.requestAccess(vc: self, .microphoneUsage) { isAllowed in
+                if isAllowed {
+                    let audioPopup = AudioPlayerPopupViewController()
+                    self.present(audioPopup, animated: true, completion: nil)
+                }
+            }
             
         default:
             break
@@ -154,7 +158,7 @@ extension InspectDetailsViewController: UIImagePickerControllerDelegate {
         let galleryAction = UIAlertAction(title: "Gallery", style: .default) { [weak self] action in
             alert.dismiss(animated: true, completion: nil)
             guard let self = self else { return }
-            PermissionManager.shared.requestAccess(vc: self, .cameraUsage) { isAllowed in
+            PermissionManager.shared.requestAccess(vc: self, .photoLibraryUsage) { isAllowed in
                 if isAllowed {
                     self.openImagePicker(sourceType: .photoLibrary)
                 }
@@ -164,7 +168,7 @@ extension InspectDetailsViewController: UIImagePickerControllerDelegate {
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] action in
             alert.dismiss(animated: true, completion: nil)
             guard let self = self else { return }
-            PermissionManager.shared.requestAccess(vc: self, .photoLibraryUsage) { isAllowed in
+            PermissionManager.shared.requestAccess(vc: self, .cameraUsage) { isAllowed in
                 if isAllowed {
                     self.openImagePicker(sourceType: .camera)
                 }

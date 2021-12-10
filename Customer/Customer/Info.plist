@@ -30,6 +30,8 @@
 	<string>App will try to access your location for better use</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Required</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>In order to record voice, app needs your permission</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Black.otf</string>

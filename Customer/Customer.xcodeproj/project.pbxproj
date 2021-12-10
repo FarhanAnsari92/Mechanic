@@ -83,6 +83,10 @@
 		2840A44B271C1E620091250F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A44A271C1E620091250F /* UserModel.swift */; };
 		2840A44E271C22DA0091250F /* RegistrationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A44D271C22DA0091250F /* RegistrationDataModel.swift */; };
 		2840A451271C60ED0091250F /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A450271C60ED0091250F /* AppRoute.swift */; };
+		28419CDE276139B300E85773 /* HRAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28419CDC276139B300E85773 /* HRAudioPlayer.swift */; };
+		28419CDF276139B300E85773 /* HRAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28419CDC276139B300E85773 /* HRAudioPlayer.swift */; };
+		28419CE0276139B300E85773 /* HRAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28419CDD276139B300E85773 /* HRAudioRecorder.swift */; };
+		28419CE1276139B300E85773 /* HRAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28419CDD276139B300E85773 /* HRAudioRecorder.swift */; };
 		2841B2BC27078586000FA706 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BB27078586000FA706 /* ProfileViewController.swift */; };
 		2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */; };
 		2841B2C227078F37000FA706 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841B2C127078F37000FA706 /* ShadowView.swift */; };
@@ -570,6 +574,8 @@
 		2840A44A271C1E620091250F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2840A44D271C22DA0091250F /* RegistrationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDataModel.swift; sourceTree = "<group>"; };
 		2840A450271C60ED0091250F /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		28419CDC276139B300E85773 /* HRAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRAudioPlayer.swift; sourceTree = "<group>"; };
+		28419CDD276139B300E85773 /* HRAudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRAudioRecorder.swift; sourceTree = "<group>"; };
 		2841B2BB27078586000FA706 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2841B2BE27078901000FA706 /* AddNewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewController.swift; sourceTree = "<group>"; };
 		2841B2C127078F37000FA706 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -787,7 +793,6 @@
 				280575BA26FBA1570035BC2B /* Products */,
 				8E6727337FAB7580F4D09840 /* Pods */,
 				F3D35D5C440184DC2D1DAA9E /* Frameworks */,
-				2896CC61275555CD0099E70A /* Mechanic-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -807,6 +812,7 @@
 				280575C526FBA1620035BC2B /* Assets.xcassets */,
 				280575C726FBA1620035BC2B /* LaunchScreen.storyboard */,
 				280575CA26FBA1620035BC2B /* Info.plist */,
+				2896CC61275555CD0099E70A /* Mechanic-Info.plist */,
 				280575DC26FBA5160035BC2B /* Controllers */,
 				287BC6EC2725768A00AF5978 /* ViewModels */,
 				280575D826FBA4B30035BC2B /* Storyboards */,
@@ -824,6 +830,8 @@
 			isa = PBXGroup;
 			children = (
 				280575F426FBAF000035BC2B /* BaseClasses */,
+				28419CDC276139B300E85773 /* HRAudioPlayer.swift */,
+				28419CDD276139B300E85773 /* HRAudioRecorder.swift */,
 				280575D426FBA31C0035BC2B /* Constants.swift */,
 				280575E226FBA8610035BC2B /* Extensions.swift */,
 				280575E526FBA88F0035BC2B /* Storyboard.swift */,
@@ -1712,6 +1720,7 @@
 				2851352B271B4E3C002979AD /* APIClient.swift in Sources */,
 				2835634A273C5363008821A1 /* ImageCacheManager.swift in Sources */,
 				28356347273C4D96008821A1 /* ProductModel.swift in Sources */,
+				28419CDE276139B300E85773 /* HRAudioPlayer.swift in Sources */,
 				C96B9C4D271EE7D7006D9EF8 /* ServiceResponseModel.swift in Sources */,
 				28A88FB92700F24400003EB7 /* HomeViewController.swift in Sources */,
 				280577B526FE70530035BC2B /* InteractiveLinkLabel.swift in Sources */,
@@ -1776,6 +1785,7 @@
 				C95B568527131ACD000D6971 /* SelectWorkshopTableViewCell.swift in Sources */,
 				28356353273EE2DD008821A1 /* OrderResponseModel.swift in Sources */,
 				287BC10B271EC15100AF5978 /* VehicleModel.swift in Sources */,
+				28419CE0276139B300E85773 /* HRAudioRecorder.swift in Sources */,
 				284F46FF2746DF4F00DEF537 /* OrderInfoView.swift in Sources */,
 				280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */,
 				2807AA142727CC7100D5A855 /* ConfirmBookingViewModel.swift in Sources */,
@@ -1943,6 +1953,7 @@
 				286E3700275E8B900038A317 /* InspectDetailsViewController.swift in Sources */,
 				2896CBC0275555CC0099E70A /* Order.swift in Sources */,
 				2896CBC1275555CC0099E70A /* BookingHistoryViewController.swift in Sources */,
+				28419CDF276139B300E85773 /* HRAudioPlayer.swift in Sources */,
 				2896CBC2275555CC0099E70A /* ConfirmBookingViewController.swift in Sources */,
 				2896CBC3275555CC0099E70A /* AutoPartsAndAccessoriesTableViewCell.swift in Sources */,
 				2896CBC4275555CC0099E70A /* ConfirmBookingTableViewCell.swift in Sources */,
@@ -2003,6 +2014,7 @@
 				2896CBF3275555CC0099E70A /* BookingDetailsHeader.swift in Sources */,
 				2896CBF4275555CC0099E70A /* BuyAccessoriesConfirmationViewController.swift in Sources */,
 				2896CBF5275555CC0099E70A /* GetVehicleResponseModel.swift in Sources */,
+				28419CE1276139B300E85773 /* HRAudioRecorder.swift in Sources */,
 				2896CBF6275555CC0099E70A /* BannerView.swift in Sources */,
 				2896CDCB275687F20099E70A /* DashboardViewController.swift in Sources */,
 				2896CBF7275555CC0099E70A /* TrackingViewController.swift in Sources */,

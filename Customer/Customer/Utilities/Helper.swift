@@ -57,6 +57,14 @@ class Helper {
         return formattedCurrency
     }
     
+    class func stringFromTimeInterval(interval: TimeInterval) -> NSString {
+        
+        let ti = NSInteger(interval)
+        let seconds = ti % 60
+        let minutes = (ti / 60) % 60
+        return NSString(format: "%02i:%02i",minutes,seconds)
+    }
+    
     class func save(user: UserModel) {
         UserDefaults.standard.setValue(user.toJSONString(), forKey: "user")
     }
