@@ -29,7 +29,7 @@ class AudioPlayerPopupViewController: BasePopupViewController {
     }
     
     func updateCounter(duration: TimeInterval)  {
-        if duration == 5 {
+        if duration == 10 {
             recorder?.stop(completion: { [weak self] (path) in
 //                self.delegate?.didStopRecording(url: URL(fileURLWithPath: path ?? ""))
                 
@@ -37,6 +37,8 @@ class AudioPlayerPopupViewController: BasePopupViewController {
                 self.audioPlayerView.isHidden = false
                 self.submitButtonView.isHidden = false
                 print(path)
+                self.slider.minimumValue = 0
+                self.slider.maximumValue = 10.0
                 self.audioPath = path
             })
         }
@@ -79,6 +81,10 @@ class AudioPlayerPopupViewController: BasePopupViewController {
     @IBAction func playAudioButtonHandler(_ sender: UIButton) {
         if let path = self.audioPath {
             HRAudioPlayer.shared.play(url: URL(fileURLWithPath: path));
+            HRAudioPlayer.shared.seekProgressCompletion = { progress in
+                print("progress -- ", progress)
+                self.slider.value = progress ?? 0.0
+            }
         }
     }
     
