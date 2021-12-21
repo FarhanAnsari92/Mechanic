@@ -47,7 +47,8 @@ extension BasePopupViewController {
     }
     
     @objc private func onHandleTap(gesture: UITapGestureRecognizer) {
-        self.dismissPopup()
+//        self.dismissPopup()
+        // Not allowing popto dismiss when tap on blank area..
     }
 }
 

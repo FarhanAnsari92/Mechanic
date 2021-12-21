@@ -24,6 +24,7 @@ enum API: String {
     case workShops = "work-shops"
     case address = "addresses"
     case job = "jobs"
+    case updateInspectionDetails = "jobs/update-inspection-details"
     case products = "products"
     case orders = "orders"
     case categories = "categories"
@@ -39,6 +40,7 @@ enum APIVersion: String {
 enum HTTPMethod: String {
     case post = "POST"
     case get = "GET"
+    case put = "PUT"
 }
 
 class APIClient {
@@ -159,6 +161,83 @@ class APIClient {
                     if response.result.value != nil {
                         if let dictionary: [String:Any] = response.result.value! as? [String:Any] {
                             print("DATA UPLOAD SUCCESSFULLY")
+                            success(dictionary)
+                        }
+                    }
+                }
+            case .failure(let error):
+                if let _ = view {
+                    view?.hideHud()
+                }
+                print(error.localizedDescription)
+            }
+        }
+        
+        
+    }
+    
+    class func uploadInspectData(
+        api: API,
+        apiVersion: APIVersion = .v1,
+        parameters: [String:String]? = nil,
+        images: [UIImage]? = nil,
+        audioURL: URL? = nil,
+        method: HTTPMethod,
+        view: UIView? = nil,
+        success: @escaping ([String:Any]?) -> Void) {
+        
+        let path = apiVersion.rawValue + "/" + api.rawValue
+        let url: URL = URL(string: path, relativeTo: BaseURL.staging)!
+        let URLStr = url.absoluteString
+        
+        if let _ = view {
+            view?.showHud()
+        }
+        
+        Alamofire.upload(multipartFormData:
+                            {
+                                (multipartFormData) in
+                                if let images = images {
+                                    for i in 0..<images.count {
+                                        let image = images[i]
+                                        
+                                        multipartFormData.append(image.jpegData(compressionQuality: 0.3)!, withName: "images[\(i)]", fileName: "images[\(i)].jpeg", mimeType: "image/jpeg")
+                                        
+                                    }
+                                }
+                                
+                                if let audioURL = audioURL {
+                                    multipartFormData.append(audioURL, withName: "audio")
+                                }
+                                
+                                if let params = parameters {
+                                    for (key, value) in params
+                                    {
+                                        multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                                    }
+                                }
+                            },
+                         to:URLStr,
+                         headers: [
+                            "Accept": "application/json",
+                            "Content-Type": "application/json",
+                            "Authorization": "Bearer \(User.shared.getUser()?.accessToken ?? "")"
+                         ]
+        )
+        { (result) in
+
+            switch result {
+            case .success(let upload,_,_ ):
+                upload.uploadProgress(closure: { (progress) in
+                    print(progress)
+                })
+                upload.responseJSON
+                { response in
+                    if response.result.value != nil {
+                        if let dictionary: [String:Any] = response.result.value! as? [String:Any] {
+                            if let _ = view {
+                                view?.hideHud()
+                            }
                             success(dictionary)
                         }
                     }

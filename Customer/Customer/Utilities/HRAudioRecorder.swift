@@ -14,7 +14,7 @@ import AVFoundation
     func record(atPath path: String)
     func pause()
     func resume()
-    func stop(completion: @escaping (String?) -> ())
+    func stop(completion: @escaping (String?, URL?) -> ())
     @objc optional func progressUpdate(block: @escaping (CGFloat) -> Void)
 }
 
@@ -24,7 +24,7 @@ final class HRAudioRecorder: NSObject, Recorder
     
     fileprivate var timer: Timer!
     private var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
-    private var audioRecorder : AVAudioRecorder!
+    var audioRecorder : AVAudioRecorder!
     private var settings =   [  AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
                                 AVSampleRateKey: 12000,
                                 AVNumberOfChannelsKey: 1,
@@ -34,7 +34,7 @@ final class HRAudioRecorder: NSObject, Recorder
     var duration = CGFloat()
     
     private var filePath: String?
-    var completionBlock: ((String?) -> ())?
+    var completionBlock: ((String?, URL?) -> ())?
     private var durationBlock: ((CGFloat) -> Void)?
     
     private func setup(ForPath path: String) {
@@ -84,7 +84,7 @@ final class HRAudioRecorder: NSObject, Recorder
         }
     }
     
-    func stop(completion: @escaping (String?) -> ()) {
+    func stop(completion: @escaping (String?, URL?) -> ()) {
         completionBlock = completion
         if let recorder = audioRecorder {
             recorder.stop()
@@ -101,7 +101,7 @@ final class HRAudioRecorder: NSObject, Recorder
     
     @objc func updateDuration() {
         if duration >= 60 {
-            completionBlock?(self.filePath)
+            completionBlock?(self.filePath, self.audioRecorder.url)
             timer.invalidate()
             state = .stop
             return
@@ -122,14 +122,14 @@ final class HRAudioRecorder: NSObject, Recorder
 extension HRAudioRecorder: AVAudioRecorderDelegate
 {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        completionBlock?(self.filePath)
+        completionBlock?(self.filePath, recorder.url)
         timer.invalidate()
         state = .stop
         debugPrint("recording \(flag ? "done" : "failed")")
     }
     
     func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
-        completionBlock?(nil)
+        completionBlock?(nil, nil)
         state = .stop
         timer.invalidate()
         debugPrint("error")

@@ -11,6 +11,7 @@ import GoogleMaps
 class MapViewController: UIViewController {
     
     @IBOutlet weak var gmsMapView: GMSMapView!
+    var jobDetails: BookingHistoryModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,8 @@ class MapViewController: UIViewController {
     
     @IBAction func reachedDestinationButtonHandler(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .dashboard)
-        let vc = sb.instantiateViewController(withIdentifier: InspectDetailsViewController.storyboardIdentifier)
+        let vc = sb.instantiateViewController(withIdentifier: InspectDetailsViewController.storyboardIdentifier) as! InspectDetailsViewController
+        vc.jobDetails = self.jobDetails
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

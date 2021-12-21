@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioPlayerPopupViewController" customModule="Customer" customModuleProvider="target">
             <connections>
                 <outlet property="audioPlayerView" destination="8kP-3b-wnm" id="Ihq-dN-PTr"/>
+                <outlet property="btnRecorder" destination="hGF-uf-BIV" id="tGy-1T-jxs"/>
                 <outlet property="containerView" destination="lm0-a6-YgM" id="qtk-4N-gRV"/>
                 <outlet property="lblRecordingDuration" destination="hc1-Gm-r9H" id="A7z-1j-hfv"/>
                 <outlet property="slider" destination="iAT-Th-mOo" id="luC-Mk-C8L"/>
@@ -44,9 +45,13 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mic" translatesAutoresizingMaskIntoConstraints="NO" id="GLY-bh-Kd7">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-uf-BIV">
                                     <rect key="frame" x="0.0" y="100" width="334" height="100"/>
-                                </imageView>
+                                    <state key="normal" image="ic_mic"/>
+                                    <connections>
+                                        <action selector="recordAudioActionButtonHandler:" destination="-1" eventType="touchUpInside" id="5L6-Ug-iA6"/>
+                                    </connections>
+                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-Gm-r9H">
                                     <rect key="frame" x="0.0" y="200" width="334" height="100"/>
                                     <constraints>

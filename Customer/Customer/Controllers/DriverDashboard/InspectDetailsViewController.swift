@@ -24,8 +24,12 @@ class InspectDetailsViewController: UIViewController {
         }
     }
     
+    var jobDetails: BookingHistoryModel?
+    
     var inspections: [InspectionModel]?
     var images = [UIImage]()
+    var audioPath: String?
+    var audioURL: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +50,35 @@ class InspectDetailsViewController: UIViewController {
             } else {
                 print("Unable to parse")
             }
+        }
+    }
+    
+    @IBAction func submitDataButtonHandler(_ sender: UIButton) { // Mark as collected
+        var params = [String:String]()
+        params["job_id"] = self.jobDetails?.id?.description
+        params["rider_note"] = "some rider note"
+        
+        var inspectionItems: String = ""
+        self.inspections?.forEach({ inspectionModel in
+            if inspectionModel.isSelected {
+                if inspectionItems.count > 0 {
+                    inspectionItems += "," + (inspectionModel.id?.description ?? "")
+                } else {
+                    inspectionItems += inspectionModel.id?.description ?? ""
+                }
+            }
+        })
+        params["inspection_items"] = inspectionItems
+        print("Parameters - ", params)
+        
+        var imagesToUpload: [UIImage]? = nil
+        if self.images.count > 0 {
+            imagesToUpload = self.images
+        }
+        APIClient.uploadInspectData(api: .updateInspectionDetails, parameters: params, images: imagesToUpload, audioURL: self.audioURL, method: .post, view: self.view) { (dictionary) in
+            print("==============================")
+            print(dictionary)
+            print("==============================")
         }
     }
 
@@ -136,9 +169,11 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
             
         case 2:
             print("record audio")
-            PermissionManager.shared.requestAccess(vc: self, .microphoneUsage) { isAllowed in
+            PermissionManager.shared.requestAccess(vc: self, .microphoneUsage) { [weak self] isAllowed in
+                guard let self = self else { return }
                 if isAllowed {
                     let audioPopup = AudioPlayerPopupViewController()
+                    audioPopup.delegate = self
                     self.present(audioPopup, animated: true, completion: nil)
                 }
             }
@@ -148,6 +183,14 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
         }
     }
     
+}
+
+extension InspectDetailsViewController: AudioPlayerPopupViewControllerDelegate {
+    func didRecordAudio(path: String?, url: URL?) {
+        print("received audio url in Controlleer to use - ", url)
+        self.audioPath = path
+        self.audioURL = url
+    }
 }
 
 extension InspectDetailsViewController: UIImagePickerControllerDelegate {

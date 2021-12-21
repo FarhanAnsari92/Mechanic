@@ -212,6 +212,9 @@
                                     <constraint firstAttribute="height" constant="55" id="F8g-5Y-fN7"/>
                                 </constraints>
                                 <state key="normal" title="Mark As Collected"/>
+                                <connections>
+                                    <action selector="submitDataButtonHandler:" destination="lkh-LG-Ga0" eventType="touchUpInside" id="Oaj-Cj-xsL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hE2-12-fZO"/>
