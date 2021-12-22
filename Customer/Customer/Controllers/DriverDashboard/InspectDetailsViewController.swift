@@ -20,6 +20,7 @@ class InspectDetailsViewController: UIViewController {
             tableView.register(InspectionImagesTableViewCell.nib, forCellReuseIdentifier: InspectionImagesTableViewCell.identifier)
             tableView.register(InspectionCommentTableViewCell.nib, forCellReuseIdentifier: InspectionCommentTableViewCell.identifier)
             tableView.register(InspectionAudioTableViewCell.nib, forCellReuseIdentifier: InspectionAudioTableViewCell.identifier)
+            tableView.register(AudioPlayerTableViewCell.nib, forCellReuseIdentifier: AudioPlayerTableViewCell.identifier)
             
         }
     }
@@ -28,8 +29,7 @@ class InspectDetailsViewController: UIViewController {
     
     var inspections: [InspectionModel]?
     var images = [UIImage]()
-    var audioPath: String?
-    var audioURL: URL?
+    var audio: Audio?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +75,7 @@ class InspectDetailsViewController: UIViewController {
         if self.images.count > 0 {
             imagesToUpload = self.images
         }
-        APIClient.uploadInspectData(api: .updateInspectionDetails, parameters: params, images: imagesToUpload, audioURL: self.audioURL, method: .post, view: self.view) { (dictionary) in
+        APIClient.uploadInspectData(api: .updateInspectionDetails, parameters: params, images: imagesToUpload, audioURL: self.audio?.url, method: .post, view: self.view) { (dictionary) in
             print("==============================")
             print(dictionary)
             print("==============================")
@@ -142,7 +142,18 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
             return cell
             
         case 2:
-                        
+            if let audio = self.audio {
+                
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: AudioPlayerTableViewCell.identifier, for: indexPath) as! AudioPlayerTableViewCell
+                cell.set(audio: audio)
+                cell.removeAudioCompletion = { [weak self] in
+                    self?.audio = nil
+                    self?.tableView.reloadSections(IndexSet(integer: 2), with: .fade)
+                }
+                return cell
+                
+            }
             let cell = tableView.dequeueReusableCell(withIdentifier: InspectionAudioTableViewCell.identifier, for: indexPath) as! InspectionAudioTableViewCell
             
             return cell
@@ -186,11 +197,12 @@ extension InspectDetailsViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 extension InspectDetailsViewController: AudioPlayerPopupViewControllerDelegate {
-    func didRecordAudio(path: String?, url: URL?) {
-        print("received audio url in Controlleer to use - ", url)
-        self.audioPath = path
-        self.audioURL = url
+    
+    func didRecordAudio(audio: Audio?) {
+        self.audio = audio
+        self.tableView.reloadSections(IndexSet(integer: 2), with: .fade)
     }
+    
 }
 
 extension InspectDetailsViewController: UIImagePickerControllerDelegate {

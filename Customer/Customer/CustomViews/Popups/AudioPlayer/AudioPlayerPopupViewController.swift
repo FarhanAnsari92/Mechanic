@@ -7,8 +7,14 @@
 
 import UIKit
 
+struct Audio {
+    var path: String?
+    var url: URL?
+    var duration: Double?
+}
+
 protocol AudioPlayerPopupViewControllerDelegate: NSObjectProtocol {
-    func didRecordAudio(path: String?, url: URL?)
+    func didRecordAudio(audio: Audio?)
 }
 
 class AudioPlayerPopupViewController: BasePopupViewController {
@@ -108,12 +114,12 @@ class AudioPlayerPopupViewController: BasePopupViewController {
             recorder?.stop(completion: { [weak self] (path, url) in
                 print("Dismiss by user - ", path)
                 print("Dismiss by user - ", url)
-                self?.delegate?.didRecordAudio(path: nil, url: nil)
+                self?.delegate?.didRecordAudio(audio: nil)
                 self?.dismissPopup()
             })
         } else {
             print("audio has been being record")
-            self.delegate?.didRecordAudio(path: nil, url: nil)
+            self.delegate?.didRecordAudio(audio: nil)
             self.dismissPopup()
         }
 
@@ -134,7 +140,8 @@ class AudioPlayerPopupViewController: BasePopupViewController {
         print(recorder?.state.rawValue)
         print("============")
         self.audioView.stopAudio()
-        self.delegate?.didRecordAudio(path: self.audioPath, url: self.audioURL)
+        let audio = Audio(path: self.audioPath, url: self.audioURL, duration: self.audioDuration)
+        self.delegate?.didRecordAudio(audio: audio)
         self.dismissPopup()
         
     }

@@ -121,6 +121,10 @@
 		2842728E277341BC00EE47F4 /* AudioPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2842728B277341BC00EE47F4 /* AudioPlayerView.xib */; };
 		2842728F277341BC00EE47F4 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842728C277341BC00EE47F4 /* AudioPlayerView.swift */; };
 		28427290277341BC00EE47F4 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842728C277341BC00EE47F4 /* AudioPlayerView.swift */; };
+		28448A792773A94500332F8B /* AudioPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28448A772773A94500332F8B /* AudioPlayerTableViewCell.swift */; };
+		28448A7A2773A94500332F8B /* AudioPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28448A772773A94500332F8B /* AudioPlayerTableViewCell.swift */; };
+		28448A7B2773A94500332F8B /* AudioPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28448A782773A94500332F8B /* AudioPlayerTableViewCell.xib */; };
+		28448A7C2773A94500332F8B /* AudioPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28448A782773A94500332F8B /* AudioPlayerTableViewCell.xib */; };
 		284F46FF2746DF4F00DEF537 /* OrderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F46FE2746DF4F00DEF537 /* OrderInfoView.swift */; };
 		284F47022746DF5D00DEF537 /* OrderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284F47012746DF5D00DEF537 /* OrderInfoView.xib */; };
 		284F475927496A4E00DEF537 /* CategoryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F475627496A4E00DEF537 /* CategoryResponseModel.swift */; };
@@ -612,6 +616,8 @@
 		2841B45B270B949C000FA706 /* BannerViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		2842728B277341BC00EE47F4 /* AudioPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioPlayerView.xib; sourceTree = "<group>"; };
 		2842728C277341BC00EE47F4 /* AudioPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
+		28448A772773A94500332F8B /* AudioPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		28448A782773A94500332F8B /* AudioPlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayerTableViewCell.xib; sourceTree = "<group>"; };
 		284F46FE2746DF4F00DEF537 /* OrderInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoView.swift; sourceTree = "<group>"; };
 		284F47012746DF5D00DEF537 /* OrderInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderInfoView.xib; sourceTree = "<group>"; };
 		284F475627496A4E00DEF537 /* CategoryResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryResponseModel.swift; sourceTree = "<group>"; };
@@ -1237,6 +1243,8 @@
 				28360F75275F8087006A6C29 /* InspectionCommentTableViewCell.xib */,
 				28360F7A275FBE57006A6C29 /* InspectionAudioTableViewCell.swift */,
 				28360F7B275FBE57006A6C29 /* InspectionAudioTableViewCell.xib */,
+				28448A772773A94500332F8B /* AudioPlayerTableViewCell.swift */,
+				28448A782773A94500332F8B /* AudioPlayerTableViewCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -1441,6 +1449,7 @@
 				C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */,
 				2841B2D22707A71A000FA706 /* ImageTableViewCell.xib in Resources */,
 				C9A85345270CF1A900066B1E /* NotificationTableViewCell.xib in Resources */,
+				28448A7B2773A94500332F8B /* AudioPlayerTableViewCell.xib in Resources */,
 				2841B2F72708E5FA000FA706 /* AutoPartsAndAccessoriesTableViewCell.xib in Resources */,
 				28512E132711A1CE002979AD /* TopPicksView.xib in Resources */,
 				289802E4270E2984002565B6 /* Chat.storyboard in Resources */,
@@ -1484,6 +1493,7 @@
 				2896CC13275555CC0099E70A /* CategoryCollectionViewCell.xib in Resources */,
 				2896CC14275555CC0099E70A /* BaseStepper.xib in Resources */,
 				2896CC15275555CC0099E70A /* BannerCollectionViewCell.xib in Resources */,
+				28448A7C2773A94500332F8B /* AudioPlayerTableViewCell.xib in Resources */,
 				2896CC16275555CC0099E70A /* Poppins-LightItalic.ttf in Resources */,
 				2896CC17275555CC0099E70A /* Basket.storyboard in Resources */,
 				2896CC18275555CC0099E70A /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -1810,6 +1820,7 @@
 				287BC111271EC43F00AF5978 /* ModelVehicle.swift in Sources */,
 				28512E172711A5B4002979AD /* TopPickTableViewCell.swift in Sources */,
 				28512E7327133067002979AD /* FilterSortTableViewCell.swift in Sources */,
+				28448A792773A94500332F8B /* AudioPlayerTableViewCell.swift in Sources */,
 				2841B2EB27084F55000FA706 /* BookingDetailsViewController.swift in Sources */,
 				28373E152706378D0071E93D /* AppLinkLabel.swift in Sources */,
 				2841B2D12707A71A000FA706 /* ImageTableViewCell.swift in Sources */,
@@ -1984,6 +1995,7 @@
 				2896CBCF275555CC0099E70A /* ProductBaseModel.swift in Sources */,
 				2896CBD0275555CC0099E70A /* GetVehicleModel.swift in Sources */,
 				2896CBD1275555CC0099E70A /* Category.swift in Sources */,
+				28448A7A2773A94500332F8B /* AudioPlayerTableViewCell.swift in Sources */,
 				28360F82275FC372006A6C29 /* ImageCollectionViewCell.swift in Sources */,
 				2896CBD2275555CC0099E70A /* NibDesignable.swift in Sources */,
 				2896CBD3275555CC0099E70A /* HomeBaseViewController.swift in Sources */,
