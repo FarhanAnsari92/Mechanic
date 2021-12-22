@@ -17,10 +17,13 @@ class AudioPlayerPopupViewController: BasePopupViewController {
     
     @IBOutlet weak var lblRecordingDuration: UILabel!
     
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var audioPlayerView: UIView!
     @IBOutlet weak var submitButtonView: UIView!
     @IBOutlet weak var btnRecorder: UIButton!
+    
+    @IBOutlet weak var btnDismiss: UIButton!
+    
+    @IBOutlet weak var audioView: AudioPlayerView!
+    @IBOutlet weak var audioParentView: UIView!
     
     var audioDuration: Double = 0.0
     
@@ -53,11 +56,24 @@ class AudioPlayerPopupViewController: BasePopupViewController {
         recorder?.stop(completion: { [weak self] (path, url) in
             
             guard let self = self else { return }
-            self.audioPlayerView.isHidden = false
+            
+            self.btnRecorder.isHidden = true
+            self.lblRecordingDuration.isHidden = true
+            
+            self.audioParentView.isHidden = false
+            self.audioView.audioDuration = self.audioDuration
+            self.audioView.audioPath = path
+            self.audioView.removeAudioCompletion = { [weak self] in
+                self?.lblRecordingDuration.text = "00:00"
+                self?.audioParentView.isHidden = true
+                self?.submitButtonView.isHidden = true
+                self?.btnRecorder.isHidden = false
+                self?.lblRecordingDuration.isHidden = false
+            }
+            self.audioView.setupView()
+            
             self.submitButtonView.isHidden = false
             print(path)
-            self.slider.minimumValue = 0
-            self.slider.maximumValue = Float(self.audioDuration)
             self.audioPath = path
             self.audioURL = url
         })
@@ -85,7 +101,8 @@ class AudioPlayerPopupViewController: BasePopupViewController {
         fatalError()
     }
 
-    @IBAction func onActionDone(_ sender: Any) {
+    @IBAction func dismissButtonHandler(_ sender: Any) {
+        self.audioView.stopAudio()
         if recorder?.state == .recording || recorder?.state == .paused {
             print("audio was being record")
             recorder?.stop(completion: { [weak self] (path, url) in
@@ -111,22 +128,12 @@ class AudioPlayerPopupViewController: BasePopupViewController {
         }
     }
     
-    @IBAction func playAudioButtonHandler(_ sender: UIButton) {
-        if let path = self.audioPath {
-            HRAudioPlayer.shared.play(url: URL(fileURLWithPath: path));
-            HRAudioPlayer.shared.seekProgressCompletion = { progress in
-                print("progress -- ", progress)
-                self.slider.value = progress ?? 0.0
-            }
-        }
-    }
-    
     @IBAction func submitButtonHandler(_ sender: UIButton) {
         print("============")
         print(recorder?.state)
         print(recorder?.state.rawValue)
         print("============")
-        
+        self.audioView.stopAudio()
         self.delegate?.didRecordAudio(path: self.audioPath, url: self.audioURL)
         self.dismissPopup()
         
