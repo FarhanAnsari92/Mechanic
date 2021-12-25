@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          -- CREDENTIAL
          03352266407 customer pwd 1-7
          03472455159 mechanic pwd 1-7
+         03300000001 mechanic pwd string
          */
         
         #if Customer

@@ -49,13 +49,17 @@ class APIClient {
         api: API,
         apiVersion: APIVersion = .v1,
         parameters: [String:String]? = nil,
+        id: String? = nil,
         method: HTTPMethod,
         data: Data? = nil,
         view: UIView? = nil,
         success: @escaping (([String:Any]?) -> Void)) {        
         
         let path = apiVersion.rawValue + "/" + api.rawValue
-        let url: URL = URL(string: path, relativeTo: BaseURL.staging)!
+        var url: URL = URL(string: path, relativeTo: BaseURL.staging)!
+        if let id = id, method == .put {
+            url = url.appendingPathComponent(id);
+        }
         
         if let _ = view {
             view?.showHud()

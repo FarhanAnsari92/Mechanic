@@ -47,27 +47,26 @@ class JobDetailsViewController: UIViewController {
     
     @objc func pickuopNowButtonHandler(_ sender: UIButton) {
                 
-//        if let id = jobDetails?.id {
-//            var params = [String:String]()
-//            params["id"] = id.description
-//
-//
-//            var dataToUpdate = [String:String]()
-//            dataToUpdate["job_status"] = "pick_up"
-//
-//            let data = try? JSONSerialization.data(withJSONObject: dataToUpdate, options: .fragmentsAllowed)
-//            print("DATA ---- ", data)
-//            APIClient.callApi(api: .job, parameters: params, method: .put, data: data, view: self.view) { (dictionary) in
-//                print(dictionary)
-//            }
-//        }
-        
-        
-        
-        let sb = UIStoryboard(storyboard: .dashboard)
-        let vc = sb.instantiateViewController(withIdentifier: MapViewController.storyboardIdentifier) as! MapViewController
-        vc.jobDetails = self.jobDetails
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let _id = jobDetails?.id {
+            
+            let id = _id.description
+            
+            var dataToUpdate = [String:String]()
+            dataToUpdate["job_status"] = "pick_up"
+            
+            APIClient.callApi(api: .job, parameters: dataToUpdate, id: id, method: .put, view: self.view) { (dictionary) in
+                
+                if dictionary?["success"] as? Bool ?? false {
+                    
+                    let sb = UIStoryboard(storyboard: .dashboard)
+                    let vc = sb.instantiateViewController(withIdentifier: MapViewController.storyboardIdentifier) as! MapViewController
+                    vc.jobDetails = self.jobDetails
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                }
+            }
+        }
+                                
     }
 
 }
