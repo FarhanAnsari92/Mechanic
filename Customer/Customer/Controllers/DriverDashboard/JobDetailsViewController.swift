@@ -45,7 +45,7 @@ class JobDetailsViewController: UIViewController {
         scrollView.contentSize = contentRect.size
     }
     
-    @objc func pickuopNowButtonHandler(_ sender: UIButton) {
+    @objc func pickupNowButtonHandler(_ sender: UIButton) {
                 
         if let _id = jobDetails?.id {
             
@@ -126,7 +126,7 @@ extension JobDetailsViewController {
         pickupBtn.translatesAutoresizingMaskIntoConstraints = false
         pickupBtn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         pickupBtn.setTitle("PICK UP NOW", for: .normal)
-        pickupBtn.addTarget(self, action: #selector(self.pickuopNowButtonHandler(_:)), for: .touchUpInside)
+        pickupBtn.addTarget(self, action: #selector(self.pickupNowButtonHandler(_:)), for: .touchUpInside)
         self.stackView.addArrangedSubview(pickupBtn)
     }
 
