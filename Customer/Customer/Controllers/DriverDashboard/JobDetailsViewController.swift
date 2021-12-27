@@ -122,7 +122,9 @@ extension JobDetailsViewController {
     }
     
     private func setupPickupNowButton() {
-        let pickupBtn = AppButton(frame: CGRect(origin: .zero, size: CGSize(width: self.stackView.frame.width, height: 100)))
+        let pickupBtn = AppButton(frame: CGRect(origin: .zero, size: CGSize(width: self.stackView.frame.width, height: 55)))
+        pickupBtn.translatesAutoresizingMaskIntoConstraints = false
+        pickupBtn.heightAnchor.constraint(equalToConstant: 55).isActive = true
         pickupBtn.setTitle("PICK UP NOW", for: .normal)
         pickupBtn.addTarget(self, action: #selector(self.pickuopNowButtonHandler(_:)), for: .touchUpInside)
         self.stackView.addArrangedSubview(pickupBtn)

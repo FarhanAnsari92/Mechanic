@@ -34,8 +34,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ane-6w-zlT">
                                 <rect key="frame" x="20" y="108" width="374" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Pick Up"/>
+                                    <segment title="Drop Of"/>
                                 </segments>
                                 <connections>
                                     <action selector="didTabSegmentWithSigment:" destination="EL5-Vm-jYb" eventType="valueChanged" id="PVU-hB-Gac"/>
@@ -87,7 +87,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="51l-Fk-aZk">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="200"/>
+                                                <rect key="frame" x="20" y="10" width="374" height="200"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RlV-3d-8B3" customClass="GMSMapView">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
@@ -103,7 +103,7 @@
                                         <constraints>
                                             <constraint firstItem="51l-Fk-aZk" firstAttribute="leading" secondItem="gUn-Dx-tcn" secondAttribute="leading" constant="20" id="GgM-nq-dHE"/>
                                             <constraint firstAttribute="trailing" secondItem="51l-Fk-aZk" secondAttribute="trailing" constant="20" id="HJy-kL-llF"/>
-                                            <constraint firstItem="51l-Fk-aZk" firstAttribute="top" secondItem="gUn-Dx-tcn" secondAttribute="top" id="fFq-gM-vk1"/>
+                                            <constraint firstItem="51l-Fk-aZk" firstAttribute="top" secondItem="gUn-Dx-tcn" secondAttribute="top" constant="10" id="OZb-yJ-dma"/>
                                         </constraints>
                                     </view>
                                 </subviews>

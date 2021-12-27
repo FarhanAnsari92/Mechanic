@@ -103,14 +103,14 @@
                                 </view>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-t3-s8N">
-                            <rect key="frame" x="274" y="10" width="70" height="35"/>
-                            <color key="backgroundColor" red="0.29803921570000003" green="0.65098039220000004" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-t3-s8N">
+                            <rect key="frame" x="309" y="10" width="35" height="35"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstAttribute="width" secondItem="fA7-t3-s8N" secondAttribute="height" multiplier="1:1" id="Xwx-Gg-hTr"/>
                                 <constraint firstAttribute="height" constant="35" id="ggI-UC-Zwm"/>
-                                <constraint firstAttribute="width" constant="70" id="vQw-7o-Qbm"/>
                             </constraints>
-                            <state key="normal" title="Dismiss"/>
+                            <state key="normal" image="ic_close"/>
                             <connections>
                                 <action selector="dismissButtonHandler:" destination="-1" eventType="touchUpInside" id="Wc8-ju-hMr"/>
                             </connections>
@@ -139,6 +139,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ic_close" width="32" height="32"/>
         <image name="ic_mic" width="44" height="70"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
