@@ -38,6 +38,13 @@ class InspectDetailsViewController: UIViewController {
         self.getInspectionList()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        HRAudioRecorder.shared.stop { (_, _) in
+            
+        }
+    }
+    
     func getInspectionList() {
         APIClient.callApi(api: .inspectionTitles, method: .get, view: self.view) { data in
             if let dictionary = data {
