@@ -44,6 +44,11 @@ class ChatViewController: HomeBaseViewController {
         removeObserver()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print("super.viewDidLayoutSubviews()")
+    }
+    
     func setupTextView() {
         textView.maxLength = 140
         textView.trimWhiteSpaceWhenEndEditing = false

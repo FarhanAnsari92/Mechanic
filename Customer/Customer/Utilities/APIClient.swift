@@ -10,7 +10,7 @@ import Alamofire
 import GoogleMaps
 
 struct BaseURL {
-    static let staging: URL = URL(string: "https://aspenweather.net/motox-services/api/")!
+    static let staging: URL = URL(string: "http://motox.aspenweather.net/api/")!
 }
 
 enum API: String {
