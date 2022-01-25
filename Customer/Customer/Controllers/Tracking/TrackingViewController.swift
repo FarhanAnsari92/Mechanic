@@ -112,7 +112,7 @@ extension TrackingViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableView.automaticDimension
             }
         } else {
-            return 70
+            return UITableView.automaticDimension
         }
     }
     

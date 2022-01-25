@@ -26,8 +26,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaL-B2-oRM" customClass="ShadowView" customModule="Customer" customModuleProvider="target">
                         <rect key="frame" x="60" y="10" width="479" height="127"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhN-dF-nyq">
-                                <rect key="frame" x="15" y="53.5" width="449" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhN-dF-nyq">
+                                <rect key="frame" x="15" y="10" width="449" height="107"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,6 +36,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="YhN-dF-nyq" secondAttribute="trailing" constant="15" id="9xe-Zl-jU9"/>
+                            <constraint firstAttribute="bottom" secondItem="YhN-dF-nyq" secondAttribute="bottom" constant="10" id="JL4-yI-zcu"/>
+                            <constraint firstItem="YhN-dF-nyq" firstAttribute="top" secondItem="zaL-B2-oRM" secondAttribute="top" constant="10" id="ZZv-wb-9z4"/>
                             <constraint firstItem="YhN-dF-nyq" firstAttribute="centerY" secondItem="zaL-B2-oRM" secondAttribute="centerY" id="kKc-vk-zcU"/>
                             <constraint firstItem="YhN-dF-nyq" firstAttribute="leading" secondItem="zaL-B2-oRM" secondAttribute="leading" constant="15" id="ka9-79-Mv4"/>
                         </constraints>
