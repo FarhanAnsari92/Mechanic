@@ -48,6 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let _deviceToken = deviceToken
         self.deviceToken = _deviceToken.hexString
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        if !SocketIOManager.shared.isConnected {
+//            SocketIOManager.shared.connectSocketClient()
+            SocketIOManager.shared.establishConnection()
+        }
+    }
 
 }
 

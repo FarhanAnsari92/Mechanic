@@ -31,8 +31,8 @@ class WorkShopModel: Mappable {
     var name : String?
     var address : String?
     var city_id : Int?
-    var latitude : Int?
-    var longitude : Int?
+    var latitude : Double?
+    var longitude : Double?
     var status : Bool?
     var work_start_time : String?
     var work_end_time : String?

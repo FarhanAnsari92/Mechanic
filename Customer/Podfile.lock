@@ -23,6 +23,9 @@ PODS:
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
   - SideMenu (6.5.0)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
   - SwiftyJSON (4.0.0)
   - TTTAttributedLabel (2.0.0)
   - ZSWTappableLabel (3.3.2)
@@ -42,6 +45,7 @@ DEPENDENCIES:
   - RSSelectionMenu (~> 7.1.3)
   - SDWebImage (~> 5.8.3)
   - SideMenu (~> 6.0)
+  - Socket.IO-Client-Swift (= 15.2.0)
   - TTTAttributedLabel
   - ZSWTappableLabel (~> 3.3)
 
@@ -59,6 +63,8 @@ SPEC REPOS:
     - RSSelectionMenu
     - SDWebImage
     - SideMenu
+    - Socket.IO-Client-Swift
+    - Starscream
     - SwiftyJSON
     - TTTAttributedLabel
     - ZSWTappableLabel
@@ -92,10 +98,12 @@ SPEC CHECKSUMS:
   RSSelectionMenu: 873d62ebbaef138519f6cf3f073412c2b5d94c2c
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   ZSWTappableLabel: 92f11d677bb395a8294df48482316c4981783ca0
 
-PODFILE CHECKSUM: f60b46aa4a313ab40a37bb8a0efef3935e9b039e
+PODFILE CHECKSUM: e1f59f5e9f6a4dd7ea518f923785a7299d7a2e03
 
 COCOAPODS: 1.10.1

@@ -459,6 +459,8 @@
 		28A88FC22700F8CF00003EB7 /* HomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */; };
 		28A88FC62700FA4A00003EB7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC52700FA4A00003EB7 /* Helper.swift */; };
 		28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */; };
+		28C4A1A3279C4DB600A7F4D6 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4A1A2279C4DB600A7F4D6 /* SocketIOManager.swift */; };
+		28C4A1A4279C4DB600A7F4D6 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4A1A2279C4DB600A7F4D6 /* SocketIOManager.swift */; };
 		28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */; };
 		28CCA64927039D7000DB1421 /* LeftMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */; };
 		28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */; };
@@ -728,6 +730,7 @@
 		28A88FC12700F8CF00003EB7 /* HomeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseViewController.swift; sourceTree = "<group>"; };
 		28A88FC52700FA4A00003EB7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseNavigationController.swift; sourceTree = "<group>"; };
+		28C4A1A2279C4DB600A7F4D6 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuTableViewCell.xib; sourceTree = "<group>"; };
 		28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -866,6 +869,7 @@
 				2835631F2739AAC1008821A1 /* Dynamic.swift */,
 				28356349273C5363008821A1 /* ImageCacheManager.swift */,
 				2835634C273EA3E9008821A1 /* ProductCart.swift */,
+				28C4A1A2279C4DB600A7F4D6 /* SocketIOManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1853,6 +1857,7 @@
 				28512E372711CAC6002979AD /* ReviewTableViewCell.swift in Sources */,
 				28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */,
 				2840A448271C1B050091250F /* RoleModel.swift in Sources */,
+				28C4A1A3279C4DB600A7F4D6 /* SocketIOManager.swift in Sources */,
 				289802F1270E3572002565B6 /* ChatReceiverTableViewCell.swift in Sources */,
 				28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */,
 				280577BF26FE84760035BC2B /* AuthTextField.swift in Sources */,
@@ -1970,6 +1975,7 @@
 				2896CBBB275555CC0099E70A /* OrderResponseModel.swift in Sources */,
 				2896CBBC275555CC0099E70A /* VehicleModel.swift in Sources */,
 				2896CBBD275555CC0099E70A /* OrderInfoView.swift in Sources */,
+				28C4A1A4279C4DB600A7F4D6 /* SocketIOManager.swift in Sources */,
 				2896CBBE275555CC0099E70A /* OTPTextField.swift in Sources */,
 				2896CBBF275555CC0099E70A /* ConfirmBookingViewModel.swift in Sources */,
 				286E3700275E8B900038A317 /* InspectDetailsViewController.swift in Sources */,
@@ -2203,6 +2209,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M67P46G8SC;
 				INFOPLIST_FILE = Customer/Info.plist;
@@ -2214,6 +2221,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D Customer";
 				PRODUCT_BUNDLE_IDENTIFIER = com.motocustomer.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2225,6 +2233,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M67P46G8SC;
 				INFOPLIST_FILE = Customer/Info.plist;
@@ -2236,6 +2245,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D Customer";
 				PRODUCT_BUNDLE_IDENTIFIER = com.motocustomer.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -25,4 +25,8 @@ class BookingHistoryViewModel {
         }
     }
     
+    func getStatusHistory(index: Int) -> [StatusHistoryModel]? {
+        return self.bookings.value[index].statusHistory
+    }
+    
 }

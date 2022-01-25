@@ -39,6 +39,7 @@ class ConfirmBookingViewController: HomeBaseViewController {
     
     var data: [Section] = [Section]()
     let viewModel = ConfirmBookingViewModel()
+    var selectedWorkshop: WorkShopModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +100,7 @@ class ConfirmBookingViewController: HomeBaseViewController {
     
     func requestJob() {
         let cart = Cart.shared
-        var params = [String:String]()
+        var params = [String:Any]()
         
         params["user_id"] = cart.vehicle?.userId?.description ?? "0" //?.description ?? ""
 //        params["rider_id"] = "0" // not used
@@ -111,24 +112,41 @@ class ConfirmBookingViewController: HomeBaseViewController {
         params["number_plate"] = cart.vehicle?.numberPlate ?? ""
         params["horse_power"] = cart.vehicle?.horsePower ?? ""
         params["year"] = cart.vehicle?.year?.description ?? ""
-        params["address"] = cart.address?.address ?? ""
+        
         params["city_id"] = cart.vehicle?.city?.id?.description ?? ""
-        params["latitude"] = cart.address?.latitude?.description ?? ""
-        params["longitude"] = cart.address?.longitude?.description ?? ""
+        
         params["total_amount"] = cart.getTotalAmount().description
         params["payment_type"] = "creditcard"
         params["drop_date"] = "2021-11-26"
         params["drop_time"] = "11:11"
-        for i in 0..<(cart.getServices()?.count ?? 0) {
-            if let id = cart.getServices()?[i].id {
-                params["services[\(i)]"] = id.description
+        params["services"] = [1]
+        if AppDelegate.instance.isPickupSelected {
+            params["address"] = cart.address?.address ?? ""
+            params["latitude"] = cart.address?.latitude?.description ?? ""
+            params["longitude"] = cart.address?.longitude?.description ?? ""
+        } else {
+            guard let workshop = self.selectedWorkshop else {
+                return
             }
+            params["workshop_id"] = workshop.id
+            params["address"] = workshop.address
+            params["latitude"] = workshop.latitude
+            params["longitude"] = workshop.longitude
         }
         
+//        for i in 0..<(cart.getServices()?.count ?? 0) {
+//            if let id = cart.getServices()?[i].id {
+//                params["services[\(i)]"] = id.description
+//            }
+//        }
+//        guard let data = try? JSONSerialization.data(withJSONObject: params, options: []) else {
+//            return
+//        }
+        let data = params.percentEncoded()
         print("params --- ", params)
         
-        APIClient.callApi(api: .job, parameters: params, method: .post, data: nil, view: self.view) { [weak self] data in
-            
+        APIClient.callApi(api: .job, method: .post, data: data, view: self.view) { [weak self] data in
+
             let sb = UIStoryboard(storyboard: .vehicle)
             if AppDelegate.instance.isPickupSelected {
                 let vc = sb.instantiateViewController(withIdentifier: SuccessfullRiderViewController.storyboardIdentifier)

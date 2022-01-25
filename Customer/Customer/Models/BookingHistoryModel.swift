@@ -24,6 +24,31 @@ class BookingHistoryResponseModel: Mappable {
     }
 }
 
+class StatusHistoryModel: Mappable {
+    
+    var createdAt: String?
+    var isCompleted: Bool?
+    var isVisible: Bool?
+    var jobId: Int?
+    var position: Int?
+    var status: String?
+    var title: String?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        createdAt <- map["created_at"]
+        isCompleted <- map["is_complete"]
+        isVisible <- map["is_visible"]
+        jobId <- map["job_id"]
+        position <- map["position"]
+        status <- map["status"]
+        title <- map["title"]
+    }
+}
+
 class BookingHistoryModel: Mappable {
     
     var id: Int?
@@ -31,6 +56,7 @@ class BookingHistoryModel: Mappable {
     var city: CityModel?
     var services: [Service]?
     var vehicle: GetVehicleModel?
+    var statusHistory: [StatusHistoryModel]?
     var jobNumber: String?
     var jobStatus: String?
     var jobType: String?
@@ -101,6 +127,7 @@ class BookingHistoryModel: Mappable {
         paymentType <- map["payment_type"]
         totalAmount <- map["total_amount"]
         vehicle <- map["vehicle"]
+        statusHistory <- map["status_history"]
         id <- map["id"]
         createdAt <- map["created_at"]
         user <- map["user"]

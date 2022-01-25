@@ -19,13 +19,8 @@ class TrackingViewController: HomeBaseViewController {
         }
     }
     
-    let status: [String] = [
-        "Vehicle picked from location",
-        "Vehicle Inspection",
-        "Repairing Vehicle",
-        "Delivery"
-    ]
-
+    var statusHistory: [StatusHistoryModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tracking"
@@ -77,7 +72,7 @@ extension TrackingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 { return 2 }
-        return 4
+        return self.statusHistory?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,8 +94,10 @@ extension TrackingViewController: UITableViewDelegate, UITableViewDataSource {
             cell.imgTick.isHidden = indexPath.row > 0
             cell.deselectView.isHidden = indexPath.row == 0
             cell.upperLine.isHidden = indexPath.row == 0
-            cell.lowerLine.isHidden = indexPath.row == status.count - 1
-            cell.lblStatus.text = status[indexPath.row]
+            if let status = statusHistory {
+                cell.lowerLine.isHidden = indexPath.row == status.count - 1
+                cell.lblStatus.text = status[indexPath.row].title
+            }
             return cell
             
         }

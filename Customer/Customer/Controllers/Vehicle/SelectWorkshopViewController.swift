@@ -26,6 +26,7 @@ class SelectWorkshopViewController: HomeBaseViewController {
     }
     
     var workshops: [WorkShopModel]?
+    var selectedWorkshop: WorkShopModel?
 
     let locationManager = LocationManager(withAccuracy: .bestForNavigation)
     
@@ -65,7 +66,8 @@ class SelectWorkshopViewController: HomeBaseViewController {
     
     @IBAction func btn_done(_ sender: UIButton) {
         let sb = UIStoryboard(storyboard: .vehicle)
-        let vc = sb.instantiateViewController(withIdentifier: ConfirmBookingViewController.storyboardIdentifier)
+        let vc = sb.instantiateViewController(withIdentifier: ConfirmBookingViewController.storyboardIdentifier) as! ConfirmBookingViewController
+        vc.selectedWorkshop = self.selectedWorkshop
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -100,6 +102,7 @@ extension SelectWorkshopViewController : UITableViewDelegate , UITableViewDataSo
         }
         self.workshops?.forEach({ $0.isSelected = false })
         self.workshops?[indexPath.row].isSelected = true
+        self.selectedWorkshop = self.workshops?[indexPath.row]
         self.tableview.reloadSections(IndexSet(integer: 0), with: .fade)
     }
     
