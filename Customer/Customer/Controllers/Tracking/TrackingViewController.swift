@@ -46,6 +46,12 @@ class TrackingViewController: HomeBaseViewController {
         let vc = sb.instantiateViewController(withIdentifier: BookingHistoryViewController.storyboardIdentifier)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func trackViaMapButtonHandler(_ sender: UIButton) {
+        let sb = UIStoryboard(storyboard: .tracking)
+        let vc = sb.instantiateViewController(withIdentifier: TrackMapViewController.storyboardIdentifier)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 

@@ -20,23 +20,23 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>NSAppTransportSecurity</key>
-        <dict>
-            <key>NSAllowsArbitraryLoads</key>
-            <true/>
-            <key>NSExceptionDomains</key>
-            <dict>
-                <key>motox.aspenweather.net</key>
-                <dict>
-                    <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                    <true/>
-                    <key>NSExceptionMinimumTLSVersion</key>
-                    <string>TLSv1.1</string>
-                    <key>NSIncludesSubdomains</key>
-                    <true/>
-                </dict>
-           </dict>
-    </dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>motox.aspenweather.net</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Required</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
@@ -45,10 +45,10 @@
 	<string>App will try to access your location for better use</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App will try to access your location for better use</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Required</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>In order to record voice, app needs your permission</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Required</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Black.otf</string>

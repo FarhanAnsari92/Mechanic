@@ -42,6 +42,7 @@
 		280577C926FF38C60035BC2B /* VerifyNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577C826FF38C60035BC2B /* VerifyNumberViewController.swift */; };
 		280577CC26FF3C070035BC2B /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280577CB26FF3C070035BC2B /* OTPTextField.swift */; };
 		2807AA142727CC7100D5A855 /* ConfirmBookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2807AA132727CC7100D5A855 /* ConfirmBookingViewModel.swift */; };
+		282E825C27A53FE70072FB77 /* TrackMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4A1A727A0442000A7F4D6 /* TrackMapViewController.swift */; };
 		2835631D2739AA82008821A1 /* BookingHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835631C2739AA81008821A1 /* BookingHistoryViewModel.swift */; };
 		283563202739AAC1008821A1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835631F2739AAC1008821A1 /* Dynamic.swift */; };
 		283563232739B41A008821A1 /* BookingHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283563222739B41A008821A1 /* BookingHistoryModel.swift */; };
@@ -461,6 +462,7 @@
 		28A88FC92700FCA200003EB7 /* HomeBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */; };
 		28C4A1A3279C4DB600A7F4D6 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4A1A2279C4DB600A7F4D6 /* SocketIOManager.swift */; };
 		28C4A1A4279C4DB600A7F4D6 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4A1A2279C4DB600A7F4D6 /* SocketIOManager.swift */; };
+		28C4A1A827A0442100A7F4D6 /* TrackMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4A1A727A0442000A7F4D6 /* TrackMapViewController.swift */; };
 		28CCA64527039B6700DB1421 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */; };
 		28CCA64927039D7000DB1421 /* LeftMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */; };
 		28CCA64A27039D7000DB1421 /* LeftMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */; };
@@ -731,6 +733,7 @@
 		28A88FC52700FA4A00003EB7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		28A88FC82700FCA200003EB7 /* HomeBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseNavigationController.swift; sourceTree = "<group>"; };
 		28C4A1A2279C4DB600A7F4D6 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		28C4A1A727A0442000A7F4D6 /* TrackMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMapViewController.swift; sourceTree = "<group>"; };
 		28CCA64427039B6700DB1421 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		28CCA64727039D7000DB1421 /* LeftMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuTableViewCell.xib; sourceTree = "<group>"; };
 		28CCA64827039D7000DB1421 /* LeftMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -1054,6 +1057,7 @@
 				2841B2CC2707A696000FA706 /* TrackingViewController.swift */,
 				2841B2E22708453C000FA706 /* BookingHistoryViewController.swift */,
 				2841B2EA27084F55000FA706 /* BookingDetailsViewController.swift */,
+				28C4A1A727A0442000A7F4D6 /* TrackMapViewController.swift */,
 			);
 			path = Tracking;
 			sourceTree = "<group>";
@@ -1327,8 +1331,8 @@
 				280575B626FBA1570035BC2B /* Frameworks */,
 				280575B726FBA1570035BC2B /* Resources */,
 				693DCC4111AB8A074FA3D880 /* [CP] Embed Pods Frameworks */,
-				8A360654AD0AD6AD9BC3B195 /* [CP] Copy Pods Resources */,
 				284F470C27477FE900DEF537 /* ShellScript */,
+				832ABE781F40F535B154680B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1348,8 +1352,8 @@
 				2896CC0A275555CC0099E70A /* Frameworks */,
 				2896CC0C275555CC0099E70A /* Resources */,
 				2896CC5A275555CC0099E70A /* [CP] Embed Pods Frameworks */,
-				2896CC5B275555CC0099E70A /* [CP] Copy Pods Resources */,
 				2896CC5C275555CC0099E70A /* ShellScript */,
+				F30A203222D1F26FFCA94B72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1639,23 +1643,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mechanic/Pods-Mechanic-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2896CC5B275555CC0099E70A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mechanic/Pods-Mechanic-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mechanic/Pods-Mechanic-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mechanic/Pods-Mechanic-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2896CC5C275555CC0099E70A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1691,7 +1678,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Customer/Pods-Customer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A360654AD0AD6AD9BC3B195 /* [CP] Copy Pods Resources */ = {
+		832ABE781F40F535B154680B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1728,6 +1715,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F30A203222D1F26FFCA94B72 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mechanic/Pods-Mechanic-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mechanic/Pods-Mechanic-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mechanic/Pods-Mechanic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1774,6 +1778,7 @@
 				280575D526FBA31C0035BC2B /* Constants.swift in Sources */,
 				2841B2C227078F37000FA706 /* ShadowView.swift in Sources */,
 				28512E622712C45A002979AD /* AccessoryBannerViewCollectionViewCell.swift in Sources */,
+				28C4A1A827A0442100A7F4D6 /* TrackMapViewController.swift in Sources */,
 				28512E4B2712B8AF002979AD /* AccessoryBanner.swift in Sources */,
 				28512E782713373C002979AD /* FilterPriceTableViewCell.swift in Sources */,
 				28512E7C27133E0D002979AD /* SingleSelectionView.swift in Sources */,
@@ -1972,6 +1977,7 @@
 				2896CBB8275555CC0099E70A /* ChatSenderTableViewCell.swift in Sources */,
 				2896CBB9275555CC0099E70A /* BaseNavigationController.swift in Sources */,
 				2896CBBA275555CC0099E70A /* SelectWorkshopTableViewCell.swift in Sources */,
+				282E825C27A53FE70072FB77 /* TrackMapViewController.swift in Sources */,
 				2896CBBB275555CC0099E70A /* OrderResponseModel.swift in Sources */,
 				2896CBBC275555CC0099E70A /* VehicleModel.swift in Sources */,
 				2896CBBD275555CC0099E70A /* OrderInfoView.swift in Sources */,
@@ -2219,7 +2225,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D Customer";
-				PRODUCT_BUNDLE_IDENTIFIER = com.motocustomer.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mechani.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -2243,7 +2249,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D Customer";
-				PRODUCT_BUNDLE_IDENTIFIER = com.motocustomer.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mechani.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

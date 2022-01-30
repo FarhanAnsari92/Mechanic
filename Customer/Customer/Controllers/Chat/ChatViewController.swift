@@ -36,12 +36,17 @@ class ChatViewController: HomeBaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addObserver()
+        SocketIOManager.shared.on(.getThreads) { (data, ack) in
+            print("thread --- ", data)
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.textView.resignFirstResponder()
         removeObserver()
+        SocketIOManager.shared.off(.getThreads)
     }
     
     override func viewDidLayoutSubviews() {

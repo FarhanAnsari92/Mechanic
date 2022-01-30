@@ -38,16 +38,16 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NhM-eb-bNv">
-                                        <rect key="frame" x="0.0" y="262.5" width="280" height="88.5"/>
+                                        <rect key="frame" x="0.0" y="268.5" width="280" height="76"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-KB-vPo">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="28"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" red="0.12156862745098039" green="0.16078431372549018" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Before Using Our Services\nPlease Register First" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lei-ew-0Z5">
-                                                <rect key="frame" x="0.0" y="49" width="280" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="43" width="280" height="33"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                                 <color key="textColor" red="0.29411764705882354" green="0.33333333333333331" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Before Using Our Services\nPlease Register First" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kS-ef-gPf" customClass="AppLinkLabel" customModule="Customer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="562.5" width="280" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="569" width="280" height="44"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -142,7 +142,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter Your User Id &amp; Password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6D-mF-AKH">
-                                                                <rect key="frame" x="0.0" y="22.5" width="280" height="20"/>
+                                                                <rect key="frame" x="0.0" y="24.5" width="280" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                                                 <color key="textColor" red="0.29411764705882354" green="0.33333333333333331" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                                         <rect key="frame" x="0.0" y="65" width="280" height="45"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAS-6d-8CC">
-                                                                <rect key="frame" x="0.0" y="18" width="280" height="20"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="280" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                                                 <color key="textColor" red="0.61176470589999998" green="0.63921568630000003" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -187,7 +187,7 @@
                                                         <rect key="frame" x="0.0" y="160" width="280" height="45"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc9-sn-1D3">
-                                                                <rect key="frame" x="0.0" y="18" width="280" height="20"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="280" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                                                 <color key="textColor" red="0.61176470589999998" green="0.63921568630000003" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -214,7 +214,7 @@
                                                         <rect key="frame" x="0.0" y="255" width="280" height="90"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-UU-yZa">
-                                                                <rect key="frame" x="158" y="5" width="122" height="32"/>
+                                                                <rect key="frame" x="165" y="5" width="115" height="29"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                                                 <state key="normal" title="Forgot Password?">
                                                                     <color key="titleColor" red="0.3411764705882353" green="0.52941176470588236" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
@@ -296,7 +296,7 @@
                                                         <rect key="frame" x="0.0" y="475" width="280" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Have An Account Yet? Register Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1m-iy-bVJ" customClass="AppLinkLabel" customModule="Customer" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="50" width="280" height="20"/>
+                                                                <rect key="frame" x="0.0" y="53.5" width="280" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -703,19 +703,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sms_alert" translatesAutoresizingMaskIntoConstraints="NO" id="JUv-ts-yfJ">
-                                <rect key="frame" x="0.0" y="62" width="320" height="270"/>
+                                <rect key="frame" x="0.0" y="58.5" width="320" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="7rh-2x-rlX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter 4 Digit OTP Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt2-Xz-Iao">
-                                <rect key="frame" x="20" y="32" width="280" height="20"/>
+                                <rect key="frame" x="20" y="32" width="280" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                 <color key="textColor" red="0.29411764709999999" green="0.33333333329999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="aEB-da-2Vg">
-                                <rect key="frame" x="30" y="342" width="260" height="54.5"/>
+                                <rect key="frame" x="30" y="338.5" width="260" height="54.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amd-gj-2Zx" customClass="OTPTextField" customModule="Customer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="54.5" height="54.5"/>
@@ -756,13 +756,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzo-rl-EGQ" customClass="AppLinkLabel" customModule="Customer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="421.5" width="280" height="20"/>
+                                <rect key="frame" x="20" y="418" width="280" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpz-45-CoU" customClass="AppButton" customModule="Customer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="491.5" width="280" height="55"/>
+                                <rect key="frame" x="20" y="484.5" width="280" height="55"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.52941176469999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="y0s-Qa-zaO"/>
@@ -824,6 +824,17 @@
             <point key="canvasLocation" x="-84.057971014492765" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1kS-ef-gPf">
+            <size key="intrinsicContentSize" width="219" height="12"/>
+        </designable>
+        <designable name="Yzo-rl-EGQ">
+            <size key="intrinsicContentSize" width="34.5" height="16.5"/>
+        </designable>
+        <designable name="d1m-iy-bVJ">
+            <size key="intrinsicContentSize" width="266.5" height="16.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ic_google" width="20" height="20"/>
         <image name="initial-image" width="297" height="219"/>

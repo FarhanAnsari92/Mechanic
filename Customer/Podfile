@@ -19,7 +19,7 @@ def shared_pods
   pod 'LGSideMenuController'
   
   # https://developers.google.com/maps/documentation/ios-sdk/start
-  pod 'GoogleMaps', '2.5.0'
+  pod 'GoogleMaps', '3.5.0'
   
   # https://github.com/Alamofire/Alamofire
   pod 'Alamofire', '~> 4.8.2'

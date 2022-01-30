@@ -7,6 +7,7 @@
 
 import UIKit
 import MBProgressHUD
+import CoreLocation
 
 extension UIColor {
     
@@ -370,4 +371,15 @@ extension CharacterSet {
         allowed.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
         return allowed
     }()
+}
+
+extension CLLocation {
+    
+    var latitude: Double {
+        return self.coordinate.latitude
+    }
+    
+    var longitude: Double {
+        return self.coordinate.longitude
+    }
 }

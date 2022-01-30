@@ -9,11 +9,17 @@ import SocketIO
 
 enum EventListener: String {
     case riderLocationSuccess = "RiderLocationSuccess"
+    case notifyUserNewRiderLocation = "NotifyUserNewRiderLocation"
+    case getThreads
+    case threadJoined
 }
 
 enum EventEmmiter: String {
     case Init = "Init"
     case getRiderLastLocation = "GetRiderLastLocation"
+    case updateRiderLocation = "UpdateRiderLocation"
+    case getUserThreads
+    case joinRoom
 }
 
 class SocketIOManager {
@@ -36,7 +42,14 @@ class SocketIOManager {
     
     private init() {
         
-        manager = SocketManager(socketURL: baseURLSocket, config: [.log(true), .forceWebsockets(true)])
+        manager = SocketManager(
+            socketURL: baseURLSocket,
+            config: [
+                /*.log(true), */
+                .forceWebsockets(true),
+                .reconnects(true)
+            ]
+        )
         
         socket = manager.defaultSocket
     }
@@ -83,6 +96,7 @@ extension SocketIOManager {
         if !SocketIOManager.shared.isConnected {
             self.establishConnection()
         }
+        print("Emit Event - ", event.rawValue, " data - ", parameters)
         socket.emit(event.rawValue, with: [parameters])
     }
     
@@ -91,6 +105,7 @@ extension SocketIOManager {
 //            self.establishConnection()
 //        }
         self.off(event)
+        print("Listen Event - ", event.rawValue)
         socket.on(event.rawValue) { data, ack in
             completion(data, ack)
         }
