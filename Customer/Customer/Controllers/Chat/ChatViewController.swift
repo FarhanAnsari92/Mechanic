@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import GrowingTextView
+//import ReverseExtension
 
 // https://objectpartners.com/2019/07/09/building-an-ios-chat-feature-without-hacks/
 
@@ -45,7 +45,7 @@ class ChatViewController: HomeBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        becomeFirstResponder()
+//        becomeFirstResponder()
         addObserver()
         SocketIOManager.shared.on(.getThreads) { (data, ack) in
             print("thread --- ", data)
@@ -53,18 +53,31 @@ class ChatViewController: HomeBaseViewController {
         
         SocketIOManager.shared.on(.threadJoined) { [weak self] (data, ack) in
             guard let self = self else { return }
+            
             if let dictArray = data as? [[String:Any]],
                 let firstDict = dictArray.first {
                 let obj = ObjectMapperManager<ChatModel>().map(dictionary: firstDict)
                 let messages = obj?.messages
-                self.messages = messages
+                self.messages = messages?.reversed()
                 self.tableView.reloadData()
                 self.scrollToBottom()
             }
         }
         
-        SocketIOManager.shared.on(.newMessage) { (data, ack) in
-            print("MESSAGE --- ", data)
+        SocketIOManager.shared.on(.newMessage) { [weak self] (data, ack) in
+            guard let self = self else { return }
+            if let dictArray = data as? [[String:Any]],
+                let firstDict = dictArray.first {
+                let obj = ObjectMapperManager<MessageModel>().map(dictionary: firstDict)
+                guard let message = obj else {
+                    print("unable to parse")
+                    return
+                }
+                self.messages?.append(message)
+                let row = self.messages?.count ?? 0
+                self.tableView.insertRows(at: [IndexPath(row: row - 1, section: 0)], with: .fade)
+                self.scrollToBottom()
+            }
         }
         
     }
@@ -87,7 +100,8 @@ class ChatViewController: HomeBaseViewController {
     
     func scrollToBottom(animated: Bool) {
         view.layoutIfNeeded()
-        tableView.setContentOffset(bottomOffset(), animated: animated)
+        let bottom = bottomOffset()
+        tableView.setContentOffset(bottom, animated: animated)
     }
      
     func bottomOffset() -> CGPoint {
@@ -98,7 +112,7 @@ class ChatViewController: HomeBaseViewController {
         get {
             if let vu = chatView {
                 vu.sendMessageCompletion = { [weak self] message in
-                    self?.send(message)
+                    self?.send("message \(self?.messages?.count ?? 0)")
                 }
                 return vu
             }

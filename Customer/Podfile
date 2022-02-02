@@ -41,8 +41,6 @@ def shared_pods
   
   pod 'TTTAttributedLabel'
   
-  # https://github.com/KennethTsang/GrowingTextView
-  pod 'GrowingTextView', '0.7.2'
   # https://github.com/mohn93/AdvancedPageControl
   pod 'AdvancedPageControl'
   
@@ -51,6 +49,9 @@ def shared_pods
   
   # https://github.com/socketio/socket.io-client-swift
   pod 'Socket.IO-Client-Swift', '15.2.0'
+  
+  # https://github.com/marty-suzuki/ReverseExtension
+  pod 'ReverseExtension', '0.6.0'
 
 end
 
