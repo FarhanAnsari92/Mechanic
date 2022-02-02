@@ -8,6 +8,8 @@
 import UIKit
 import GrowingTextView
 
+// https://objectpartners.com/2019/07/09/building-an-ios-chat-feature-without-hacks/
+
 class ChatViewController: HomeBaseViewController {
     
     @IBOutlet weak var tableView: UITableView! {
@@ -95,6 +97,9 @@ class ChatViewController: HomeBaseViewController {
     override var inputAccessoryView: UIView? {
         get {
             if let vu = chatView {
+                vu.sendMessageCompletion = { [weak self] message in
+                    self?.send(message)
+                }
                 return vu
             }
             return ChatTextView.loadNib
@@ -165,18 +170,15 @@ class ChatViewController: HomeBaseViewController {
         }, completion: nil)
     }
     
-    @IBAction func sendMessageButtonHandler(_ sender: UIButton) {
+    func send(_ message: String) {
         
-//        guard let message = self.textView.text else {
-//            fatalError("Unable to get message.")
-//        }
-//        guard let tId = self.threadId else {
-//            fatalError("Unable to find thread id")
-//        }
-//        var data = [String:Any]()
-//        data["message"] = message // "message 3 from rider."
-//        data["thread_id"] = tId
-//        SocketIOManager.shared.emit(.sendMessage, parameters: data)
+        guard let tId = self.threadId else {
+            fatalError("Unable to find thread id")
+        }
+        var data = [String:Any]()
+        data["message"] = message
+        data["thread_id"] = tId
+        SocketIOManager.shared.emit(.sendMessage, parameters: data)
     }
     
 }

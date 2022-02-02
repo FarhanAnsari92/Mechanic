@@ -24,6 +24,9 @@
                                 <constraint firstAttribute="width" constant="33" id="oFX-D8-fwh"/>
                             </constraints>
                             <state key="normal" image="ic_send_msg"/>
+                            <connections>
+                                <action selector="sendMessageButtonHandler:" destination="iN0-l3-epB" eventType="touchUpInside" id="d6C-st-V62"/>
+                            </connections>
                         </button>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xES-BC-0Se">
                             <rect key="frame" x="5" y="5" width="361" height="34"/>

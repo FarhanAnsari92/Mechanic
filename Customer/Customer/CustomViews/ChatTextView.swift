@@ -12,6 +12,8 @@ class ChatTextView: UIView {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet var textViewHeight: NSLayoutConstraint!
     
+    var sendMessageCompletion: ((String) -> Void)?
+    
     var placeholderLabel : UILabel!
 
     static var loadNib: ChatTextView {
@@ -47,6 +49,13 @@ class ChatTextView: UIView {
      
         let textSize = textView.sizeThatFits(size)
         return CGSize(width: bounds.width, height: textSize.height)
+    }
+    
+    @IBAction func sendMessageButtonHandler(_ sender: UIButton) {
+        guard let text = self.textView.text else {
+            return
+        }
+        sendMessageCompletion?(text)
     }
     
 }
