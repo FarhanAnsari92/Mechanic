@@ -75,8 +75,8 @@ extension BookingHistoryViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(storyboard: .tracking)
         let vc = sb.instantiateViewController(withIdentifier: TrackingViewController.storyboardIdentifier) as! TrackingViewController
-        let statusHistory = self.viewModel.getStatusHistory(index: indexPath.row)
-        vc.statusHistory = statusHistory
+        let bookingDetails = self.viewModel.getBookingDetails(index: indexPath.row)
+        vc.bookingDetails = bookingDetails
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

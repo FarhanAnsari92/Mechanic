@@ -12,6 +12,7 @@ enum EventListener: String {
     case notifyUserNewRiderLocation = "NotifyUserNewRiderLocation"
     case getThreads
     case threadJoined
+    case newMessage
 }
 
 enum EventEmmiter: String {
@@ -20,6 +21,7 @@ enum EventEmmiter: String {
     case updateRiderLocation = "UpdateRiderLocation"
     case getUserThreads
     case joinRoom
+    case sendMessage
 }
 
 class SocketIOManager {
@@ -138,7 +140,9 @@ extension SocketIOManager {
         
         socket.on(clientEvent: .connect) { (data, ack) in
             print("Socket Connected")
-            self.emit(EventEmmiter.Init, parameters: ["user_id": "7"])
+            if let id = Helper.getUser()?.id?.description {
+                self.emit(EventEmmiter.Init, parameters: ["user_id": id])
+            }
         }
         
         socket.on(clientEvent: .disconnect) { (data, ack) in

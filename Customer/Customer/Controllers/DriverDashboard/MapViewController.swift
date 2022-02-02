@@ -85,13 +85,24 @@ class MapViewController: UIViewController {
     }
     
     func setupCallButton() {
-        let backBtn = UIBarButtonItem(image: UIImage(named: "ic_call"), style: .plain, target: self, action: #selector(self.callButtonHandler))
-        backBtn.tintColor = .white
-        navigationItem.rightBarButtonItem = backBtn
+        
+        let callBtn = UIBarButtonItem(image: UIImage(named: "ic_call"), style: .plain, target: self, action: #selector(self.callButtonHandler))
+        callBtn.tintColor = .white
+
+        let chatBtn = UIBarButtonItem(image: UIImage(named: "ic_chat"), style: .plain, target: self, action: #selector(self.openChat))
+        chatBtn.tintColor = .white
+        navigationItem.rightBarButtonItems = [callBtn, chatBtn]
     }
     
     @objc private func callButtonHandler() {
         print("call")
+    }
+    
+    @objc func openChat() {
+        let sb = UIStoryboard(storyboard: .chat)
+        let vc = sb.instantiateViewController(withIdentifier: ChatViewController.storyboardIdentifier) as! ChatViewController
+        vc.threadId = self.jobDetails?.thread?.threadId?.description
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func reachedDestinationButtonHandler(_ sender: UIButton) {

@@ -49,6 +49,33 @@ class StatusHistoryModel: Mappable {
     }
 }
 
+class ThreadModel: Mappable {
+    
+    var jobId: Int?
+    var threadId: Int?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        jobId <- map["job_id"]
+        threadId <- map["id"]
+    }
+//    thread =             {
+//        "created_at" = "2022-01-29 15:48:44";
+//        "created_by" = 7;
+//        "deleted_at" = "<null>";
+//        id = 8;
+//        "job_id" = 9;
+//        "last_message" = "<null>";
+//        "last_message_by" = 0;
+//        status = 1;
+//        type = single;
+//        "updated_at" = "2022-01-29 15:48:44";
+//    }
+}
+
 class BookingHistoryModel: Mappable {
     
     var id: Int?
@@ -57,6 +84,7 @@ class BookingHistoryModel: Mappable {
     var services: [Service]?
     var vehicle: GetVehicleModel?
     var statusHistory: [StatusHistoryModel]?
+    var thread: ThreadModel?
     var jobNumber: String?
     var jobStatus: String?
     var jobType: String?
@@ -121,6 +149,7 @@ class BookingHistoryModel: Mappable {
         services <- map["job_services"]
         jobNumber <- map["job_number"]
         jobStatus <- map["job_status"]
+        thread <- map["thread"]
         jobType <- map["job_type"]
         numberPlate <- map["number_plate"]
         paymentStatus <- map["payment_status"]

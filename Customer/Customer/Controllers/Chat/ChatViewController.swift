@@ -24,20 +24,44 @@ class ChatViewController: HomeBaseViewController {
     
     @IBOutlet weak var textView: GrowingTextView!
     @IBOutlet weak var containerViewBottomConstraint: NSLayoutConstraint!
+    
+    var threadId: String?
+    
+    var messages: [MessageModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Chat"
         setupBackButton(color: .white)
         setupTextView()
-        scrollToBottom()
+//        scrollToBottom()
+        if let tId = self.threadId {
+            SocketIOManager.shared.emit(.joinRoom, parameters: ["thread_id": tId])
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        becomeFirstResponder()
         addObserver()
         SocketIOManager.shared.on(.getThreads) { (data, ack) in
             print("thread --- ", data)
+        }
+        
+        SocketIOManager.shared.on(.threadJoined) { [weak self] (data, ack) in
+            guard let self = self else { return }
+            if let dictArray = data as? [[String:Any]],
+                let firstDict = dictArray.first {
+                let obj = ObjectMapperManager<ChatModel>().map(dictionary: firstDict)
+                let messages = obj?.messages
+                self.messages = messages
+                self.tableView.reloadData()
+                self.scrollToBottom()
+            }
+        }
+        
+        SocketIOManager.shared.on(.newMessage) { (data, ack) in
+            print("MESSAGE --- ", data)
         }
         
     }
@@ -47,11 +71,28 @@ class ChatViewController: HomeBaseViewController {
         self.textView.resignFirstResponder()
         removeObserver()
         SocketIOManager.shared.off(.getThreads)
+        SocketIOManager.shared.off(.threadJoined)
+        SocketIOManager.shared.off(.newMessage)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         print("super.viewDidLayoutSubviews()")
+    }
+    
+    override var inputAccessoryView: UIView? {
+        get {
+            let vu = ChatTextView.loadNib
+            return vu
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    override var canResignFirstResponder: Bool {
+        return true
     }
     
     func setupTextView() {
@@ -65,8 +106,11 @@ class ChatViewController: HomeBaseViewController {
     }
     
     func scrollToBottom() {
+        guard let count = self.messages?.count else {
+            return
+        }
         DispatchQueue.main.async {
-            let indexPath = IndexPath(row: 9, section: 0)
+            let indexPath = IndexPath(row: count - 1, section: 0)
             self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
@@ -110,7 +154,17 @@ class ChatViewController: HomeBaseViewController {
     }
     
     @IBAction func sendMessageButtonHandler(_ sender: UIButton) {
-        print("message to send - ", self.textView.text ?? "")
+        
+        guard let message = self.textView.text else {
+            fatalError("Unable to get message.")
+        }
+        guard let tId = self.threadId else {
+            fatalError("Unable to find thread id")
+        }
+        var data = [String:Any]()
+        data["message"] = message // "message 3 from rider."
+        data["thread_id"] = tId
+        SocketIOManager.shared.emit(.sendMessage, parameters: data)
     }
     
 }
@@ -118,18 +172,20 @@ class ChatViewController: HomeBaseViewController {
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.messages?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.row % 2 == 0 {
+        guard let message = self.messages?[indexPath.row] else {
+            fatalError("Unable to get message.")
+        }
+        if message.isMe {
             let cell = tableView.dequeueReusableCell(withIdentifier: ChatSenderTableViewCell.identifier, for: indexPath) as! ChatSenderTableViewCell
-            cell.lblMessage.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+            cell.lblMessage.text = message.message
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ChatReceiverTableViewCell.identifier, for: indexPath) as! ChatReceiverTableViewCell
-            cell.lblMessage.text = "Hello!"
+            cell.lblMessage.text = message.message
             return cell
         }
     }

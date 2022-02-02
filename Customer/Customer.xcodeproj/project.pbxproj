@@ -491,6 +491,12 @@
 		C95B568827134BE6000D6971 /* ConfirmBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */; };
 		C96B9C4C271EE7D7006D9EF8 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B9C4A271EE7D6006D9EF8 /* ServiceModel.swift */; };
 		C96B9C4D271EE7D7006D9EF8 /* ServiceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B9C4B271EE7D6006D9EF8 /* ServiceResponseModel.swift */; };
+		C97F675827A9C094004E27DC /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F675727A9C094004E27DC /* ChatModel.swift */; };
+		C97F675927A9C094004E27DC /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F675727A9C094004E27DC /* ChatModel.swift */; };
+		C97F675B27AA291E004E27DC /* ChatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F675A27AA291E004E27DC /* ChatTextView.swift */; };
+		C97F675C27AA291E004E27DC /* ChatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F675A27AA291E004E27DC /* ChatTextView.swift */; };
+		C97F675E27AA2930004E27DC /* ChatTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97F675D27AA2930004E27DC /* ChatTextView.xib */; };
+		C97F675F27AA2930004E27DC /* ChatTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97F675D27AA2930004E27DC /* ChatTextView.xib */; };
 		C9A8391827108C0800BD08FA /* SelectServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */; };
 		C9A8533E270CCC2F00066B1E /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8533D270CCC2F00066B1E /* Notification.storyboard */; };
 		C9A85341270CCCA400066B1E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A85340270CCCA400066B1E /* NotificationViewController.swift */; };
@@ -764,6 +770,9 @@
 		C95B568727134BE6000D6971 /* ConfirmBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmBookingViewController.swift; sourceTree = "<group>"; };
 		C96B9C4A271EE7D6006D9EF8 /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		C96B9C4B271EE7D6006D9EF8 /* ServiceResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponseModel.swift; sourceTree = "<group>"; };
+		C97F675727A9C094004E27DC /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		C97F675A27AA291E004E27DC /* ChatTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTextView.swift; sourceTree = "<group>"; };
+		C97F675D27AA2930004E27DC /* ChatTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTextView.xib; sourceTree = "<group>"; };
 		C9A8391727108C0800BD08FA /* SelectServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesViewController.swift; sourceTree = "<group>"; };
 		C9A8533D270CCC2F00066B1E /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		C9A85340270CCCA400066B1E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -1047,6 +1056,7 @@
 				284F475827496A4E00DEF537 /* CategoryModel.swift */,
 				284F475627496A4E00DEF537 /* CategoryResponseModel.swift */,
 				286E3705275E99C10038A317 /* InspectionModel.swift */,
+				C97F675727A9C094004E27DC /* ChatModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1098,6 +1108,8 @@
 				2896CE28275CEA1B0099E70A /* KeyValueViewContainer.xib */,
 				28360F6A275F7ECB006A6C29 /* TitleHeaderView.swift */,
 				28360F6F275F7EDB006A6C29 /* TitleHeaderView.xib */,
+				C97F675A27AA291E004E27DC /* ChatTextView.swift */,
+				C97F675D27AA2930004E27DC /* ChatTextView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1445,6 +1457,7 @@
 				280575C926FBA1620035BC2B /* LaunchScreen.storyboard in Resources */,
 				28360F97275FE4C0006A6C29 /* AudioPlayerPopupViewController.xib in Resources */,
 				28360F70275F7EDB006A6C29 /* TitleHeaderView.xib in Resources */,
+				C97F675E27AA2930004E27DC /* ChatTextView.xib in Resources */,
 				28373E1827063EC80071E93D /* Contact.storyboard in Resources */,
 				280576FA26FCFAC10035BC2B /* Poppins-Black.otf in Resources */,
 				284F47022746DF5D00DEF537 /* OrderInfoView.xib in Resources */,
@@ -1502,6 +1515,7 @@
 				2896CC14275555CC0099E70A /* BaseStepper.xib in Resources */,
 				2896CC15275555CC0099E70A /* BannerCollectionViewCell.xib in Resources */,
 				28448A7C2773A94500332F8B /* AudioPlayerTableViewCell.xib in Resources */,
+				C97F675F27AA2930004E27DC /* ChatTextView.xib in Resources */,
 				2896CC16275555CC0099E70A /* Poppins-LightItalic.ttf in Resources */,
 				2896CC17275555CC0099E70A /* Basket.storyboard in Resources */,
 				2896CC18275555CC0099E70A /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -1797,6 +1811,7 @@
 				28512E102711A1C2002979AD /* TopPicksView.swift in Sources */,
 				289805A727106D2E002565B6 /* AppRadioView.swift in Sources */,
 				2898054E27105390002565B6 /* BuyAccessoriesConfirmationBasketTableViewCell.swift in Sources */,
+				C97F675827A9C094004E27DC /* ChatModel.swift in Sources */,
 				28512E1C2711A78F002979AD /* TopPickCollectionViewCell.swift in Sources */,
 				28356354273EE2DD008821A1 /* OrderModel.swift in Sources */,
 				28CCA6B82704F29600DB1421 /* AppButton.swift in Sources */,
@@ -1881,6 +1896,7 @@
 				28512E2F2711BAD4002979AD /* ProductReviewsView.swift in Sources */,
 				28360F6B275F7ECB006A6C29 /* TitleHeaderView.swift in Sources */,
 				2841B2BF27078901000FA706 /* AddNewAddressViewController.swift in Sources */,
+				C97F675B27AA291E004E27DC /* ChatTextView.swift in Sources */,
 				280575FA26FBB5190035BC2B /* LoginViewController.swift in Sources */,
 				28512E232711B8CF002979AD /* ProductDetailsAndRatingsView.swift in Sources */,
 				284F475F27496CBD00DEF537 /* CategoryListCollectionViewCell.swift in Sources */,
@@ -1979,6 +1995,7 @@
 				2896CBBA275555CC0099E70A /* SelectWorkshopTableViewCell.swift in Sources */,
 				282E825C27A53FE70072FB77 /* TrackMapViewController.swift in Sources */,
 				2896CBBB275555CC0099E70A /* OrderResponseModel.swift in Sources */,
+				C97F675C27AA291E004E27DC /* ChatTextView.swift in Sources */,
 				2896CBBC275555CC0099E70A /* VehicleModel.swift in Sources */,
 				2896CBBD275555CC0099E70A /* OrderInfoView.swift in Sources */,
 				28C4A1A4279C4DB600A7F4D6 /* SocketIOManager.swift in Sources */,
@@ -2022,6 +2039,7 @@
 				2896CBDC275555CC0099E70A /* SectionHeader.swift in Sources */,
 				2896CBDD275555CC0099E70A /* BookingHistoryViewModel.swift in Sources */,
 				2896CBDE275555CC0099E70A /* RegistrationDataModel.swift in Sources */,
+				C97F675927A9C094004E27DC /* ChatModel.swift in Sources */,
 				2896CBDF275555CC0099E70A /* ServiceModel.swift in Sources */,
 				2896CDED2756A2470099E70A /* DriverLeftMenuViewController.swift in Sources */,
 				28360F91275FE45F006A6C29 /* AudioPlayerPopupViewController.swift in Sources */,

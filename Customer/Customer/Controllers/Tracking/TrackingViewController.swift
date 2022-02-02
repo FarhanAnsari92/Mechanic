@@ -19,7 +19,7 @@ class TrackingViewController: HomeBaseViewController {
         }
     }
     
-    var statusHistory: [StatusHistoryModel]?
+    var bookingDetails: BookingHistoryModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +48,17 @@ class TrackingViewController: HomeBaseViewController {
     }
     
     @IBAction func trackViaMapButtonHandler(_ sender: UIButton) {
+        guard
+            let jobId = self.bookingDetails?.thread?.jobId?.description,
+            let threadId = self.bookingDetails?.thread?.threadId?.description else {
+                fatalError("provide proper data to view model")
+        }
+        
         let sb = UIStoryboard(storyboard: .tracking)
-        let vc = sb.instantiateViewController(withIdentifier: TrackMapViewController.storyboardIdentifier)
+        let vc = sb.instantiateViewController(withIdentifier: TrackMapViewController.storyboardIdentifier) as! TrackMapViewController
+        
+        let vm = TrackMapViewControllerViewModel(jobId: jobId, threadId: threadId)
+        vc.viewModel = vm
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -78,7 +87,7 @@ extension TrackingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 { return 2 }
-        return self.statusHistory?.count ?? 0
+        return self.bookingDetails?.statusHistory?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,7 +109,7 @@ extension TrackingViewController: UITableViewDelegate, UITableViewDataSource {
             cell.imgTick.isHidden = indexPath.row > 0
             cell.deselectView.isHidden = indexPath.row == 0
             cell.upperLine.isHidden = indexPath.row == 0
-            if let status = statusHistory {
+            if let status = self.bookingDetails?.statusHistory {
                 cell.lowerLine.isHidden = indexPath.row == status.count - 1
                 cell.lblStatus.text = status[indexPath.row].title
             }
