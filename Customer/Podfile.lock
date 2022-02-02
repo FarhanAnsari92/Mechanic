@@ -17,7 +17,6 @@ PODS:
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
   - ObjectMapper (3.5.3)
-  - ReverseExtension (0.6.0)
   - RSSelectionMenu (7.1.3)
   - SDWebImage (5.8.4):
     - SDWebImage/Core (= 5.8.4)
@@ -41,7 +40,6 @@ DEPENDENCIES:
   - NHRangeSlider (from `https://github.com/FarhanAnsari92/NHRangeSlider.git`)
   - NVActivityIndicatorView
   - ObjectMapper (~> 3.4)
-  - ReverseExtension (= 0.6.0)
   - RSSelectionMenu (~> 7.1.3)
   - SDWebImage (~> 5.8.3)
   - SideMenu (~> 6.0)
@@ -59,7 +57,6 @@ SPEC REPOS:
     - MBProgressHUD
     - NVActivityIndicatorView
     - ObjectMapper
-    - ReverseExtension
     - RSSelectionMenu
     - SDWebImage
     - SideMenu
@@ -94,7 +91,6 @@ SPEC CHECKSUMS:
   NHRangeSlider: dae06d7b8fc74a38b026c2a962d591766a30bf16
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
-  ReverseExtension: 5c7ca8c165f47e9bde8e26084d5e7bf21ad4f5a6
   RSSelectionMenu: 873d62ebbaef138519f6cf3f073412c2b5d94c2c
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
@@ -104,6 +100,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   ZSWTappableLabel: 92f11d677bb395a8294df48482316c4981783ca0
 
-PODFILE CHECKSUM: 51487f9865eb28fc34f642edc388eff8dff534a9
+PODFILE CHECKSUM: 10f0d585e824d67d2cf47b326b98be88981affbf
 
 COCOAPODS: 1.11.2
