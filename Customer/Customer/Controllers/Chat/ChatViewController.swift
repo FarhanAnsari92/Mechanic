@@ -22,8 +22,10 @@ class ChatViewController: HomeBaseViewController {
         }
     }
     
-    @IBOutlet weak var textView: GrowingTextView!
-    @IBOutlet weak var containerViewBottomConstraint: NSLayoutConstraint!
+    var chatView: ChatTextView?
+    
+    var shouldScrollToBottom = true
+//    var shouldAdjustForKeyboard = true // use it when interactive pop gesture is on
     
     var threadId: String?
     
@@ -33,8 +35,7 @@ class ChatViewController: HomeBaseViewController {
         super.viewDidLoad()
         self.title = "Chat"
         setupBackButton(color: .white)
-        setupTextView()
-//        scrollToBottom()
+        chatView = ChatTextView.loadNib
         if let tId = self.threadId {
             SocketIOManager.shared.emit(.joinRoom, parameters: ["thread_id": tId])
         }
@@ -68,7 +69,6 @@ class ChatViewController: HomeBaseViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.textView.resignFirstResponder()
         removeObserver()
         SocketIOManager.shared.off(.getThreads)
         SocketIOManager.shared.off(.threadJoined)
@@ -77,13 +77,27 @@ class ChatViewController: HomeBaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print("super.viewDidLayoutSubviews()")
+        if shouldScrollToBottom {
+            shouldScrollToBottom = false
+            scrollToBottom(animated: false)
+        }
+    }
+    
+    func scrollToBottom(animated: Bool) {
+        view.layoutIfNeeded()
+        tableView.setContentOffset(bottomOffset(), animated: animated)
+    }
+     
+    func bottomOffset() -> CGPoint {
+        return CGPoint(x: 0, y: max(-tableView.contentInset.top, tableView.contentSize.height - (tableView.bounds.size.height - tableView.contentInset.bottom)))
     }
     
     override var inputAccessoryView: UIView? {
         get {
-            let vu = ChatTextView.loadNib
-            return vu
+            if let vu = chatView {
+                return vu
+            }
+            return ChatTextView.loadNib
         }
     }
     
@@ -93,16 +107,6 @@ class ChatViewController: HomeBaseViewController {
     
     override var canResignFirstResponder: Bool {
         return true
-    }
-    
-    func setupTextView() {
-        textView.maxLength = 140
-        textView.trimWhiteSpaceWhenEndEditing = false
-        textView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
-        textView.minHeight = 25.0
-        textView.maxHeight = 70.0
-        textView.backgroundColor = UIColor(hexString: "F1F1F1")
-        textView.layer.cornerRadius = textView.frame.height / 2
     }
     
     func scrollToBottom() {
@@ -128,43 +132,51 @@ class ChatViewController: HomeBaseViewController {
 
 
     @objc func keyboardWillShow(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            var safeArea: CGFloat = 0
-            if #available(iOS 11.0, *) {
-                let window = UIApplication.shared.keyWindow
-                let bottomPadding = window?.safeAreaInsets.bottom
-                safeArea = bottomPadding ?? 0
-            }
-            let bottomSpace = keyboardSize.height - safeArea
-            containerViewBottomConstraint.constant = bottomSpace
-            UIView.animate(withDuration: 0.25) {
-                self.view.layoutIfNeeded()
-            }
-            
-        }
+        adjustContentForKeyboard(shown: true, notification: notification)
         
     }
     
     @objc func keyboardWillHide(notification: Notification) {
-        containerViewBottomConstraint.constant = 0
+        adjustContentForKeyboard(shown: false, notification: notification)
         
-        UIView.animate(withDuration: 0.25) {
-            self.view.layoutIfNeeded()
+    }
+    
+    func adjustContentForKeyboard(shown: Bool, notification: Notification) {
+        guard let payload = KeyboardInfo(notification) else { return }
+     
+        let keyboardHeight = shown ? payload.frameEnd.size.height : chatView?.bounds.size.height ?? 0
+        if tableView.contentInset.bottom == keyboardHeight {
+            return
         }
+     
+        let distanceFromBottom = bottomOffset().y - tableView.contentOffset.y
+     
+        var insets = tableView.contentInset
+        insets.bottom = keyboardHeight
+     
+        UIView.animate(withDuration: payload.animationDuration, delay: 0, options: .overrideInheritedOptions, animations: {
+     
+            self.tableView.contentInset = insets
+            self.tableView.scrollIndicatorInsets = insets
+     
+            if distanceFromBottom < 10 {
+                self.tableView.contentOffset = self.bottomOffset()
+            }
+        }, completion: nil)
     }
     
     @IBAction func sendMessageButtonHandler(_ sender: UIButton) {
         
-        guard let message = self.textView.text else {
-            fatalError("Unable to get message.")
-        }
-        guard let tId = self.threadId else {
-            fatalError("Unable to find thread id")
-        }
-        var data = [String:Any]()
-        data["message"] = message // "message 3 from rider."
-        data["thread_id"] = tId
-        SocketIOManager.shared.emit(.sendMessage, parameters: data)
+//        guard let message = self.textView.text else {
+//            fatalError("Unable to get message.")
+//        }
+//        guard let tId = self.threadId else {
+//            fatalError("Unable to find thread id")
+//        }
+//        var data = [String:Any]()
+//        data["message"] = message // "message 3 from rider."
+//        data["thread_id"] = tId
+//        SocketIOManager.shared.emit(.sendMessage, parameters: data)
     }
     
 }
@@ -190,4 +202,26 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+}
+
+
+struct KeyboardInfo {
+    var animationCurve: UIView.AnimationCurve
+    var animationDuration: Double
+    var isLocal: Bool
+    var frameBegin: CGRect
+    var frameEnd: CGRect
+}
+
+extension KeyboardInfo {
+    init?(_ notification: Notification) {
+        guard notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification else { return nil }
+        let u = notification.userInfo!
+
+        animationCurve = UIView.AnimationCurve(rawValue: u[UIWindow.keyboardAnimationCurveUserInfoKey] as! Int)!
+        animationDuration = u[UIWindow.keyboardAnimationDurationUserInfoKey] as! Double
+        isLocal = u[UIWindow.keyboardIsLocalUserInfoKey] as! Bool
+        frameBegin = u[UIWindow.keyboardFrameBeginUserInfoKey] as! CGRect
+        frameEnd = u[UIWindow.keyboardFrameEndUserInfoKey] as! CGRect
+    }
 }

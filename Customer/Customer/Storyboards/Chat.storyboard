@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,61 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nMz-P3-hQj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="775"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaM-ca-zGr">
-                                <rect key="frame" x="0.0" y="819" width="414" height="43"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="azD-r2-5uk" customClass="GrowingTextView" customModule="GrowingTextView">
-                                        <rect key="frame" x="20" y="5" width="341" height="33"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Text Message"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6q-tl-Sgg">
-                                        <rect key="frame" x="371" y="5" width="33" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="euN-MM-01z"/>
-                                            <constraint firstAttribute="width" constant="33" id="mf3-Uo-Hiu"/>
-                                        </constraints>
-                                        <state key="normal" image="ic_send_msg"/>
-                                        <connections>
-                                            <action selector="sendMessageButtonHandler:" destination="1DZ-oD-cN1" eventType="touchUpInside" id="Tkw-Cu-VUQ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="azD-r2-5uk" firstAttribute="leading" secondItem="OaM-ca-zGr" secondAttribute="leading" constant="20" id="Apg-he-zGK"/>
-                                    <constraint firstAttribute="trailing" secondItem="i6q-tl-Sgg" secondAttribute="trailing" constant="10" id="RVf-rd-cWl"/>
-                                    <constraint firstItem="i6q-tl-Sgg" firstAttribute="bottom" secondItem="azD-r2-5uk" secondAttribute="bottom" id="fG9-qV-8sn"/>
-                                    <constraint firstAttribute="bottom" secondItem="azD-r2-5uk" secondAttribute="bottom" constant="5" id="tY6-aZ-mNc"/>
-                                    <constraint firstItem="azD-r2-5uk" firstAttribute="top" secondItem="OaM-ca-zGr" secondAttribute="top" constant="5" id="w8A-8M-xjf"/>
-                                    <constraint firstItem="i6q-tl-Sgg" firstAttribute="leading" secondItem="azD-r2-5uk" secondAttribute="trailing" constant="10" id="xgz-Uo-dv0"/>
-                                </constraints>
-                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="ikS-59-hfE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ikS-59-hfE" firstAttribute="trailing" secondItem="nMz-P3-hQj" secondAttribute="trailing" id="4K8-ce-dFi"/>
-                            <constraint firstItem="ikS-59-hfE" firstAttribute="bottom" secondItem="OaM-ca-zGr" secondAttribute="bottom" id="8Ta-cr-fRl"/>
                             <constraint firstItem="nMz-P3-hQj" firstAttribute="leading" secondItem="ikS-59-hfE" secondAttribute="leading" id="H5V-Am-FaN"/>
-                            <constraint firstItem="OaM-ca-zGr" firstAttribute="leading" secondItem="ikS-59-hfE" secondAttribute="leading" id="L8u-QQ-hJo"/>
-                            <constraint firstItem="OaM-ca-zGr" firstAttribute="top" secondItem="nMz-P3-hQj" secondAttribute="bottom" id="O5v-fP-OiL"/>
-                            <constraint firstItem="ikS-59-hfE" firstAttribute="trailing" secondItem="OaM-ca-zGr" secondAttribute="trailing" id="Ohs-h8-noo"/>
                             <constraint firstItem="nMz-P3-hQj" firstAttribute="top" secondItem="ikS-59-hfE" secondAttribute="top" id="l3S-Sl-4yf"/>
+                            <constraint firstItem="ikS-59-hfE" firstAttribute="bottom" secondItem="nMz-P3-hQj" secondAttribute="bottom" id="tLZ-h9-Lze"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="ikS-59-hfE"/>
                     </view>
                     <connections>
-                        <outlet property="containerViewBottomConstraint" destination="8Ta-cr-fRl" id="Fjd-V9-gdK"/>
                         <outlet property="tableView" destination="nMz-P3-hQj" id="yNn-At-Mmt"/>
-                        <outlet property="textView" destination="azD-r2-5uk" id="kLh-QO-kDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q93-sA-lGC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -80,18 +39,4 @@
             <point key="canvasLocation" x="-514.49275362318849" y="59.598214285714285"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="azD-r2-5uk">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
-    </designables>
-    <resources>
-        <image name="ic_send_msg" width="19.5" height="17"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -11,24 +11,59 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="ChatTextView" customModule="Customer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnm-CE-Asp">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
-                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwb-Jn-GYp">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeP-MM-hWm">
+                            <rect key="frame" x="371" y="6" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="Oll-k6-BOT"/>
+                                <constraint firstAttribute="width" constant="33" id="oFX-D8-fwh"/>
+                            </constraints>
+                            <state key="normal" image="ic_send_msg"/>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xES-BC-0Se">
+                            <rect key="frame" x="5" y="5" width="361" height="34"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="PF2-4j-3DR"/>
+                            </constraints>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="xES-BC-0Se" firstAttribute="top" secondItem="Vwb-Jn-GYp" secondAttribute="top" constant="5" id="1iq-01-K5V"/>
+                        <constraint firstAttribute="bottom" secondItem="QeP-MM-hWm" secondAttribute="bottom" constant="5" id="25m-i5-AsF"/>
+                        <constraint firstAttribute="bottom" secondItem="xES-BC-0Se" secondAttribute="bottom" constant="5" id="6LX-mp-VEv"/>
+                        <constraint firstAttribute="trailing" secondItem="QeP-MM-hWm" secondAttribute="trailing" constant="10" id="7az-g0-gco"/>
+                        <constraint firstItem="xES-BC-0Se" firstAttribute="leading" secondItem="Vwb-Jn-GYp" secondAttribute="leading" constant="5" id="ykb-wE-vOf"/>
+                        <constraint firstItem="QeP-MM-hWm" firstAttribute="leading" secondItem="xES-BC-0Se" secondAttribute="trailing" constant="5" id="zeV-QG-prS"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dnm-CE-Asp" secondAttribute="trailing" id="9RQ-bZ-bSy"/>
-                <constraint firstItem="Dnm-CE-Asp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WX2-79-z2h"/>
-                <constraint firstItem="Dnm-CE-Asp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="etv-ZU-zp0"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Dnm-CE-Asp" secondAttribute="bottom" id="wGJ-Um-KdE"/>
+                <constraint firstItem="Vwb-Jn-GYp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6rv-wc-Pf0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vwb-Jn-GYp" secondAttribute="bottom" id="gjB-8Y-mDR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vwb-Jn-GYp" secondAttribute="trailing" id="pHC-Gf-d8j"/>
+                <constraint firstItem="Vwb-Jn-GYp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vvs-2j-WIq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="234.70982142857142"/>
+            <connections>
+                <outlet property="textView" destination="xES-BC-0Se" id="dod-Zv-uj4"/>
+                <outlet property="textViewHeight" destination="PF2-4j-3DR" id="IQy-XY-fhD"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="221.65178571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_send_msg" width="19.5" height="17"/>
+    </resources>
 </document>
